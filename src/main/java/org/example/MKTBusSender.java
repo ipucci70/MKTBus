@@ -13,7 +13,7 @@ import org.example.Market.QuoteRequest;
 import org.example.Market.QuoteResponse;
 import org.example.Market.Quote;
 
-public class MKTBusManager {
+public class MKTBusSender {
     private final static String QUOTEREQ_QUEUE_NAME = "quotereq_mkt_queue";
     private final static String QUOTERES_QUEUE_NAME = "quoteres_mkt_queue";
     private final static String QUOTE_QUEUE_NAME = "quote_mkt_queue";
@@ -22,7 +22,7 @@ public class MKTBusManager {
     private final static String MISSING_CONNECTION = "Missing Connection";
     private final static String MISSING_CHANNEL = "Missing Channel";
     private final static String SENT_OK = "OK";
-    private final static Logger LOG = LoggerFactory.getLogger(MKTBusManager.class);
+    private final static Logger LOG = LoggerFactory.getLogger(MKTBusSender.class);
     private final static String EXCHANGE_NAME = "MKT";
 
     private final ConnectionFactory busFactory;
@@ -43,7 +43,7 @@ public class MKTBusManager {
                 .build();
      */
 
-    public MKTBusManager(String hostName, String virtualHost, int port, String userName, String password) throws IOException, TimeoutException{
+    public MKTBusSender(String hostName, String virtualHost, int port, String userName, String password) throws IOException, TimeoutException{
 
         // Set up the connection and channel
         busFactory = new ConnectionFactory();

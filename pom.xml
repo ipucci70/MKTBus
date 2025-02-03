@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>MKTBus</artifactId>
-    <version>0.0.3</version>
+    <version>0.1.0</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -41,6 +41,10 @@
             <artifactId>amqp-client</artifactId>
             <version>5.24.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.4.0-jre</version>
+        </dependency>
     </dependencies>
-
 </project>

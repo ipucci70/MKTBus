@@ -15,10 +15,11 @@ import java.util.concurrent.TimeoutException;
 import com.google.common.base.Strings;
 
 import org.example.Market.QuoteRequest;
-//import org.example.Market.QuoteRequestLeg;
 import org.example.Market.QuoteResponse;
+import org.example.Market.Price;
 import org.example.Market.Quote;
 import org.example.Utils;
+import org.example.Market.PriceType;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -39,6 +40,7 @@ public class MKTBusSender {
     private final static String PRICE_QUEUE_NAME = "prc_mkt_queue";
     private final static String MISSING_CONNECTION = "Missing Connection";
     private final static String MISSING_CHANNEL = "Missing Channel";
+    private final static String SEND_ERROR = "Send Error";
     private final static String SENT_OK = "OK";
     private final static String EXCHANGE_NAME = "MKT";
     private static final long MAX_CONNECTION_ATTEMPTS = 50;
@@ -173,7 +175,13 @@ public class MKTBusSender {
             return MISSING_CHANNEL;
         }
         byte[] serializedQuoteRequest = quoteRequest.toByteArray();
-        busChannel.basicPublish("", QUOTEREQ_QUEUE_NAME, null, serializedQuoteRequest);
+        try {
+            busChannel.basicPublish("", QUOTEREQ_QUEUE_NAME, null, serializedQuoteRequest);
+        }
+        catch (IOException  e){
+            LOG.error("Error sending Quote Request " + quoteRequest + e.getLocalizedMessage(), Utils.stackTraceToString(e));
+            return SEND_ERROR;
+        }
         LOG.info(" [x] Sent '" + quoteRequest + "'");
         return SENT_OK;
     }
@@ -187,7 +195,13 @@ public class MKTBusSender {
             return MISSING_CHANNEL;
         }
         byte[] serializedQuoteResponse = quoteResponse.toByteArray();
-        busChannel.basicPublish("", QUOTERES_QUEUE_NAME, null, serializedQuoteResponse);
+        try {
+            busChannel.basicPublish("", QUOTERES_QUEUE_NAME, null, serializedQuoteResponse);
+        }
+        catch (IOException  e){
+            LOG.error("Error sending Quote Response " + quoteResponse + e.getLocalizedMessage(), Utils.stackTraceToString(e));
+            return SEND_ERROR;
+        }
         LOG.info(" [x] Sent '" + quoteResponse + "'");
         return SENT_OK;
     }
@@ -201,12 +215,37 @@ public class MKTBusSender {
             return MISSING_CHANNEL;
         }
         byte[] serializedQuote = quote.toByteArray();
-        busChannel.basicPublish("", QUOTE_QUEUE_NAME, null, serializedQuote);
+        try{
+            busChannel.basicPublish("", QUOTE_QUEUE_NAME, null, serializedQuote);
+        }
+        catch (IOException  e){
+            LOG.error("Error sending Quote" + quote + e.getLocalizedMessage(), Utils.stackTraceToString(e));
+            return SEND_ERROR;
+        }
         LOG.info(" [x] Sent '" + quote + "'");
         return SENT_OK;
     }
 
-    
+    public String SendOnBus(Price price) throws IOException
+    {
+        if (busConnection==null){
+            return MISSING_CONNECTION;
+        }
+        if (busChannel==null){
+            return MISSING_CHANNEL;
+        }
+        byte[] serializedPrice = price.toByteArray();
+        try{
+            busChannel.basicPublish("", PRICE_QUEUE_NAME, null, serializedPrice);
+        }
+        catch (IOException  e){
+            LOG.error("Error sending Price " + price + e.getLocalizedMessage(), Utils.stackTraceToString(e));
+            return SEND_ERROR;
+        }
+        LOG.info(" [x] Sent '" + price + "'");
+        return SENT_OK;
+    }
+
     /*
      *  LIST OF POSSIBLE TOPICS:
      * 
@@ -245,6 +284,36 @@ public class MKTBusSender {
     public String GetTopic(QuoteResponse quoteResponse)
     {
         return "QUOTERES." + "BOND." + quoteResponse.getTypeValue() + "." + quoteResponse.getIssuerMemberID() + "." + quoteResponse.getFirstLeg().getSecurityID();
+    }
+
+    public String GetTopic(Price price)
+    {
+        String  priceType;
+
+        switch (price.getType().getNumber()){
+            case PriceType.TYPE_Composite_VALUE:
+                priceType = new String("COMP");
+                break;
+            case PriceType.TYPE_Indicative_VALUE:
+                priceType = new String("IND");
+                break;
+            case PriceType.TYPE_Tier_VALUE:
+                priceType = new String("TIER");
+                break;
+            case PriceType.TYPE_CD4PM_VALUE:
+                priceType = new String("CD4PM");
+                break;
+            case PriceType.TYPE_CORP4PM_VALUE:
+                priceType = new String("CORP4PM");
+                break;
+            case PriceType.TYPE_CorporateSpread_VALUE:
+                priceType = new String("CORPSPREAD");
+                break;
+            default:
+                priceType = new String("");
+                break;
+        }
+        return "PRICE." + "BOND." + priceType + "." + price.getSecurityID();
     }
 
     private static class ConnectionTask extends TimerTask {

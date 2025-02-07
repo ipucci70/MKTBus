@@ -13421,6 +13421,18 @@ public final class Market {
      */
     com.google.protobuf.ByteString
         getMarketIDBytes();
+
+    /**
+     * <code>string MemberID = 2024;</code>
+     * @return The memberID.
+     */
+    java.lang.String getMemberID();
+    /**
+     * <code>string MemberID = 2024;</code>
+     * @return The bytes for memberID.
+     */
+    com.google.protobuf.ByteString
+        getMemberIDBytes();
   }
   /**
    * Protobuf type {@code org.example.Price}
@@ -13451,6 +13463,7 @@ public final class Market {
       type_ = 0;
       state_ = 0;
       marketID_ = "";
+      memberID_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -13884,6 +13897,45 @@ public final class Market {
       }
     }
 
+    public static final int MEMBERID_FIELD_NUMBER = 2024;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object memberID_ = "";
+    /**
+     * <code>string MemberID = 2024;</code>
+     * @return The memberID.
+     */
+    @java.lang.Override
+    public java.lang.String getMemberID() {
+      java.lang.Object ref = memberID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        memberID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string MemberID = 2024;</code>
+     * @return The bytes for memberID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMemberIDBytes() {
+      java.lang.Object ref = memberID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        memberID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13969,6 +14021,9 @@ public final class Market {
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(marketID_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2023, marketID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(memberID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2024, memberID_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -14070,6 +14125,9 @@ public final class Market {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(marketID_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2023, marketID_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(memberID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2024, memberID_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -14144,6 +14202,8 @@ public final class Market {
           != other.getUpdateTime()) return false;
       if (!getMarketID()
           .equals(other.getMarketID())) return false;
+      if (!getMemberID()
+          .equals(other.getMemberID())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -14220,6 +14280,8 @@ public final class Market {
           getUpdateTime());
       hash = (37 * hash) + MARKETID_FIELD_NUMBER;
       hash = (53 * hash) + getMarketID().hashCode();
+      hash = (37 * hash) + MEMBERID_FIELD_NUMBER;
+      hash = (53 * hash) + getMemberID().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14375,6 +14437,7 @@ public final class Market {
         updateDate_ = 0L;
         updateTime_ = 0L;
         marketID_ = "";
+        memberID_ = "";
         return this;
       }
 
@@ -14480,6 +14543,9 @@ public final class Market {
         if (((from_bitField0_ & 0x00800000) != 0)) {
           result.marketID_ = marketID_;
         }
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          result.memberID_ = memberID_;
+        }
       }
 
       @java.lang.Override
@@ -14574,6 +14640,11 @@ public final class Market {
         if (!other.getMarketID().isEmpty()) {
           marketID_ = other.marketID_;
           bitField0_ |= 0x00800000;
+          onChanged();
+        }
+        if (!other.getMemberID().isEmpty()) {
+          memberID_ = other.memberID_;
+          bitField0_ |= 0x01000000;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -14722,6 +14793,11 @@ public final class Market {
                 bitField0_ |= 0x00800000;
                 break;
               } // case 16186
+              case 16194: {
+                memberID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x01000000;
+                break;
+              } // case 16194
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -15745,6 +15821,78 @@ public final class Market {
         checkByteStringIsUtf8(value);
         marketID_ = value;
         bitField0_ |= 0x00800000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object memberID_ = "";
+      /**
+       * <code>string MemberID = 2024;</code>
+       * @return The memberID.
+       */
+      public java.lang.String getMemberID() {
+        java.lang.Object ref = memberID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          memberID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string MemberID = 2024;</code>
+       * @return The bytes for memberID.
+       */
+      public com.google.protobuf.ByteString
+          getMemberIDBytes() {
+        java.lang.Object ref = memberID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          memberID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string MemberID = 2024;</code>
+       * @param value The memberID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMemberID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        memberID_ = value;
+        bitField0_ |= 0x01000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string MemberID = 2024;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMemberID() {
+        memberID_ = getDefaultInstance().getMemberID();
+        bitField0_ = (bitField0_ & ~0x01000000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string MemberID = 2024;</code>
+       * @param value The bytes for memberID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMemberIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        memberID_ = value;
+        bitField0_ |= 0x01000000;
         onChanged();
         return this;
       }
@@ -18078,7 +18226,7 @@ public final class Market {
       "radeSource\022\031\n\020ProviderSourceID\030\355\013 \001(\t\022\025\n" +
       "\014CreationDate\030\356\013 \001(\004\022\025\n\014CreationTime\030\357\013 " +
       "\001(\004\022\023\n\nUpdateDate\030\360\013 \001(\004\022\023\n\nUpdateTime\030\361" +
-      "\013 \001(\004\022\031\n\020SettlementAmount\030\362\013 \001(\001\"\201\004\n\005Pri" +
+      "\013 \001(\004\022\031\n\020SettlementAmount\030\362\013 \001(\001\"\224\004\n\005Pri" +
       "ce\022\023\n\nSecurityID\030\320\017 \001(\t\022\021\n\010ISINCode\030\321\017 \001" +
       "(\t\022\016\n\005CUSIP\030\322\017 \001(\t\022\023\n\nTradeClass\030\323\017 \001(\t\022" +
       "%\n\004Type\030\324\017 \001(\0162\026.org.example.PriceType\022\021" +
@@ -18091,37 +18239,38 @@ public final class Market {
       "\341\017 \001(\001\022\'\n\005State\030\342\017 \001(\0162\027.org.example.Pri" +
       "ceState\022\022\n\tPriceDate\030\343\017 \001(\004\022\022\n\tPriceTime" +
       "\030\344\017 \001(\004\022\023\n\nUpdateDate\030\345\017 \001(\004\022\023\n\nUpdateTi" +
-      "me\030\346\017 \001(\004\022\021\n\010MarketID\030\347\017 \001(\t\"\231\003\n\nInstrum" +
-      "ent\022\023\n\nSecurityID\030\304\023 \001(\t\022\021\n\010ISINCode\030\305\023 " +
-      "\001(\t\022\016\n\005CUSIP\030\306\023 \001(\t\022\021\n\010MarketID\030\307\023 \001(\t\022\022" +
-      "\n\tSectionID\030\310\023 \001(\t\022\023\n\nTradeClass\030\311\023 \001(\t\022" +
-      "\024\n\013Description\030\312\023 \001(\001\022\021\n\010Currency\030\313\023 \001(\001" +
-      "\022\017\n\006Issuer\030\314\023 \001(\001\022,\n\005Class\030\315\023 \001(\0162\034.org." +
-      "example.InstrumentClass\022\022\n\tPriceTick\030\316\023 " +
-      "\001(\001\022\020\n\007QtyTick\030\317\023 \001(\001\022\027\n\016MinTradableQty\030" +
-      "\320\023 \001(\001\022\020\n\007LotSize\030\321\023 \001(\001\022\025\n\014ClosingPrice" +
-      "\030\322\023 \001(\001\022\022\n\tIssueDate\030\323\023 \001(\004\022\031\n\020TradingSt" +
-      "artDate\030\324\023 \001(\004\022\030\n\017TradingStopDate\030\325\023 \001(\004" +
-      "*&\n\007LegVerb\022\014\n\010VERB_BUY\020\000\022\r\n\tVERB_SELL\020\001" +
-      "*N\n\024QuoteRequestMLegType\022\021\n\rMLEG_Outrigh" +
-      "t\020\000\022\017\n\013MLEG_Switch\020\001\022\022\n\016MLEG_Butterfly\020\002" +
-      "*X\n\020QuoteRequestType\022\030\n\024TYPE_RequestBidO" +
-      "ffer\020\000\022\025\n\021TYPE_MyBidMyOffer\020\001\022\023\n\017TYPE_Li" +
-      "mitOrder\020\002*m\n\022QuoteRequestStatus\022\021\n\rSTAT" +
-      "US_Active\020\000\022\021\n\rSTATUS_Filled\020\001\022\024\n\020STATUS" +
-      "_Cancelled\020\002\022\033\n\027STATUS_RejectedByMarket\020" +
-      "\003*D\n\rProcessStatus\022\032\n\026PROCESSED_NotProce" +
-      "ssed\020\000\022\027\n\023PROCESSED_Processed\020\001*R\n\013Trade" +
-      "Source\022\027\n\023SOURCE_QuoteRequest\020\000\022\020\n\014SOURC" +
-      "E_Quote\020\001\022\030\n\024SOURCE_QuoteResponse\020\002*\177\n\tP" +
-      "riceType\022\022\n\016TYPE_Composite\020\000\022\023\n\017TYPE_Ind" +
-      "icative\020\001\022\r\n\tTYPE_Tier\020\002\022\030\n\024TYPE_Corpora" +
-      "teSpread\020\003\022\020\n\014TYPE_CORP4PM\020\004\022\016\n\nTYPE_CD4" +
-      "PM\020\005*R\n\nPriceState\022\016\n\nSTATE_None\020\000\022\016\n\nST" +
-      "ATE_Firm\020\001\022\021\n\rSTATE_Subject\020\002\022\021\n\rSTATE_D" +
-      "eleted\020\003*W\n\017InstrumentClass\022\030\n\024CLASS_Gov" +
-      "ernmentBond\020\000\022\027\n\023CLASS_CorporateBond\020\001\022\021" +
-      "\n\rCLASS_Futures\020\002b\006proto3"
+      "me\030\346\017 \001(\004\022\021\n\010MarketID\030\347\017 \001(\t\022\021\n\010MemberID" +
+      "\030\350\017 \001(\t\"\231\003\n\nInstrument\022\023\n\nSecurityID\030\304\023 " +
+      "\001(\t\022\021\n\010ISINCode\030\305\023 \001(\t\022\016\n\005CUSIP\030\306\023 \001(\t\022\021" +
+      "\n\010MarketID\030\307\023 \001(\t\022\022\n\tSectionID\030\310\023 \001(\t\022\023\n" +
+      "\nTradeClass\030\311\023 \001(\t\022\024\n\013Description\030\312\023 \001(\001" +
+      "\022\021\n\010Currency\030\313\023 \001(\001\022\017\n\006Issuer\030\314\023 \001(\001\022,\n\005" +
+      "Class\030\315\023 \001(\0162\034.org.example.InstrumentCla" +
+      "ss\022\022\n\tPriceTick\030\316\023 \001(\001\022\020\n\007QtyTick\030\317\023 \001(\001" +
+      "\022\027\n\016MinTradableQty\030\320\023 \001(\001\022\020\n\007LotSize\030\321\023 " +
+      "\001(\001\022\025\n\014ClosingPrice\030\322\023 \001(\001\022\022\n\tIssueDate\030" +
+      "\323\023 \001(\004\022\031\n\020TradingStartDate\030\324\023 \001(\004\022\030\n\017Tra" +
+      "dingStopDate\030\325\023 \001(\004*&\n\007LegVerb\022\014\n\010VERB_B" +
+      "UY\020\000\022\r\n\tVERB_SELL\020\001*N\n\024QuoteRequestMLegT" +
+      "ype\022\021\n\rMLEG_Outright\020\000\022\017\n\013MLEG_Switch\020\001\022" +
+      "\022\n\016MLEG_Butterfly\020\002*X\n\020QuoteRequestType\022" +
+      "\030\n\024TYPE_RequestBidOffer\020\000\022\025\n\021TYPE_MyBidM" +
+      "yOffer\020\001\022\023\n\017TYPE_LimitOrder\020\002*m\n\022QuoteRe" +
+      "questStatus\022\021\n\rSTATUS_Active\020\000\022\021\n\rSTATUS" +
+      "_Filled\020\001\022\024\n\020STATUS_Cancelled\020\002\022\033\n\027STATU" +
+      "S_RejectedByMarket\020\003*D\n\rProcessStatus\022\032\n" +
+      "\026PROCESSED_NotProcessed\020\000\022\027\n\023PROCESSED_P" +
+      "rocessed\020\001*R\n\013TradeSource\022\027\n\023SOURCE_Quot" +
+      "eRequest\020\000\022\020\n\014SOURCE_Quote\020\001\022\030\n\024SOURCE_Q" +
+      "uoteResponse\020\002*\177\n\tPriceType\022\022\n\016TYPE_Comp" +
+      "osite\020\000\022\023\n\017TYPE_Indicative\020\001\022\r\n\tTYPE_Tie" +
+      "r\020\002\022\030\n\024TYPE_CorporateSpread\020\003\022\020\n\014TYPE_CO" +
+      "RP4PM\020\004\022\016\n\nTYPE_CD4PM\020\005*R\n\nPriceState\022\016\n" +
+      "\nSTATE_None\020\000\022\016\n\nSTATE_Firm\020\001\022\021\n\rSTATE_S" +
+      "ubject\020\002\022\021\n\rSTATE_Deleted\020\003*W\n\017Instrumen" +
+      "tClass\022\030\n\024CLASS_GovernmentBond\020\000\022\027\n\023CLAS" +
+      "S_CorporateBond\020\001\022\021\n\rCLASS_Futures\020\002b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18162,7 +18311,7 @@ public final class Market {
     internal_static_org_example_Price_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_Price_descriptor,
-        new java.lang.String[] { "SecurityID", "ISINCode", "CUSIP", "TradeClass", "Type", "BidPrice", "BidYield", "BidSpread", "BidAxe", "BidQty", "AskPrice", "AskYield", "AskSpread", "AskAxe", "AskQty", "DeltaPrice", "DeltaYield", "DeltaSpread", "State", "PriceDate", "PriceTime", "UpdateDate", "UpdateTime", "MarketID", });
+        new java.lang.String[] { "SecurityID", "ISINCode", "CUSIP", "TradeClass", "Type", "BidPrice", "BidYield", "BidSpread", "BidAxe", "BidQty", "AskPrice", "AskYield", "AskSpread", "AskAxe", "AskQty", "DeltaPrice", "DeltaYield", "DeltaSpread", "State", "PriceDate", "PriceTime", "UpdateDate", "UpdateTime", "MarketID", "MemberID", });
     internal_static_org_example_Instrument_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_org_example_Instrument_fieldAccessorTable = new

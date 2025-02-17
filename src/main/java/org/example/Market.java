@@ -16843,16 +16843,28 @@ public final class Market {
         getTradeClassBytes();
 
     /**
-     * <code>double Currency = 2617;</code>
+     * <code>string Currency = 2617;</code>
      * @return The currency.
      */
-    double getCurrency();
+    java.lang.String getCurrency();
+    /**
+     * <code>string Currency = 2617;</code>
+     * @return The bytes for currency.
+     */
+    com.google.protobuf.ByteString
+        getCurrencyBytes();
 
     /**
-     * <code>double Issuer = 2618;</code>
+     * <code>string Issuer = 2618;</code>
      * @return The issuer.
      */
-    double getIssuer();
+    java.lang.String getIssuer();
+    /**
+     * <code>string Issuer = 2618;</code>
+     * @return The bytes for issuer.
+     */
+    com.google.protobuf.ByteString
+        getIssuerBytes();
 
     /**
      * <code>.org.example.InstrumentClass Class = 2619;</code>
@@ -16960,6 +16972,8 @@ public final class Market {
       marketID_ = "";
       sectionID_ = "";
       tradeClass_ = "";
+      currency_ = "";
+      issuer_ = "";
       class__ = 0;
       benchmarkSecurityID_ = "";
     }
@@ -17251,25 +17265,81 @@ public final class Market {
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 2617;
-    private double currency_ = 0D;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object currency_ = "";
     /**
-     * <code>double Currency = 2617;</code>
+     * <code>string Currency = 2617;</code>
      * @return The currency.
      */
     @java.lang.Override
-    public double getCurrency() {
-      return currency_;
+    public java.lang.String getCurrency() {
+      java.lang.Object ref = currency_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        currency_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string Currency = 2617;</code>
+     * @return The bytes for currency.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCurrencyBytes() {
+      java.lang.Object ref = currency_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        currency_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int ISSUER_FIELD_NUMBER = 2618;
-    private double issuer_ = 0D;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object issuer_ = "";
     /**
-     * <code>double Issuer = 2618;</code>
+     * <code>string Issuer = 2618;</code>
      * @return The issuer.
      */
     @java.lang.Override
-    public double getIssuer() {
-      return issuer_;
+    public java.lang.String getIssuer() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        issuer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string Issuer = 2618;</code>
+     * @return The bytes for issuer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIssuerBytes() {
+      java.lang.Object ref = issuer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        issuer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int CLASS_FIELD_NUMBER = 2619;
@@ -17463,11 +17533,11 @@ public final class Market {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(tradeClass_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2615, tradeClass_);
       }
-      if (java.lang.Double.doubleToRawLongBits(currency_) != 0) {
-        output.writeDouble(2617, currency_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(currency_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2617, currency_);
       }
-      if (java.lang.Double.doubleToRawLongBits(issuer_) != 0) {
-        output.writeDouble(2618, issuer_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuer_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2618, issuer_);
       }
       if (class__ != org.example.Market.InstrumentClass.CLASS_GovernmentBond.getNumber()) {
         output.writeEnum(2619, class__);
@@ -17532,13 +17602,11 @@ public final class Market {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(tradeClass_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2615, tradeClass_);
       }
-      if (java.lang.Double.doubleToRawLongBits(currency_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(2617, currency_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(currency_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2617, currency_);
       }
-      if (java.lang.Double.doubleToRawLongBits(issuer_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(2618, issuer_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuer_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2618, issuer_);
       }
       if (class__ != org.example.Market.InstrumentClass.CLASS_GovernmentBond.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
@@ -17612,12 +17680,10 @@ public final class Market {
           .equals(other.getSectionID())) return false;
       if (!getTradeClass()
           .equals(other.getTradeClass())) return false;
-      if (java.lang.Double.doubleToLongBits(getCurrency())
-          != java.lang.Double.doubleToLongBits(
-              other.getCurrency())) return false;
-      if (java.lang.Double.doubleToLongBits(getIssuer())
-          != java.lang.Double.doubleToLongBits(
-              other.getIssuer())) return false;
+      if (!getCurrency()
+          .equals(other.getCurrency())) return false;
+      if (!getIssuer()
+          .equals(other.getIssuer())) return false;
       if (class__ != other.class__) return false;
       if (java.lang.Double.doubleToLongBits(getPriceTick())
           != java.lang.Double.doubleToLongBits(
@@ -17671,11 +17737,9 @@ public final class Market {
       hash = (37 * hash) + TRADECLASS_FIELD_NUMBER;
       hash = (53 * hash) + getTradeClass().hashCode();
       hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getCurrency()));
+      hash = (53 * hash) + getCurrency().hashCode();
       hash = (37 * hash) + ISSUER_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getIssuer()));
+      hash = (53 * hash) + getIssuer().hashCode();
       hash = (37 * hash) + CLASS_FIELD_NUMBER;
       hash = (53 * hash) + class__;
       hash = (37 * hash) + PRICETICK_FIELD_NUMBER;
@@ -17845,8 +17909,8 @@ public final class Market {
         marketID_ = "";
         sectionID_ = "";
         tradeClass_ = "";
-        currency_ = 0D;
-        issuer_ = 0D;
+        currency_ = "";
+        issuer_ = "";
         class__ = 0;
         priceTick_ = 0D;
         qtyTick_ = 0D;
@@ -18000,11 +18064,15 @@ public final class Market {
           bitField0_ |= 0x00000040;
           onChanged();
         }
-        if (other.getCurrency() != 0D) {
-          setCurrency(other.getCurrency());
+        if (!other.getCurrency().isEmpty()) {
+          currency_ = other.currency_;
+          bitField0_ |= 0x00000080;
+          onChanged();
         }
-        if (other.getIssuer() != 0D) {
-          setIssuer(other.getIssuer());
+        if (!other.getIssuer().isEmpty()) {
+          issuer_ = other.issuer_;
+          bitField0_ |= 0x00000100;
+          onChanged();
         }
         if (other.class__ != 0) {
           setClass_Value(other.getClass_Value());
@@ -18102,16 +18170,16 @@ public final class Market {
                 bitField0_ |= 0x00000040;
                 break;
               } // case 20922
-              case 20937: {
-                currency_ = input.readDouble();
+              case 20938: {
+                currency_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000080;
                 break;
-              } // case 20937
-              case 20945: {
-                issuer_ = input.readDouble();
+              } // case 20938
+              case 20946: {
+                issuer_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000100;
                 break;
-              } // case 20945
+              } // case 20946
               case 20952: {
                 class__ = input.readEnum();
                 bitField0_ |= 0x00000200;
@@ -18688,66 +18756,146 @@ public final class Market {
         return this;
       }
 
-      private double currency_ ;
+      private java.lang.Object currency_ = "";
       /**
-       * <code>double Currency = 2617;</code>
+       * <code>string Currency = 2617;</code>
        * @return The currency.
        */
-      @java.lang.Override
-      public double getCurrency() {
-        return currency_;
+      public java.lang.String getCurrency() {
+        java.lang.Object ref = currency_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          currency_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>double Currency = 2617;</code>
+       * <code>string Currency = 2617;</code>
+       * @return The bytes for currency.
+       */
+      public com.google.protobuf.ByteString
+          getCurrencyBytes() {
+        java.lang.Object ref = currency_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          currency_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string Currency = 2617;</code>
        * @param value The currency to set.
        * @return This builder for chaining.
        */
-      public Builder setCurrency(double value) {
-
+      public Builder setCurrency(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
         currency_ = value;
         bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>double Currency = 2617;</code>
+       * <code>string Currency = 2617;</code>
        * @return This builder for chaining.
        */
       public Builder clearCurrency() {
+        currency_ = getDefaultInstance().getCurrency();
         bitField0_ = (bitField0_ & ~0x00000080);
-        currency_ = 0D;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Currency = 2617;</code>
+       * @param value The bytes for currency to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrencyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        currency_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
 
-      private double issuer_ ;
+      private java.lang.Object issuer_ = "";
       /**
-       * <code>double Issuer = 2618;</code>
+       * <code>string Issuer = 2618;</code>
        * @return The issuer.
        */
-      @java.lang.Override
-      public double getIssuer() {
-        return issuer_;
+      public java.lang.String getIssuer() {
+        java.lang.Object ref = issuer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          issuer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>double Issuer = 2618;</code>
+       * <code>string Issuer = 2618;</code>
+       * @return The bytes for issuer.
+       */
+      public com.google.protobuf.ByteString
+          getIssuerBytes() {
+        java.lang.Object ref = issuer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          issuer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string Issuer = 2618;</code>
        * @param value The issuer to set.
        * @return This builder for chaining.
        */
-      public Builder setIssuer(double value) {
-
+      public Builder setIssuer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
         issuer_ = value;
         bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
-       * <code>double Issuer = 2618;</code>
+       * <code>string Issuer = 2618;</code>
        * @return This builder for chaining.
        */
       public Builder clearIssuer() {
+        issuer_ = getDefaultInstance().getIssuer();
         bitField0_ = (bitField0_ & ~0x00000100);
-        issuer_ = 0D;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Issuer = 2618;</code>
+       * @param value The bytes for issuer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        issuer_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -19353,7 +19501,7 @@ public final class Market {
       "escription\030\251\024 \001(\t\022\021\n\010ISINCode\030\263\024 \001(\t\022\016\n\005" +
       "CUSIP\030\264\024 \001(\t\022\021\n\010MarketID\030\265\024 \001(\t\022\022\n\tSecti" +
       "onID\030\266\024 \001(\t\022\023\n\nTradeClass\030\267\024 \001(\t\022\021\n\010Curr" +
-      "ency\030\271\024 \001(\001\022\017\n\006Issuer\030\272\024 \001(\001\022,\n\005Class\030\273\024" +
+      "ency\030\271\024 \001(\t\022\017\n\006Issuer\030\272\024 \001(\t\022,\n\005Class\030\273\024" +
       " \001(\0162\034.org.example.InstrumentClass\022\022\n\tPr" +
       "iceTick\030\274\024 \001(\001\022\020\n\007QtyTick\030\275\024 \001(\001\022\027\n\016MinT" +
       "radableQty\030\276\024 \001(\001\022\020\n\007LotSize\030\277\024 \001(\001\022\025\n\014C" +

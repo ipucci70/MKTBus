@@ -3,6 +3,8 @@ package org.example;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+import com.rabbitmq.client.DeliverCallback;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,6 +15,7 @@ import java.io.StringWriter;
 import java.util.TimerTask;
 import java.util.concurrent.TimeoutException;
 import com.google.common.base.Strings;
+import com.google.protobuf.InvalidProtocolBufferException;
 
 import org.example.Market.QuoteRequest;
 import org.example.Market.QuoteResponse;
@@ -25,13 +28,14 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MKTBusSender {
+public class MKTBusManager {
 
-    private static final Logger LOG = LoggerFactory.getLogger(MKTBusSender.class);
+    private static final Logger LOG = LoggerFactory.getLogger(MKTBusManager.class);
 
     private final static String QUOTEREQ_QUEUE_NAME = "quotereq_mkt_queue";
     private final static String QUOTERES_QUEUE_NAME = "quoteres_mkt_queue";
@@ -75,7 +79,7 @@ public class MKTBusSender {
                 .build();
      */
 
-    public MKTBusSender(String hostName, String virtualHost, int port, String userName, String password) 
+    public MKTBusManager(String hostName, String virtualHost, int port, String userName, String password) 
     {
         this.hostName = hostName;
         this.virtualHost = virtualHost;
@@ -141,6 +145,7 @@ public class MKTBusSender {
         // connectionAttempts starts at 0
         if (connectionAttempts >= MAX_CONNECTION_ATTEMPTS) {
             LOG.error("Connection FAILED after too many attempts");
+            isConnecting=false;
             return;
         }
 
@@ -317,9 +322,9 @@ public class MKTBusSender {
     }
 
     private static class ConnectionTask extends TimerTask {
-        private final MKTBusSender busSender;
+        private final MKTBusManager busSender;
 
-        ConnectionTask(MKTBusSender busSender) {
+        ConnectionTask(MKTBusManager busSender) {
             this.busSender = busSender;
         }
 
@@ -332,24 +337,142 @@ public class MKTBusSender {
 
             if (busSender.connect()) {
                 LOG.info("Reconnected. Issuing flush...");
+                isConnecting=false;
+                isConnected=true;
             }
         }
     }
-/* 
-    private static class AMQPConnectionListener implements ExceptionListener {
-        private static final Logger LOG = LoggerFactory.getLogger(AMQPConnectionListener.class);
 
-        private final AMQPClient client;
-
-        public AMQPConnectionListener(AMQPClient client) {
-            this.client = client;
-        }
-        @Override
-        public void onException(@NotNull JMSException e) {
-            LOG.error("Exception listener invoked: {}", e.getLocalizedMessage());
-            client.onConnectionLost();
-        }
+    @FunctionalInterface
+    public interface QuoteRequestCallback{
+        void handle(QuoteRequest quoteRequest);
     }
-        */
+
+    @FunctionalInterface
+    public interface QuoteCallback{
+        void handle(Quote quote);
+    }
+
+    @FunctionalInterface
+    public interface QuoteResponseCallback{
+        void handle(QuoteResponse quoteResponse);
+    }
+
+    @FunctionalInterface
+    public interface PriceCallback{
+        void handle(Price price);
+    }
+
+    public boolean listenQuoteRequest(QuoteRequestCallback quoteRequestCallback){
+
+        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+            byte[] body = delivery.getBody();
+            try {
+                // Decode the Protocol Buffer message
+                QuoteRequest quoteRequest = QuoteRequest.parseFrom(body);
+                LOG.info("received a quote request from bus" + quoteRequest.toString());
+                quoteRequestCallback.handle(quoteRequest);
+            } catch (InvalidProtocolBufferException e) {
+                LOG.error("Failed to parse Protocol Buffer message: " + 
+                e.getLocalizedMessage(),
+                Utils.stackTraceToString(e));
+            }
+        };
+
+        try {
+            busChannel.basicConsume(QUOTEREQ_QUEUE_NAME, true, deliverCallback, consumerTag -> {});
+        }catch (IOException e){
+            LOG.error("Exception in basicConsume: " + 
+            e.getLocalizedMessage(),
+            Utils.stackTraceToString(e));
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean listenQuote(QuoteCallback quoteCallback){
+
+        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+            byte[] body = delivery.getBody();
+            try {
+                // Decode the Protocol Buffer message
+                Quote quote = Quote.parseFrom(body);
+                LOG.info("received a quote from bus" + quote.toString());
+                quoteCallback.handle(quote);
+            } catch (InvalidProtocolBufferException e) {
+                LOG.error("Failed to parse Protocol Buffer message: " + 
+                e.getLocalizedMessage(),
+                Utils.stackTraceToString(e));
+            }
+        };
+
+        try {
+            busChannel.basicConsume(QUOTE_QUEUE_NAME, true, deliverCallback, consumerTag -> {});
+        }catch (IOException e){
+            LOG.error("Exception in basicConsume: " + 
+            e.getLocalizedMessage(),
+            Utils.stackTraceToString(e));
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean listenQuoteResponse(QuoteResponseCallback quoteResponseCallback){
+
+        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+            byte[] body = delivery.getBody();
+            try {
+                // Decode the Protocol Buffer message
+                QuoteResponse quoteResponse = QuoteResponse.parseFrom(body);
+                LOG.info("received a quote response from bus" + quoteResponse.toString());
+                quoteResponseCallback.handle(quoteResponse);
+            } catch (InvalidProtocolBufferException e) {
+                LOG.error("Failed to parse Protocol Buffer message: " + 
+                e.getLocalizedMessage(),
+                Utils.stackTraceToString(e));
+            }
+        };
+
+        try {
+            busChannel.basicConsume(QUOTERES_QUEUE_NAME, true, deliverCallback, consumerTag -> {});
+        }catch (IOException e){
+            LOG.error("Exception in basicConsume: " + 
+            e.getLocalizedMessage(),
+            Utils.stackTraceToString(e));
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean listenPrice(PriceCallback priceCallback){
+
+        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+            byte[] body = delivery.getBody();
+            try {
+                // Decode the Protocol Buffer message
+                Price price = Price.parseFrom(body);
+                LOG.info("received a price from bus" + price.toString());
+                priceCallback.handle(price);
+            } catch (InvalidProtocolBufferException e) {
+                LOG.error("Failed to parse Protocol Buffer message: " + 
+                e.getLocalizedMessage(),
+                Utils.stackTraceToString(e));
+            }
+        };
+
+        try {
+            busChannel.basicConsume(PRICE_QUEUE_NAME, true, deliverCallback, consumerTag -> {});
+        }catch (IOException e){
+            LOG.error("Exception in basicConsume: " + 
+            e.getLocalizedMessage(),
+            Utils.stackTraceToString(e));
+            return false;
+        }
+
+        return true;
+    }
 }
 

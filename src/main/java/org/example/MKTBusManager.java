@@ -37,11 +37,17 @@ public class MKTBusManager {
 
     private static final Logger LOG = LoggerFactory.getLogger(MKTBusManager.class);
 
-    private final static String QUOTEREQ_QUEUE_NAME = "quotereq_mkt_queue";
-    private final static String QUOTERES_QUEUE_NAME = "quoteres_mkt_queue";
-    private final static String QUOTE_QUEUE_NAME = "quote_mkt_queue";
-    private final static String TRADE_QUEUE_NAME = "quote_mkt_queue";
-    private final static String PRICE_QUEUE_NAME = "prc_mkt_queue";
+    private final static String QUOTEREQ_QUEUE_NAME_OUT = "quotereq_mkt_queue_out";
+    private final static String QUOTERES_QUEUE_NAME_OUT = "quoteres_mkt_queue_out";
+    private final static String QUOTE_QUEUE_NAME_OUT = "quote_mkt_queue_out";
+    private final static String TRADE_QUEUE_NAME_OUT = "quote_mkt_queue_out";
+    private final static String PRICE_QUEUE_NAME_OUT = "prc_mkt_queue_out";
+
+    private final static String QUOTEREQ_QUEUE_NAME_IN = "quotereq_mkt_queue_in";
+    private final static String QUOTERES_QUEUE_NAME_IN = "quoteres_mkt_queue_in";
+    private final static String QUOTE_QUEUE_NAME_IN = "quote_mkt_queue_in";
+    private final static String TRADE_QUEUE_NAME_IN = "quote_mkt_queue_in";
+
     private final static String MISSING_CONNECTION = "Missing Connection";
     private final static String MISSING_CHANNEL = "Missing Channel";
     private final static String SEND_ERROR = "Send Error";
@@ -63,21 +69,6 @@ public class MKTBusManager {
 
     private static volatile boolean isConnecting;
     private static volatile boolean isConnected;
-
-
-    /*
-     
-       QuoteRequestLeg firstLeg = QuoteRequestLeg.newBuilder()
-        .setSecurityID("first")
-        .setPrice(100)
-        .setQuantity(1000)
-        .build();
-
-        QuoteRequest quoteRequest = QuoteRequest.newBuilder()
-                .setRequestID("1234")
-                .setFirstLeg(firstLeg)
-                .build();
-     */
 
     public MKTBusManager(String hostName, String virtualHost, int port, String userName, String password) 
     {
@@ -118,18 +109,28 @@ public class MKTBusManager {
 
             busChannel = busConnection.createChannel();
             busChannel.exchangeDeclare(EXCHANGE_NAME, "topic");
-            busChannel.queueDeclare(QUOTEREQ_QUEUE_NAME, false, false, false, null);
-            busChannel.queueDeclare(QUOTERES_QUEUE_NAME, false, false, false, null);
-            busChannel.queueDeclare(QUOTE_QUEUE_NAME, false, false, false, null);
-            busChannel.queueDeclare(TRADE_QUEUE_NAME, false, false, false, null);
-            busChannel.queueDeclare(PRICE_QUEUE_NAME, false, false, false, null);
+            busChannel.queueDeclare(QUOTEREQ_QUEUE_NAME_OUT, false, false, false, null);
+            busChannel.queueDeclare(QUOTERES_QUEUE_NAME_OUT, false, false, false, null);
+            busChannel.queueDeclare(QUOTE_QUEUE_NAME_OUT, false, false, false, null);
+            busChannel.queueDeclare(TRADE_QUEUE_NAME_OUT, false, false, false, null);
+            busChannel.queueDeclare(PRICE_QUEUE_NAME_OUT, false, false, false, null);
+            busChannel.queueDeclare(QUOTEREQ_QUEUE_NAME_IN, false, false, false, null);
+            busChannel.queueDeclare(QUOTERES_QUEUE_NAME_IN, false, false, false, null);
+            busChannel.queueDeclare(QUOTE_QUEUE_NAME_IN, false, false, false, null);
+            busChannel.queueDeclare(TRADE_QUEUE_NAME_IN, false, false, false, null);
+        
             LOG.info("successfully created bus channel {}@{}, binding queues", userName, hostName);
             
-            busChannel.queueBind(QUOTEREQ_QUEUE_NAME, EXCHANGE_NAME, "QUOTEREQ.BOND.*.*");
-            busChannel.queueBind(QUOTE_QUEUE_NAME, EXCHANGE_NAME, "QUOTE.BOND.*.*");
-            busChannel.queueBind(QUOTERES_QUEUE_NAME, EXCHANGE_NAME, "QUOTERES.BOND.*.*");
-            busChannel.queueBind(TRADE_QUEUE_NAME, EXCHANGE_NAME, "TRADE.BOND.*.*");
-            busChannel.queueBind(PRICE_QUEUE_NAME, EXCHANGE_NAME, "PRICE.BOND.#");
+            busChannel.queueBind(QUOTEREQ_QUEUE_NAME_OUT, EXCHANGE_NAME, "QUOTEREQ.BOND.*.*");
+            busChannel.queueBind(QUOTE_QUEUE_NAME_OUT, EXCHANGE_NAME, "QUOTE.BOND.*.*");
+            busChannel.queueBind(QUOTERES_QUEUE_NAME_OUT, EXCHANGE_NAME, "QUOTERES.BOND.*.*");
+            busChannel.queueBind(TRADE_QUEUE_NAME_OUT, EXCHANGE_NAME, "TRADE.BOND.*.*");
+            busChannel.queueBind(PRICE_QUEUE_NAME_OUT, EXCHANGE_NAME, "PRICE.BOND.#");
+            busChannel.queueBind(QUOTEREQ_QUEUE_NAME_IN, EXCHANGE_NAME, "QUOTEREQ.BOND.*.*");
+            busChannel.queueBind(QUOTE_QUEUE_NAME_IN, EXCHANGE_NAME, "QUOTE.BOND.*.*");
+            busChannel.queueBind(QUOTERES_QUEUE_NAME_IN, EXCHANGE_NAME, "QUOTERES.BOND.*.*");
+            busChannel.queueBind(TRADE_QUEUE_NAME_IN, EXCHANGE_NAME, "TRADE.BOND.*.*");
+
             isConnecting=false;
             isConnected=true;
             return true;
@@ -171,6 +172,18 @@ public class MKTBusManager {
         }
     }
 
+    public boolean waitForConnection() {
+        synchronized (this) {
+            while (isConnecting) {
+                try {
+                    this.wait();
+                } catch (InterruptedException ignored) { }
+            }
+        }
+        return true;
+    }
+
+    //used to send transactions to matching engine
     public String SendOnBus(QuoteRequest quoteRequest) throws IOException
     {
         if (busConnection==null){
@@ -181,7 +194,7 @@ public class MKTBusManager {
         }
         byte[] serializedQuoteRequest = quoteRequest.toByteArray();
         try {
-            busChannel.basicPublish("", QUOTEREQ_QUEUE_NAME, null, serializedQuoteRequest);
+            busChannel.basicPublish("", QUOTEREQ_QUEUE_NAME_OUT, null, serializedQuoteRequest);
         }
         catch (IOException  e){
             LOG.error("Error sending Quote Request " + quoteRequest + e.getLocalizedMessage(), Utils.stackTraceToString(e));
@@ -191,6 +204,7 @@ public class MKTBusManager {
         return SENT_OK;
     }
 
+    //used to send transactions to matching engine
     public String SendOnBus(QuoteResponse quoteResponse) throws IOException
     {
         if (busConnection==null){
@@ -201,7 +215,7 @@ public class MKTBusManager {
         }
         byte[] serializedQuoteResponse = quoteResponse.toByteArray();
         try {
-            busChannel.basicPublish("", QUOTERES_QUEUE_NAME, null, serializedQuoteResponse);
+            busChannel.basicPublish("", QUOTERES_QUEUE_NAME_OUT, null, serializedQuoteResponse);
         }
         catch (IOException  e){
             LOG.error("Error sending Quote Response " + quoteResponse + e.getLocalizedMessage(), Utils.stackTraceToString(e));
@@ -211,6 +225,7 @@ public class MKTBusManager {
         return SENT_OK;
     }
 
+    //used to send transactions to matching engine
     public String SendOnBus(Quote quote) throws IOException
     {
         if (busConnection==null){
@@ -221,7 +236,7 @@ public class MKTBusManager {
         }
         byte[] serializedQuote = quote.toByteArray();
         try{
-            busChannel.basicPublish("", QUOTE_QUEUE_NAME, null, serializedQuote);
+            busChannel.basicPublish("", QUOTE_QUEUE_NAME_OUT, null, serializedQuote);
         }
         catch (IOException  e){
             LOG.error("Error sending Quote" + quote + e.getLocalizedMessage(), Utils.stackTraceToString(e));
@@ -231,6 +246,7 @@ public class MKTBusManager {
         return SENT_OK;
     }
 
+    //used to publish prices
     public String SendOnBus(Price price) throws IOException
     {
         if (busConnection==null){
@@ -241,7 +257,7 @@ public class MKTBusManager {
         }
         byte[] serializedPrice = price.toByteArray();
         try{
-            busChannel.basicPublish("", PRICE_QUEUE_NAME, null, serializedPrice);
+            busChannel.basicPublish("", PRICE_QUEUE_NAME_OUT, null, serializedPrice);
         }
         catch (IOException  e){
             LOG.error("Error sending Price " + price + e.getLocalizedMessage(), Utils.stackTraceToString(e));
@@ -363,7 +379,8 @@ public class MKTBusManager {
         void handle(Price price);
     }
 
-    public boolean listenQuoteRequest(QuoteRequestCallback quoteRequestCallback){
+    //used by matching engine to receive transactions
+    public boolean receiveQuoteRequest(QuoteRequestCallback quoteRequestCallback){
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             byte[] body = delivery.getBody();
@@ -380,7 +397,7 @@ public class MKTBusManager {
         };
 
         try {
-            busChannel.basicConsume(QUOTEREQ_QUEUE_NAME, true, deliverCallback, consumerTag -> {});
+            busChannel.basicConsume(QUOTEREQ_QUEUE_NAME_OUT, true, deliverCallback, consumerTag -> {});
         }catch (IOException e){
             LOG.error("Exception in basicConsume: " + 
             e.getLocalizedMessage(),
@@ -391,7 +408,8 @@ public class MKTBusManager {
         return true;
     }
 
-    public boolean listenQuote(QuoteCallback quoteCallback){
+    //used by matching engine to receive transactions
+    public boolean receiveQuote(QuoteCallback quoteCallback){
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             byte[] body = delivery.getBody();
@@ -408,7 +426,7 @@ public class MKTBusManager {
         };
 
         try {
-            busChannel.basicConsume(QUOTE_QUEUE_NAME, true, deliverCallback, consumerTag -> {});
+            busChannel.basicConsume(QUOTE_QUEUE_NAME_OUT, true, deliverCallback, consumerTag -> {});
         }catch (IOException e){
             LOG.error("Exception in basicConsume: " + 
             e.getLocalizedMessage(),
@@ -419,7 +437,8 @@ public class MKTBusManager {
         return true;
     }
 
-    public boolean listenQuoteResponse(QuoteResponseCallback quoteResponseCallback){
+    //used by matching engine to receive transactions
+    public boolean receiveQuoteResponse(QuoteResponseCallback quoteResponseCallback){
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             byte[] body = delivery.getBody();
@@ -436,7 +455,7 @@ public class MKTBusManager {
         };
 
         try {
-            busChannel.basicConsume(QUOTERES_QUEUE_NAME, true, deliverCallback, consumerTag -> {});
+            busChannel.basicConsume(QUOTERES_QUEUE_NAME_OUT, true, deliverCallback, consumerTag -> {});
         }catch (IOException e){
             LOG.error("Exception in basicConsume: " + 
             e.getLocalizedMessage(),
@@ -447,7 +466,8 @@ public class MKTBusManager {
         return true;
     }
 
-    public boolean listenPrice(PriceCallback priceCallback){
+    //used to read prices received by the CIP
+    public boolean receivePrice(PriceCallback priceCallback){
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             byte[] body = delivery.getBody();
@@ -464,7 +484,7 @@ public class MKTBusManager {
         };
 
         try {
-            busChannel.basicConsume(PRICE_QUEUE_NAME, true, deliverCallback, consumerTag -> {});
+            busChannel.basicConsume(PRICE_QUEUE_NAME_OUT, true, deliverCallback, consumerTag -> {});
         }catch (IOException e){
             LOG.error("Exception in basicConsume: " + 
             e.getLocalizedMessage(),

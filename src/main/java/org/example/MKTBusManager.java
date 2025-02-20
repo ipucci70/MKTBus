@@ -5,8 +5,8 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.beans.ExceptionListener;
 import java.io.IOException;
@@ -35,7 +35,7 @@ import java.util.TimerTask;
 
 public class MKTBusManager {
 
-    private static final Logger LOG = LoggerFactory.getLogger(MKTBusManager.class);
+    private static final Logger LOG = LogManager.getLogger(MKTBusManager.class);
 
     private final static String QUOTEREQ_QUEUE_NAME_OUT = "quotereq_mkt_queue_out";
     private final static String QUOTERES_QUEUE_NAME_OUT = "quoteres_mkt_queue_out";

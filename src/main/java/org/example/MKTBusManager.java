@@ -17,10 +17,10 @@ import java.util.concurrent.TimeoutException;
 import com.google.common.base.Strings;
 import com.google.protobuf.InvalidProtocolBufferException;
 
-import org.example.Market.QuoteRequest;
-import org.example.Market.QuoteResponse;
-import org.example.Market.Price;
-import org.example.Market.Quote;
+import org.example.Market.MarketQuoteRequest;
+import org.example.Market.MarketQuoteResponse;
+import org.example.Market.MarketPrice;
+import org.example.Market.MarketQuote;
 import org.example.Utils;
 import org.example.Market.PriceType;
 
@@ -184,7 +184,7 @@ public class MKTBusManager {
     }
 
     //used to send transactions to matching engine
-    public String SendOnBus(QuoteRequest quoteRequest) throws IOException
+    public String SendOnBus(MarketQuoteRequest marketQuoteRequest) throws IOException
     {
         if (busConnection==null){
             return MISSING_CONNECTION;
@@ -192,20 +192,20 @@ public class MKTBusManager {
         if (busChannel==null){
             return MISSING_CHANNEL;
         }
-        byte[] serializedQuoteRequest = quoteRequest.toByteArray();
+        byte[] serializedQuoteRequest = marketQuoteRequest.toByteArray();
         try {
             busChannel.basicPublish("", QUOTEREQ_QUEUE_NAME_OUT, null, serializedQuoteRequest);
         }
         catch (IOException  e){
-            LOG.error("Error sending Quote Request " + quoteRequest + e.getLocalizedMessage(), Utils.stackTraceToString(e));
+            LOG.error("Error sending Quote Request " + marketQuoteRequest + e.getLocalizedMessage(), Utils.stackTraceToString(e));
             return SEND_ERROR;
         }
-        LOG.info(" [x] Sent '" + quoteRequest + "'");
+        LOG.info(" [x] Sent '" + marketQuoteRequest + "'");
         return SENT_OK;
     }
 
     //used to send transactions to matching engine
-    public String SendOnBus(QuoteResponse quoteResponse) throws IOException
+    public String SendOnBus(MarketQuoteResponse marketQuoteResponse) throws IOException
     {
         if (busConnection==null){
             return MISSING_CONNECTION;
@@ -213,20 +213,20 @@ public class MKTBusManager {
         if (busChannel==null){
             return MISSING_CHANNEL;
         }
-        byte[] serializedQuoteResponse = quoteResponse.toByteArray();
+        byte[] serializedQuoteResponse = marketQuoteResponse.toByteArray();
         try {
             busChannel.basicPublish("", QUOTERES_QUEUE_NAME_OUT, null, serializedQuoteResponse);
         }
         catch (IOException  e){
-            LOG.error("Error sending Quote Response " + quoteResponse + e.getLocalizedMessage(), Utils.stackTraceToString(e));
+            LOG.error("Error sending Quote Response " + marketQuoteResponse + e.getLocalizedMessage(), Utils.stackTraceToString(e));
             return SEND_ERROR;
         }
-        LOG.info(" [x] Sent '" + quoteResponse + "'");
+        LOG.info(" [x] Sent '" + marketQuoteResponse + "'");
         return SENT_OK;
     }
 
     //used to send transactions to matching engine
-    public String SendOnBus(Quote quote) throws IOException
+    public String SendOnBus(MarketQuote marketQuote) throws IOException
     {
         if (busConnection==null){
             return MISSING_CONNECTION;
@@ -234,20 +234,20 @@ public class MKTBusManager {
         if (busChannel==null){
             return MISSING_CHANNEL;
         }
-        byte[] serializedQuote = quote.toByteArray();
+        byte[] serializedQuote = marketQuote.toByteArray();
         try{
             busChannel.basicPublish("", QUOTE_QUEUE_NAME_OUT, null, serializedQuote);
         }
         catch (IOException  e){
-            LOG.error("Error sending Quote" + quote + e.getLocalizedMessage(), Utils.stackTraceToString(e));
+            LOG.error("Error sending Quote" + marketQuote + e.getLocalizedMessage(), Utils.stackTraceToString(e));
             return SEND_ERROR;
         }
-        LOG.info(" [x] Sent '" + quote + "'");
+        LOG.info(" [x] Sent '" + marketQuote + "'");
         return SENT_OK;
     }
 
     //used to publish prices
-    public String SendOnBus(Price price) throws IOException
+    public String SendOnBus(MarketPrice marketPrice) throws IOException
     {
         if (busConnection==null){
             return MISSING_CONNECTION;
@@ -255,15 +255,15 @@ public class MKTBusManager {
         if (busChannel==null){
             return MISSING_CHANNEL;
         }
-        byte[] serializedPrice = price.toByteArray();
+        byte[] serializedPrice = marketPrice.toByteArray();
         try{
             busChannel.basicPublish("", PRICE_QUEUE_NAME_OUT, null, serializedPrice);
         }
         catch (IOException  e){
-            LOG.error("Error sending Price " + price + e.getLocalizedMessage(), Utils.stackTraceToString(e));
+            LOG.error("Error sending Price " + marketPrice + e.getLocalizedMessage(), Utils.stackTraceToString(e));
             return SEND_ERROR;
         }
-        LOG.info(" [x] Sent '" + price + "'");
+        LOG.info(" [x] Sent '" + marketPrice + "'");
         return SENT_OK;
     }
 
@@ -292,26 +292,26 @@ public class MKTBusManager {
      * 
      * 
      */
-    public String GetTopic(QuoteRequest quoteRequest)
+    public String GetTopic(MarketQuoteRequest marketQuoteRequest)
     {
-        return "QUOTEREQ." + "BOND." + quoteRequest.getTypeValue() + "." + quoteRequest.getIssuerMemberID() + "." + quoteRequest.getFirstLeg().getSecurityID();
+        return "QUOTEREQ." + "BOND." + marketQuoteRequest.getTypeValue() + "." + marketQuoteRequest.getIssuerMemberID() + "." + marketQuoteRequest.getFirstLeg().getSecurityID();
     }
 
-    public String GetTopic(Quote quote)
+    public String GetTopic(MarketQuote marketQuote)
     {
-        return "QUOTE." + "BOND." + quote.getTypeValue() + "." + quote.getCounterpartMemberID() + "." + quote.getFirstLeg().getSecurityID();
+        return "QUOTE." + "BOND." + marketQuote.getTypeValue() + "." + marketQuote.getCounterpartMemberID() + "." + marketQuote.getFirstLeg().getSecurityID();
     }
 
-    public String GetTopic(QuoteResponse quoteResponse)
+    public String GetTopic(MarketQuoteResponse marketQuoteResponse)
     {
-        return "QUOTERES." + "BOND." + quoteResponse.getTypeValue() + "." + quoteResponse.getIssuerMemberID() + "." + quoteResponse.getFirstLeg().getSecurityID();
+        return "QUOTERES." + "BOND." + marketQuoteResponse.getTypeValue() + "." + marketQuoteResponse.getIssuerMemberID() + "." + marketQuoteResponse.getFirstLeg().getSecurityID();
     }
 
-    public String GetTopic(Price price)
+    public String GetTopic(MarketPrice marketPrice)
     {
         String  priceType;
 
-        switch (price.getType().getNumber()){
+        switch (marketPrice.getType().getNumber()){
             case PriceType.TYPE_Composite_VALUE:
                 priceType = new String("COMP");
                 break;
@@ -334,7 +334,7 @@ public class MKTBusManager {
                 priceType = new String("");
                 break;
         }
-        return "PRICE." + "BOND." + priceType + "." + price.getSecurityID();
+        return "PRICE." + "BOND." + priceType + "." + marketPrice.getSecurityID();
     }
 
     private static class ConnectionTask extends TimerTask {
@@ -361,34 +361,34 @@ public class MKTBusManager {
 
     @FunctionalInterface
     public interface QuoteRequestCallback{
-        void handle(QuoteRequest quoteRequest);
+        void handle(MarketQuoteRequest marketQuoteRequest);
     }
 
     @FunctionalInterface
     public interface QuoteCallback{
-        void handle(Quote quote);
+        void handle(MarketQuote marketQuote);
     }
 
     @FunctionalInterface
     public interface QuoteResponseCallback{
-        void handle(QuoteResponse quoteResponse);
+        void handle(MarketQuoteResponse marketQuoteResponse);
     }
 
     @FunctionalInterface
     public interface PriceCallback{
-        void handle(Price price);
+        void handle(MarketPrice marketPrice);
     }
 
     //used by matching engine to receive transactions
-    public boolean receiveQuoteRequest(QuoteRequestCallback quoteRequestCallback){
+    public boolean receiveMarketQuoteRequest(QuoteRequestCallback quoteRequestCallback){
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             byte[] body = delivery.getBody();
             try {
                 // Decode the Protocol Buffer message
-                QuoteRequest quoteRequest = QuoteRequest.parseFrom(body);
-                LOG.info("received a quote request from bus" + quoteRequest.toString());
-                quoteRequestCallback.handle(quoteRequest);
+                MarketQuoteRequest marketQuoteRequest = MarketQuoteRequest.parseFrom(body);
+                LOG.info("received a quote request from bus" + marketQuoteRequest.toString());
+                quoteRequestCallback.handle(marketQuoteRequest);
             } catch (InvalidProtocolBufferException e) {
                 LOG.error("Failed to parse Protocol Buffer message: " + 
                 e.getLocalizedMessage(),
@@ -409,15 +409,15 @@ public class MKTBusManager {
     }
 
     //used by matching engine to receive transactions
-    public boolean receiveQuote(QuoteCallback quoteCallback){
+    public boolean receiveMarketQuote(QuoteCallback quoteCallback){
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             byte[] body = delivery.getBody();
             try {
                 // Decode the Protocol Buffer message
-                Quote quote = Quote.parseFrom(body);
-                LOG.info("received a quote from bus" + quote.toString());
-                quoteCallback.handle(quote);
+                MarketQuote marketQuote = MarketQuote.parseFrom(body);
+                LOG.info("received a quote from bus" + marketQuote.toString());
+                quoteCallback.handle(marketQuote);
             } catch (InvalidProtocolBufferException e) {
                 LOG.error("Failed to parse Protocol Buffer message: " + 
                 e.getLocalizedMessage(),
@@ -438,15 +438,15 @@ public class MKTBusManager {
     }
 
     //used by matching engine to receive transactions
-    public boolean receiveQuoteResponse(QuoteResponseCallback quoteResponseCallback){
+    public boolean receiveMarketQuoteResponse(QuoteResponseCallback quoteResponseCallback){
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             byte[] body = delivery.getBody();
             try {
                 // Decode the Protocol Buffer message
-                QuoteResponse quoteResponse = QuoteResponse.parseFrom(body);
-                LOG.info("received a quote response from bus" + quoteResponse.toString());
-                quoteResponseCallback.handle(quoteResponse);
+                MarketQuoteResponse marketQuoteResponse = MarketQuoteResponse.parseFrom(body);
+                LOG.info("received a quote response from bus" + marketQuoteResponse.toString());
+                quoteResponseCallback.handle(marketQuoteResponse);
             } catch (InvalidProtocolBufferException e) {
                 LOG.error("Failed to parse Protocol Buffer message: " + 
                 e.getLocalizedMessage(),
@@ -467,15 +467,15 @@ public class MKTBusManager {
     }
 
     //used to read prices received by the CIP
-    public boolean receivePrice(PriceCallback priceCallback){
+    public boolean receiveMarketPrice(PriceCallback priceCallback){
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             byte[] body = delivery.getBody();
             try {
                 // Decode the Protocol Buffer message
-                Price price = Price.parseFrom(body);
-                LOG.info("received a price from bus" + price.toString());
-                priceCallback.handle(price);
+                MarketPrice marketPrice = MarketPrice.parseFrom(body);
+                LOG.info("received a price from bus" + marketPrice.toString());
+                priceCallback.handle(marketPrice);
             } catch (InvalidProtocolBufferException e) {
                 LOG.error("Failed to parse Protocol Buffer message: " + 
                 e.getLocalizedMessage(),

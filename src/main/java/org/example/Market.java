@@ -1186,8 +1186,8 @@ public final class Market {
     // @@protoc_insertion_point(enum_scope:org.example.InstrumentClass)
   }
 
-  public interface QuoteRequestLegOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.example.QuoteRequestLeg)
+  public interface QuoteLegOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.example.QuoteLeg)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1254,12 +1254,12 @@ public final class Market {
    * Leg fields from 1 to 149
    * </pre>
    *
-   * Protobuf type {@code org.example.QuoteRequestLeg}
+   * Protobuf type {@code org.example.QuoteLeg}
    */
-  public static final class QuoteRequestLeg extends
+  public static final class QuoteLeg extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:org.example.QuoteRequestLeg)
-      QuoteRequestLegOrBuilder {
+      // @@protoc_insertion_point(message_implements:org.example.QuoteLeg)
+      QuoteLegOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -1268,13 +1268,13 @@ public final class Market {
         /* minor= */ 29,
         /* patch= */ 3,
         /* suffix= */ "",
-        QuoteRequestLeg.class.getName());
+        QuoteLeg.class.getName());
     }
-    // Use QuoteRequestLeg.newBuilder() to construct.
-    private QuoteRequestLeg(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use QuoteLeg.newBuilder() to construct.
+    private QuoteLeg(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private QuoteRequestLeg() {
+    private QuoteLeg() {
       securityID_ = "";
       verb_ = 0;
       marketID_ = "";
@@ -1282,15 +1282,15 @@ public final class Market {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.example.Market.internal_static_org_example_QuoteRequestLeg_descriptor;
+      return org.example.Market.internal_static_org_example_QuoteLeg_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.example.Market.internal_static_org_example_QuoteRequestLeg_fieldAccessorTable
+      return org.example.Market.internal_static_org_example_QuoteLeg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.example.Market.QuoteRequestLeg.class, org.example.Market.QuoteRequestLeg.Builder.class);
+              org.example.Market.QuoteLeg.class, org.example.Market.QuoteLeg.Builder.class);
     }
 
     public static final int SECURITYID_FIELD_NUMBER = 1;
@@ -1513,10 +1513,10 @@ public final class Market {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.example.Market.QuoteRequestLeg)) {
+      if (!(obj instanceof org.example.Market.QuoteLeg)) {
         return super.equals(obj);
       }
-      org.example.Market.QuoteRequestLeg other = (org.example.Market.QuoteRequestLeg) obj;
+      org.example.Market.QuoteLeg other = (org.example.Market.QuoteLeg) obj;
 
       if (!getSecurityID()
           .equals(other.getSecurityID())) return false;
@@ -1569,44 +1569,44 @@ public final class Market {
       return hash;
     }
 
-    public static org.example.Market.QuoteRequestLeg parseFrom(
+    public static org.example.Market.QuoteLeg parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.QuoteRequestLeg parseFrom(
+    public static org.example.Market.QuoteLeg parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.QuoteRequestLeg parseFrom(
+    public static org.example.Market.QuoteLeg parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.QuoteRequestLeg parseFrom(
+    public static org.example.Market.QuoteLeg parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.QuoteRequestLeg parseFrom(byte[] data)
+    public static org.example.Market.QuoteLeg parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.QuoteRequestLeg parseFrom(
+    public static org.example.Market.QuoteLeg parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.QuoteRequestLeg parseFrom(java.io.InputStream input)
+    public static org.example.Market.QuoteLeg parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.QuoteRequestLeg parseFrom(
+    public static org.example.Market.QuoteLeg parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1614,26 +1614,26 @@ public final class Market {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.example.Market.QuoteRequestLeg parseDelimitedFrom(java.io.InputStream input)
+    public static org.example.Market.QuoteLeg parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.example.Market.QuoteRequestLeg parseDelimitedFrom(
+    public static org.example.Market.QuoteLeg parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.example.Market.QuoteRequestLeg parseFrom(
+    public static org.example.Market.QuoteLeg parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.QuoteRequestLeg parseFrom(
+    public static org.example.Market.QuoteLeg parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1646,7 +1646,7 @@ public final class Market {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.example.Market.QuoteRequestLeg prototype) {
+    public static Builder newBuilder(org.example.Market.QuoteLeg prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1666,26 +1666,26 @@ public final class Market {
      * Leg fields from 1 to 149
      * </pre>
      *
-     * Protobuf type {@code org.example.QuoteRequestLeg}
+     * Protobuf type {@code org.example.QuoteLeg}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.example.QuoteRequestLeg)
-        org.example.Market.QuoteRequestLegOrBuilder {
+        // @@protoc_insertion_point(builder_implements:org.example.QuoteLeg)
+        org.example.Market.QuoteLegOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.example.Market.internal_static_org_example_QuoteRequestLeg_descriptor;
+        return org.example.Market.internal_static_org_example_QuoteLeg_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.example.Market.internal_static_org_example_QuoteRequestLeg_fieldAccessorTable
+        return org.example.Market.internal_static_org_example_QuoteLeg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.example.Market.QuoteRequestLeg.class, org.example.Market.QuoteRequestLeg.Builder.class);
+                org.example.Market.QuoteLeg.class, org.example.Market.QuoteLeg.Builder.class);
       }
 
-      // Construct using org.example.Market.QuoteRequestLeg.newBuilder()
+      // Construct using org.example.Market.QuoteLeg.newBuilder()
       private Builder() {
 
       }
@@ -1712,17 +1712,17 @@ public final class Market {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.example.Market.internal_static_org_example_QuoteRequestLeg_descriptor;
+        return org.example.Market.internal_static_org_example_QuoteLeg_descriptor;
       }
 
       @java.lang.Override
-      public org.example.Market.QuoteRequestLeg getDefaultInstanceForType() {
-        return org.example.Market.QuoteRequestLeg.getDefaultInstance();
+      public org.example.Market.QuoteLeg getDefaultInstanceForType() {
+        return org.example.Market.QuoteLeg.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.example.Market.QuoteRequestLeg build() {
-        org.example.Market.QuoteRequestLeg result = buildPartial();
+      public org.example.Market.QuoteLeg build() {
+        org.example.Market.QuoteLeg result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1730,14 +1730,14 @@ public final class Market {
       }
 
       @java.lang.Override
-      public org.example.Market.QuoteRequestLeg buildPartial() {
-        org.example.Market.QuoteRequestLeg result = new org.example.Market.QuoteRequestLeg(this);
+      public org.example.Market.QuoteLeg buildPartial() {
+        org.example.Market.QuoteLeg result = new org.example.Market.QuoteLeg(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.example.Market.QuoteRequestLeg result) {
+      private void buildPartial0(org.example.Market.QuoteLeg result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.securityID_ = securityID_;
@@ -1764,16 +1764,16 @@ public final class Market {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.example.Market.QuoteRequestLeg) {
-          return mergeFrom((org.example.Market.QuoteRequestLeg)other);
+        if (other instanceof org.example.Market.QuoteLeg) {
+          return mergeFrom((org.example.Market.QuoteLeg)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.example.Market.QuoteRequestLeg other) {
-        if (other == org.example.Market.QuoteRequestLeg.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.example.Market.QuoteLeg other) {
+        if (other == org.example.Market.QuoteLeg.getDefaultInstance()) return this;
         if (!other.getSecurityID().isEmpty()) {
           securityID_ = other.securityID_;
           bitField0_ |= 0x00000001;
@@ -2202,23 +2202,23 @@ public final class Market {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:org.example.QuoteRequestLeg)
+      // @@protoc_insertion_point(builder_scope:org.example.QuoteLeg)
     }
 
-    // @@protoc_insertion_point(class_scope:org.example.QuoteRequestLeg)
-    private static final org.example.Market.QuoteRequestLeg DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:org.example.QuoteLeg)
+    private static final org.example.Market.QuoteLeg DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.example.Market.QuoteRequestLeg();
+      DEFAULT_INSTANCE = new org.example.Market.QuoteLeg();
     }
 
-    public static org.example.Market.QuoteRequestLeg getDefaultInstance() {
+    public static org.example.Market.QuoteLeg getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<QuoteRequestLeg>
-        PARSER = new com.google.protobuf.AbstractParser<QuoteRequestLeg>() {
+    private static final com.google.protobuf.Parser<QuoteLeg>
+        PARSER = new com.google.protobuf.AbstractParser<QuoteLeg>() {
       @java.lang.Override
-      public QuoteRequestLeg parsePartialFrom(
+      public QuoteLeg parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2237,24 +2237,1193 @@ public final class Market {
       }
     };
 
-    public static com.google.protobuf.Parser<QuoteRequestLeg> parser() {
+    public static com.google.protobuf.Parser<QuoteLeg> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<QuoteRequestLeg> getParserForType() {
+    public com.google.protobuf.Parser<QuoteLeg> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public org.example.Market.QuoteRequestLeg getDefaultInstanceForType() {
+    public org.example.Market.QuoteLeg getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface QuoteRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.example.QuoteRequest)
+  public interface InternalInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.example.InternalInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string SessionID = 1;</code>
+     * @return The sessionID.
+     */
+    java.lang.String getSessionID();
+    /**
+     * <code>string SessionID = 1;</code>
+     * @return The bytes for sessionID.
+     */
+    com.google.protobuf.ByteString
+        getSessionIDBytes();
+
+    /**
+     * <code>string FlowID = 2;</code>
+     * @return The flowID.
+     */
+    java.lang.String getFlowID();
+    /**
+     * <code>string FlowID = 2;</code>
+     * @return The bytes for flowID.
+     */
+    com.google.protobuf.ByteString
+        getFlowIDBytes();
+
+    /**
+     * <code>uint64 TransactionCreationTime = 3;</code>
+     * @return The transactionCreationTime.
+     */
+    long getTransactionCreationTime();
+
+    /**
+     * <code>uint64 SentOnBusTime = 4;</code>
+     * @return The sentOnBusTime.
+     */
+    long getSentOnBusTime();
+
+    /**
+     * <code>uint64 TakenFromBusTime = 5;</code>
+     * @return The takenFromBusTime.
+     */
+    long getTakenFromBusTime();
+
+    /**
+     * <code>uint64 ProcessedTime = 6;</code>
+     * @return The processedTime.
+     */
+    long getProcessedTime();
+
+    /**
+     * <code>uint64 SentBackToBusTime = 7;</code>
+     * @return The sentBackToBusTime.
+     */
+    long getSentBackToBusTime();
+
+    /**
+     * <code>uint64 TakenBackFromBusTime = 8;</code>
+     * @return The takenBackFromBusTime.
+     */
+    long getTakenBackFromBusTime();
+
+    /**
+     * <code>uint64 CloseTransactionTime = 9;</code>
+     * @return The closeTransactionTime.
+     */
+    long getCloseTransactionTime();
+  }
+  /**
+   * Protobuf type {@code org.example.InternalInfo}
+   */
+  public static final class InternalInfo extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:org.example.InternalInfo)
+      InternalInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        InternalInfo.class.getName());
+    }
+    // Use InternalInfo.newBuilder() to construct.
+    private InternalInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private InternalInfo() {
+      sessionID_ = "";
+      flowID_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.example.Market.internal_static_org_example_InternalInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.example.Market.internal_static_org_example_InternalInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.example.Market.InternalInfo.class, org.example.Market.InternalInfo.Builder.class);
+    }
+
+    public static final int SESSIONID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sessionID_ = "";
+    /**
+     * <code>string SessionID = 1;</code>
+     * @return The sessionID.
+     */
+    @java.lang.Override
+    public java.lang.String getSessionID() {
+      java.lang.Object ref = sessionID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sessionID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string SessionID = 1;</code>
+     * @return The bytes for sessionID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSessionIDBytes() {
+      java.lang.Object ref = sessionID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FLOWID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object flowID_ = "";
+    /**
+     * <code>string FlowID = 2;</code>
+     * @return The flowID.
+     */
+    @java.lang.Override
+    public java.lang.String getFlowID() {
+      java.lang.Object ref = flowID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        flowID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string FlowID = 2;</code>
+     * @return The bytes for flowID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFlowIDBytes() {
+      java.lang.Object ref = flowID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        flowID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSACTIONCREATIONTIME_FIELD_NUMBER = 3;
+    private long transactionCreationTime_ = 0L;
+    /**
+     * <code>uint64 TransactionCreationTime = 3;</code>
+     * @return The transactionCreationTime.
+     */
+    @java.lang.Override
+    public long getTransactionCreationTime() {
+      return transactionCreationTime_;
+    }
+
+    public static final int SENTONBUSTIME_FIELD_NUMBER = 4;
+    private long sentOnBusTime_ = 0L;
+    /**
+     * <code>uint64 SentOnBusTime = 4;</code>
+     * @return The sentOnBusTime.
+     */
+    @java.lang.Override
+    public long getSentOnBusTime() {
+      return sentOnBusTime_;
+    }
+
+    public static final int TAKENFROMBUSTIME_FIELD_NUMBER = 5;
+    private long takenFromBusTime_ = 0L;
+    /**
+     * <code>uint64 TakenFromBusTime = 5;</code>
+     * @return The takenFromBusTime.
+     */
+    @java.lang.Override
+    public long getTakenFromBusTime() {
+      return takenFromBusTime_;
+    }
+
+    public static final int PROCESSEDTIME_FIELD_NUMBER = 6;
+    private long processedTime_ = 0L;
+    /**
+     * <code>uint64 ProcessedTime = 6;</code>
+     * @return The processedTime.
+     */
+    @java.lang.Override
+    public long getProcessedTime() {
+      return processedTime_;
+    }
+
+    public static final int SENTBACKTOBUSTIME_FIELD_NUMBER = 7;
+    private long sentBackToBusTime_ = 0L;
+    /**
+     * <code>uint64 SentBackToBusTime = 7;</code>
+     * @return The sentBackToBusTime.
+     */
+    @java.lang.Override
+    public long getSentBackToBusTime() {
+      return sentBackToBusTime_;
+    }
+
+    public static final int TAKENBACKFROMBUSTIME_FIELD_NUMBER = 8;
+    private long takenBackFromBusTime_ = 0L;
+    /**
+     * <code>uint64 TakenBackFromBusTime = 8;</code>
+     * @return The takenBackFromBusTime.
+     */
+    @java.lang.Override
+    public long getTakenBackFromBusTime() {
+      return takenBackFromBusTime_;
+    }
+
+    public static final int CLOSETRANSACTIONTIME_FIELD_NUMBER = 9;
+    private long closeTransactionTime_ = 0L;
+    /**
+     * <code>uint64 CloseTransactionTime = 9;</code>
+     * @return The closeTransactionTime.
+     */
+    @java.lang.Override
+    public long getCloseTransactionTime() {
+      return closeTransactionTime_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(sessionID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, sessionID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(flowID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, flowID_);
+      }
+      if (transactionCreationTime_ != 0L) {
+        output.writeUInt64(3, transactionCreationTime_);
+      }
+      if (sentOnBusTime_ != 0L) {
+        output.writeUInt64(4, sentOnBusTime_);
+      }
+      if (takenFromBusTime_ != 0L) {
+        output.writeUInt64(5, takenFromBusTime_);
+      }
+      if (processedTime_ != 0L) {
+        output.writeUInt64(6, processedTime_);
+      }
+      if (sentBackToBusTime_ != 0L) {
+        output.writeUInt64(7, sentBackToBusTime_);
+      }
+      if (takenBackFromBusTime_ != 0L) {
+        output.writeUInt64(8, takenBackFromBusTime_);
+      }
+      if (closeTransactionTime_ != 0L) {
+        output.writeUInt64(9, closeTransactionTime_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(sessionID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, sessionID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(flowID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, flowID_);
+      }
+      if (transactionCreationTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, transactionCreationTime_);
+      }
+      if (sentOnBusTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, sentOnBusTime_);
+      }
+      if (takenFromBusTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, takenFromBusTime_);
+      }
+      if (processedTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, processedTime_);
+      }
+      if (sentBackToBusTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, sentBackToBusTime_);
+      }
+      if (takenBackFromBusTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, takenBackFromBusTime_);
+      }
+      if (closeTransactionTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, closeTransactionTime_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.example.Market.InternalInfo)) {
+        return super.equals(obj);
+      }
+      org.example.Market.InternalInfo other = (org.example.Market.InternalInfo) obj;
+
+      if (!getSessionID()
+          .equals(other.getSessionID())) return false;
+      if (!getFlowID()
+          .equals(other.getFlowID())) return false;
+      if (getTransactionCreationTime()
+          != other.getTransactionCreationTime()) return false;
+      if (getSentOnBusTime()
+          != other.getSentOnBusTime()) return false;
+      if (getTakenFromBusTime()
+          != other.getTakenFromBusTime()) return false;
+      if (getProcessedTime()
+          != other.getProcessedTime()) return false;
+      if (getSentBackToBusTime()
+          != other.getSentBackToBusTime()) return false;
+      if (getTakenBackFromBusTime()
+          != other.getTakenBackFromBusTime()) return false;
+      if (getCloseTransactionTime()
+          != other.getCloseTransactionTime()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SESSIONID_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionID().hashCode();
+      hash = (37 * hash) + FLOWID_FIELD_NUMBER;
+      hash = (53 * hash) + getFlowID().hashCode();
+      hash = (37 * hash) + TRANSACTIONCREATIONTIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTransactionCreationTime());
+      hash = (37 * hash) + SENTONBUSTIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSentOnBusTime());
+      hash = (37 * hash) + TAKENFROMBUSTIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTakenFromBusTime());
+      hash = (37 * hash) + PROCESSEDTIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProcessedTime());
+      hash = (37 * hash) + SENTBACKTOBUSTIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSentBackToBusTime());
+      hash = (37 * hash) + TAKENBACKFROMBUSTIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTakenBackFromBusTime());
+      hash = (37 * hash) + CLOSETRANSACTIONTIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCloseTransactionTime());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.example.Market.InternalInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.example.Market.InternalInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.example.Market.InternalInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.example.Market.InternalInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.example.Market.InternalInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.example.Market.InternalInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.example.Market.InternalInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.example.Market.InternalInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static org.example.Market.InternalInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static org.example.Market.InternalInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.example.Market.InternalInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.example.Market.InternalInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.example.Market.InternalInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code org.example.InternalInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:org.example.InternalInfo)
+        org.example.Market.InternalInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.example.Market.internal_static_org_example_InternalInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.example.Market.internal_static_org_example_InternalInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.example.Market.InternalInfo.class, org.example.Market.InternalInfo.Builder.class);
+      }
+
+      // Construct using org.example.Market.InternalInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sessionID_ = "";
+        flowID_ = "";
+        transactionCreationTime_ = 0L;
+        sentOnBusTime_ = 0L;
+        takenFromBusTime_ = 0L;
+        processedTime_ = 0L;
+        sentBackToBusTime_ = 0L;
+        takenBackFromBusTime_ = 0L;
+        closeTransactionTime_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.example.Market.internal_static_org_example_InternalInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public org.example.Market.InternalInfo getDefaultInstanceForType() {
+        return org.example.Market.InternalInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.example.Market.InternalInfo build() {
+        org.example.Market.InternalInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.example.Market.InternalInfo buildPartial() {
+        org.example.Market.InternalInfo result = new org.example.Market.InternalInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(org.example.Market.InternalInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sessionID_ = sessionID_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.flowID_ = flowID_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.transactionCreationTime_ = transactionCreationTime_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.sentOnBusTime_ = sentOnBusTime_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.takenFromBusTime_ = takenFromBusTime_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.processedTime_ = processedTime_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.sentBackToBusTime_ = sentBackToBusTime_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.takenBackFromBusTime_ = takenBackFromBusTime_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.closeTransactionTime_ = closeTransactionTime_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.example.Market.InternalInfo) {
+          return mergeFrom((org.example.Market.InternalInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.example.Market.InternalInfo other) {
+        if (other == org.example.Market.InternalInfo.getDefaultInstance()) return this;
+        if (!other.getSessionID().isEmpty()) {
+          sessionID_ = other.sessionID_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getFlowID().isEmpty()) {
+          flowID_ = other.flowID_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getTransactionCreationTime() != 0L) {
+          setTransactionCreationTime(other.getTransactionCreationTime());
+        }
+        if (other.getSentOnBusTime() != 0L) {
+          setSentOnBusTime(other.getSentOnBusTime());
+        }
+        if (other.getTakenFromBusTime() != 0L) {
+          setTakenFromBusTime(other.getTakenFromBusTime());
+        }
+        if (other.getProcessedTime() != 0L) {
+          setProcessedTime(other.getProcessedTime());
+        }
+        if (other.getSentBackToBusTime() != 0L) {
+          setSentBackToBusTime(other.getSentBackToBusTime());
+        }
+        if (other.getTakenBackFromBusTime() != 0L) {
+          setTakenBackFromBusTime(other.getTakenBackFromBusTime());
+        }
+        if (other.getCloseTransactionTime() != 0L) {
+          setCloseTransactionTime(other.getCloseTransactionTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sessionID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                flowID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                transactionCreationTime_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                sentOnBusTime_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                takenFromBusTime_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                processedTime_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                sentBackToBusTime_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                takenBackFromBusTime_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                closeTransactionTime_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object sessionID_ = "";
+      /**
+       * <code>string SessionID = 1;</code>
+       * @return The sessionID.
+       */
+      public java.lang.String getSessionID() {
+        java.lang.Object ref = sessionID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sessionID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string SessionID = 1;</code>
+       * @return The bytes for sessionID.
+       */
+      public com.google.protobuf.ByteString
+          getSessionIDBytes() {
+        java.lang.Object ref = sessionID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sessionID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string SessionID = 1;</code>
+       * @param value The sessionID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sessionID_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string SessionID = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSessionID() {
+        sessionID_ = getDefaultInstance().getSessionID();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string SessionID = 1;</code>
+       * @param value The bytes for sessionID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSessionIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sessionID_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object flowID_ = "";
+      /**
+       * <code>string FlowID = 2;</code>
+       * @return The flowID.
+       */
+      public java.lang.String getFlowID() {
+        java.lang.Object ref = flowID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          flowID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string FlowID = 2;</code>
+       * @return The bytes for flowID.
+       */
+      public com.google.protobuf.ByteString
+          getFlowIDBytes() {
+        java.lang.Object ref = flowID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          flowID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string FlowID = 2;</code>
+       * @param value The flowID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlowID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        flowID_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string FlowID = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlowID() {
+        flowID_ = getDefaultInstance().getFlowID();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string FlowID = 2;</code>
+       * @param value The bytes for flowID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlowIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        flowID_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long transactionCreationTime_ ;
+      /**
+       * <code>uint64 TransactionCreationTime = 3;</code>
+       * @return The transactionCreationTime.
+       */
+      @java.lang.Override
+      public long getTransactionCreationTime() {
+        return transactionCreationTime_;
+      }
+      /**
+       * <code>uint64 TransactionCreationTime = 3;</code>
+       * @param value The transactionCreationTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionCreationTime(long value) {
+
+        transactionCreationTime_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 TransactionCreationTime = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransactionCreationTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        transactionCreationTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long sentOnBusTime_ ;
+      /**
+       * <code>uint64 SentOnBusTime = 4;</code>
+       * @return The sentOnBusTime.
+       */
+      @java.lang.Override
+      public long getSentOnBusTime() {
+        return sentOnBusTime_;
+      }
+      /**
+       * <code>uint64 SentOnBusTime = 4;</code>
+       * @param value The sentOnBusTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSentOnBusTime(long value) {
+
+        sentOnBusTime_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 SentOnBusTime = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSentOnBusTime() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        sentOnBusTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long takenFromBusTime_ ;
+      /**
+       * <code>uint64 TakenFromBusTime = 5;</code>
+       * @return The takenFromBusTime.
+       */
+      @java.lang.Override
+      public long getTakenFromBusTime() {
+        return takenFromBusTime_;
+      }
+      /**
+       * <code>uint64 TakenFromBusTime = 5;</code>
+       * @param value The takenFromBusTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTakenFromBusTime(long value) {
+
+        takenFromBusTime_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 TakenFromBusTime = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTakenFromBusTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        takenFromBusTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long processedTime_ ;
+      /**
+       * <code>uint64 ProcessedTime = 6;</code>
+       * @return The processedTime.
+       */
+      @java.lang.Override
+      public long getProcessedTime() {
+        return processedTime_;
+      }
+      /**
+       * <code>uint64 ProcessedTime = 6;</code>
+       * @param value The processedTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProcessedTime(long value) {
+
+        processedTime_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 ProcessedTime = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProcessedTime() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        processedTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long sentBackToBusTime_ ;
+      /**
+       * <code>uint64 SentBackToBusTime = 7;</code>
+       * @return The sentBackToBusTime.
+       */
+      @java.lang.Override
+      public long getSentBackToBusTime() {
+        return sentBackToBusTime_;
+      }
+      /**
+       * <code>uint64 SentBackToBusTime = 7;</code>
+       * @param value The sentBackToBusTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSentBackToBusTime(long value) {
+
+        sentBackToBusTime_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 SentBackToBusTime = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSentBackToBusTime() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        sentBackToBusTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long takenBackFromBusTime_ ;
+      /**
+       * <code>uint64 TakenBackFromBusTime = 8;</code>
+       * @return The takenBackFromBusTime.
+       */
+      @java.lang.Override
+      public long getTakenBackFromBusTime() {
+        return takenBackFromBusTime_;
+      }
+      /**
+       * <code>uint64 TakenBackFromBusTime = 8;</code>
+       * @param value The takenBackFromBusTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTakenBackFromBusTime(long value) {
+
+        takenBackFromBusTime_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 TakenBackFromBusTime = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTakenBackFromBusTime() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        takenBackFromBusTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long closeTransactionTime_ ;
+      /**
+       * <code>uint64 CloseTransactionTime = 9;</code>
+       * @return The closeTransactionTime.
+       */
+      @java.lang.Override
+      public long getCloseTransactionTime() {
+        return closeTransactionTime_;
+      }
+      /**
+       * <code>uint64 CloseTransactionTime = 9;</code>
+       * @param value The closeTransactionTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCloseTransactionTime(long value) {
+
+        closeTransactionTime_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 CloseTransactionTime = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCloseTransactionTime() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        closeTransactionTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:org.example.InternalInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:org.example.InternalInfo)
+    private static final org.example.Market.InternalInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.example.Market.InternalInfo();
+    }
+
+    public static org.example.Market.InternalInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InternalInfo>
+        PARSER = new com.google.protobuf.AbstractParser<InternalInfo>() {
+      @java.lang.Override
+      public InternalInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InternalInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InternalInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.example.Market.InternalInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MarketQuoteRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.example.MarketQuoteRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2292,49 +3461,49 @@ public final class Market {
     org.example.Market.QuoteRequestType getType();
 
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
      * @return Whether the firstLeg field is set.
      */
     boolean hasFirstLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
      * @return The firstLeg.
      */
-    org.example.Market.QuoteRequestLeg getFirstLeg();
+    org.example.Market.QuoteLeg getFirstLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
      */
-    org.example.Market.QuoteRequestLegOrBuilder getFirstLegOrBuilder();
+    org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder();
 
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
      * @return Whether the secondLeg field is set.
      */
     boolean hasSecondLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
      * @return The secondLeg.
      */
-    org.example.Market.QuoteRequestLeg getSecondLeg();
+    org.example.Market.QuoteLeg getSecondLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
      */
-    org.example.Market.QuoteRequestLegOrBuilder getSecondLegOrBuilder();
+    org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder();
 
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
      * @return Whether the thirdLeg field is set.
      */
     boolean hasThirdLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
      * @return The thirdLeg.
      */
-    org.example.Market.QuoteRequestLeg getThirdLeg();
+    org.example.Market.QuoteLeg getThirdLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
      */
-    org.example.Market.QuoteRequestLegOrBuilder getThirdLegOrBuilder();
+    org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder();
 
     /**
      * <code>string IssuerMemberID = 156;</code>
@@ -2450,12 +3619,12 @@ public final class Market {
     org.example.Market.ProcessStatus getProcessStatus();
   }
   /**
-   * Protobuf type {@code org.example.QuoteRequest}
+   * Protobuf type {@code org.example.MarketQuoteRequest}
    */
-  public static final class QuoteRequest extends
+  public static final class MarketQuoteRequest extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:org.example.QuoteRequest)
-      QuoteRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:org.example.MarketQuoteRequest)
+      MarketQuoteRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -2464,13 +3633,13 @@ public final class Market {
         /* minor= */ 29,
         /* patch= */ 3,
         /* suffix= */ "",
-        QuoteRequest.class.getName());
+        MarketQuoteRequest.class.getName());
     }
-    // Use QuoteRequest.newBuilder() to construct.
-    private QuoteRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use MarketQuoteRequest.newBuilder() to construct.
+    private MarketQuoteRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private QuoteRequest() {
+    private MarketQuoteRequest() {
       requestID_ = "";
       mlegType_ = 0;
       type_ = 0;
@@ -2484,15 +3653,15 @@ public final class Market {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.example.Market.internal_static_org_example_QuoteRequest_descriptor;
+      return org.example.Market.internal_static_org_example_MarketQuoteRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.example.Market.internal_static_org_example_QuoteRequest_fieldAccessorTable
+      return org.example.Market.internal_static_org_example_MarketQuoteRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.example.Market.QuoteRequest.class, org.example.Market.QuoteRequest.Builder.class);
+              org.example.Market.MarketQuoteRequest.class, org.example.Market.MarketQuoteRequest.Builder.class);
     }
 
     private int bitField0_;
@@ -2572,9 +3741,9 @@ public final class Market {
     }
 
     public static final int FIRSTLEG_FIELD_NUMBER = 153;
-    private org.example.Market.QuoteRequestLeg firstLeg_;
+    private org.example.Market.QuoteLeg firstLeg_;
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
      * @return Whether the firstLeg field is set.
      */
     @java.lang.Override
@@ -2582,25 +3751,25 @@ public final class Market {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
      * @return The firstLeg.
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLeg getFirstLeg() {
-      return firstLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : firstLeg_;
+    public org.example.Market.QuoteLeg getFirstLeg() {
+      return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
     }
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLegOrBuilder getFirstLegOrBuilder() {
-      return firstLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : firstLeg_;
+    public org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder() {
+      return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
     }
 
     public static final int SECONDLEG_FIELD_NUMBER = 154;
-    private org.example.Market.QuoteRequestLeg secondLeg_;
+    private org.example.Market.QuoteLeg secondLeg_;
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
      * @return Whether the secondLeg field is set.
      */
     @java.lang.Override
@@ -2608,25 +3777,25 @@ public final class Market {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
      * @return The secondLeg.
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLeg getSecondLeg() {
-      return secondLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : secondLeg_;
+    public org.example.Market.QuoteLeg getSecondLeg() {
+      return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
     }
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLegOrBuilder getSecondLegOrBuilder() {
-      return secondLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : secondLeg_;
+    public org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder() {
+      return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
     }
 
     public static final int THIRDLEG_FIELD_NUMBER = 155;
-    private org.example.Market.QuoteRequestLeg thirdLeg_;
+    private org.example.Market.QuoteLeg thirdLeg_;
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
      * @return Whether the thirdLeg field is set.
      */
     @java.lang.Override
@@ -2634,19 +3803,19 @@ public final class Market {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
      * @return The thirdLeg.
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLeg getThirdLeg() {
-      return thirdLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : thirdLeg_;
+    public org.example.Market.QuoteLeg getThirdLeg() {
+      return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
     }
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLegOrBuilder getThirdLegOrBuilder() {
-      return thirdLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : thirdLeg_;
+    public org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder() {
+      return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
     }
 
     public static final int ISSUERMEMBERID_FIELD_NUMBER = 156;
@@ -3037,10 +4206,10 @@ public final class Market {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.example.Market.QuoteRequest)) {
+      if (!(obj instanceof org.example.Market.MarketQuoteRequest)) {
         return super.equals(obj);
       }
-      org.example.Market.QuoteRequest other = (org.example.Market.QuoteRequest) obj;
+      org.example.Market.MarketQuoteRequest other = (org.example.Market.MarketQuoteRequest) obj;
 
       if (!getRequestID()
           .equals(other.getRequestID())) return false;
@@ -3149,44 +4318,44 @@ public final class Market {
       return hash;
     }
 
-    public static org.example.Market.QuoteRequest parseFrom(
+    public static org.example.Market.MarketQuoteRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.QuoteRequest parseFrom(
+    public static org.example.Market.MarketQuoteRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.QuoteRequest parseFrom(
+    public static org.example.Market.MarketQuoteRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.QuoteRequest parseFrom(
+    public static org.example.Market.MarketQuoteRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.QuoteRequest parseFrom(byte[] data)
+    public static org.example.Market.MarketQuoteRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.QuoteRequest parseFrom(
+    public static org.example.Market.MarketQuoteRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.QuoteRequest parseFrom(java.io.InputStream input)
+    public static org.example.Market.MarketQuoteRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.QuoteRequest parseFrom(
+    public static org.example.Market.MarketQuoteRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3194,26 +4363,26 @@ public final class Market {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.example.Market.QuoteRequest parseDelimitedFrom(java.io.InputStream input)
+    public static org.example.Market.MarketQuoteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.example.Market.QuoteRequest parseDelimitedFrom(
+    public static org.example.Market.MarketQuoteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.example.Market.QuoteRequest parseFrom(
+    public static org.example.Market.MarketQuoteRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.QuoteRequest parseFrom(
+    public static org.example.Market.MarketQuoteRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3226,7 +4395,7 @@ public final class Market {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.example.Market.QuoteRequest prototype) {
+    public static Builder newBuilder(org.example.Market.MarketQuoteRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3242,26 +4411,26 @@ public final class Market {
       return builder;
     }
     /**
-     * Protobuf type {@code org.example.QuoteRequest}
+     * Protobuf type {@code org.example.MarketQuoteRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.example.QuoteRequest)
-        org.example.Market.QuoteRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:org.example.MarketQuoteRequest)
+        org.example.Market.MarketQuoteRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.example.Market.internal_static_org_example_QuoteRequest_descriptor;
+        return org.example.Market.internal_static_org_example_MarketQuoteRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.example.Market.internal_static_org_example_QuoteRequest_fieldAccessorTable
+        return org.example.Market.internal_static_org_example_MarketQuoteRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.example.Market.QuoteRequest.class, org.example.Market.QuoteRequest.Builder.class);
+                org.example.Market.MarketQuoteRequest.class, org.example.Market.MarketQuoteRequest.Builder.class);
       }
 
-      // Construct using org.example.Market.QuoteRequest.newBuilder()
+      // Construct using org.example.Market.MarketQuoteRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3320,17 +4489,17 @@ public final class Market {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.example.Market.internal_static_org_example_QuoteRequest_descriptor;
+        return org.example.Market.internal_static_org_example_MarketQuoteRequest_descriptor;
       }
 
       @java.lang.Override
-      public org.example.Market.QuoteRequest getDefaultInstanceForType() {
-        return org.example.Market.QuoteRequest.getDefaultInstance();
+      public org.example.Market.MarketQuoteRequest getDefaultInstanceForType() {
+        return org.example.Market.MarketQuoteRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.example.Market.QuoteRequest build() {
-        org.example.Market.QuoteRequest result = buildPartial();
+      public org.example.Market.MarketQuoteRequest build() {
+        org.example.Market.MarketQuoteRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3338,14 +4507,14 @@ public final class Market {
       }
 
       @java.lang.Override
-      public org.example.Market.QuoteRequest buildPartial() {
-        org.example.Market.QuoteRequest result = new org.example.Market.QuoteRequest(this);
+      public org.example.Market.MarketQuoteRequest buildPartial() {
+        org.example.Market.MarketQuoteRequest result = new org.example.Market.MarketQuoteRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.example.Market.QuoteRequest result) {
+      private void buildPartial0(org.example.Market.MarketQuoteRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.requestID_ = requestID_;
@@ -3417,16 +4586,16 @@ public final class Market {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.example.Market.QuoteRequest) {
-          return mergeFrom((org.example.Market.QuoteRequest)other);
+        if (other instanceof org.example.Market.MarketQuoteRequest) {
+          return mergeFrom((org.example.Market.MarketQuoteRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.example.Market.QuoteRequest other) {
-        if (other == org.example.Market.QuoteRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.example.Market.MarketQuoteRequest other) {
+        if (other == org.example.Market.MarketQuoteRequest.getDefaultInstance()) return this;
         if (!other.getRequestID().isEmpty()) {
           requestID_ = other.requestID_;
           bitField0_ |= 0x00000001;
@@ -3812,31 +4981,31 @@ public final class Market {
         return this;
       }
 
-      private org.example.Market.QuoteRequestLeg firstLeg_;
+      private org.example.Market.QuoteLeg firstLeg_;
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> firstLegBuilder_;
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> firstLegBuilder_;
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
        * @return Whether the firstLeg field is set.
        */
       public boolean hasFirstLeg() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
        * @return The firstLeg.
        */
-      public org.example.Market.QuoteRequestLeg getFirstLeg() {
+      public org.example.Market.QuoteLeg getFirstLeg() {
         if (firstLegBuilder_ == null) {
-          return firstLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : firstLeg_;
+          return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
         } else {
           return firstLegBuilder_.getMessage();
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
        */
-      public Builder setFirstLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder setFirstLeg(org.example.Market.QuoteLeg value) {
         if (firstLegBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3850,10 +5019,10 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
        */
       public Builder setFirstLeg(
-          org.example.Market.QuoteRequestLeg.Builder builderForValue) {
+          org.example.Market.QuoteLeg.Builder builderForValue) {
         if (firstLegBuilder_ == null) {
           firstLeg_ = builderForValue.build();
         } else {
@@ -3864,13 +5033,13 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
        */
-      public Builder mergeFirstLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder mergeFirstLeg(org.example.Market.QuoteLeg value) {
         if (firstLegBuilder_ == null) {
           if (((bitField0_ & 0x00000008) != 0) &&
             firstLeg_ != null &&
-            firstLeg_ != org.example.Market.QuoteRequestLeg.getDefaultInstance()) {
+            firstLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getFirstLegBuilder().mergeFrom(value);
           } else {
             firstLeg_ = value;
@@ -3885,7 +5054,7 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
        */
       public Builder clearFirstLeg() {
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -3898,33 +5067,33 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
        */
-      public org.example.Market.QuoteRequestLeg.Builder getFirstLegBuilder() {
+      public org.example.Market.QuoteLeg.Builder getFirstLegBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getFirstLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
        */
-      public org.example.Market.QuoteRequestLegOrBuilder getFirstLegOrBuilder() {
+      public org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder() {
         if (firstLegBuilder_ != null) {
           return firstLegBuilder_.getMessageOrBuilder();
         } else {
           return firstLeg_ == null ?
-              org.example.Market.QuoteRequestLeg.getDefaultInstance() : firstLeg_;
+              org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> 
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
           getFirstLegFieldBuilder() {
         if (firstLegBuilder_ == null) {
           firstLegBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder>(
+              org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder>(
                   getFirstLeg(),
                   getParentForChildren(),
                   isClean());
@@ -3933,31 +5102,31 @@ public final class Market {
         return firstLegBuilder_;
       }
 
-      private org.example.Market.QuoteRequestLeg secondLeg_;
+      private org.example.Market.QuoteLeg secondLeg_;
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> secondLegBuilder_;
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> secondLegBuilder_;
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
        * @return Whether the secondLeg field is set.
        */
       public boolean hasSecondLeg() {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
        * @return The secondLeg.
        */
-      public org.example.Market.QuoteRequestLeg getSecondLeg() {
+      public org.example.Market.QuoteLeg getSecondLeg() {
         if (secondLegBuilder_ == null) {
-          return secondLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : secondLeg_;
+          return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
         } else {
           return secondLegBuilder_.getMessage();
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
        */
-      public Builder setSecondLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder setSecondLeg(org.example.Market.QuoteLeg value) {
         if (secondLegBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3971,10 +5140,10 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
        */
       public Builder setSecondLeg(
-          org.example.Market.QuoteRequestLeg.Builder builderForValue) {
+          org.example.Market.QuoteLeg.Builder builderForValue) {
         if (secondLegBuilder_ == null) {
           secondLeg_ = builderForValue.build();
         } else {
@@ -3985,13 +5154,13 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
        */
-      public Builder mergeSecondLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder mergeSecondLeg(org.example.Market.QuoteLeg value) {
         if (secondLegBuilder_ == null) {
           if (((bitField0_ & 0x00000010) != 0) &&
             secondLeg_ != null &&
-            secondLeg_ != org.example.Market.QuoteRequestLeg.getDefaultInstance()) {
+            secondLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getSecondLegBuilder().mergeFrom(value);
           } else {
             secondLeg_ = value;
@@ -4006,7 +5175,7 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
        */
       public Builder clearSecondLeg() {
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -4019,33 +5188,33 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
        */
-      public org.example.Market.QuoteRequestLeg.Builder getSecondLegBuilder() {
+      public org.example.Market.QuoteLeg.Builder getSecondLegBuilder() {
         bitField0_ |= 0x00000010;
         onChanged();
         return getSecondLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
        */
-      public org.example.Market.QuoteRequestLegOrBuilder getSecondLegOrBuilder() {
+      public org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder() {
         if (secondLegBuilder_ != null) {
           return secondLegBuilder_.getMessageOrBuilder();
         } else {
           return secondLeg_ == null ?
-              org.example.Market.QuoteRequestLeg.getDefaultInstance() : secondLeg_;
+              org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> 
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
           getSecondLegFieldBuilder() {
         if (secondLegBuilder_ == null) {
           secondLegBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder>(
+              org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder>(
                   getSecondLeg(),
                   getParentForChildren(),
                   isClean());
@@ -4054,31 +5223,31 @@ public final class Market {
         return secondLegBuilder_;
       }
 
-      private org.example.Market.QuoteRequestLeg thirdLeg_;
+      private org.example.Market.QuoteLeg thirdLeg_;
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> thirdLegBuilder_;
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> thirdLegBuilder_;
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
        * @return Whether the thirdLeg field is set.
        */
       public boolean hasThirdLeg() {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
        * @return The thirdLeg.
        */
-      public org.example.Market.QuoteRequestLeg getThirdLeg() {
+      public org.example.Market.QuoteLeg getThirdLeg() {
         if (thirdLegBuilder_ == null) {
-          return thirdLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : thirdLeg_;
+          return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
         } else {
           return thirdLegBuilder_.getMessage();
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
        */
-      public Builder setThirdLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder setThirdLeg(org.example.Market.QuoteLeg value) {
         if (thirdLegBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4092,10 +5261,10 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
        */
       public Builder setThirdLeg(
-          org.example.Market.QuoteRequestLeg.Builder builderForValue) {
+          org.example.Market.QuoteLeg.Builder builderForValue) {
         if (thirdLegBuilder_ == null) {
           thirdLeg_ = builderForValue.build();
         } else {
@@ -4106,13 +5275,13 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
        */
-      public Builder mergeThirdLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder mergeThirdLeg(org.example.Market.QuoteLeg value) {
         if (thirdLegBuilder_ == null) {
           if (((bitField0_ & 0x00000020) != 0) &&
             thirdLeg_ != null &&
-            thirdLeg_ != org.example.Market.QuoteRequestLeg.getDefaultInstance()) {
+            thirdLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getThirdLegBuilder().mergeFrom(value);
           } else {
             thirdLeg_ = value;
@@ -4127,7 +5296,7 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
        */
       public Builder clearThirdLeg() {
         bitField0_ = (bitField0_ & ~0x00000020);
@@ -4140,33 +5309,33 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
        */
-      public org.example.Market.QuoteRequestLeg.Builder getThirdLegBuilder() {
+      public org.example.Market.QuoteLeg.Builder getThirdLegBuilder() {
         bitField0_ |= 0x00000020;
         onChanged();
         return getThirdLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
        */
-      public org.example.Market.QuoteRequestLegOrBuilder getThirdLegOrBuilder() {
+      public org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder() {
         if (thirdLegBuilder_ != null) {
           return thirdLegBuilder_.getMessageOrBuilder();
         } else {
           return thirdLeg_ == null ?
-              org.example.Market.QuoteRequestLeg.getDefaultInstance() : thirdLeg_;
+              org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> 
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
           getThirdLegFieldBuilder() {
         if (thirdLegBuilder_ == null) {
           thirdLegBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder>(
+              org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder>(
                   getThirdLeg(),
                   getParentForChildren(),
                   isClean());
@@ -4760,23 +5929,23 @@ public final class Market {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:org.example.QuoteRequest)
+      // @@protoc_insertion_point(builder_scope:org.example.MarketQuoteRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:org.example.QuoteRequest)
-    private static final org.example.Market.QuoteRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:org.example.MarketQuoteRequest)
+    private static final org.example.Market.MarketQuoteRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.example.Market.QuoteRequest();
+      DEFAULT_INSTANCE = new org.example.Market.MarketQuoteRequest();
     }
 
-    public static org.example.Market.QuoteRequest getDefaultInstance() {
+    public static org.example.Market.MarketQuoteRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<QuoteRequest>
-        PARSER = new com.google.protobuf.AbstractParser<QuoteRequest>() {
+    private static final com.google.protobuf.Parser<MarketQuoteRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MarketQuoteRequest>() {
       @java.lang.Override
-      public QuoteRequest parsePartialFrom(
+      public MarketQuoteRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4795,24 +5964,24 @@ public final class Market {
       }
     };
 
-    public static com.google.protobuf.Parser<QuoteRequest> parser() {
+    public static com.google.protobuf.Parser<MarketQuoteRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<QuoteRequest> getParserForType() {
+    public com.google.protobuf.Parser<MarketQuoteRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public org.example.Market.QuoteRequest getDefaultInstanceForType() {
+    public org.example.Market.MarketQuoteRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface QuoteOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.example.Quote)
+  public interface MarketQuoteOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.example.MarketQuote)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -4862,49 +6031,49 @@ public final class Market {
     org.example.Market.QuoteRequestType getType();
 
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
      * @return Whether the firstLeg field is set.
      */
     boolean hasFirstLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
      * @return The firstLeg.
      */
-    org.example.Market.QuoteRequestLeg getFirstLeg();
+    org.example.Market.QuoteLeg getFirstLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
      */
-    org.example.Market.QuoteRequestLegOrBuilder getFirstLegOrBuilder();
+    org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder();
 
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
      * @return Whether the secondLeg field is set.
      */
     boolean hasSecondLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
      * @return The secondLeg.
      */
-    org.example.Market.QuoteRequestLeg getSecondLeg();
+    org.example.Market.QuoteLeg getSecondLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
      */
-    org.example.Market.QuoteRequestLegOrBuilder getSecondLegOrBuilder();
+    org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder();
 
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
      * @return Whether the thirdLeg field is set.
      */
     boolean hasThirdLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
      * @return The thirdLeg.
      */
-    org.example.Market.QuoteRequestLeg getThirdLeg();
+    org.example.Market.QuoteLeg getThirdLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
      */
-    org.example.Market.QuoteRequestLegOrBuilder getThirdLegOrBuilder();
+    org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder();
 
     /**
      * <code>string IssuerMemberID = 507;</code>
@@ -5017,12 +6186,12 @@ public final class Market {
    * Quote fields from 500 to 999
    * </pre>
    *
-   * Protobuf type {@code org.example.Quote}
+   * Protobuf type {@code org.example.MarketQuote}
    */
-  public static final class Quote extends
+  public static final class MarketQuote extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:org.example.Quote)
-      QuoteOrBuilder {
+      // @@protoc_insertion_point(message_implements:org.example.MarketQuote)
+      MarketQuoteOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -5031,13 +6200,13 @@ public final class Market {
         /* minor= */ 29,
         /* patch= */ 3,
         /* suffix= */ "",
-        Quote.class.getName());
+        MarketQuote.class.getName());
     }
-    // Use Quote.newBuilder() to construct.
-    private Quote(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use MarketQuote.newBuilder() to construct.
+    private MarketQuote(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private Quote() {
+    private MarketQuote() {
       quoteID_ = "";
       quoteRequestID_ = "";
       mlegType_ = 0;
@@ -5052,15 +6221,15 @@ public final class Market {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.example.Market.internal_static_org_example_Quote_descriptor;
+      return org.example.Market.internal_static_org_example_MarketQuote_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.example.Market.internal_static_org_example_Quote_fieldAccessorTable
+      return org.example.Market.internal_static_org_example_MarketQuote_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.example.Market.Quote.class, org.example.Market.Quote.Builder.class);
+              org.example.Market.MarketQuote.class, org.example.Market.MarketQuote.Builder.class);
     }
 
     private int bitField0_;
@@ -5179,9 +6348,9 @@ public final class Market {
     }
 
     public static final int FIRSTLEG_FIELD_NUMBER = 504;
-    private org.example.Market.QuoteRequestLeg firstLeg_;
+    private org.example.Market.QuoteLeg firstLeg_;
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
      * @return Whether the firstLeg field is set.
      */
     @java.lang.Override
@@ -5189,25 +6358,25 @@ public final class Market {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
      * @return The firstLeg.
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLeg getFirstLeg() {
-      return firstLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : firstLeg_;
+    public org.example.Market.QuoteLeg getFirstLeg() {
+      return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
     }
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLegOrBuilder getFirstLegOrBuilder() {
-      return firstLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : firstLeg_;
+    public org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder() {
+      return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
     }
 
     public static final int SECONDLEG_FIELD_NUMBER = 505;
-    private org.example.Market.QuoteRequestLeg secondLeg_;
+    private org.example.Market.QuoteLeg secondLeg_;
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
      * @return Whether the secondLeg field is set.
      */
     @java.lang.Override
@@ -5215,25 +6384,25 @@ public final class Market {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
      * @return The secondLeg.
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLeg getSecondLeg() {
-      return secondLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : secondLeg_;
+    public org.example.Market.QuoteLeg getSecondLeg() {
+      return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
     }
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLegOrBuilder getSecondLegOrBuilder() {
-      return secondLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : secondLeg_;
+    public org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder() {
+      return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
     }
 
     public static final int THIRDLEG_FIELD_NUMBER = 506;
-    private org.example.Market.QuoteRequestLeg thirdLeg_;
+    private org.example.Market.QuoteLeg thirdLeg_;
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
      * @return Whether the thirdLeg field is set.
      */
     @java.lang.Override
@@ -5241,19 +6410,19 @@ public final class Market {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
      * @return The thirdLeg.
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLeg getThirdLeg() {
-      return thirdLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : thirdLeg_;
+    public org.example.Market.QuoteLeg getThirdLeg() {
+      return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
     }
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLegOrBuilder getThirdLegOrBuilder() {
-      return thirdLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : thirdLeg_;
+    public org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder() {
+      return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
     }
 
     public static final int ISSUERMEMBERID_FIELD_NUMBER = 507;
@@ -5674,10 +6843,10 @@ public final class Market {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.example.Market.Quote)) {
+      if (!(obj instanceof org.example.Market.MarketQuote)) {
         return super.equals(obj);
       }
-      org.example.Market.Quote other = (org.example.Market.Quote) obj;
+      org.example.Market.MarketQuote other = (org.example.Market.MarketQuote) obj;
 
       if (!getQuoteID()
           .equals(other.getQuoteID())) return false;
@@ -5788,44 +6957,44 @@ public final class Market {
       return hash;
     }
 
-    public static org.example.Market.Quote parseFrom(
+    public static org.example.Market.MarketQuote parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Quote parseFrom(
+    public static org.example.Market.MarketQuote parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Quote parseFrom(
+    public static org.example.Market.MarketQuote parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Quote parseFrom(
+    public static org.example.Market.MarketQuote parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Quote parseFrom(byte[] data)
+    public static org.example.Market.MarketQuote parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Quote parseFrom(
+    public static org.example.Market.MarketQuote parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Quote parseFrom(java.io.InputStream input)
+    public static org.example.Market.MarketQuote parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.Quote parseFrom(
+    public static org.example.Market.MarketQuote parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5833,26 +7002,26 @@ public final class Market {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.example.Market.Quote parseDelimitedFrom(java.io.InputStream input)
+    public static org.example.Market.MarketQuote parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.example.Market.Quote parseDelimitedFrom(
+    public static org.example.Market.MarketQuote parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.example.Market.Quote parseFrom(
+    public static org.example.Market.MarketQuote parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.Quote parseFrom(
+    public static org.example.Market.MarketQuote parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5865,7 +7034,7 @@ public final class Market {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.example.Market.Quote prototype) {
+    public static Builder newBuilder(org.example.Market.MarketQuote prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5885,26 +7054,26 @@ public final class Market {
      * Quote fields from 500 to 999
      * </pre>
      *
-     * Protobuf type {@code org.example.Quote}
+     * Protobuf type {@code org.example.MarketQuote}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.example.Quote)
-        org.example.Market.QuoteOrBuilder {
+        // @@protoc_insertion_point(builder_implements:org.example.MarketQuote)
+        org.example.Market.MarketQuoteOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.example.Market.internal_static_org_example_Quote_descriptor;
+        return org.example.Market.internal_static_org_example_MarketQuote_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.example.Market.internal_static_org_example_Quote_fieldAccessorTable
+        return org.example.Market.internal_static_org_example_MarketQuote_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.example.Market.Quote.class, org.example.Market.Quote.Builder.class);
+                org.example.Market.MarketQuote.class, org.example.Market.MarketQuote.Builder.class);
       }
 
-      // Construct using org.example.Market.Quote.newBuilder()
+      // Construct using org.example.Market.MarketQuote.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5963,17 +7132,17 @@ public final class Market {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.example.Market.internal_static_org_example_Quote_descriptor;
+        return org.example.Market.internal_static_org_example_MarketQuote_descriptor;
       }
 
       @java.lang.Override
-      public org.example.Market.Quote getDefaultInstanceForType() {
-        return org.example.Market.Quote.getDefaultInstance();
+      public org.example.Market.MarketQuote getDefaultInstanceForType() {
+        return org.example.Market.MarketQuote.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.example.Market.Quote build() {
-        org.example.Market.Quote result = buildPartial();
+      public org.example.Market.MarketQuote build() {
+        org.example.Market.MarketQuote result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5981,14 +7150,14 @@ public final class Market {
       }
 
       @java.lang.Override
-      public org.example.Market.Quote buildPartial() {
-        org.example.Market.Quote result = new org.example.Market.Quote(this);
+      public org.example.Market.MarketQuote buildPartial() {
+        org.example.Market.MarketQuote result = new org.example.Market.MarketQuote(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.example.Market.Quote result) {
+      private void buildPartial0(org.example.Market.MarketQuote result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.quoteID_ = quoteID_;
@@ -6062,16 +7231,16 @@ public final class Market {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.example.Market.Quote) {
-          return mergeFrom((org.example.Market.Quote)other);
+        if (other instanceof org.example.Market.MarketQuote) {
+          return mergeFrom((org.example.Market.MarketQuote)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.example.Market.Quote other) {
-        if (other == org.example.Market.Quote.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.example.Market.MarketQuote other) {
+        if (other == org.example.Market.MarketQuote.getDefaultInstance()) return this;
         if (!other.getQuoteID().isEmpty()) {
           quoteID_ = other.quoteID_;
           bitField0_ |= 0x00000001;
@@ -6535,31 +7704,31 @@ public final class Market {
         return this;
       }
 
-      private org.example.Market.QuoteRequestLeg firstLeg_;
+      private org.example.Market.QuoteLeg firstLeg_;
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> firstLegBuilder_;
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> firstLegBuilder_;
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
        * @return Whether the firstLeg field is set.
        */
       public boolean hasFirstLeg() {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
        * @return The firstLeg.
        */
-      public org.example.Market.QuoteRequestLeg getFirstLeg() {
+      public org.example.Market.QuoteLeg getFirstLeg() {
         if (firstLegBuilder_ == null) {
-          return firstLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : firstLeg_;
+          return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
         } else {
           return firstLegBuilder_.getMessage();
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
        */
-      public Builder setFirstLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder setFirstLeg(org.example.Market.QuoteLeg value) {
         if (firstLegBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6573,10 +7742,10 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
        */
       public Builder setFirstLeg(
-          org.example.Market.QuoteRequestLeg.Builder builderForValue) {
+          org.example.Market.QuoteLeg.Builder builderForValue) {
         if (firstLegBuilder_ == null) {
           firstLeg_ = builderForValue.build();
         } else {
@@ -6587,13 +7756,13 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
        */
-      public Builder mergeFirstLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder mergeFirstLeg(org.example.Market.QuoteLeg value) {
         if (firstLegBuilder_ == null) {
           if (((bitField0_ & 0x00000010) != 0) &&
             firstLeg_ != null &&
-            firstLeg_ != org.example.Market.QuoteRequestLeg.getDefaultInstance()) {
+            firstLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getFirstLegBuilder().mergeFrom(value);
           } else {
             firstLeg_ = value;
@@ -6608,7 +7777,7 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
        */
       public Builder clearFirstLeg() {
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -6621,33 +7790,33 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
        */
-      public org.example.Market.QuoteRequestLeg.Builder getFirstLegBuilder() {
+      public org.example.Market.QuoteLeg.Builder getFirstLegBuilder() {
         bitField0_ |= 0x00000010;
         onChanged();
         return getFirstLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
        */
-      public org.example.Market.QuoteRequestLegOrBuilder getFirstLegOrBuilder() {
+      public org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder() {
         if (firstLegBuilder_ != null) {
           return firstLegBuilder_.getMessageOrBuilder();
         } else {
           return firstLeg_ == null ?
-              org.example.Market.QuoteRequestLeg.getDefaultInstance() : firstLeg_;
+              org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> 
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
           getFirstLegFieldBuilder() {
         if (firstLegBuilder_ == null) {
           firstLegBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder>(
+              org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder>(
                   getFirstLeg(),
                   getParentForChildren(),
                   isClean());
@@ -6656,31 +7825,31 @@ public final class Market {
         return firstLegBuilder_;
       }
 
-      private org.example.Market.QuoteRequestLeg secondLeg_;
+      private org.example.Market.QuoteLeg secondLeg_;
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> secondLegBuilder_;
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> secondLegBuilder_;
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
        * @return Whether the secondLeg field is set.
        */
       public boolean hasSecondLeg() {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
        * @return The secondLeg.
        */
-      public org.example.Market.QuoteRequestLeg getSecondLeg() {
+      public org.example.Market.QuoteLeg getSecondLeg() {
         if (secondLegBuilder_ == null) {
-          return secondLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : secondLeg_;
+          return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
         } else {
           return secondLegBuilder_.getMessage();
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
        */
-      public Builder setSecondLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder setSecondLeg(org.example.Market.QuoteLeg value) {
         if (secondLegBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6694,10 +7863,10 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
        */
       public Builder setSecondLeg(
-          org.example.Market.QuoteRequestLeg.Builder builderForValue) {
+          org.example.Market.QuoteLeg.Builder builderForValue) {
         if (secondLegBuilder_ == null) {
           secondLeg_ = builderForValue.build();
         } else {
@@ -6708,13 +7877,13 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
        */
-      public Builder mergeSecondLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder mergeSecondLeg(org.example.Market.QuoteLeg value) {
         if (secondLegBuilder_ == null) {
           if (((bitField0_ & 0x00000020) != 0) &&
             secondLeg_ != null &&
-            secondLeg_ != org.example.Market.QuoteRequestLeg.getDefaultInstance()) {
+            secondLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getSecondLegBuilder().mergeFrom(value);
           } else {
             secondLeg_ = value;
@@ -6729,7 +7898,7 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
        */
       public Builder clearSecondLeg() {
         bitField0_ = (bitField0_ & ~0x00000020);
@@ -6742,33 +7911,33 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
        */
-      public org.example.Market.QuoteRequestLeg.Builder getSecondLegBuilder() {
+      public org.example.Market.QuoteLeg.Builder getSecondLegBuilder() {
         bitField0_ |= 0x00000020;
         onChanged();
         return getSecondLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
        */
-      public org.example.Market.QuoteRequestLegOrBuilder getSecondLegOrBuilder() {
+      public org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder() {
         if (secondLegBuilder_ != null) {
           return secondLegBuilder_.getMessageOrBuilder();
         } else {
           return secondLeg_ == null ?
-              org.example.Market.QuoteRequestLeg.getDefaultInstance() : secondLeg_;
+              org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> 
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
           getSecondLegFieldBuilder() {
         if (secondLegBuilder_ == null) {
           secondLegBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder>(
+              org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder>(
                   getSecondLeg(),
                   getParentForChildren(),
                   isClean());
@@ -6777,31 +7946,31 @@ public final class Market {
         return secondLegBuilder_;
       }
 
-      private org.example.Market.QuoteRequestLeg thirdLeg_;
+      private org.example.Market.QuoteLeg thirdLeg_;
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> thirdLegBuilder_;
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> thirdLegBuilder_;
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
        * @return Whether the thirdLeg field is set.
        */
       public boolean hasThirdLeg() {
         return ((bitField0_ & 0x00000040) != 0);
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
        * @return The thirdLeg.
        */
-      public org.example.Market.QuoteRequestLeg getThirdLeg() {
+      public org.example.Market.QuoteLeg getThirdLeg() {
         if (thirdLegBuilder_ == null) {
-          return thirdLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : thirdLeg_;
+          return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
         } else {
           return thirdLegBuilder_.getMessage();
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
        */
-      public Builder setThirdLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder setThirdLeg(org.example.Market.QuoteLeg value) {
         if (thirdLegBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6815,10 +7984,10 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
        */
       public Builder setThirdLeg(
-          org.example.Market.QuoteRequestLeg.Builder builderForValue) {
+          org.example.Market.QuoteLeg.Builder builderForValue) {
         if (thirdLegBuilder_ == null) {
           thirdLeg_ = builderForValue.build();
         } else {
@@ -6829,13 +7998,13 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
        */
-      public Builder mergeThirdLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder mergeThirdLeg(org.example.Market.QuoteLeg value) {
         if (thirdLegBuilder_ == null) {
           if (((bitField0_ & 0x00000040) != 0) &&
             thirdLeg_ != null &&
-            thirdLeg_ != org.example.Market.QuoteRequestLeg.getDefaultInstance()) {
+            thirdLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getThirdLegBuilder().mergeFrom(value);
           } else {
             thirdLeg_ = value;
@@ -6850,7 +8019,7 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
        */
       public Builder clearThirdLeg() {
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -6863,33 +8032,33 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
        */
-      public org.example.Market.QuoteRequestLeg.Builder getThirdLegBuilder() {
+      public org.example.Market.QuoteLeg.Builder getThirdLegBuilder() {
         bitField0_ |= 0x00000040;
         onChanged();
         return getThirdLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
        */
-      public org.example.Market.QuoteRequestLegOrBuilder getThirdLegOrBuilder() {
+      public org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder() {
         if (thirdLegBuilder_ != null) {
           return thirdLegBuilder_.getMessageOrBuilder();
         } else {
           return thirdLeg_ == null ?
-              org.example.Market.QuoteRequestLeg.getDefaultInstance() : thirdLeg_;
+              org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> 
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
           getThirdLegFieldBuilder() {
         if (thirdLegBuilder_ == null) {
           thirdLegBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder>(
+              org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder>(
                   getThirdLeg(),
                   getParentForChildren(),
                   isClean());
@@ -7484,23 +8653,23 @@ public final class Market {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:org.example.Quote)
+      // @@protoc_insertion_point(builder_scope:org.example.MarketQuote)
     }
 
-    // @@protoc_insertion_point(class_scope:org.example.Quote)
-    private static final org.example.Market.Quote DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:org.example.MarketQuote)
+    private static final org.example.Market.MarketQuote DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.example.Market.Quote();
+      DEFAULT_INSTANCE = new org.example.Market.MarketQuote();
     }
 
-    public static org.example.Market.Quote getDefaultInstance() {
+    public static org.example.Market.MarketQuote getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Quote>
-        PARSER = new com.google.protobuf.AbstractParser<Quote>() {
+    private static final com.google.protobuf.Parser<MarketQuote>
+        PARSER = new com.google.protobuf.AbstractParser<MarketQuote>() {
       @java.lang.Override
-      public Quote parsePartialFrom(
+      public MarketQuote parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -7519,24 +8688,24 @@ public final class Market {
       }
     };
 
-    public static com.google.protobuf.Parser<Quote> parser() {
+    public static com.google.protobuf.Parser<MarketQuote> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Quote> getParserForType() {
+    public com.google.protobuf.Parser<MarketQuote> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public org.example.Market.Quote getDefaultInstanceForType() {
+    public org.example.Market.MarketQuote getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface QuoteResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.example.QuoteResponse)
+  public interface MarketQuoteResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.example.MarketQuoteResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -7598,49 +8767,49 @@ public final class Market {
     org.example.Market.QuoteRequestType getType();
 
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
      * @return Whether the firstLeg field is set.
      */
     boolean hasFirstLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
      * @return The firstLeg.
      */
-    org.example.Market.QuoteRequestLeg getFirstLeg();
+    org.example.Market.QuoteLeg getFirstLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
      */
-    org.example.Market.QuoteRequestLegOrBuilder getFirstLegOrBuilder();
+    org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder();
 
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
      * @return Whether the secondLeg field is set.
      */
     boolean hasSecondLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
      * @return The secondLeg.
      */
-    org.example.Market.QuoteRequestLeg getSecondLeg();
+    org.example.Market.QuoteLeg getSecondLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
      */
-    org.example.Market.QuoteRequestLegOrBuilder getSecondLegOrBuilder();
+    org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder();
 
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
      * @return Whether the thirdLeg field is set.
      */
     boolean hasThirdLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
      * @return The thirdLeg.
      */
-    org.example.Market.QuoteRequestLeg getThirdLeg();
+    org.example.Market.QuoteLeg getThirdLeg();
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
      */
-    org.example.Market.QuoteRequestLegOrBuilder getThirdLegOrBuilder();
+    org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder();
 
     /**
      * <code>string IssuerMemberID = 1008;</code>
@@ -7753,12 +8922,12 @@ public final class Market {
    * Quote fields from 1000 to 1499
    * </pre>
    *
-   * Protobuf type {@code org.example.QuoteResponse}
+   * Protobuf type {@code org.example.MarketQuoteResponse}
    */
-  public static final class QuoteResponse extends
+  public static final class MarketQuoteResponse extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:org.example.QuoteResponse)
-      QuoteResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:org.example.MarketQuoteResponse)
+      MarketQuoteResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -7767,13 +8936,13 @@ public final class Market {
         /* minor= */ 29,
         /* patch= */ 3,
         /* suffix= */ "",
-        QuoteResponse.class.getName());
+        MarketQuoteResponse.class.getName());
     }
-    // Use QuoteResponse.newBuilder() to construct.
-    private QuoteResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use MarketQuoteResponse.newBuilder() to construct.
+    private MarketQuoteResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private QuoteResponse() {
+    private MarketQuoteResponse() {
       quoteResponseID_ = "";
       quoteRequestID_ = "";
       quoteID_ = "";
@@ -7789,15 +8958,15 @@ public final class Market {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.example.Market.internal_static_org_example_QuoteResponse_descriptor;
+      return org.example.Market.internal_static_org_example_MarketQuoteResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.example.Market.internal_static_org_example_QuoteResponse_fieldAccessorTable
+      return org.example.Market.internal_static_org_example_MarketQuoteResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.example.Market.QuoteResponse.class, org.example.Market.QuoteResponse.Builder.class);
+              org.example.Market.MarketQuoteResponse.class, org.example.Market.MarketQuoteResponse.Builder.class);
     }
 
     private int bitField0_;
@@ -7955,9 +9124,9 @@ public final class Market {
     }
 
     public static final int FIRSTLEG_FIELD_NUMBER = 1005;
-    private org.example.Market.QuoteRequestLeg firstLeg_;
+    private org.example.Market.QuoteLeg firstLeg_;
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
      * @return Whether the firstLeg field is set.
      */
     @java.lang.Override
@@ -7965,25 +9134,25 @@ public final class Market {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
      * @return The firstLeg.
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLeg getFirstLeg() {
-      return firstLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : firstLeg_;
+    public org.example.Market.QuoteLeg getFirstLeg() {
+      return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
     }
     /**
-     * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLegOrBuilder getFirstLegOrBuilder() {
-      return firstLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : firstLeg_;
+    public org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder() {
+      return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
     }
 
     public static final int SECONDLEG_FIELD_NUMBER = 1006;
-    private org.example.Market.QuoteRequestLeg secondLeg_;
+    private org.example.Market.QuoteLeg secondLeg_;
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
      * @return Whether the secondLeg field is set.
      */
     @java.lang.Override
@@ -7991,25 +9160,25 @@ public final class Market {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
      * @return The secondLeg.
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLeg getSecondLeg() {
-      return secondLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : secondLeg_;
+    public org.example.Market.QuoteLeg getSecondLeg() {
+      return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
     }
     /**
-     * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLegOrBuilder getSecondLegOrBuilder() {
-      return secondLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : secondLeg_;
+    public org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder() {
+      return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
     }
 
     public static final int THIRDLEG_FIELD_NUMBER = 1007;
-    private org.example.Market.QuoteRequestLeg thirdLeg_;
+    private org.example.Market.QuoteLeg thirdLeg_;
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
      * @return Whether the thirdLeg field is set.
      */
     @java.lang.Override
@@ -8017,19 +9186,19 @@ public final class Market {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
      * @return The thirdLeg.
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLeg getThirdLeg() {
-      return thirdLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : thirdLeg_;
+    public org.example.Market.QuoteLeg getThirdLeg() {
+      return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
     }
     /**
-     * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
      */
     @java.lang.Override
-    public org.example.Market.QuoteRequestLegOrBuilder getThirdLegOrBuilder() {
-      return thirdLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : thirdLeg_;
+    public org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder() {
+      return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
     }
 
     public static final int ISSUERMEMBERID_FIELD_NUMBER = 1008;
@@ -8456,10 +9625,10 @@ public final class Market {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.example.Market.QuoteResponse)) {
+      if (!(obj instanceof org.example.Market.MarketQuoteResponse)) {
         return super.equals(obj);
       }
-      org.example.Market.QuoteResponse other = (org.example.Market.QuoteResponse) obj;
+      org.example.Market.MarketQuoteResponse other = (org.example.Market.MarketQuoteResponse) obj;
 
       if (!getQuoteResponseID()
           .equals(other.getQuoteResponseID())) return false;
@@ -8574,44 +9743,44 @@ public final class Market {
       return hash;
     }
 
-    public static org.example.Market.QuoteResponse parseFrom(
+    public static org.example.Market.MarketQuoteResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.QuoteResponse parseFrom(
+    public static org.example.Market.MarketQuoteResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.QuoteResponse parseFrom(
+    public static org.example.Market.MarketQuoteResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.QuoteResponse parseFrom(
+    public static org.example.Market.MarketQuoteResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.QuoteResponse parseFrom(byte[] data)
+    public static org.example.Market.MarketQuoteResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.QuoteResponse parseFrom(
+    public static org.example.Market.MarketQuoteResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.QuoteResponse parseFrom(java.io.InputStream input)
+    public static org.example.Market.MarketQuoteResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.QuoteResponse parseFrom(
+    public static org.example.Market.MarketQuoteResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8619,26 +9788,26 @@ public final class Market {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.example.Market.QuoteResponse parseDelimitedFrom(java.io.InputStream input)
+    public static org.example.Market.MarketQuoteResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.example.Market.QuoteResponse parseDelimitedFrom(
+    public static org.example.Market.MarketQuoteResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.example.Market.QuoteResponse parseFrom(
+    public static org.example.Market.MarketQuoteResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.QuoteResponse parseFrom(
+    public static org.example.Market.MarketQuoteResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8651,7 +9820,7 @@ public final class Market {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.example.Market.QuoteResponse prototype) {
+    public static Builder newBuilder(org.example.Market.MarketQuoteResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -8671,26 +9840,26 @@ public final class Market {
      * Quote fields from 1000 to 1499
      * </pre>
      *
-     * Protobuf type {@code org.example.QuoteResponse}
+     * Protobuf type {@code org.example.MarketQuoteResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.example.QuoteResponse)
-        org.example.Market.QuoteResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:org.example.MarketQuoteResponse)
+        org.example.Market.MarketQuoteResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.example.Market.internal_static_org_example_QuoteResponse_descriptor;
+        return org.example.Market.internal_static_org_example_MarketQuoteResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.example.Market.internal_static_org_example_QuoteResponse_fieldAccessorTable
+        return org.example.Market.internal_static_org_example_MarketQuoteResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.example.Market.QuoteResponse.class, org.example.Market.QuoteResponse.Builder.class);
+                org.example.Market.MarketQuoteResponse.class, org.example.Market.MarketQuoteResponse.Builder.class);
       }
 
-      // Construct using org.example.Market.QuoteResponse.newBuilder()
+      // Construct using org.example.Market.MarketQuoteResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8750,17 +9919,17 @@ public final class Market {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.example.Market.internal_static_org_example_QuoteResponse_descriptor;
+        return org.example.Market.internal_static_org_example_MarketQuoteResponse_descriptor;
       }
 
       @java.lang.Override
-      public org.example.Market.QuoteResponse getDefaultInstanceForType() {
-        return org.example.Market.QuoteResponse.getDefaultInstance();
+      public org.example.Market.MarketQuoteResponse getDefaultInstanceForType() {
+        return org.example.Market.MarketQuoteResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.example.Market.QuoteResponse build() {
-        org.example.Market.QuoteResponse result = buildPartial();
+      public org.example.Market.MarketQuoteResponse build() {
+        org.example.Market.MarketQuoteResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -8768,14 +9937,14 @@ public final class Market {
       }
 
       @java.lang.Override
-      public org.example.Market.QuoteResponse buildPartial() {
-        org.example.Market.QuoteResponse result = new org.example.Market.QuoteResponse(this);
+      public org.example.Market.MarketQuoteResponse buildPartial() {
+        org.example.Market.MarketQuoteResponse result = new org.example.Market.MarketQuoteResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.example.Market.QuoteResponse result) {
+      private void buildPartial0(org.example.Market.MarketQuoteResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.quoteResponseID_ = quoteResponseID_;
@@ -8852,16 +10021,16 @@ public final class Market {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.example.Market.QuoteResponse) {
-          return mergeFrom((org.example.Market.QuoteResponse)other);
+        if (other instanceof org.example.Market.MarketQuoteResponse) {
+          return mergeFrom((org.example.Market.MarketQuoteResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.example.Market.QuoteResponse other) {
-        if (other == org.example.Market.QuoteResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.example.Market.MarketQuoteResponse other) {
+        if (other == org.example.Market.MarketQuoteResponse.getDefaultInstance()) return this;
         if (!other.getQuoteResponseID().isEmpty()) {
           quoteResponseID_ = other.quoteResponseID_;
           bitField0_ |= 0x00000001;
@@ -9407,31 +10576,31 @@ public final class Market {
         return this;
       }
 
-      private org.example.Market.QuoteRequestLeg firstLeg_;
+      private org.example.Market.QuoteLeg firstLeg_;
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> firstLegBuilder_;
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> firstLegBuilder_;
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
        * @return Whether the firstLeg field is set.
        */
       public boolean hasFirstLeg() {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
        * @return The firstLeg.
        */
-      public org.example.Market.QuoteRequestLeg getFirstLeg() {
+      public org.example.Market.QuoteLeg getFirstLeg() {
         if (firstLegBuilder_ == null) {
-          return firstLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : firstLeg_;
+          return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
         } else {
           return firstLegBuilder_.getMessage();
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
        */
-      public Builder setFirstLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder setFirstLeg(org.example.Market.QuoteLeg value) {
         if (firstLegBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9445,10 +10614,10 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
        */
       public Builder setFirstLeg(
-          org.example.Market.QuoteRequestLeg.Builder builderForValue) {
+          org.example.Market.QuoteLeg.Builder builderForValue) {
         if (firstLegBuilder_ == null) {
           firstLeg_ = builderForValue.build();
         } else {
@@ -9459,13 +10628,13 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
        */
-      public Builder mergeFirstLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder mergeFirstLeg(org.example.Market.QuoteLeg value) {
         if (firstLegBuilder_ == null) {
           if (((bitField0_ & 0x00000020) != 0) &&
             firstLeg_ != null &&
-            firstLeg_ != org.example.Market.QuoteRequestLeg.getDefaultInstance()) {
+            firstLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getFirstLegBuilder().mergeFrom(value);
           } else {
             firstLeg_ = value;
@@ -9480,7 +10649,7 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
        */
       public Builder clearFirstLeg() {
         bitField0_ = (bitField0_ & ~0x00000020);
@@ -9493,33 +10662,33 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
        */
-      public org.example.Market.QuoteRequestLeg.Builder getFirstLegBuilder() {
+      public org.example.Market.QuoteLeg.Builder getFirstLegBuilder() {
         bitField0_ |= 0x00000020;
         onChanged();
         return getFirstLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
        */
-      public org.example.Market.QuoteRequestLegOrBuilder getFirstLegOrBuilder() {
+      public org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder() {
         if (firstLegBuilder_ != null) {
           return firstLegBuilder_.getMessageOrBuilder();
         } else {
           return firstLeg_ == null ?
-              org.example.Market.QuoteRequestLeg.getDefaultInstance() : firstLeg_;
+              org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> 
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
           getFirstLegFieldBuilder() {
         if (firstLegBuilder_ == null) {
           firstLegBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder>(
+              org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder>(
                   getFirstLeg(),
                   getParentForChildren(),
                   isClean());
@@ -9528,31 +10697,31 @@ public final class Market {
         return firstLegBuilder_;
       }
 
-      private org.example.Market.QuoteRequestLeg secondLeg_;
+      private org.example.Market.QuoteLeg secondLeg_;
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> secondLegBuilder_;
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> secondLegBuilder_;
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
        * @return Whether the secondLeg field is set.
        */
       public boolean hasSecondLeg() {
         return ((bitField0_ & 0x00000040) != 0);
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
        * @return The secondLeg.
        */
-      public org.example.Market.QuoteRequestLeg getSecondLeg() {
+      public org.example.Market.QuoteLeg getSecondLeg() {
         if (secondLegBuilder_ == null) {
-          return secondLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : secondLeg_;
+          return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
         } else {
           return secondLegBuilder_.getMessage();
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
        */
-      public Builder setSecondLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder setSecondLeg(org.example.Market.QuoteLeg value) {
         if (secondLegBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9566,10 +10735,10 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
        */
       public Builder setSecondLeg(
-          org.example.Market.QuoteRequestLeg.Builder builderForValue) {
+          org.example.Market.QuoteLeg.Builder builderForValue) {
         if (secondLegBuilder_ == null) {
           secondLeg_ = builderForValue.build();
         } else {
@@ -9580,13 +10749,13 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
        */
-      public Builder mergeSecondLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder mergeSecondLeg(org.example.Market.QuoteLeg value) {
         if (secondLegBuilder_ == null) {
           if (((bitField0_ & 0x00000040) != 0) &&
             secondLeg_ != null &&
-            secondLeg_ != org.example.Market.QuoteRequestLeg.getDefaultInstance()) {
+            secondLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getSecondLegBuilder().mergeFrom(value);
           } else {
             secondLeg_ = value;
@@ -9601,7 +10770,7 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
        */
       public Builder clearSecondLeg() {
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -9614,33 +10783,33 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
        */
-      public org.example.Market.QuoteRequestLeg.Builder getSecondLegBuilder() {
+      public org.example.Market.QuoteLeg.Builder getSecondLegBuilder() {
         bitField0_ |= 0x00000040;
         onChanged();
         return getSecondLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
        */
-      public org.example.Market.QuoteRequestLegOrBuilder getSecondLegOrBuilder() {
+      public org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder() {
         if (secondLegBuilder_ != null) {
           return secondLegBuilder_.getMessageOrBuilder();
         } else {
           return secondLeg_ == null ?
-              org.example.Market.QuoteRequestLeg.getDefaultInstance() : secondLeg_;
+              org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> 
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
           getSecondLegFieldBuilder() {
         if (secondLegBuilder_ == null) {
           secondLegBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder>(
+              org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder>(
                   getSecondLeg(),
                   getParentForChildren(),
                   isClean());
@@ -9649,31 +10818,31 @@ public final class Market {
         return secondLegBuilder_;
       }
 
-      private org.example.Market.QuoteRequestLeg thirdLeg_;
+      private org.example.Market.QuoteLeg thirdLeg_;
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> thirdLegBuilder_;
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> thirdLegBuilder_;
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
        * @return Whether the thirdLeg field is set.
        */
       public boolean hasThirdLeg() {
         return ((bitField0_ & 0x00000080) != 0);
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
        * @return The thirdLeg.
        */
-      public org.example.Market.QuoteRequestLeg getThirdLeg() {
+      public org.example.Market.QuoteLeg getThirdLeg() {
         if (thirdLegBuilder_ == null) {
-          return thirdLeg_ == null ? org.example.Market.QuoteRequestLeg.getDefaultInstance() : thirdLeg_;
+          return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
         } else {
           return thirdLegBuilder_.getMessage();
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
        */
-      public Builder setThirdLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder setThirdLeg(org.example.Market.QuoteLeg value) {
         if (thirdLegBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9687,10 +10856,10 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
        */
       public Builder setThirdLeg(
-          org.example.Market.QuoteRequestLeg.Builder builderForValue) {
+          org.example.Market.QuoteLeg.Builder builderForValue) {
         if (thirdLegBuilder_ == null) {
           thirdLeg_ = builderForValue.build();
         } else {
@@ -9701,13 +10870,13 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
        */
-      public Builder mergeThirdLeg(org.example.Market.QuoteRequestLeg value) {
+      public Builder mergeThirdLeg(org.example.Market.QuoteLeg value) {
         if (thirdLegBuilder_ == null) {
           if (((bitField0_ & 0x00000080) != 0) &&
             thirdLeg_ != null &&
-            thirdLeg_ != org.example.Market.QuoteRequestLeg.getDefaultInstance()) {
+            thirdLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getThirdLegBuilder().mergeFrom(value);
           } else {
             thirdLeg_ = value;
@@ -9722,7 +10891,7 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
        */
       public Builder clearThirdLeg() {
         bitField0_ = (bitField0_ & ~0x00000080);
@@ -9735,33 +10904,33 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
        */
-      public org.example.Market.QuoteRequestLeg.Builder getThirdLegBuilder() {
+      public org.example.Market.QuoteLeg.Builder getThirdLegBuilder() {
         bitField0_ |= 0x00000080;
         onChanged();
         return getThirdLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
        */
-      public org.example.Market.QuoteRequestLegOrBuilder getThirdLegOrBuilder() {
+      public org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder() {
         if (thirdLegBuilder_ != null) {
           return thirdLegBuilder_.getMessageOrBuilder();
         } else {
           return thirdLeg_ == null ?
-              org.example.Market.QuoteRequestLeg.getDefaultInstance() : thirdLeg_;
+              org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
         }
       }
       /**
-       * <code>.org.example.QuoteRequestLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder> 
+          org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
           getThirdLegFieldBuilder() {
         if (thirdLegBuilder_ == null) {
           thirdLegBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              org.example.Market.QuoteRequestLeg, org.example.Market.QuoteRequestLeg.Builder, org.example.Market.QuoteRequestLegOrBuilder>(
+              org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder>(
                   getThirdLeg(),
                   getParentForChildren(),
                   isClean());
@@ -10356,23 +11525,23 @@ public final class Market {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:org.example.QuoteResponse)
+      // @@protoc_insertion_point(builder_scope:org.example.MarketQuoteResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:org.example.QuoteResponse)
-    private static final org.example.Market.QuoteResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:org.example.MarketQuoteResponse)
+    private static final org.example.Market.MarketQuoteResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.example.Market.QuoteResponse();
+      DEFAULT_INSTANCE = new org.example.Market.MarketQuoteResponse();
     }
 
-    public static org.example.Market.QuoteResponse getDefaultInstance() {
+    public static org.example.Market.MarketQuoteResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<QuoteResponse>
-        PARSER = new com.google.protobuf.AbstractParser<QuoteResponse>() {
+    private static final com.google.protobuf.Parser<MarketQuoteResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MarketQuoteResponse>() {
       @java.lang.Override
-      public QuoteResponse parsePartialFrom(
+      public MarketQuoteResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -10391,24 +11560,24 @@ public final class Market {
       }
     };
 
-    public static com.google.protobuf.Parser<QuoteResponse> parser() {
+    public static com.google.protobuf.Parser<MarketQuoteResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<QuoteResponse> getParserForType() {
+    public com.google.protobuf.Parser<MarketQuoteResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public org.example.Market.QuoteResponse getDefaultInstanceForType() {
+    public org.example.Market.MarketQuoteResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface TradeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.example.Trade)
+  public interface MarketTradeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.example.MarketTrade)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -10623,12 +11792,12 @@ public final class Market {
    * trade fields from 1500 to 1999
    * </pre>
    *
-   * Protobuf type {@code org.example.Trade}
+   * Protobuf type {@code org.example.MarketTrade}
    */
-  public static final class Trade extends
+  public static final class MarketTrade extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:org.example.Trade)
-      TradeOrBuilder {
+      // @@protoc_insertion_point(message_implements:org.example.MarketTrade)
+      MarketTradeOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -10637,13 +11806,13 @@ public final class Market {
         /* minor= */ 29,
         /* patch= */ 3,
         /* suffix= */ "",
-        Trade.class.getName());
+        MarketTrade.class.getName());
     }
-    // Use Trade.newBuilder() to construct.
-    private Trade(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use MarketTrade.newBuilder() to construct.
+    private MarketTrade(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private Trade() {
+    private MarketTrade() {
       tradeID_ = "";
       securityID_ = "";
       iSINCode_ = "";
@@ -10661,15 +11830,15 @@ public final class Market {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.example.Market.internal_static_org_example_Trade_descriptor;
+      return org.example.Market.internal_static_org_example_MarketTrade_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.example.Market.internal_static_org_example_Trade_fieldAccessorTable
+      return org.example.Market.internal_static_org_example_MarketTrade_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.example.Market.Trade.class, org.example.Market.Trade.Builder.class);
+              org.example.Market.MarketTrade.class, org.example.Market.MarketTrade.Builder.class);
     }
 
     public static final int TRADEID_FIELD_NUMBER = 1500;
@@ -11392,10 +12561,10 @@ public final class Market {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.example.Market.Trade)) {
+      if (!(obj instanceof org.example.Market.MarketTrade)) {
         return super.equals(obj);
       }
-      org.example.Market.Trade other = (org.example.Market.Trade) obj;
+      org.example.Market.MarketTrade other = (org.example.Market.MarketTrade) obj;
 
       if (!getTradeID()
           .equals(other.getTradeID())) return false;
@@ -11512,44 +12681,44 @@ public final class Market {
       return hash;
     }
 
-    public static org.example.Market.Trade parseFrom(
+    public static org.example.Market.MarketTrade parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Trade parseFrom(
+    public static org.example.Market.MarketTrade parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Trade parseFrom(
+    public static org.example.Market.MarketTrade parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Trade parseFrom(
+    public static org.example.Market.MarketTrade parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Trade parseFrom(byte[] data)
+    public static org.example.Market.MarketTrade parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Trade parseFrom(
+    public static org.example.Market.MarketTrade parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Trade parseFrom(java.io.InputStream input)
+    public static org.example.Market.MarketTrade parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.Trade parseFrom(
+    public static org.example.Market.MarketTrade parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11557,26 +12726,26 @@ public final class Market {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.example.Market.Trade parseDelimitedFrom(java.io.InputStream input)
+    public static org.example.Market.MarketTrade parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.example.Market.Trade parseDelimitedFrom(
+    public static org.example.Market.MarketTrade parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.example.Market.Trade parseFrom(
+    public static org.example.Market.MarketTrade parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.Trade parseFrom(
+    public static org.example.Market.MarketTrade parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11589,7 +12758,7 @@ public final class Market {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.example.Market.Trade prototype) {
+    public static Builder newBuilder(org.example.Market.MarketTrade prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -11609,26 +12778,26 @@ public final class Market {
      * trade fields from 1500 to 1999
      * </pre>
      *
-     * Protobuf type {@code org.example.Trade}
+     * Protobuf type {@code org.example.MarketTrade}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.example.Trade)
-        org.example.Market.TradeOrBuilder {
+        // @@protoc_insertion_point(builder_implements:org.example.MarketTrade)
+        org.example.Market.MarketTradeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.example.Market.internal_static_org_example_Trade_descriptor;
+        return org.example.Market.internal_static_org_example_MarketTrade_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.example.Market.internal_static_org_example_Trade_fieldAccessorTable
+        return org.example.Market.internal_static_org_example_MarketTrade_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.example.Market.Trade.class, org.example.Market.Trade.Builder.class);
+                org.example.Market.MarketTrade.class, org.example.Market.MarketTrade.Builder.class);
       }
 
-      // Construct using org.example.Market.Trade.newBuilder()
+      // Construct using org.example.Market.MarketTrade.newBuilder()
       private Builder() {
 
       }
@@ -11670,17 +12839,17 @@ public final class Market {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.example.Market.internal_static_org_example_Trade_descriptor;
+        return org.example.Market.internal_static_org_example_MarketTrade_descriptor;
       }
 
       @java.lang.Override
-      public org.example.Market.Trade getDefaultInstanceForType() {
-        return org.example.Market.Trade.getDefaultInstance();
+      public org.example.Market.MarketTrade getDefaultInstanceForType() {
+        return org.example.Market.MarketTrade.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.example.Market.Trade build() {
-        org.example.Market.Trade result = buildPartial();
+      public org.example.Market.MarketTrade build() {
+        org.example.Market.MarketTrade result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -11688,14 +12857,14 @@ public final class Market {
       }
 
       @java.lang.Override
-      public org.example.Market.Trade buildPartial() {
-        org.example.Market.Trade result = new org.example.Market.Trade(this);
+      public org.example.Market.MarketTrade buildPartial() {
+        org.example.Market.MarketTrade result = new org.example.Market.MarketTrade(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.example.Market.Trade result) {
+      private void buildPartial0(org.example.Market.MarketTrade result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.tradeID_ = tradeID_;
@@ -11767,16 +12936,16 @@ public final class Market {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.example.Market.Trade) {
-          return mergeFrom((org.example.Market.Trade)other);
+        if (other instanceof org.example.Market.MarketTrade) {
+          return mergeFrom((org.example.Market.MarketTrade)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.example.Market.Trade other) {
-        if (other == org.example.Market.Trade.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.example.Market.MarketTrade other) {
+        if (other == org.example.Market.MarketTrade.getDefaultInstance()) return this;
         if (!other.getTradeID().isEmpty()) {
           tradeID_ = other.tradeID_;
           bitField0_ |= 0x00000001;
@@ -13183,23 +14352,23 @@ public final class Market {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:org.example.Trade)
+      // @@protoc_insertion_point(builder_scope:org.example.MarketTrade)
     }
 
-    // @@protoc_insertion_point(class_scope:org.example.Trade)
-    private static final org.example.Market.Trade DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:org.example.MarketTrade)
+    private static final org.example.Market.MarketTrade DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.example.Market.Trade();
+      DEFAULT_INSTANCE = new org.example.Market.MarketTrade();
     }
 
-    public static org.example.Market.Trade getDefaultInstance() {
+    public static org.example.Market.MarketTrade getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Trade>
-        PARSER = new com.google.protobuf.AbstractParser<Trade>() {
+    private static final com.google.protobuf.Parser<MarketTrade>
+        PARSER = new com.google.protobuf.AbstractParser<MarketTrade>() {
       @java.lang.Override
-      public Trade parsePartialFrom(
+      public MarketTrade parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -13218,24 +14387,24 @@ public final class Market {
       }
     };
 
-    public static com.google.protobuf.Parser<Trade> parser() {
+    public static com.google.protobuf.Parser<MarketTrade> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Trade> getParserForType() {
+    public com.google.protobuf.Parser<MarketTrade> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public org.example.Market.Trade getDefaultInstanceForType() {
+    public org.example.Market.MarketTrade getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface PriceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.example.Price)
+  public interface MarketPriceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.example.MarketPrice)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -13435,12 +14604,12 @@ public final class Market {
         getMemberIDBytes();
   }
   /**
-   * Protobuf type {@code org.example.Price}
+   * Protobuf type {@code org.example.MarketPrice}
    */
-  public static final class Price extends
+  public static final class MarketPrice extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:org.example.Price)
-      PriceOrBuilder {
+      // @@protoc_insertion_point(message_implements:org.example.MarketPrice)
+      MarketPriceOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -13449,13 +14618,13 @@ public final class Market {
         /* minor= */ 29,
         /* patch= */ 3,
         /* suffix= */ "",
-        Price.class.getName());
+        MarketPrice.class.getName());
     }
-    // Use Price.newBuilder() to construct.
-    private Price(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use MarketPrice.newBuilder() to construct.
+    private MarketPrice(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private Price() {
+    private MarketPrice() {
       securityID_ = "";
       iSINCode_ = "";
       cUSIP_ = "";
@@ -13468,15 +14637,15 @@ public final class Market {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.example.Market.internal_static_org_example_Price_descriptor;
+      return org.example.Market.internal_static_org_example_MarketPrice_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.example.Market.internal_static_org_example_Price_fieldAccessorTable
+      return org.example.Market.internal_static_org_example_MarketPrice_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.example.Market.Price.class, org.example.Market.Price.Builder.class);
+              org.example.Market.MarketPrice.class, org.example.Market.MarketPrice.Builder.class);
     }
 
     public static final int SECURITYID_FIELD_NUMBER = 2000;
@@ -14138,10 +15307,10 @@ public final class Market {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.example.Market.Price)) {
+      if (!(obj instanceof org.example.Market.MarketPrice)) {
         return super.equals(obj);
       }
-      org.example.Market.Price other = (org.example.Market.Price) obj;
+      org.example.Market.MarketPrice other = (org.example.Market.MarketPrice) obj;
 
       if (!getSecurityID()
           .equals(other.getSecurityID())) return false;
@@ -14287,44 +15456,44 @@ public final class Market {
       return hash;
     }
 
-    public static org.example.Market.Price parseFrom(
+    public static org.example.Market.MarketPrice parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Price parseFrom(
+    public static org.example.Market.MarketPrice parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Price parseFrom(
+    public static org.example.Market.MarketPrice parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Price parseFrom(
+    public static org.example.Market.MarketPrice parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Price parseFrom(byte[] data)
+    public static org.example.Market.MarketPrice parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Price parseFrom(
+    public static org.example.Market.MarketPrice parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Price parseFrom(java.io.InputStream input)
+    public static org.example.Market.MarketPrice parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.Price parseFrom(
+    public static org.example.Market.MarketPrice parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14332,26 +15501,26 @@ public final class Market {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.example.Market.Price parseDelimitedFrom(java.io.InputStream input)
+    public static org.example.Market.MarketPrice parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.example.Market.Price parseDelimitedFrom(
+    public static org.example.Market.MarketPrice parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.example.Market.Price parseFrom(
+    public static org.example.Market.MarketPrice parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.Price parseFrom(
+    public static org.example.Market.MarketPrice parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14364,7 +15533,7 @@ public final class Market {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.example.Market.Price prototype) {
+    public static Builder newBuilder(org.example.Market.MarketPrice prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -14380,26 +15549,26 @@ public final class Market {
       return builder;
     }
     /**
-     * Protobuf type {@code org.example.Price}
+     * Protobuf type {@code org.example.MarketPrice}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.example.Price)
-        org.example.Market.PriceOrBuilder {
+        // @@protoc_insertion_point(builder_implements:org.example.MarketPrice)
+        org.example.Market.MarketPriceOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.example.Market.internal_static_org_example_Price_descriptor;
+        return org.example.Market.internal_static_org_example_MarketPrice_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.example.Market.internal_static_org_example_Price_fieldAccessorTable
+        return org.example.Market.internal_static_org_example_MarketPrice_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.example.Market.Price.class, org.example.Market.Price.Builder.class);
+                org.example.Market.MarketPrice.class, org.example.Market.MarketPrice.Builder.class);
       }
 
-      // Construct using org.example.Market.Price.newBuilder()
+      // Construct using org.example.Market.MarketPrice.newBuilder()
       private Builder() {
 
       }
@@ -14444,17 +15613,17 @@ public final class Market {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.example.Market.internal_static_org_example_Price_descriptor;
+        return org.example.Market.internal_static_org_example_MarketPrice_descriptor;
       }
 
       @java.lang.Override
-      public org.example.Market.Price getDefaultInstanceForType() {
-        return org.example.Market.Price.getDefaultInstance();
+      public org.example.Market.MarketPrice getDefaultInstanceForType() {
+        return org.example.Market.MarketPrice.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.example.Market.Price build() {
-        org.example.Market.Price result = buildPartial();
+      public org.example.Market.MarketPrice build() {
+        org.example.Market.MarketPrice result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -14462,14 +15631,14 @@ public final class Market {
       }
 
       @java.lang.Override
-      public org.example.Market.Price buildPartial() {
-        org.example.Market.Price result = new org.example.Market.Price(this);
+      public org.example.Market.MarketPrice buildPartial() {
+        org.example.Market.MarketPrice result = new org.example.Market.MarketPrice(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.example.Market.Price result) {
+      private void buildPartial0(org.example.Market.MarketPrice result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.securityID_ = securityID_;
@@ -14550,16 +15719,16 @@ public final class Market {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.example.Market.Price) {
-          return mergeFrom((org.example.Market.Price)other);
+        if (other instanceof org.example.Market.MarketPrice) {
+          return mergeFrom((org.example.Market.MarketPrice)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.example.Market.Price other) {
-        if (other == org.example.Market.Price.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.example.Market.MarketPrice other) {
+        if (other == org.example.Market.MarketPrice.getDefaultInstance()) return this;
         if (!other.getSecurityID().isEmpty()) {
           securityID_ = other.securityID_;
           bitField0_ |= 0x00000001;
@@ -15897,23 +17066,23 @@ public final class Market {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:org.example.Price)
+      // @@protoc_insertion_point(builder_scope:org.example.MarketPrice)
     }
 
-    // @@protoc_insertion_point(class_scope:org.example.Price)
-    private static final org.example.Market.Price DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:org.example.MarketPrice)
+    private static final org.example.Market.MarketPrice DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.example.Market.Price();
+      DEFAULT_INSTANCE = new org.example.Market.MarketPrice();
     }
 
-    public static org.example.Market.Price getDefaultInstance() {
+    public static org.example.Market.MarketPrice getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Price>
-        PARSER = new com.google.protobuf.AbstractParser<Price>() {
+    private static final com.google.protobuf.Parser<MarketPrice>
+        PARSER = new com.google.protobuf.AbstractParser<MarketPrice>() {
       @java.lang.Override
-      public Price parsePartialFrom(
+      public MarketPrice parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -15932,24 +17101,24 @@ public final class Market {
       }
     };
 
-    public static com.google.protobuf.Parser<Price> parser() {
+    public static com.google.protobuf.Parser<MarketPrice> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Price> getParserForType() {
+    public com.google.protobuf.Parser<MarketPrice> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public org.example.Market.Price getDefaultInstanceForType() {
+    public org.example.Market.MarketPrice getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface SectionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.example.Section)
+  public interface MarketSectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.example.MarketSection)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -15989,12 +17158,12 @@ public final class Market {
         getDescriptionBytes();
   }
   /**
-   * Protobuf type {@code org.example.Section}
+   * Protobuf type {@code org.example.MarketSection}
    */
-  public static final class Section extends
+  public static final class MarketSection extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:org.example.Section)
-      SectionOrBuilder {
+      // @@protoc_insertion_point(message_implements:org.example.MarketSection)
+      MarketSectionOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -16003,13 +17172,13 @@ public final class Market {
         /* minor= */ 29,
         /* patch= */ 3,
         /* suffix= */ "",
-        Section.class.getName());
+        MarketSection.class.getName());
     }
-    // Use Section.newBuilder() to construct.
-    private Section(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use MarketSection.newBuilder() to construct.
+    private MarketSection(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private Section() {
+    private MarketSection() {
       marketID_ = "";
       sectionID_ = "";
       description_ = "";
@@ -16017,15 +17186,15 @@ public final class Market {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.example.Market.internal_static_org_example_Section_descriptor;
+      return org.example.Market.internal_static_org_example_MarketSection_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.example.Market.internal_static_org_example_Section_fieldAccessorTable
+      return org.example.Market.internal_static_org_example_MarketSection_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.example.Market.Section.class, org.example.Market.Section.Builder.class);
+              org.example.Market.MarketSection.class, org.example.Market.MarketSection.Builder.class);
     }
 
     public static final int MARKETID_FIELD_NUMBER = 2550;
@@ -16196,10 +17365,10 @@ public final class Market {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.example.Market.Section)) {
+      if (!(obj instanceof org.example.Market.MarketSection)) {
         return super.equals(obj);
       }
-      org.example.Market.Section other = (org.example.Market.Section) obj;
+      org.example.Market.MarketSection other = (org.example.Market.MarketSection) obj;
 
       if (!getMarketID()
           .equals(other.getMarketID())) return false;
@@ -16229,44 +17398,44 @@ public final class Market {
       return hash;
     }
 
-    public static org.example.Market.Section parseFrom(
+    public static org.example.Market.MarketSection parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Section parseFrom(
+    public static org.example.Market.MarketSection parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Section parseFrom(
+    public static org.example.Market.MarketSection parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Section parseFrom(
+    public static org.example.Market.MarketSection parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Section parseFrom(byte[] data)
+    public static org.example.Market.MarketSection parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Section parseFrom(
+    public static org.example.Market.MarketSection parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Section parseFrom(java.io.InputStream input)
+    public static org.example.Market.MarketSection parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.Section parseFrom(
+    public static org.example.Market.MarketSection parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16274,26 +17443,26 @@ public final class Market {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.example.Market.Section parseDelimitedFrom(java.io.InputStream input)
+    public static org.example.Market.MarketSection parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.example.Market.Section parseDelimitedFrom(
+    public static org.example.Market.MarketSection parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.example.Market.Section parseFrom(
+    public static org.example.Market.MarketSection parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.Section parseFrom(
+    public static org.example.Market.MarketSection parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16306,7 +17475,7 @@ public final class Market {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.example.Market.Section prototype) {
+    public static Builder newBuilder(org.example.Market.MarketSection prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -16322,26 +17491,26 @@ public final class Market {
       return builder;
     }
     /**
-     * Protobuf type {@code org.example.Section}
+     * Protobuf type {@code org.example.MarketSection}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.example.Section)
-        org.example.Market.SectionOrBuilder {
+        // @@protoc_insertion_point(builder_implements:org.example.MarketSection)
+        org.example.Market.MarketSectionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.example.Market.internal_static_org_example_Section_descriptor;
+        return org.example.Market.internal_static_org_example_MarketSection_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.example.Market.internal_static_org_example_Section_fieldAccessorTable
+        return org.example.Market.internal_static_org_example_MarketSection_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.example.Market.Section.class, org.example.Market.Section.Builder.class);
+                org.example.Market.MarketSection.class, org.example.Market.MarketSection.Builder.class);
       }
 
-      // Construct using org.example.Market.Section.newBuilder()
+      // Construct using org.example.Market.MarketSection.newBuilder()
       private Builder() {
 
       }
@@ -16364,17 +17533,17 @@ public final class Market {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.example.Market.internal_static_org_example_Section_descriptor;
+        return org.example.Market.internal_static_org_example_MarketSection_descriptor;
       }
 
       @java.lang.Override
-      public org.example.Market.Section getDefaultInstanceForType() {
-        return org.example.Market.Section.getDefaultInstance();
+      public org.example.Market.MarketSection getDefaultInstanceForType() {
+        return org.example.Market.MarketSection.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.example.Market.Section build() {
-        org.example.Market.Section result = buildPartial();
+      public org.example.Market.MarketSection build() {
+        org.example.Market.MarketSection result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -16382,14 +17551,14 @@ public final class Market {
       }
 
       @java.lang.Override
-      public org.example.Market.Section buildPartial() {
-        org.example.Market.Section result = new org.example.Market.Section(this);
+      public org.example.Market.MarketSection buildPartial() {
+        org.example.Market.MarketSection result = new org.example.Market.MarketSection(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.example.Market.Section result) {
+      private void buildPartial0(org.example.Market.MarketSection result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.marketID_ = marketID_;
@@ -16404,16 +17573,16 @@ public final class Market {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.example.Market.Section) {
-          return mergeFrom((org.example.Market.Section)other);
+        if (other instanceof org.example.Market.MarketSection) {
+          return mergeFrom((org.example.Market.MarketSection)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.example.Market.Section other) {
-        if (other == org.example.Market.Section.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.example.Market.MarketSection other) {
+        if (other == org.example.Market.MarketSection.getDefaultInstance()) return this;
         if (!other.getMarketID().isEmpty()) {
           marketID_ = other.marketID_;
           bitField0_ |= 0x00000001;
@@ -16703,23 +17872,23 @@ public final class Market {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:org.example.Section)
+      // @@protoc_insertion_point(builder_scope:org.example.MarketSection)
     }
 
-    // @@protoc_insertion_point(class_scope:org.example.Section)
-    private static final org.example.Market.Section DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:org.example.MarketSection)
+    private static final org.example.Market.MarketSection DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.example.Market.Section();
+      DEFAULT_INSTANCE = new org.example.Market.MarketSection();
     }
 
-    public static org.example.Market.Section getDefaultInstance() {
+    public static org.example.Market.MarketSection getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Section>
-        PARSER = new com.google.protobuf.AbstractParser<Section>() {
+    private static final com.google.protobuf.Parser<MarketSection>
+        PARSER = new com.google.protobuf.AbstractParser<MarketSection>() {
       @java.lang.Override
-      public Section parsePartialFrom(
+      public MarketSection parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -16738,24 +17907,24 @@ public final class Market {
       }
     };
 
-    public static com.google.protobuf.Parser<Section> parser() {
+    public static com.google.protobuf.Parser<MarketSection> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Section> getParserForType() {
+    public com.google.protobuf.Parser<MarketSection> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public org.example.Market.Section getDefaultInstanceForType() {
+    public org.example.Market.MarketSection getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface InstrumentOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:org.example.Instrument)
+  public interface MarketInstrumentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:org.example.MarketInstrument)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -16944,12 +18113,12 @@ public final class Market {
         getBenchmarkSecurityIDBytes();
   }
   /**
-   * Protobuf type {@code org.example.Instrument}
+   * Protobuf type {@code org.example.MarketInstrument}
    */
-  public static final class Instrument extends
+  public static final class MarketInstrument extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:org.example.Instrument)
-      InstrumentOrBuilder {
+      // @@protoc_insertion_point(message_implements:org.example.MarketInstrument)
+      MarketInstrumentOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -16958,13 +18127,13 @@ public final class Market {
         /* minor= */ 29,
         /* patch= */ 3,
         /* suffix= */ "",
-        Instrument.class.getName());
+        MarketInstrument.class.getName());
     }
-    // Use Instrument.newBuilder() to construct.
-    private Instrument(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use MarketInstrument.newBuilder() to construct.
+    private MarketInstrument(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private Instrument() {
+    private MarketInstrument() {
       securityID_ = "";
       description_ = "";
       iSINCode_ = "";
@@ -16980,15 +18149,15 @@ public final class Market {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.example.Market.internal_static_org_example_Instrument_descriptor;
+      return org.example.Market.internal_static_org_example_MarketInstrument_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.example.Market.internal_static_org_example_Instrument_fieldAccessorTable
+      return org.example.Market.internal_static_org_example_MarketInstrument_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.example.Market.Instrument.class, org.example.Market.Instrument.Builder.class);
+              org.example.Market.MarketInstrument.class, org.example.Market.MarketInstrument.Builder.class);
     }
 
     public static final int SECURITYID_FIELD_NUMBER = 2600;
@@ -17661,10 +18830,10 @@ public final class Market {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof org.example.Market.Instrument)) {
+      if (!(obj instanceof org.example.Market.MarketInstrument)) {
         return super.equals(obj);
       }
-      org.example.Market.Instrument other = (org.example.Market.Instrument) obj;
+      org.example.Market.MarketInstrument other = (org.example.Market.MarketInstrument) obj;
 
       if (!getSecurityID()
           .equals(other.getSecurityID())) return false;
@@ -17776,44 +18945,44 @@ public final class Market {
       return hash;
     }
 
-    public static org.example.Market.Instrument parseFrom(
+    public static org.example.Market.MarketInstrument parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Instrument parseFrom(
+    public static org.example.Market.MarketInstrument parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Instrument parseFrom(
+    public static org.example.Market.MarketInstrument parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Instrument parseFrom(
+    public static org.example.Market.MarketInstrument parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Instrument parseFrom(byte[] data)
+    public static org.example.Market.MarketInstrument parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static org.example.Market.Instrument parseFrom(
+    public static org.example.Market.MarketInstrument parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static org.example.Market.Instrument parseFrom(java.io.InputStream input)
+    public static org.example.Market.MarketInstrument parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.Instrument parseFrom(
+    public static org.example.Market.MarketInstrument parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -17821,26 +18990,26 @@ public final class Market {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static org.example.Market.Instrument parseDelimitedFrom(java.io.InputStream input)
+    public static org.example.Market.MarketInstrument parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static org.example.Market.Instrument parseDelimitedFrom(
+    public static org.example.Market.MarketInstrument parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static org.example.Market.Instrument parseFrom(
+    public static org.example.Market.MarketInstrument parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static org.example.Market.Instrument parseFrom(
+    public static org.example.Market.MarketInstrument parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -17853,7 +19022,7 @@ public final class Market {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(org.example.Market.Instrument prototype) {
+    public static Builder newBuilder(org.example.Market.MarketInstrument prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -17869,26 +19038,26 @@ public final class Market {
       return builder;
     }
     /**
-     * Protobuf type {@code org.example.Instrument}
+     * Protobuf type {@code org.example.MarketInstrument}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:org.example.Instrument)
-        org.example.Market.InstrumentOrBuilder {
+        // @@protoc_insertion_point(builder_implements:org.example.MarketInstrument)
+        org.example.Market.MarketInstrumentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.example.Market.internal_static_org_example_Instrument_descriptor;
+        return org.example.Market.internal_static_org_example_MarketInstrument_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.example.Market.internal_static_org_example_Instrument_fieldAccessorTable
+        return org.example.Market.internal_static_org_example_MarketInstrument_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                org.example.Market.Instrument.class, org.example.Market.Instrument.Builder.class);
+                org.example.Market.MarketInstrument.class, org.example.Market.MarketInstrument.Builder.class);
       }
 
-      // Construct using org.example.Market.Instrument.newBuilder()
+      // Construct using org.example.Market.MarketInstrument.newBuilder()
       private Builder() {
 
       }
@@ -17928,17 +19097,17 @@ public final class Market {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.example.Market.internal_static_org_example_Instrument_descriptor;
+        return org.example.Market.internal_static_org_example_MarketInstrument_descriptor;
       }
 
       @java.lang.Override
-      public org.example.Market.Instrument getDefaultInstanceForType() {
-        return org.example.Market.Instrument.getDefaultInstance();
+      public org.example.Market.MarketInstrument getDefaultInstanceForType() {
+        return org.example.Market.MarketInstrument.getDefaultInstance();
       }
 
       @java.lang.Override
-      public org.example.Market.Instrument build() {
-        org.example.Market.Instrument result = buildPartial();
+      public org.example.Market.MarketInstrument build() {
+        org.example.Market.MarketInstrument result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -17946,14 +19115,14 @@ public final class Market {
       }
 
       @java.lang.Override
-      public org.example.Market.Instrument buildPartial() {
-        org.example.Market.Instrument result = new org.example.Market.Instrument(this);
+      public org.example.Market.MarketInstrument buildPartial() {
+        org.example.Market.MarketInstrument result = new org.example.Market.MarketInstrument(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(org.example.Market.Instrument result) {
+      private void buildPartial0(org.example.Market.MarketInstrument result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.securityID_ = securityID_;
@@ -18019,16 +19188,16 @@ public final class Market {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof org.example.Market.Instrument) {
-          return mergeFrom((org.example.Market.Instrument)other);
+        if (other instanceof org.example.Market.MarketInstrument) {
+          return mergeFrom((org.example.Market.MarketInstrument)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(org.example.Market.Instrument other) {
-        if (other == org.example.Market.Instrument.getDefaultInstance()) return this;
+      public Builder mergeFrom(org.example.Market.MarketInstrument other) {
+        if (other == org.example.Market.MarketInstrument.getDefaultInstance()) return this;
         if (!other.getSecurityID().isEmpty()) {
           securityID_ = other.securityID_;
           bitField0_ |= 0x00000001;
@@ -19313,23 +20482,23 @@ public final class Market {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:org.example.Instrument)
+      // @@protoc_insertion_point(builder_scope:org.example.MarketInstrument)
     }
 
-    // @@protoc_insertion_point(class_scope:org.example.Instrument)
-    private static final org.example.Market.Instrument DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:org.example.MarketInstrument)
+    private static final org.example.Market.MarketInstrument DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new org.example.Market.Instrument();
+      DEFAULT_INSTANCE = new org.example.Market.MarketInstrument();
     }
 
-    public static org.example.Market.Instrument getDefaultInstance() {
+    public static org.example.Market.MarketInstrument getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Instrument>
-        PARSER = new com.google.protobuf.AbstractParser<Instrument>() {
+    private static final com.google.protobuf.Parser<MarketInstrument>
+        PARSER = new com.google.protobuf.AbstractParser<MarketInstrument>() {
       @java.lang.Override
-      public Instrument parsePartialFrom(
+      public MarketInstrument parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -19348,62 +20517,67 @@ public final class Market {
       }
     };
 
-    public static com.google.protobuf.Parser<Instrument> parser() {
+    public static com.google.protobuf.Parser<MarketInstrument> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Instrument> getParserForType() {
+    public com.google.protobuf.Parser<MarketInstrument> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public org.example.Market.Instrument getDefaultInstanceForType() {
+    public org.example.Market.MarketInstrument getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_example_QuoteRequestLeg_descriptor;
+    internal_static_org_example_QuoteLeg_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_example_QuoteRequestLeg_fieldAccessorTable;
+      internal_static_org_example_QuoteLeg_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_example_QuoteRequest_descriptor;
+    internal_static_org_example_InternalInfo_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_example_QuoteRequest_fieldAccessorTable;
+      internal_static_org_example_InternalInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_example_Quote_descriptor;
+    internal_static_org_example_MarketQuoteRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_example_Quote_fieldAccessorTable;
+      internal_static_org_example_MarketQuoteRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_example_QuoteResponse_descriptor;
+    internal_static_org_example_MarketQuote_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_example_QuoteResponse_fieldAccessorTable;
+      internal_static_org_example_MarketQuote_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_example_Trade_descriptor;
+    internal_static_org_example_MarketQuoteResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_example_Trade_fieldAccessorTable;
+      internal_static_org_example_MarketQuoteResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_example_Price_descriptor;
+    internal_static_org_example_MarketTrade_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_example_Price_fieldAccessorTable;
+      internal_static_org_example_MarketTrade_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_example_Section_descriptor;
+    internal_static_org_example_MarketPrice_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_example_Section_fieldAccessorTable;
+      internal_static_org_example_MarketPrice_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_org_example_Instrument_descriptor;
+    internal_static_org_example_MarketSection_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_org_example_Instrument_fieldAccessorTable;
+      internal_static_org_example_MarketSection_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_org_example_MarketInstrument_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_org_example_MarketInstrument_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -19413,174 +20587,185 @@ public final class Market {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014Market.proto\022\013org.example\"\237\001\n\017QuoteReq" +
-      "uestLeg\022\022\n\nSecurityID\030\001 \001(\t\022\r\n\005Price\030\002 \001" +
-      "(\001\022\r\n\005Yield\030\003 \001(\001\022\020\n\010Quantity\030\004 \001(\001\022\022\n\nM" +
-      "inimumQty\030\005 \001(\001\022\"\n\004Verb\030\006 \001(\0162\024.org.exam" +
-      "ple.LegVerb\022\020\n\010MarketID\030\007 \001(\t\"\373\004\n\014QuoteR" +
-      "equest\022\022\n\tRequestID\030\226\001 \001(\t\0224\n\010MlegType\030\227" +
-      "\001 \001(\0162!.org.example.QuoteRequestMLegType" +
-      "\022,\n\004Type\030\230\001 \001(\0162\035.org.example.QuoteReque" +
-      "stType\022/\n\010FirstLeg\030\231\001 \001(\0132\034.org.example." +
-      "QuoteRequestLeg\0220\n\tSecondLeg\030\232\001 \001(\0132\034.or" +
-      "g.example.QuoteRequestLeg\022/\n\010ThirdLeg\030\233\001" +
-      " \001(\0132\034.org.example.QuoteRequestLeg\022\027\n\016Is" +
-      "suerMemberID\030\234\001 \001(\t\022\031\n\020IssuerOperatorID\030" +
-      "\235\001 \001(\t\022#\n\032NumberOfDestinationMembers\030\236\001 " +
-      "\001(\005\022\032\n\021DestinationMember\030\237\001 \003(\t\022\025\n\014Creat" +
-      "ionDate\030\240\001 \001(\004\022\025\n\014CreationTime\030\241\001 \001(\004\022\023\n" +
-      "\nUpdateDate\030\242\001 \001(\004\022\023\n\nUpdateTime\030\243\001 \001(\004\022" +
-      "\025\n\014ValidityDate\030\244\001 \001(\004\022\025\n\014ValidityTime\030\245" +
-      "\001 \001(\004\0220\n\006Status\030\246\001 \001(\0162\037.org.example.Quo" +
-      "teRequestStatus\0222\n\rProcessStatus\030\247\001 \001(\0162" +
-      "\032.org.example.ProcessStatus\"\210\005\n\005Quote\022\020\n" +
-      "\007QuoteID\030\364\003 \001(\t\022\027\n\016QuoteRequestID\030\365\003 \001(\t" +
-      "\0224\n\010MlegType\030\366\003 \001(\0162!.org.example.QuoteR" +
-      "equestMLegType\022,\n\004Type\030\367\003 \001(\0162\035.org.exam" +
-      "ple.QuoteRequestType\022/\n\010FirstLeg\030\370\003 \001(\0132" +
-      "\034.org.example.QuoteRequestLeg\0220\n\tSecondL" +
-      "eg\030\371\003 \001(\0132\034.org.example.QuoteRequestLeg\022" +
-      "/\n\010ThirdLeg\030\372\003 \001(\0132\034.org.example.QuoteRe" +
-      "questLeg\022\027\n\016IssuerMemberID\030\373\003 \001(\t\022\031\n\020Iss" +
-      "uerOperatorID\030\374\003 \001(\t\022\034\n\023CounterpartMembe" +
-      "rID\030\375\003 \001(\t\022\036\n\025CounterpartOperatorID\030\376\003 \001" +
-      "(\t\022\025\n\014CreationDate\030\377\003 \001(\004\022\025\n\014CreationTim" +
-      "e\030\200\004 \001(\004\022\023\n\nUpdateDate\030\201\004 \001(\004\022\023\n\nUpdateT" +
-      "ime\030\202\004 \001(\004\022\025\n\014ValidityDate\030\203\004 \001(\004\022\025\n\014Val" +
-      "idityTime\030\204\004 \001(\004\0220\n\006Status\030\205\004 \001(\0162\037.org." +
-      "example.QuoteRequestStatus\0222\n\rProcessSta" +
-      "tus\030\206\004 \001(\0162\032.org.example.ProcessStatus\"\252" +
-      "\005\n\rQuoteResponse\022\030\n\017QuoteResponseID\030\350\007 \001" +
-      "(\t\022\027\n\016QuoteRequestID\030\351\007 \001(\t\022\020\n\007QuoteID\030\352" +
-      "\007 \001(\t\0224\n\010MlegType\030\353\007 \001(\0162!.org.example.Q" +
-      "uoteRequestMLegType\022,\n\004Type\030\354\007 \001(\0162\035.org" +
-      ".example.QuoteRequestType\022/\n\010FirstLeg\030\355\007" +
-      " \001(\0132\034.org.example.QuoteRequestLeg\0220\n\tSe" +
-      "condLeg\030\356\007 \001(\0132\034.org.example.QuoteReques" +
-      "tLeg\022/\n\010ThirdLeg\030\357\007 \001(\0132\034.org.example.Qu" +
-      "oteRequestLeg\022\027\n\016IssuerMemberID\030\360\007 \001(\t\022\031" +
-      "\n\020IssuerOperatorID\030\361\007 \001(\t\022\034\n\023Counterpart" +
-      "MemberID\030\362\007 \001(\t\022\036\n\025CounterpartOperatorID" +
-      "\030\363\007 \001(\t\022\025\n\014CreationDate\030\364\007 \001(\004\022\025\n\014Creati" +
-      "onTime\030\365\007 \001(\004\022\023\n\nUpdateDate\030\366\007 \001(\004\022\023\n\nUp" +
-      "dateTime\030\367\007 \001(\004\022\025\n\014ValidityDate\030\370\007 \001(\004\022\025" +
-      "\n\014ValidityTime\030\371\007 \001(\004\0220\n\006Status\030\372\007 \001(\0162\037" +
-      ".org.example.QuoteRequestStatus\0222\n\rProce" +
-      "ssStatus\030\373\007 \001(\0162\032.org.example.ProcessSta" +
-      "tus\"\312\004\n\005Trade\022\020\n\007TradeID\030\334\013 \001(\t\022\023\n\nSecur" +
-      "ityID\030\336\013 \001(\t\022\021\n\010ISINCode\030\337\013 \001(\t\022\016\n\005CUSIP" +
-      "\030\340\013 \001(\t\022\016\n\005Price\030\341\013 \001(\001\022\016\n\005Yield\030\342\013 \001(\001\022" +
-      "\021\n\010Quantity\030\343\013 \001(\001\022\023\n\nMinimumQty\030\344\013 \001(\001\022" +
-      ",\n\rAggressorVerb\030\345\013 \001(\0162\024.org.example.Le" +
-      "gVerb\022\032\n\021AggressorMemberID\030\346\013 \001(\t\022\034\n\023Agg" +
-      "ressorOperatorID\030\347\013 \001(\t\0222\n\017AggressorSour" +
-      "ce\030\350\013 \001(\0162\030.org.example.TradeSource\022\032\n\021A" +
-      "ggressorSourceID\030\351\013 \001(\t\022\031\n\020ProviderMembe" +
-      "rID\030\352\013 \001(\t\022\033\n\022ProviderOperatorID\030\353\013 \001(\t\022" +
-      "1\n\016ProviderSource\030\354\013 \001(\0162\030.org.example.T" +
-      "radeSource\022\031\n\020ProviderSourceID\030\355\013 \001(\t\022\025\n" +
-      "\014CreationDate\030\356\013 \001(\004\022\025\n\014CreationTime\030\357\013 " +
-      "\001(\004\022\023\n\nUpdateDate\030\360\013 \001(\004\022\023\n\nUpdateTime\030\361" +
-      "\013 \001(\004\022\031\n\020SettlementAmount\030\362\013 \001(\001\"\224\004\n\005Pri" +
-      "ce\022\023\n\nSecurityID\030\320\017 \001(\t\022\021\n\010ISINCode\030\321\017 \001" +
-      "(\t\022\016\n\005CUSIP\030\322\017 \001(\t\022\023\n\nTradeClass\030\323\017 \001(\t\022" +
-      "%\n\004Type\030\324\017 \001(\0162\026.org.example.PriceType\022\021" +
-      "\n\010BidPrice\030\325\017 \001(\001\022\021\n\010BidYield\030\326\017 \001(\001\022\022\n\t" +
-      "BidSpread\030\327\017 \001(\001\022\017\n\006BidAxe\030\330\017 \001(\001\022\017\n\006Bid" +
-      "Qty\030\331\017 \001(\001\022\021\n\010AskPrice\030\332\017 \001(\001\022\021\n\010AskYiel" +
-      "d\030\333\017 \001(\001\022\022\n\tAskSpread\030\334\017 \001(\001\022\017\n\006AskAxe\030\335" +
-      "\017 \001(\001\022\017\n\006AskQty\030\336\017 \001(\001\022\023\n\nDeltaPrice\030\337\017 " +
-      "\001(\001\022\023\n\nDeltaYield\030\340\017 \001(\001\022\024\n\013DeltaSpread\030" +
-      "\341\017 \001(\001\022\'\n\005State\030\342\017 \001(\0162\027.org.example.Pri" +
-      "ceState\022\022\n\tPriceDate\030\343\017 \001(\004\022\022\n\tPriceTime" +
-      "\030\344\017 \001(\004\022\023\n\nUpdateDate\030\345\017 \001(\004\022\023\n\nUpdateTi" +
-      "me\030\346\017 \001(\004\022\021\n\010MarketID\030\347\017 \001(\t\022\021\n\010MemberID" +
-      "\030\350\017 \001(\t\"F\n\007Section\022\021\n\010MarketID\030\366\023 \001(\t\022\022\n" +
-      "\tSectionID\030\367\023 \001(\t\022\024\n\013Description\030\370\023 \001(\t\"" +
-      "\313\003\n\nInstrument\022\023\n\nSecurityID\030\250\024 \001(\t\022\024\n\013D" +
-      "escription\030\251\024 \001(\t\022\021\n\010ISINCode\030\263\024 \001(\t\022\016\n\005" +
-      "CUSIP\030\264\024 \001(\t\022\021\n\010MarketID\030\265\024 \001(\t\022\022\n\tSecti" +
-      "onID\030\266\024 \001(\t\022\023\n\nTradeClass\030\267\024 \001(\t\022\021\n\010Curr" +
-      "ency\030\271\024 \001(\t\022\017\n\006Issuer\030\272\024 \001(\t\022,\n\005Class\030\273\024" +
-      " \001(\0162\034.org.example.InstrumentClass\022\022\n\tPr" +
-      "iceTick\030\274\024 \001(\001\022\020\n\007QtyTick\030\275\024 \001(\001\022\027\n\016MinT" +
-      "radableQty\030\276\024 \001(\001\022\020\n\007LotSize\030\277\024 \001(\001\022\025\n\014C" +
-      "losingPrice\030\300\024 \001(\001\022\022\n\tIssueDate\030\301\024 \001(\004\022\031" +
-      "\n\020TradingStartDate\030\302\024 \001(\004\022\030\n\017TradingStop" +
-      "Date\030\303\024 \001(\004\022\022\n\tYieldTick\030\304\024 \001(\001\022\034\n\023Bench" +
-      "markSecurityID\030\305\024 \001(\t*&\n\007LegVerb\022\014\n\010VERB" +
-      "_BUY\020\000\022\r\n\tVERB_SELL\020\001*N\n\024QuoteRequestMLe" +
-      "gType\022\021\n\rMLEG_Outright\020\000\022\017\n\013MLEG_Switch\020" +
-      "\001\022\022\n\016MLEG_Butterfly\020\002*X\n\020QuoteRequestTyp" +
-      "e\022\030\n\024TYPE_RequestBidOffer\020\000\022\025\n\021TYPE_MyBi" +
-      "dMyOffer\020\001\022\023\n\017TYPE_LimitOrder\020\002*m\n\022Quote" +
-      "RequestStatus\022\021\n\rSTATUS_Active\020\000\022\021\n\rSTAT" +
-      "US_Filled\020\001\022\024\n\020STATUS_Cancelled\020\002\022\033\n\027STA" +
-      "TUS_RejectedByMarket\020\003*D\n\rProcessStatus\022" +
-      "\032\n\026PROCESSED_NotProcessed\020\000\022\027\n\023PROCESSED" +
-      "_Processed\020\001*R\n\013TradeSource\022\027\n\023SOURCE_Qu" +
-      "oteRequest\020\000\022\020\n\014SOURCE_Quote\020\001\022\030\n\024SOURCE" +
-      "_QuoteResponse\020\002*\177\n\tPriceType\022\022\n\016TYPE_Co" +
-      "mposite\020\000\022\023\n\017TYPE_Indicative\020\001\022\r\n\tTYPE_T" +
-      "ier\020\002\022\030\n\024TYPE_CorporateSpread\020\003\022\020\n\014TYPE_" +
-      "CORP4PM\020\004\022\016\n\nTYPE_CD4PM\020\005*R\n\nPriceState\022" +
-      "\016\n\nSTATE_None\020\000\022\016\n\nSTATE_Firm\020\001\022\021\n\rSTATE" +
-      "_Subject\020\002\022\021\n\rSTATE_Deleted\020\003*W\n\017Instrum" +
-      "entClass\022\030\n\024CLASS_GovernmentBond\020\000\022\027\n\023CL" +
-      "ASS_CorporateBond\020\001\022\021\n\rCLASS_Futures\020\002b\006" +
-      "proto3"
+      "\n\014Market.proto\022\013org.example\"\230\001\n\010QuoteLeg" +
+      "\022\022\n\nSecurityID\030\001 \001(\t\022\r\n\005Price\030\002 \001(\001\022\r\n\005Y" +
+      "ield\030\003 \001(\001\022\020\n\010Quantity\030\004 \001(\001\022\022\n\nMinimumQ" +
+      "ty\030\005 \001(\001\022\"\n\004Verb\030\006 \001(\0162\024.org.example.Leg" +
+      "Verb\022\020\n\010MarketID\030\007 \001(\t\"\361\001\n\014InternalInfo\022" +
+      "\021\n\tSessionID\030\001 \001(\t\022\016\n\006FlowID\030\002 \001(\t\022\037\n\027Tr" +
+      "ansactionCreationTime\030\003 \001(\004\022\025\n\rSentOnBus" +
+      "Time\030\004 \001(\004\022\030\n\020TakenFromBusTime\030\005 \001(\004\022\025\n\r" +
+      "ProcessedTime\030\006 \001(\004\022\031\n\021SentBackToBusTime" +
+      "\030\007 \001(\004\022\034\n\024TakenBackFromBusTime\030\010 \001(\004\022\034\n\024" +
+      "CloseTransactionTime\030\t \001(\004\"\354\004\n\022MarketQuo" +
+      "teRequest\022\022\n\tRequestID\030\226\001 \001(\t\0224\n\010MlegTyp" +
+      "e\030\227\001 \001(\0162!.org.example.QuoteRequestMLegT" +
+      "ype\022,\n\004Type\030\230\001 \001(\0162\035.org.example.QuoteRe" +
+      "questType\022(\n\010FirstLeg\030\231\001 \001(\0132\025.org.examp" +
+      "le.QuoteLeg\022)\n\tSecondLeg\030\232\001 \001(\0132\025.org.ex" +
+      "ample.QuoteLeg\022(\n\010ThirdLeg\030\233\001 \001(\0132\025.org." +
+      "example.QuoteLeg\022\027\n\016IssuerMemberID\030\234\001 \001(" +
+      "\t\022\031\n\020IssuerOperatorID\030\235\001 \001(\t\022#\n\032NumberOf" +
+      "DestinationMembers\030\236\001 \001(\005\022\032\n\021Destination" +
+      "Member\030\237\001 \003(\t\022\025\n\014CreationDate\030\240\001 \001(\004\022\025\n\014" +
+      "CreationTime\030\241\001 \001(\004\022\023\n\nUpdateDate\030\242\001 \001(\004" +
+      "\022\023\n\nUpdateTime\030\243\001 \001(\004\022\025\n\014ValidityDate\030\244\001" +
+      " \001(\004\022\025\n\014ValidityTime\030\245\001 \001(\004\0220\n\006Status\030\246\001" +
+      " \001(\0162\037.org.example.QuoteRequestStatus\0222\n" +
+      "\rProcessStatus\030\247\001 \001(\0162\032.org.example.Proc" +
+      "essStatus\"\371\004\n\013MarketQuote\022\020\n\007QuoteID\030\364\003 " +
+      "\001(\t\022\027\n\016QuoteRequestID\030\365\003 \001(\t\0224\n\010MlegType" +
+      "\030\366\003 \001(\0162!.org.example.QuoteRequestMLegTy" +
+      "pe\022,\n\004Type\030\367\003 \001(\0162\035.org.example.QuoteReq" +
+      "uestType\022(\n\010FirstLeg\030\370\003 \001(\0132\025.org.exampl" +
+      "e.QuoteLeg\022)\n\tSecondLeg\030\371\003 \001(\0132\025.org.exa" +
+      "mple.QuoteLeg\022(\n\010ThirdLeg\030\372\003 \001(\0132\025.org.e" +
+      "xample.QuoteLeg\022\027\n\016IssuerMemberID\030\373\003 \001(\t" +
+      "\022\031\n\020IssuerOperatorID\030\374\003 \001(\t\022\034\n\023Counterpa" +
+      "rtMemberID\030\375\003 \001(\t\022\036\n\025CounterpartOperator" +
+      "ID\030\376\003 \001(\t\022\025\n\014CreationDate\030\377\003 \001(\004\022\025\n\014Crea" +
+      "tionTime\030\200\004 \001(\004\022\023\n\nUpdateDate\030\201\004 \001(\004\022\023\n\n" +
+      "UpdateTime\030\202\004 \001(\004\022\025\n\014ValidityDate\030\203\004 \001(\004" +
+      "\022\025\n\014ValidityTime\030\204\004 \001(\004\0220\n\006Status\030\205\004 \001(\016" +
+      "2\037.org.example.QuoteRequestStatus\0222\n\rPro" +
+      "cessStatus\030\206\004 \001(\0162\032.org.example.ProcessS" +
+      "tatus\"\233\005\n\023MarketQuoteResponse\022\030\n\017QuoteRe" +
+      "sponseID\030\350\007 \001(\t\022\027\n\016QuoteRequestID\030\351\007 \001(\t" +
+      "\022\020\n\007QuoteID\030\352\007 \001(\t\0224\n\010MlegType\030\353\007 \001(\0162!." +
+      "org.example.QuoteRequestMLegType\022,\n\004Type" +
+      "\030\354\007 \001(\0162\035.org.example.QuoteRequestType\022(" +
+      "\n\010FirstLeg\030\355\007 \001(\0132\025.org.example.QuoteLeg" +
+      "\022)\n\tSecondLeg\030\356\007 \001(\0132\025.org.example.Quote" +
+      "Leg\022(\n\010ThirdLeg\030\357\007 \001(\0132\025.org.example.Quo" +
+      "teLeg\022\027\n\016IssuerMemberID\030\360\007 \001(\t\022\031\n\020Issuer" +
+      "OperatorID\030\361\007 \001(\t\022\034\n\023CounterpartMemberID" +
+      "\030\362\007 \001(\t\022\036\n\025CounterpartOperatorID\030\363\007 \001(\t\022" +
+      "\025\n\014CreationDate\030\364\007 \001(\004\022\025\n\014CreationTime\030\365" +
+      "\007 \001(\004\022\023\n\nUpdateDate\030\366\007 \001(\004\022\023\n\nUpdateTime" +
+      "\030\367\007 \001(\004\022\025\n\014ValidityDate\030\370\007 \001(\004\022\025\n\014Validi" +
+      "tyTime\030\371\007 \001(\004\0220\n\006Status\030\372\007 \001(\0162\037.org.exa" +
+      "mple.QuoteRequestStatus\0222\n\rProcessStatus" +
+      "\030\373\007 \001(\0162\032.org.example.ProcessStatus\"\320\004\n\013" +
+      "MarketTrade\022\020\n\007TradeID\030\334\013 \001(\t\022\023\n\nSecurit" +
+      "yID\030\336\013 \001(\t\022\021\n\010ISINCode\030\337\013 \001(\t\022\016\n\005CUSIP\030\340" +
+      "\013 \001(\t\022\016\n\005Price\030\341\013 \001(\001\022\016\n\005Yield\030\342\013 \001(\001\022\021\n" +
+      "\010Quantity\030\343\013 \001(\001\022\023\n\nMinimumQty\030\344\013 \001(\001\022,\n" +
+      "\rAggressorVerb\030\345\013 \001(\0162\024.org.example.LegV" +
+      "erb\022\032\n\021AggressorMemberID\030\346\013 \001(\t\022\034\n\023Aggre" +
+      "ssorOperatorID\030\347\013 \001(\t\0222\n\017AggressorSource" +
+      "\030\350\013 \001(\0162\030.org.example.TradeSource\022\032\n\021Agg" +
+      "ressorSourceID\030\351\013 \001(\t\022\031\n\020ProviderMemberI" +
+      "D\030\352\013 \001(\t\022\033\n\022ProviderOperatorID\030\353\013 \001(\t\0221\n" +
+      "\016ProviderSource\030\354\013 \001(\0162\030.org.example.Tra" +
+      "deSource\022\031\n\020ProviderSourceID\030\355\013 \001(\t\022\025\n\014C" +
+      "reationDate\030\356\013 \001(\004\022\025\n\014CreationTime\030\357\013 \001(" +
+      "\004\022\023\n\nUpdateDate\030\360\013 \001(\004\022\023\n\nUpdateTime\030\361\013 " +
+      "\001(\004\022\031\n\020SettlementAmount\030\362\013 \001(\001\"\232\004\n\013Marke" +
+      "tPrice\022\023\n\nSecurityID\030\320\017 \001(\t\022\021\n\010ISINCode\030" +
+      "\321\017 \001(\t\022\016\n\005CUSIP\030\322\017 \001(\t\022\023\n\nTradeClass\030\323\017 " +
+      "\001(\t\022%\n\004Type\030\324\017 \001(\0162\026.org.example.PriceTy" +
+      "pe\022\021\n\010BidPrice\030\325\017 \001(\001\022\021\n\010BidYield\030\326\017 \001(\001" +
+      "\022\022\n\tBidSpread\030\327\017 \001(\001\022\017\n\006BidAxe\030\330\017 \001(\001\022\017\n" +
+      "\006BidQty\030\331\017 \001(\001\022\021\n\010AskPrice\030\332\017 \001(\001\022\021\n\010Ask" +
+      "Yield\030\333\017 \001(\001\022\022\n\tAskSpread\030\334\017 \001(\001\022\017\n\006AskA" +
+      "xe\030\335\017 \001(\001\022\017\n\006AskQty\030\336\017 \001(\001\022\023\n\nDeltaPrice" +
+      "\030\337\017 \001(\001\022\023\n\nDeltaYield\030\340\017 \001(\001\022\024\n\013DeltaSpr" +
+      "ead\030\341\017 \001(\001\022\'\n\005State\030\342\017 \001(\0162\027.org.example" +
+      ".PriceState\022\022\n\tPriceDate\030\343\017 \001(\004\022\022\n\tPrice" +
+      "Time\030\344\017 \001(\004\022\023\n\nUpdateDate\030\345\017 \001(\004\022\023\n\nUpda" +
+      "teTime\030\346\017 \001(\004\022\021\n\010MarketID\030\347\017 \001(\t\022\021\n\010Memb" +
+      "erID\030\350\017 \001(\t\"L\n\rMarketSection\022\021\n\010MarketID" +
+      "\030\366\023 \001(\t\022\022\n\tSectionID\030\367\023 \001(\t\022\024\n\013Descripti" +
+      "on\030\370\023 \001(\t\"\321\003\n\020MarketInstrument\022\023\n\nSecuri" +
+      "tyID\030\250\024 \001(\t\022\024\n\013Description\030\251\024 \001(\t\022\021\n\010ISI" +
+      "NCode\030\263\024 \001(\t\022\016\n\005CUSIP\030\264\024 \001(\t\022\021\n\010MarketID" +
+      "\030\265\024 \001(\t\022\022\n\tSectionID\030\266\024 \001(\t\022\023\n\nTradeClas" +
+      "s\030\267\024 \001(\t\022\021\n\010Currency\030\271\024 \001(\t\022\017\n\006Issuer\030\272\024" +
+      " \001(\t\022,\n\005Class\030\273\024 \001(\0162\034.org.example.Instr" +
+      "umentClass\022\022\n\tPriceTick\030\274\024 \001(\001\022\020\n\007QtyTic" +
+      "k\030\275\024 \001(\001\022\027\n\016MinTradableQty\030\276\024 \001(\001\022\020\n\007Lot" +
+      "Size\030\277\024 \001(\001\022\025\n\014ClosingPrice\030\300\024 \001(\001\022\022\n\tIs" +
+      "sueDate\030\301\024 \001(\004\022\031\n\020TradingStartDate\030\302\024 \001(" +
+      "\004\022\030\n\017TradingStopDate\030\303\024 \001(\004\022\022\n\tYieldTick" +
+      "\030\304\024 \001(\001\022\034\n\023BenchmarkSecurityID\030\305\024 \001(\t*&\n" +
+      "\007LegVerb\022\014\n\010VERB_BUY\020\000\022\r\n\tVERB_SELL\020\001*N\n" +
+      "\024QuoteRequestMLegType\022\021\n\rMLEG_Outright\020\000" +
+      "\022\017\n\013MLEG_Switch\020\001\022\022\n\016MLEG_Butterfly\020\002*X\n" +
+      "\020QuoteRequestType\022\030\n\024TYPE_RequestBidOffe" +
+      "r\020\000\022\025\n\021TYPE_MyBidMyOffer\020\001\022\023\n\017TYPE_Limit" +
+      "Order\020\002*m\n\022QuoteRequestStatus\022\021\n\rSTATUS_" +
+      "Active\020\000\022\021\n\rSTATUS_Filled\020\001\022\024\n\020STATUS_Ca" +
+      "ncelled\020\002\022\033\n\027STATUS_RejectedByMarket\020\003*D" +
+      "\n\rProcessStatus\022\032\n\026PROCESSED_NotProcesse" +
+      "d\020\000\022\027\n\023PROCESSED_Processed\020\001*R\n\013TradeSou" +
+      "rce\022\027\n\023SOURCE_QuoteRequest\020\000\022\020\n\014SOURCE_Q" +
+      "uote\020\001\022\030\n\024SOURCE_QuoteResponse\020\002*\177\n\tPric" +
+      "eType\022\022\n\016TYPE_Composite\020\000\022\023\n\017TYPE_Indica" +
+      "tive\020\001\022\r\n\tTYPE_Tier\020\002\022\030\n\024TYPE_CorporateS" +
+      "pread\020\003\022\020\n\014TYPE_CORP4PM\020\004\022\016\n\nTYPE_CD4PM\020" +
+      "\005*R\n\nPriceState\022\016\n\nSTATE_None\020\000\022\016\n\nSTATE" +
+      "_Firm\020\001\022\021\n\rSTATE_Subject\020\002\022\021\n\rSTATE_Dele" +
+      "ted\020\003*W\n\017InstrumentClass\022\030\n\024CLASS_Govern" +
+      "mentBond\020\000\022\027\n\023CLASS_CorporateBond\020\001\022\021\n\rC" +
+      "LASS_Futures\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_org_example_QuoteRequestLeg_descriptor =
+    internal_static_org_example_QuoteLeg_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_org_example_QuoteRequestLeg_fieldAccessorTable = new
+    internal_static_org_example_QuoteLeg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_org_example_QuoteRequestLeg_descriptor,
+        internal_static_org_example_QuoteLeg_descriptor,
         new java.lang.String[] { "SecurityID", "Price", "Yield", "Quantity", "MinimumQty", "Verb", "MarketID", });
-    internal_static_org_example_QuoteRequest_descriptor =
+    internal_static_org_example_InternalInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_org_example_QuoteRequest_fieldAccessorTable = new
+    internal_static_org_example_InternalInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_org_example_QuoteRequest_descriptor,
-        new java.lang.String[] { "RequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "NumberOfDestinationMembers", "DestinationMember", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", });
-    internal_static_org_example_Quote_descriptor =
+        internal_static_org_example_InternalInfo_descriptor,
+        new java.lang.String[] { "SessionID", "FlowID", "TransactionCreationTime", "SentOnBusTime", "TakenFromBusTime", "ProcessedTime", "SentBackToBusTime", "TakenBackFromBusTime", "CloseTransactionTime", });
+    internal_static_org_example_MarketQuoteRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_org_example_Quote_fieldAccessorTable = new
+    internal_static_org_example_MarketQuoteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_org_example_Quote_descriptor,
-        new java.lang.String[] { "QuoteID", "QuoteRequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", });
-    internal_static_org_example_QuoteResponse_descriptor =
+        internal_static_org_example_MarketQuoteRequest_descriptor,
+        new java.lang.String[] { "RequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "NumberOfDestinationMembers", "DestinationMember", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", });
+    internal_static_org_example_MarketQuote_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_org_example_QuoteResponse_fieldAccessorTable = new
+    internal_static_org_example_MarketQuote_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_org_example_QuoteResponse_descriptor,
-        new java.lang.String[] { "QuoteResponseID", "QuoteRequestID", "QuoteID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", });
-    internal_static_org_example_Trade_descriptor =
+        internal_static_org_example_MarketQuote_descriptor,
+        new java.lang.String[] { "QuoteID", "QuoteRequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", });
+    internal_static_org_example_MarketQuoteResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_org_example_Trade_fieldAccessorTable = new
+    internal_static_org_example_MarketQuoteResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_org_example_Trade_descriptor,
-        new java.lang.String[] { "TradeID", "SecurityID", "ISINCode", "CUSIP", "Price", "Yield", "Quantity", "MinimumQty", "AggressorVerb", "AggressorMemberID", "AggressorOperatorID", "AggressorSource", "AggressorSourceID", "ProviderMemberID", "ProviderOperatorID", "ProviderSource", "ProviderSourceID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "SettlementAmount", });
-    internal_static_org_example_Price_descriptor =
+        internal_static_org_example_MarketQuoteResponse_descriptor,
+        new java.lang.String[] { "QuoteResponseID", "QuoteRequestID", "QuoteID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", });
+    internal_static_org_example_MarketTrade_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_org_example_Price_fieldAccessorTable = new
+    internal_static_org_example_MarketTrade_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_org_example_Price_descriptor,
-        new java.lang.String[] { "SecurityID", "ISINCode", "CUSIP", "TradeClass", "Type", "BidPrice", "BidYield", "BidSpread", "BidAxe", "BidQty", "AskPrice", "AskYield", "AskSpread", "AskAxe", "AskQty", "DeltaPrice", "DeltaYield", "DeltaSpread", "State", "PriceDate", "PriceTime", "UpdateDate", "UpdateTime", "MarketID", "MemberID", });
-    internal_static_org_example_Section_descriptor =
+        internal_static_org_example_MarketTrade_descriptor,
+        new java.lang.String[] { "TradeID", "SecurityID", "ISINCode", "CUSIP", "Price", "Yield", "Quantity", "MinimumQty", "AggressorVerb", "AggressorMemberID", "AggressorOperatorID", "AggressorSource", "AggressorSourceID", "ProviderMemberID", "ProviderOperatorID", "ProviderSource", "ProviderSourceID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "SettlementAmount", });
+    internal_static_org_example_MarketPrice_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_org_example_Section_fieldAccessorTable = new
+    internal_static_org_example_MarketPrice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_org_example_Section_descriptor,
-        new java.lang.String[] { "MarketID", "SectionID", "Description", });
-    internal_static_org_example_Instrument_descriptor =
+        internal_static_org_example_MarketPrice_descriptor,
+        new java.lang.String[] { "SecurityID", "ISINCode", "CUSIP", "TradeClass", "Type", "BidPrice", "BidYield", "BidSpread", "BidAxe", "BidQty", "AskPrice", "AskYield", "AskSpread", "AskAxe", "AskQty", "DeltaPrice", "DeltaYield", "DeltaSpread", "State", "PriceDate", "PriceTime", "UpdateDate", "UpdateTime", "MarketID", "MemberID", });
+    internal_static_org_example_MarketSection_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_org_example_Instrument_fieldAccessorTable = new
+    internal_static_org_example_MarketSection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_org_example_Instrument_descriptor,
+        internal_static_org_example_MarketSection_descriptor,
+        new java.lang.String[] { "MarketID", "SectionID", "Description", });
+    internal_static_org_example_MarketInstrument_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_org_example_MarketInstrument_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_org_example_MarketInstrument_descriptor,
         new java.lang.String[] { "SecurityID", "Description", "ISINCode", "CUSIP", "MarketID", "SectionID", "TradeClass", "Currency", "Issuer", "Class_", "PriceTick", "QtyTick", "MinTradableQty", "LotSize", "ClosingPrice", "IssueDate", "TradingStartDate", "TradingStopDate", "YieldTick", "BenchmarkSecurityID", });
     descriptor.resolveAllFeaturesImmutable();
   }

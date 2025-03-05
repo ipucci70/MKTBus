@@ -3427,133 +3427,145 @@ public final class Market {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string RequestID = 150;</code>
-     * @return The requestID.
+     * <code>string QuoteRequestID = 150;</code>
+     * @return The quoteRequestID.
      */
-    java.lang.String getRequestID();
+    java.lang.String getQuoteRequestID();
     /**
-     * <code>string RequestID = 150;</code>
-     * @return The bytes for requestID.
+     * <code>string QuoteRequestID = 150;</code>
+     * @return The bytes for quoteRequestID.
      */
     com.google.protobuf.ByteString
-        getRequestIDBytes();
+        getQuoteRequestIDBytes();
 
     /**
-     * <code>.org.example.QuoteRequestMLegType MlegType = 151;</code>
+     * <code>string ClientQuoteRequestID = 151;</code>
+     * @return The clientQuoteRequestID.
+     */
+    java.lang.String getClientQuoteRequestID();
+    /**
+     * <code>string ClientQuoteRequestID = 151;</code>
+     * @return The bytes for clientQuoteRequestID.
+     */
+    com.google.protobuf.ByteString
+        getClientQuoteRequestIDBytes();
+
+    /**
+     * <code>.org.example.QuoteRequestMLegType MlegType = 152;</code>
      * @return The enum numeric value on the wire for mlegType.
      */
     int getMlegTypeValue();
     /**
-     * <code>.org.example.QuoteRequestMLegType MlegType = 151;</code>
+     * <code>.org.example.QuoteRequestMLegType MlegType = 152;</code>
      * @return The mlegType.
      */
     org.example.Market.QuoteRequestMLegType getMlegType();
 
     /**
-     * <code>.org.example.QuoteRequestType Type = 152;</code>
+     * <code>.org.example.QuoteRequestType Type = 153;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
-     * <code>.org.example.QuoteRequestType Type = 152;</code>
+     * <code>.org.example.QuoteRequestType Type = 153;</code>
      * @return The type.
      */
     org.example.Market.QuoteRequestType getType();
 
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
      * @return Whether the firstLeg field is set.
      */
     boolean hasFirstLeg();
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
      * @return The firstLeg.
      */
     org.example.Market.QuoteLeg getFirstLeg();
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
      */
     org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder();
 
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
      * @return Whether the secondLeg field is set.
      */
     boolean hasSecondLeg();
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
      * @return The secondLeg.
      */
     org.example.Market.QuoteLeg getSecondLeg();
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
      */
     org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder();
 
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
      * @return Whether the thirdLeg field is set.
      */
     boolean hasThirdLeg();
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
      * @return The thirdLeg.
      */
     org.example.Market.QuoteLeg getThirdLeg();
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
      */
     org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder();
 
     /**
-     * <code>string IssuerMemberID = 156;</code>
+     * <code>string IssuerMemberID = 157;</code>
      * @return The issuerMemberID.
      */
     java.lang.String getIssuerMemberID();
     /**
-     * <code>string IssuerMemberID = 156;</code>
+     * <code>string IssuerMemberID = 157;</code>
      * @return The bytes for issuerMemberID.
      */
     com.google.protobuf.ByteString
         getIssuerMemberIDBytes();
 
     /**
-     * <code>string IssuerOperatorID = 157;</code>
+     * <code>string IssuerOperatorID = 158;</code>
      * @return The issuerOperatorID.
      */
     java.lang.String getIssuerOperatorID();
     /**
-     * <code>string IssuerOperatorID = 157;</code>
+     * <code>string IssuerOperatorID = 158;</code>
      * @return The bytes for issuerOperatorID.
      */
     com.google.protobuf.ByteString
         getIssuerOperatorIDBytes();
 
     /**
-     * <code>int32 NumberOfDestinationMembers = 158;</code>
+     * <code>int32 NumberOfDestinationMembers = 159;</code>
      * @return The numberOfDestinationMembers.
      */
     int getNumberOfDestinationMembers();
 
     /**
-     * <code>repeated string DestinationMember = 159;</code>
+     * <code>repeated string DestinationMember = 160;</code>
      * @return A list containing the destinationMember.
      */
     java.util.List<java.lang.String>
         getDestinationMemberList();
     /**
-     * <code>repeated string DestinationMember = 159;</code>
+     * <code>repeated string DestinationMember = 160;</code>
      * @return The count of destinationMember.
      */
     int getDestinationMemberCount();
     /**
-     * <code>repeated string DestinationMember = 159;</code>
+     * <code>repeated string DestinationMember = 160;</code>
      * @param index The index of the element to return.
      * @return The destinationMember at the given index.
      */
     java.lang.String getDestinationMember(int index);
     /**
-     * <code>repeated string DestinationMember = 159;</code>
+     * <code>repeated string DestinationMember = 160;</code>
      * @param index The index of the value to return.
      * @return The bytes of the destinationMember at the given index.
      */
@@ -3561,62 +3573,77 @@ public final class Market {
         getDestinationMemberBytes(int index);
 
     /**
-     * <code>uint64 CreationDate = 160;</code>
+     * <code>uint64 CreationDate = 161;</code>
      * @return The creationDate.
      */
     long getCreationDate();
 
     /**
-     * <code>uint64 CreationTime = 161;</code>
+     * <code>uint64 CreationTime = 162;</code>
      * @return The creationTime.
      */
     long getCreationTime();
 
     /**
-     * <code>uint64 UpdateDate = 162;</code>
+     * <code>uint64 UpdateDate = 163;</code>
      * @return The updateDate.
      */
     long getUpdateDate();
 
     /**
-     * <code>uint64 UpdateTime = 163;</code>
+     * <code>uint64 UpdateTime = 164;</code>
      * @return The updateTime.
      */
     long getUpdateTime();
 
     /**
-     * <code>uint64 ValidityDate = 164;</code>
+     * <code>uint64 ValidityDate = 165;</code>
      * @return The validityDate.
      */
     long getValidityDate();
 
     /**
-     * <code>uint64 ValidityTime = 165;</code>
+     * <code>uint64 ValidityTime = 166;</code>
      * @return The validityTime.
      */
     long getValidityTime();
 
     /**
-     * <code>.org.example.QuoteRequestStatus Status = 166;</code>
+     * <code>.org.example.QuoteRequestStatus Status = 167;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.org.example.QuoteRequestStatus Status = 166;</code>
+     * <code>.org.example.QuoteRequestStatus Status = 167;</code>
      * @return The status.
      */
     org.example.Market.QuoteRequestStatus getStatus();
 
     /**
-     * <code>.org.example.ProcessStatus ProcessStatus = 167;</code>
+     * <code>.org.example.ProcessStatus ProcessStatus = 168;</code>
      * @return The enum numeric value on the wire for processStatus.
      */
     int getProcessStatusValue();
     /**
-     * <code>.org.example.ProcessStatus ProcessStatus = 167;</code>
+     * <code>.org.example.ProcessStatus ProcessStatus = 168;</code>
      * @return The processStatus.
      */
     org.example.Market.ProcessStatus getProcessStatus();
+
+    /**
+     * <code>.org.example.InternalInfo Internals = 499;</code>
+     * @return Whether the internals field is set.
+     */
+    boolean hasInternals();
+    /**
+     * <code>.org.example.InternalInfo Internals = 499;</code>
+     * @return The internals.
+     */
+    org.example.Market.InternalInfo getInternals();
+    /**
+     * <code>.org.example.InternalInfo Internals = 499;</code>
+     */
+    org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder();
   }
   /**
    * Protobuf type {@code org.example.MarketQuoteRequest}
@@ -3640,7 +3667,8 @@ public final class Market {
       super(builder);
     }
     private MarketQuoteRequest() {
-      requestID_ = "";
+      quoteRequestID_ = "";
+      clientQuoteRequestID_ = "";
       mlegType_ = 0;
       type_ = 0;
       issuerMemberID_ = "";
@@ -3665,56 +3693,95 @@ public final class Market {
     }
 
     private int bitField0_;
-    public static final int REQUESTID_FIELD_NUMBER = 150;
+    public static final int QUOTEREQUESTID_FIELD_NUMBER = 150;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object requestID_ = "";
+    private volatile java.lang.Object quoteRequestID_ = "";
     /**
-     * <code>string RequestID = 150;</code>
-     * @return The requestID.
+     * <code>string QuoteRequestID = 150;</code>
+     * @return The quoteRequestID.
      */
     @java.lang.Override
-    public java.lang.String getRequestID() {
-      java.lang.Object ref = requestID_;
+    public java.lang.String getQuoteRequestID() {
+      java.lang.Object ref = quoteRequestID_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        requestID_ = s;
+        quoteRequestID_ = s;
         return s;
       }
     }
     /**
-     * <code>string RequestID = 150;</code>
-     * @return The bytes for requestID.
+     * <code>string QuoteRequestID = 150;</code>
+     * @return The bytes for quoteRequestID.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getRequestIDBytes() {
-      java.lang.Object ref = requestID_;
+        getQuoteRequestIDBytes() {
+      java.lang.Object ref = quoteRequestID_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        requestID_ = b;
+        quoteRequestID_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int MLEGTYPE_FIELD_NUMBER = 151;
+    public static final int CLIENTQUOTEREQUESTID_FIELD_NUMBER = 151;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientQuoteRequestID_ = "";
+    /**
+     * <code>string ClientQuoteRequestID = 151;</code>
+     * @return The clientQuoteRequestID.
+     */
+    @java.lang.Override
+    public java.lang.String getClientQuoteRequestID() {
+      java.lang.Object ref = clientQuoteRequestID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientQuoteRequestID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ClientQuoteRequestID = 151;</code>
+     * @return The bytes for clientQuoteRequestID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientQuoteRequestIDBytes() {
+      java.lang.Object ref = clientQuoteRequestID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientQuoteRequestID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MLEGTYPE_FIELD_NUMBER = 152;
     private int mlegType_ = 0;
     /**
-     * <code>.org.example.QuoteRequestMLegType MlegType = 151;</code>
+     * <code>.org.example.QuoteRequestMLegType MlegType = 152;</code>
      * @return The enum numeric value on the wire for mlegType.
      */
     @java.lang.Override public int getMlegTypeValue() {
       return mlegType_;
     }
     /**
-     * <code>.org.example.QuoteRequestMLegType MlegType = 151;</code>
+     * <code>.org.example.QuoteRequestMLegType MlegType = 152;</code>
      * @return The mlegType.
      */
     @java.lang.Override public org.example.Market.QuoteRequestMLegType getMlegType() {
@@ -3722,17 +3789,17 @@ public final class Market {
       return result == null ? org.example.Market.QuoteRequestMLegType.UNRECOGNIZED : result;
     }
 
-    public static final int TYPE_FIELD_NUMBER = 152;
+    public static final int TYPE_FIELD_NUMBER = 153;
     private int type_ = 0;
     /**
-     * <code>.org.example.QuoteRequestType Type = 152;</code>
+     * <code>.org.example.QuoteRequestType Type = 153;</code>
      * @return The enum numeric value on the wire for type.
      */
     @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
-     * <code>.org.example.QuoteRequestType Type = 152;</code>
+     * <code>.org.example.QuoteRequestType Type = 153;</code>
      * @return The type.
      */
     @java.lang.Override public org.example.Market.QuoteRequestType getType() {
@@ -3740,10 +3807,10 @@ public final class Market {
       return result == null ? org.example.Market.QuoteRequestType.UNRECOGNIZED : result;
     }
 
-    public static final int FIRSTLEG_FIELD_NUMBER = 153;
+    public static final int FIRSTLEG_FIELD_NUMBER = 154;
     private org.example.Market.QuoteLeg firstLeg_;
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
      * @return Whether the firstLeg field is set.
      */
     @java.lang.Override
@@ -3751,7 +3818,7 @@ public final class Market {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
      * @return The firstLeg.
      */
     @java.lang.Override
@@ -3759,17 +3826,17 @@ public final class Market {
       return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
     }
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
      */
     @java.lang.Override
     public org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder() {
       return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
     }
 
-    public static final int SECONDLEG_FIELD_NUMBER = 154;
+    public static final int SECONDLEG_FIELD_NUMBER = 155;
     private org.example.Market.QuoteLeg secondLeg_;
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
      * @return Whether the secondLeg field is set.
      */
     @java.lang.Override
@@ -3777,7 +3844,7 @@ public final class Market {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
      * @return The secondLeg.
      */
     @java.lang.Override
@@ -3785,17 +3852,17 @@ public final class Market {
       return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
     }
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
      */
     @java.lang.Override
     public org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder() {
       return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
     }
 
-    public static final int THIRDLEG_FIELD_NUMBER = 155;
+    public static final int THIRDLEG_FIELD_NUMBER = 156;
     private org.example.Market.QuoteLeg thirdLeg_;
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
      * @return Whether the thirdLeg field is set.
      */
     @java.lang.Override
@@ -3803,7 +3870,7 @@ public final class Market {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
      * @return The thirdLeg.
      */
     @java.lang.Override
@@ -3811,18 +3878,18 @@ public final class Market {
       return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
     }
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
      */
     @java.lang.Override
     public org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder() {
       return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
     }
 
-    public static final int ISSUERMEMBERID_FIELD_NUMBER = 156;
+    public static final int ISSUERMEMBERID_FIELD_NUMBER = 157;
     @SuppressWarnings("serial")
     private volatile java.lang.Object issuerMemberID_ = "";
     /**
-     * <code>string IssuerMemberID = 156;</code>
+     * <code>string IssuerMemberID = 157;</code>
      * @return The issuerMemberID.
      */
     @java.lang.Override
@@ -3839,7 +3906,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string IssuerMemberID = 156;</code>
+     * <code>string IssuerMemberID = 157;</code>
      * @return The bytes for issuerMemberID.
      */
     @java.lang.Override
@@ -3857,11 +3924,11 @@ public final class Market {
       }
     }
 
-    public static final int ISSUEROPERATORID_FIELD_NUMBER = 157;
+    public static final int ISSUEROPERATORID_FIELD_NUMBER = 158;
     @SuppressWarnings("serial")
     private volatile java.lang.Object issuerOperatorID_ = "";
     /**
-     * <code>string IssuerOperatorID = 157;</code>
+     * <code>string IssuerOperatorID = 158;</code>
      * @return The issuerOperatorID.
      */
     @java.lang.Override
@@ -3878,7 +3945,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string IssuerOperatorID = 157;</code>
+     * <code>string IssuerOperatorID = 158;</code>
      * @return The bytes for issuerOperatorID.
      */
     @java.lang.Override
@@ -3896,10 +3963,10 @@ public final class Market {
       }
     }
 
-    public static final int NUMBEROFDESTINATIONMEMBERS_FIELD_NUMBER = 158;
+    public static final int NUMBEROFDESTINATIONMEMBERS_FIELD_NUMBER = 159;
     private int numberOfDestinationMembers_ = 0;
     /**
-     * <code>int32 NumberOfDestinationMembers = 158;</code>
+     * <code>int32 NumberOfDestinationMembers = 159;</code>
      * @return The numberOfDestinationMembers.
      */
     @java.lang.Override
@@ -3907,12 +3974,12 @@ public final class Market {
       return numberOfDestinationMembers_;
     }
 
-    public static final int DESTINATIONMEMBER_FIELD_NUMBER = 159;
+    public static final int DESTINATIONMEMBER_FIELD_NUMBER = 160;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList destinationMember_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
-     * <code>repeated string DestinationMember = 159;</code>
+     * <code>repeated string DestinationMember = 160;</code>
      * @return A list containing the destinationMember.
      */
     public com.google.protobuf.ProtocolStringList
@@ -3920,14 +3987,14 @@ public final class Market {
       return destinationMember_;
     }
     /**
-     * <code>repeated string DestinationMember = 159;</code>
+     * <code>repeated string DestinationMember = 160;</code>
      * @return The count of destinationMember.
      */
     public int getDestinationMemberCount() {
       return destinationMember_.size();
     }
     /**
-     * <code>repeated string DestinationMember = 159;</code>
+     * <code>repeated string DestinationMember = 160;</code>
      * @param index The index of the element to return.
      * @return The destinationMember at the given index.
      */
@@ -3935,7 +4002,7 @@ public final class Market {
       return destinationMember_.get(index);
     }
     /**
-     * <code>repeated string DestinationMember = 159;</code>
+     * <code>repeated string DestinationMember = 160;</code>
      * @param index The index of the value to return.
      * @return The bytes of the destinationMember at the given index.
      */
@@ -3944,10 +4011,10 @@ public final class Market {
       return destinationMember_.getByteString(index);
     }
 
-    public static final int CREATIONDATE_FIELD_NUMBER = 160;
+    public static final int CREATIONDATE_FIELD_NUMBER = 161;
     private long creationDate_ = 0L;
     /**
-     * <code>uint64 CreationDate = 160;</code>
+     * <code>uint64 CreationDate = 161;</code>
      * @return The creationDate.
      */
     @java.lang.Override
@@ -3955,10 +4022,10 @@ public final class Market {
       return creationDate_;
     }
 
-    public static final int CREATIONTIME_FIELD_NUMBER = 161;
+    public static final int CREATIONTIME_FIELD_NUMBER = 162;
     private long creationTime_ = 0L;
     /**
-     * <code>uint64 CreationTime = 161;</code>
+     * <code>uint64 CreationTime = 162;</code>
      * @return The creationTime.
      */
     @java.lang.Override
@@ -3966,10 +4033,10 @@ public final class Market {
       return creationTime_;
     }
 
-    public static final int UPDATEDATE_FIELD_NUMBER = 162;
+    public static final int UPDATEDATE_FIELD_NUMBER = 163;
     private long updateDate_ = 0L;
     /**
-     * <code>uint64 UpdateDate = 162;</code>
+     * <code>uint64 UpdateDate = 163;</code>
      * @return The updateDate.
      */
     @java.lang.Override
@@ -3977,10 +4044,10 @@ public final class Market {
       return updateDate_;
     }
 
-    public static final int UPDATETIME_FIELD_NUMBER = 163;
+    public static final int UPDATETIME_FIELD_NUMBER = 164;
     private long updateTime_ = 0L;
     /**
-     * <code>uint64 UpdateTime = 163;</code>
+     * <code>uint64 UpdateTime = 164;</code>
      * @return The updateTime.
      */
     @java.lang.Override
@@ -3988,10 +4055,10 @@ public final class Market {
       return updateTime_;
     }
 
-    public static final int VALIDITYDATE_FIELD_NUMBER = 164;
+    public static final int VALIDITYDATE_FIELD_NUMBER = 165;
     private long validityDate_ = 0L;
     /**
-     * <code>uint64 ValidityDate = 164;</code>
+     * <code>uint64 ValidityDate = 165;</code>
      * @return The validityDate.
      */
     @java.lang.Override
@@ -3999,10 +4066,10 @@ public final class Market {
       return validityDate_;
     }
 
-    public static final int VALIDITYTIME_FIELD_NUMBER = 165;
+    public static final int VALIDITYTIME_FIELD_NUMBER = 166;
     private long validityTime_ = 0L;
     /**
-     * <code>uint64 ValidityTime = 165;</code>
+     * <code>uint64 ValidityTime = 166;</code>
      * @return The validityTime.
      */
     @java.lang.Override
@@ -4010,17 +4077,17 @@ public final class Market {
       return validityTime_;
     }
 
-    public static final int STATUS_FIELD_NUMBER = 166;
+    public static final int STATUS_FIELD_NUMBER = 167;
     private int status_ = 0;
     /**
-     * <code>.org.example.QuoteRequestStatus Status = 166;</code>
+     * <code>.org.example.QuoteRequestStatus Status = 167;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.org.example.QuoteRequestStatus Status = 166;</code>
+     * <code>.org.example.QuoteRequestStatus Status = 167;</code>
      * @return The status.
      */
     @java.lang.Override public org.example.Market.QuoteRequestStatus getStatus() {
@@ -4028,22 +4095,48 @@ public final class Market {
       return result == null ? org.example.Market.QuoteRequestStatus.UNRECOGNIZED : result;
     }
 
-    public static final int PROCESSSTATUS_FIELD_NUMBER = 167;
+    public static final int PROCESSSTATUS_FIELD_NUMBER = 168;
     private int processStatus_ = 0;
     /**
-     * <code>.org.example.ProcessStatus ProcessStatus = 167;</code>
+     * <code>.org.example.ProcessStatus ProcessStatus = 168;</code>
      * @return The enum numeric value on the wire for processStatus.
      */
     @java.lang.Override public int getProcessStatusValue() {
       return processStatus_;
     }
     /**
-     * <code>.org.example.ProcessStatus ProcessStatus = 167;</code>
+     * <code>.org.example.ProcessStatus ProcessStatus = 168;</code>
      * @return The processStatus.
      */
     @java.lang.Override public org.example.Market.ProcessStatus getProcessStatus() {
       org.example.Market.ProcessStatus result = org.example.Market.ProcessStatus.forNumber(processStatus_);
       return result == null ? org.example.Market.ProcessStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int INTERNALS_FIELD_NUMBER = 499;
+    private org.example.Market.InternalInfo internals_;
+    /**
+     * <code>.org.example.InternalInfo Internals = 499;</code>
+     * @return Whether the internals field is set.
+     */
+    @java.lang.Override
+    public boolean hasInternals() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.org.example.InternalInfo Internals = 499;</code>
+     * @return The internals.
+     */
+    @java.lang.Override
+    public org.example.Market.InternalInfo getInternals() {
+      return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+    }
+    /**
+     * <code>.org.example.InternalInfo Internals = 499;</code>
+     */
+    @java.lang.Override
+    public org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder() {
+      return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4060,59 +4153,65 @@ public final class Market {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(requestID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 150, requestID_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteRequestID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 150, quoteRequestID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteRequestID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 151, clientQuoteRequestID_);
       }
       if (mlegType_ != org.example.Market.QuoteRequestMLegType.MLEG_Outright.getNumber()) {
-        output.writeEnum(151, mlegType_);
+        output.writeEnum(152, mlegType_);
       }
       if (type_ != org.example.Market.QuoteRequestType.TYPE_RequestBidOffer.getNumber()) {
-        output.writeEnum(152, type_);
+        output.writeEnum(153, type_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(153, getFirstLeg());
+        output.writeMessage(154, getFirstLeg());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(154, getSecondLeg());
+        output.writeMessage(155, getSecondLeg());
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeMessage(155, getThirdLeg());
+        output.writeMessage(156, getThirdLeg());
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuerMemberID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 156, issuerMemberID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 157, issuerMemberID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuerOperatorID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 157, issuerOperatorID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 158, issuerOperatorID_);
       }
       if (numberOfDestinationMembers_ != 0) {
-        output.writeInt32(158, numberOfDestinationMembers_);
+        output.writeInt32(159, numberOfDestinationMembers_);
       }
       for (int i = 0; i < destinationMember_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 159, destinationMember_.getRaw(i));
+        com.google.protobuf.GeneratedMessage.writeString(output, 160, destinationMember_.getRaw(i));
       }
       if (creationDate_ != 0L) {
-        output.writeUInt64(160, creationDate_);
+        output.writeUInt64(161, creationDate_);
       }
       if (creationTime_ != 0L) {
-        output.writeUInt64(161, creationTime_);
+        output.writeUInt64(162, creationTime_);
       }
       if (updateDate_ != 0L) {
-        output.writeUInt64(162, updateDate_);
+        output.writeUInt64(163, updateDate_);
       }
       if (updateTime_ != 0L) {
-        output.writeUInt64(163, updateTime_);
+        output.writeUInt64(164, updateTime_);
       }
       if (validityDate_ != 0L) {
-        output.writeUInt64(164, validityDate_);
+        output.writeUInt64(165, validityDate_);
       }
       if (validityTime_ != 0L) {
-        output.writeUInt64(165, validityTime_);
+        output.writeUInt64(166, validityTime_);
       }
       if (status_ != org.example.Market.QuoteRequestStatus.STATUS_Active.getNumber()) {
-        output.writeEnum(166, status_);
+        output.writeEnum(167, status_);
       }
       if (processStatus_ != org.example.Market.ProcessStatus.PROCESSED_NotProcessed.getNumber()) {
-        output.writeEnum(167, processStatus_);
+        output.writeEnum(168, processStatus_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(499, getInternals());
       }
       getUnknownFields().writeTo(output);
     }
@@ -4123,38 +4222,41 @@ public final class Market {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(requestID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(150, requestID_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteRequestID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(150, quoteRequestID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteRequestID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(151, clientQuoteRequestID_);
       }
       if (mlegType_ != org.example.Market.QuoteRequestMLegType.MLEG_Outright.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(151, mlegType_);
+          .computeEnumSize(152, mlegType_);
       }
       if (type_ != org.example.Market.QuoteRequestType.TYPE_RequestBidOffer.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(152, type_);
+          .computeEnumSize(153, type_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(153, getFirstLeg());
+          .computeMessageSize(154, getFirstLeg());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(154, getSecondLeg());
+          .computeMessageSize(155, getSecondLeg());
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(155, getThirdLeg());
+          .computeMessageSize(156, getThirdLeg());
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuerMemberID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(156, issuerMemberID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(157, issuerMemberID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuerOperatorID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(157, issuerOperatorID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(158, issuerOperatorID_);
       }
       if (numberOfDestinationMembers_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(158, numberOfDestinationMembers_);
+          .computeInt32Size(159, numberOfDestinationMembers_);
       }
       {
         int dataSize = 0;
@@ -4166,35 +4268,39 @@ public final class Market {
       }
       if (creationDate_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(160, creationDate_);
+          .computeUInt64Size(161, creationDate_);
       }
       if (creationTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(161, creationTime_);
+          .computeUInt64Size(162, creationTime_);
       }
       if (updateDate_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(162, updateDate_);
+          .computeUInt64Size(163, updateDate_);
       }
       if (updateTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(163, updateTime_);
+          .computeUInt64Size(164, updateTime_);
       }
       if (validityDate_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(164, validityDate_);
+          .computeUInt64Size(165, validityDate_);
       }
       if (validityTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(165, validityTime_);
+          .computeUInt64Size(166, validityTime_);
       }
       if (status_ != org.example.Market.QuoteRequestStatus.STATUS_Active.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(166, status_);
+          .computeEnumSize(167, status_);
       }
       if (processStatus_ != org.example.Market.ProcessStatus.PROCESSED_NotProcessed.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(167, processStatus_);
+          .computeEnumSize(168, processStatus_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(499, getInternals());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4211,8 +4317,10 @@ public final class Market {
       }
       org.example.Market.MarketQuoteRequest other = (org.example.Market.MarketQuoteRequest) obj;
 
-      if (!getRequestID()
-          .equals(other.getRequestID())) return false;
+      if (!getQuoteRequestID()
+          .equals(other.getQuoteRequestID())) return false;
+      if (!getClientQuoteRequestID()
+          .equals(other.getClientQuoteRequestID())) return false;
       if (mlegType_ != other.mlegType_) return false;
       if (type_ != other.type_) return false;
       if (hasFirstLeg() != other.hasFirstLeg()) return false;
@@ -4252,6 +4360,11 @@ public final class Market {
           != other.getValidityTime()) return false;
       if (status_ != other.status_) return false;
       if (processStatus_ != other.processStatus_) return false;
+      if (hasInternals() != other.hasInternals()) return false;
+      if (hasInternals()) {
+        if (!getInternals()
+            .equals(other.getInternals())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4263,8 +4376,10 @@ public final class Market {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + REQUESTID_FIELD_NUMBER;
-      hash = (53 * hash) + getRequestID().hashCode();
+      hash = (37 * hash) + QUOTEREQUESTID_FIELD_NUMBER;
+      hash = (53 * hash) + getQuoteRequestID().hashCode();
+      hash = (37 * hash) + CLIENTQUOTEREQUESTID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientQuoteRequestID().hashCode();
       hash = (37 * hash) + MLEGTYPE_FIELD_NUMBER;
       hash = (53 * hash) + mlegType_;
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
@@ -4313,6 +4428,10 @@ public final class Market {
       hash = (53 * hash) + status_;
       hash = (37 * hash) + PROCESSSTATUS_FIELD_NUMBER;
       hash = (53 * hash) + processStatus_;
+      if (hasInternals()) {
+        hash = (37 * hash) + INTERNALS_FIELD_NUMBER;
+        hash = (53 * hash) + getInternals().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4446,13 +4565,15 @@ public final class Market {
           getFirstLegFieldBuilder();
           getSecondLegFieldBuilder();
           getThirdLegFieldBuilder();
+          getInternalsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        requestID_ = "";
+        quoteRequestID_ = "";
+        clientQuoteRequestID_ = "";
         mlegType_ = 0;
         type_ = 0;
         firstLeg_ = null;
@@ -4483,6 +4604,11 @@ public final class Market {
         validityTime_ = 0L;
         status_ = 0;
         processStatus_ = 0;
+        internals_ = null;
+        if (internalsBuilder_ != null) {
+          internalsBuilder_.dispose();
+          internalsBuilder_ = null;
+        }
         return this;
       }
 
@@ -4517,69 +4643,78 @@ public final class Market {
       private void buildPartial0(org.example.Market.MarketQuoteRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.requestID_ = requestID_;
+          result.quoteRequestID_ = quoteRequestID_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.mlegType_ = mlegType_;
+          result.clientQuoteRequestID_ = clientQuoteRequestID_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.mlegType_ = mlegType_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
           result.type_ = type_;
         }
         int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.firstLeg_ = firstLegBuilder_ == null
               ? firstLeg_
               : firstLegBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.secondLeg_ = secondLegBuilder_ == null
               ? secondLeg_
               : secondLegBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000040) != 0)) {
           result.thirdLeg_ = thirdLegBuilder_ == null
               ? thirdLeg_
               : thirdLegBuilder_.build();
           to_bitField0_ |= 0x00000004;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000080) != 0)) {
           result.issuerMemberID_ = issuerMemberID_;
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
+        if (((from_bitField0_ & 0x00000100) != 0)) {
           result.issuerOperatorID_ = issuerOperatorID_;
         }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (((from_bitField0_ & 0x00000200) != 0)) {
           result.numberOfDestinationMembers_ = numberOfDestinationMembers_;
         }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
+        if (((from_bitField0_ & 0x00000400) != 0)) {
           destinationMember_.makeImmutable();
           result.destinationMember_ = destinationMember_;
         }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           result.creationDate_ = creationDate_;
         }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
+        if (((from_bitField0_ & 0x00001000) != 0)) {
           result.creationTime_ = creationTime_;
         }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
+        if (((from_bitField0_ & 0x00002000) != 0)) {
           result.updateDate_ = updateDate_;
         }
-        if (((from_bitField0_ & 0x00002000) != 0)) {
+        if (((from_bitField0_ & 0x00004000) != 0)) {
           result.updateTime_ = updateTime_;
         }
-        if (((from_bitField0_ & 0x00004000) != 0)) {
+        if (((from_bitField0_ & 0x00008000) != 0)) {
           result.validityDate_ = validityDate_;
         }
-        if (((from_bitField0_ & 0x00008000) != 0)) {
+        if (((from_bitField0_ & 0x00010000) != 0)) {
           result.validityTime_ = validityTime_;
         }
-        if (((from_bitField0_ & 0x00010000) != 0)) {
+        if (((from_bitField0_ & 0x00020000) != 0)) {
           result.status_ = status_;
         }
-        if (((from_bitField0_ & 0x00020000) != 0)) {
+        if (((from_bitField0_ & 0x00040000) != 0)) {
           result.processStatus_ = processStatus_;
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.internals_ = internalsBuilder_ == null
+              ? internals_
+              : internalsBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -4596,9 +4731,14 @@ public final class Market {
 
       public Builder mergeFrom(org.example.Market.MarketQuoteRequest other) {
         if (other == org.example.Market.MarketQuoteRequest.getDefaultInstance()) return this;
-        if (!other.getRequestID().isEmpty()) {
-          requestID_ = other.requestID_;
+        if (!other.getQuoteRequestID().isEmpty()) {
+          quoteRequestID_ = other.quoteRequestID_;
           bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getClientQuoteRequestID().isEmpty()) {
+          clientQuoteRequestID_ = other.clientQuoteRequestID_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.mlegType_ != 0) {
@@ -4618,12 +4758,12 @@ public final class Market {
         }
         if (!other.getIssuerMemberID().isEmpty()) {
           issuerMemberID_ = other.issuerMemberID_;
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (!other.getIssuerOperatorID().isEmpty()) {
           issuerOperatorID_ = other.issuerOperatorID_;
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (other.getNumberOfDestinationMembers() != 0) {
@@ -4632,7 +4772,7 @@ public final class Market {
         if (!other.destinationMember_.isEmpty()) {
           if (destinationMember_.isEmpty()) {
             destinationMember_ = other.destinationMember_;
-            bitField0_ |= 0x00000200;
+            bitField0_ |= 0x00000400;
           } else {
             ensureDestinationMemberIsMutable();
             destinationMember_.addAll(other.destinationMember_);
@@ -4663,6 +4803,9 @@ public final class Market {
         if (other.processStatus_ != 0) {
           setProcessStatusValue(other.getProcessStatusValue());
         }
+        if (other.hasInternals()) {
+          mergeInternals(other.getInternals());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -4690,102 +4833,114 @@ public final class Market {
                 done = true;
                 break;
               case 1202: {
-                requestID_ = input.readStringRequireUtf8();
+                quoteRequestID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 1202
-              case 1208: {
-                mlegType_ = input.readEnum();
+              case 1210: {
+                clientQuoteRequestID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 1208
+              } // case 1210
               case 1216: {
-                type_ = input.readEnum();
+                mlegType_ = input.readEnum();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 1216
-              case 1226: {
-                input.readMessage(
-                    getFirstLegFieldBuilder().getBuilder(),
-                    extensionRegistry);
+              case 1224: {
+                type_ = input.readEnum();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 1226
+              } // case 1224
               case 1234: {
                 input.readMessage(
-                    getSecondLegFieldBuilder().getBuilder(),
+                    getFirstLegFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000010;
                 break;
               } // case 1234
               case 1242: {
                 input.readMessage(
-                    getThirdLegFieldBuilder().getBuilder(),
+                    getSecondLegFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000020;
                 break;
               } // case 1242
               case 1250: {
-                issuerMemberID_ = input.readStringRequireUtf8();
+                input.readMessage(
+                    getThirdLegFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000040;
                 break;
               } // case 1250
               case 1258: {
-                issuerOperatorID_ = input.readStringRequireUtf8();
+                issuerMemberID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000080;
                 break;
               } // case 1258
-              case 1264: {
-                numberOfDestinationMembers_ = input.readInt32();
+              case 1266: {
+                issuerOperatorID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000100;
                 break;
-              } // case 1264
-              case 1274: {
+              } // case 1266
+              case 1272: {
+                numberOfDestinationMembers_ = input.readInt32();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 1272
+              case 1282: {
                 java.lang.String s = input.readStringRequireUtf8();
                 ensureDestinationMemberIsMutable();
                 destinationMember_.add(s);
                 break;
-              } // case 1274
-              case 1280: {
-                creationDate_ = input.readUInt64();
-                bitField0_ |= 0x00000400;
-                break;
-              } // case 1280
+              } // case 1282
               case 1288: {
-                creationTime_ = input.readUInt64();
+                creationDate_ = input.readUInt64();
                 bitField0_ |= 0x00000800;
                 break;
               } // case 1288
               case 1296: {
-                updateDate_ = input.readUInt64();
+                creationTime_ = input.readUInt64();
                 bitField0_ |= 0x00001000;
                 break;
               } // case 1296
               case 1304: {
-                updateTime_ = input.readUInt64();
+                updateDate_ = input.readUInt64();
                 bitField0_ |= 0x00002000;
                 break;
               } // case 1304
               case 1312: {
-                validityDate_ = input.readUInt64();
+                updateTime_ = input.readUInt64();
                 bitField0_ |= 0x00004000;
                 break;
               } // case 1312
               case 1320: {
-                validityTime_ = input.readUInt64();
+                validityDate_ = input.readUInt64();
                 bitField0_ |= 0x00008000;
                 break;
               } // case 1320
               case 1328: {
-                status_ = input.readEnum();
+                validityTime_ = input.readUInt64();
                 bitField0_ |= 0x00010000;
                 break;
               } // case 1328
               case 1336: {
-                processStatus_ = input.readEnum();
+                status_ = input.readEnum();
                 bitField0_ |= 0x00020000;
                 break;
               } // case 1336
+              case 1344: {
+                processStatus_ = input.readEnum();
+                bitField0_ |= 0x00040000;
+                break;
+              } // case 1344
+              case 3994: {
+                input.readMessage(
+                    getInternalsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00080000;
+                break;
+              } // case 3994
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4803,99 +4958,171 @@ public final class Market {
       }
       private int bitField0_;
 
-      private java.lang.Object requestID_ = "";
+      private java.lang.Object quoteRequestID_ = "";
       /**
-       * <code>string RequestID = 150;</code>
-       * @return The requestID.
+       * <code>string QuoteRequestID = 150;</code>
+       * @return The quoteRequestID.
        */
-      public java.lang.String getRequestID() {
-        java.lang.Object ref = requestID_;
+      public java.lang.String getQuoteRequestID() {
+        java.lang.Object ref = quoteRequestID_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          requestID_ = s;
+          quoteRequestID_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string RequestID = 150;</code>
-       * @return The bytes for requestID.
+       * <code>string QuoteRequestID = 150;</code>
+       * @return The bytes for quoteRequestID.
        */
       public com.google.protobuf.ByteString
-          getRequestIDBytes() {
-        java.lang.Object ref = requestID_;
+          getQuoteRequestIDBytes() {
+        java.lang.Object ref = quoteRequestID_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          requestID_ = b;
+          quoteRequestID_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string RequestID = 150;</code>
-       * @param value The requestID to set.
+       * <code>string QuoteRequestID = 150;</code>
+       * @param value The quoteRequestID to set.
        * @return This builder for chaining.
        */
-      public Builder setRequestID(
+      public Builder setQuoteRequestID(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        requestID_ = value;
+        quoteRequestID_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string RequestID = 150;</code>
+       * <code>string QuoteRequestID = 150;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRequestID() {
-        requestID_ = getDefaultInstance().getRequestID();
+      public Builder clearQuoteRequestID() {
+        quoteRequestID_ = getDefaultInstance().getQuoteRequestID();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string RequestID = 150;</code>
-       * @param value The bytes for requestID to set.
+       * <code>string QuoteRequestID = 150;</code>
+       * @param value The bytes for quoteRequestID to set.
        * @return This builder for chaining.
        */
-      public Builder setRequestIDBytes(
+      public Builder setQuoteRequestIDBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        requestID_ = value;
+        quoteRequestID_ = value;
         bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientQuoteRequestID_ = "";
+      /**
+       * <code>string ClientQuoteRequestID = 151;</code>
+       * @return The clientQuoteRequestID.
+       */
+      public java.lang.String getClientQuoteRequestID() {
+        java.lang.Object ref = clientQuoteRequestID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientQuoteRequestID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 151;</code>
+       * @return The bytes for clientQuoteRequestID.
+       */
+      public com.google.protobuf.ByteString
+          getClientQuoteRequestIDBytes() {
+        java.lang.Object ref = clientQuoteRequestID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientQuoteRequestID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 151;</code>
+       * @param value The clientQuoteRequestID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteRequestID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientQuoteRequestID_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 151;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientQuoteRequestID() {
+        clientQuoteRequestID_ = getDefaultInstance().getClientQuoteRequestID();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 151;</code>
+       * @param value The bytes for clientQuoteRequestID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteRequestIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientQuoteRequestID_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private int mlegType_ = 0;
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 151;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 152;</code>
        * @return The enum numeric value on the wire for mlegType.
        */
       @java.lang.Override public int getMlegTypeValue() {
         return mlegType_;
       }
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 151;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 152;</code>
        * @param value The enum numeric value on the wire for mlegType to set.
        * @return This builder for chaining.
        */
       public Builder setMlegTypeValue(int value) {
         mlegType_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 151;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 152;</code>
        * @return The mlegType.
        */
       @java.lang.Override
@@ -4904,7 +5131,7 @@ public final class Market {
         return result == null ? org.example.Market.QuoteRequestMLegType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 151;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 152;</code>
        * @param value The mlegType to set.
        * @return This builder for chaining.
        */
@@ -4912,17 +5139,17 @@ public final class Market {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         mlegType_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 151;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 152;</code>
        * @return This builder for chaining.
        */
       public Builder clearMlegType() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         mlegType_ = 0;
         onChanged();
         return this;
@@ -4930,25 +5157,25 @@ public final class Market {
 
       private int type_ = 0;
       /**
-       * <code>.org.example.QuoteRequestType Type = 152;</code>
+       * <code>.org.example.QuoteRequestType Type = 153;</code>
        * @return The enum numeric value on the wire for type.
        */
       @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
-       * <code>.org.example.QuoteRequestType Type = 152;</code>
+       * <code>.org.example.QuoteRequestType Type = 153;</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
         type_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestType Type = 152;</code>
+       * <code>.org.example.QuoteRequestType Type = 153;</code>
        * @return The type.
        */
       @java.lang.Override
@@ -4957,7 +5184,7 @@ public final class Market {
         return result == null ? org.example.Market.QuoteRequestType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.org.example.QuoteRequestType Type = 152;</code>
+       * <code>.org.example.QuoteRequestType Type = 153;</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -4965,17 +5192,17 @@ public final class Market {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         type_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestType Type = 152;</code>
+       * <code>.org.example.QuoteRequestType Type = 153;</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         type_ = 0;
         onChanged();
         return this;
@@ -4985,14 +5212,14 @@ public final class Market {
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> firstLegBuilder_;
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
        * @return Whether the firstLeg field is set.
        */
       public boolean hasFirstLeg() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
        * @return The firstLeg.
        */
       public org.example.Market.QuoteLeg getFirstLeg() {
@@ -5003,7 +5230,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
        */
       public Builder setFirstLeg(org.example.Market.QuoteLeg value) {
         if (firstLegBuilder_ == null) {
@@ -5014,12 +5241,12 @@ public final class Market {
         } else {
           firstLegBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
        */
       public Builder setFirstLeg(
           org.example.Market.QuoteLeg.Builder builderForValue) {
@@ -5028,16 +5255,16 @@ public final class Market {
         } else {
           firstLegBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
        */
       public Builder mergeFirstLeg(org.example.Market.QuoteLeg value) {
         if (firstLegBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
+          if (((bitField0_ & 0x00000010) != 0) &&
             firstLeg_ != null &&
             firstLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getFirstLegBuilder().mergeFrom(value);
@@ -5048,16 +5275,16 @@ public final class Market {
           firstLegBuilder_.mergeFrom(value);
         }
         if (firstLeg_ != null) {
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
        */
       public Builder clearFirstLeg() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         firstLeg_ = null;
         if (firstLegBuilder_ != null) {
           firstLegBuilder_.dispose();
@@ -5067,15 +5294,15 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
        */
       public org.example.Market.QuoteLeg.Builder getFirstLegBuilder() {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return getFirstLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
        */
       public org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder() {
         if (firstLegBuilder_ != null) {
@@ -5086,7 +5313,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 153;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 154;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
@@ -5106,14 +5333,14 @@ public final class Market {
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> secondLegBuilder_;
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
        * @return Whether the secondLeg field is set.
        */
       public boolean hasSecondLeg() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
        * @return The secondLeg.
        */
       public org.example.Market.QuoteLeg getSecondLeg() {
@@ -5124,7 +5351,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
        */
       public Builder setSecondLeg(org.example.Market.QuoteLeg value) {
         if (secondLegBuilder_ == null) {
@@ -5135,12 +5362,12 @@ public final class Market {
         } else {
           secondLegBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
        */
       public Builder setSecondLeg(
           org.example.Market.QuoteLeg.Builder builderForValue) {
@@ -5149,16 +5376,16 @@ public final class Market {
         } else {
           secondLegBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
        */
       public Builder mergeSecondLeg(org.example.Market.QuoteLeg value) {
         if (secondLegBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
+          if (((bitField0_ & 0x00000020) != 0) &&
             secondLeg_ != null &&
             secondLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getSecondLegBuilder().mergeFrom(value);
@@ -5169,16 +5396,16 @@ public final class Market {
           secondLegBuilder_.mergeFrom(value);
         }
         if (secondLeg_ != null) {
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
        */
       public Builder clearSecondLeg() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         secondLeg_ = null;
         if (secondLegBuilder_ != null) {
           secondLegBuilder_.dispose();
@@ -5188,15 +5415,15 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
        */
       public org.example.Market.QuoteLeg.Builder getSecondLegBuilder() {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return getSecondLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
        */
       public org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder() {
         if (secondLegBuilder_ != null) {
@@ -5207,7 +5434,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 154;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 155;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
@@ -5227,14 +5454,14 @@ public final class Market {
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> thirdLegBuilder_;
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
        * @return Whether the thirdLeg field is set.
        */
       public boolean hasThirdLeg() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
        * @return The thirdLeg.
        */
       public org.example.Market.QuoteLeg getThirdLeg() {
@@ -5245,7 +5472,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
        */
       public Builder setThirdLeg(org.example.Market.QuoteLeg value) {
         if (thirdLegBuilder_ == null) {
@@ -5256,12 +5483,12 @@ public final class Market {
         } else {
           thirdLegBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
        */
       public Builder setThirdLeg(
           org.example.Market.QuoteLeg.Builder builderForValue) {
@@ -5270,16 +5497,16 @@ public final class Market {
         } else {
           thirdLegBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
        */
       public Builder mergeThirdLeg(org.example.Market.QuoteLeg value) {
         if (thirdLegBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
+          if (((bitField0_ & 0x00000040) != 0) &&
             thirdLeg_ != null &&
             thirdLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getThirdLegBuilder().mergeFrom(value);
@@ -5290,16 +5517,16 @@ public final class Market {
           thirdLegBuilder_.mergeFrom(value);
         }
         if (thirdLeg_ != null) {
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
        */
       public Builder clearThirdLeg() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         thirdLeg_ = null;
         if (thirdLegBuilder_ != null) {
           thirdLegBuilder_.dispose();
@@ -5309,15 +5536,15 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
        */
       public org.example.Market.QuoteLeg.Builder getThirdLegBuilder() {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return getThirdLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
        */
       public org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder() {
         if (thirdLegBuilder_ != null) {
@@ -5328,7 +5555,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 155;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 156;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
@@ -5346,7 +5573,7 @@ public final class Market {
 
       private java.lang.Object issuerMemberID_ = "";
       /**
-       * <code>string IssuerMemberID = 156;</code>
+       * <code>string IssuerMemberID = 157;</code>
        * @return The issuerMemberID.
        */
       public java.lang.String getIssuerMemberID() {
@@ -5362,7 +5589,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string IssuerMemberID = 156;</code>
+       * <code>string IssuerMemberID = 157;</code>
        * @return The bytes for issuerMemberID.
        */
       public com.google.protobuf.ByteString
@@ -5379,7 +5606,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string IssuerMemberID = 156;</code>
+       * <code>string IssuerMemberID = 157;</code>
        * @param value The issuerMemberID to set.
        * @return This builder for chaining.
        */
@@ -5387,22 +5614,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         issuerMemberID_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>string IssuerMemberID = 156;</code>
+       * <code>string IssuerMemberID = 157;</code>
        * @return This builder for chaining.
        */
       public Builder clearIssuerMemberID() {
         issuerMemberID_ = getDefaultInstance().getIssuerMemberID();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
       /**
-       * <code>string IssuerMemberID = 156;</code>
+       * <code>string IssuerMemberID = 157;</code>
        * @param value The bytes for issuerMemberID to set.
        * @return This builder for chaining.
        */
@@ -5411,14 +5638,14 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         issuerMemberID_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
 
       private java.lang.Object issuerOperatorID_ = "";
       /**
-       * <code>string IssuerOperatorID = 157;</code>
+       * <code>string IssuerOperatorID = 158;</code>
        * @return The issuerOperatorID.
        */
       public java.lang.String getIssuerOperatorID() {
@@ -5434,7 +5661,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string IssuerOperatorID = 157;</code>
+       * <code>string IssuerOperatorID = 158;</code>
        * @return The bytes for issuerOperatorID.
        */
       public com.google.protobuf.ByteString
@@ -5451,7 +5678,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string IssuerOperatorID = 157;</code>
+       * <code>string IssuerOperatorID = 158;</code>
        * @param value The issuerOperatorID to set.
        * @return This builder for chaining.
        */
@@ -5459,22 +5686,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         issuerOperatorID_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
-       * <code>string IssuerOperatorID = 157;</code>
+       * <code>string IssuerOperatorID = 158;</code>
        * @return This builder for chaining.
        */
       public Builder clearIssuerOperatorID() {
         issuerOperatorID_ = getDefaultInstance().getIssuerOperatorID();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
       /**
-       * <code>string IssuerOperatorID = 157;</code>
+       * <code>string IssuerOperatorID = 158;</code>
        * @param value The bytes for issuerOperatorID to set.
        * @return This builder for chaining.
        */
@@ -5483,14 +5710,14 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         issuerOperatorID_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
 
       private int numberOfDestinationMembers_ ;
       /**
-       * <code>int32 NumberOfDestinationMembers = 158;</code>
+       * <code>int32 NumberOfDestinationMembers = 159;</code>
        * @return The numberOfDestinationMembers.
        */
       @java.lang.Override
@@ -5498,23 +5725,23 @@ public final class Market {
         return numberOfDestinationMembers_;
       }
       /**
-       * <code>int32 NumberOfDestinationMembers = 158;</code>
+       * <code>int32 NumberOfDestinationMembers = 159;</code>
        * @param value The numberOfDestinationMembers to set.
        * @return This builder for chaining.
        */
       public Builder setNumberOfDestinationMembers(int value) {
 
         numberOfDestinationMembers_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 NumberOfDestinationMembers = 158;</code>
+       * <code>int32 NumberOfDestinationMembers = 159;</code>
        * @return This builder for chaining.
        */
       public Builder clearNumberOfDestinationMembers() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         numberOfDestinationMembers_ = 0;
         onChanged();
         return this;
@@ -5526,10 +5753,10 @@ public final class Market {
         if (!destinationMember_.isModifiable()) {
           destinationMember_ = new com.google.protobuf.LazyStringArrayList(destinationMember_);
         }
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
       }
       /**
-       * <code>repeated string DestinationMember = 159;</code>
+       * <code>repeated string DestinationMember = 160;</code>
        * @return A list containing the destinationMember.
        */
       public com.google.protobuf.ProtocolStringList
@@ -5538,14 +5765,14 @@ public final class Market {
         return destinationMember_;
       }
       /**
-       * <code>repeated string DestinationMember = 159;</code>
+       * <code>repeated string DestinationMember = 160;</code>
        * @return The count of destinationMember.
        */
       public int getDestinationMemberCount() {
         return destinationMember_.size();
       }
       /**
-       * <code>repeated string DestinationMember = 159;</code>
+       * <code>repeated string DestinationMember = 160;</code>
        * @param index The index of the element to return.
        * @return The destinationMember at the given index.
        */
@@ -5553,7 +5780,7 @@ public final class Market {
         return destinationMember_.get(index);
       }
       /**
-       * <code>repeated string DestinationMember = 159;</code>
+       * <code>repeated string DestinationMember = 160;</code>
        * @param index The index of the value to return.
        * @return The bytes of the destinationMember at the given index.
        */
@@ -5562,7 +5789,7 @@ public final class Market {
         return destinationMember_.getByteString(index);
       }
       /**
-       * <code>repeated string DestinationMember = 159;</code>
+       * <code>repeated string DestinationMember = 160;</code>
        * @param index The index to set the value at.
        * @param value The destinationMember to set.
        * @return This builder for chaining.
@@ -5572,12 +5799,12 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         ensureDestinationMemberIsMutable();
         destinationMember_.set(index, value);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string DestinationMember = 159;</code>
+       * <code>repeated string DestinationMember = 160;</code>
        * @param value The destinationMember to add.
        * @return This builder for chaining.
        */
@@ -5586,12 +5813,12 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         ensureDestinationMemberIsMutable();
         destinationMember_.add(value);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string DestinationMember = 159;</code>
+       * <code>repeated string DestinationMember = 160;</code>
        * @param values The destinationMember to add.
        * @return This builder for chaining.
        */
@@ -5600,23 +5827,23 @@ public final class Market {
         ensureDestinationMemberIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, destinationMember_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string DestinationMember = 159;</code>
+       * <code>repeated string DestinationMember = 160;</code>
        * @return This builder for chaining.
        */
       public Builder clearDestinationMember() {
         destinationMember_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);;
+        bitField0_ = (bitField0_ & ~0x00000400);;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string DestinationMember = 159;</code>
+       * <code>repeated string DestinationMember = 160;</code>
        * @param value The bytes of the destinationMember to add.
        * @return This builder for chaining.
        */
@@ -5626,14 +5853,14 @@ public final class Market {
         checkByteStringIsUtf8(value);
         ensureDestinationMemberIsMutable();
         destinationMember_.add(value);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
 
       private long creationDate_ ;
       /**
-       * <code>uint64 CreationDate = 160;</code>
+       * <code>uint64 CreationDate = 161;</code>
        * @return The creationDate.
        */
       @java.lang.Override
@@ -5641,23 +5868,23 @@ public final class Market {
         return creationDate_;
       }
       /**
-       * <code>uint64 CreationDate = 160;</code>
+       * <code>uint64 CreationDate = 161;</code>
        * @param value The creationDate to set.
        * @return This builder for chaining.
        */
       public Builder setCreationDate(long value) {
 
         creationDate_ = value;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 CreationDate = 160;</code>
+       * <code>uint64 CreationDate = 161;</code>
        * @return This builder for chaining.
        */
       public Builder clearCreationDate() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         creationDate_ = 0L;
         onChanged();
         return this;
@@ -5665,7 +5892,7 @@ public final class Market {
 
       private long creationTime_ ;
       /**
-       * <code>uint64 CreationTime = 161;</code>
+       * <code>uint64 CreationTime = 162;</code>
        * @return The creationTime.
        */
       @java.lang.Override
@@ -5673,23 +5900,23 @@ public final class Market {
         return creationTime_;
       }
       /**
-       * <code>uint64 CreationTime = 161;</code>
+       * <code>uint64 CreationTime = 162;</code>
        * @param value The creationTime to set.
        * @return This builder for chaining.
        */
       public Builder setCreationTime(long value) {
 
         creationTime_ = value;
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 CreationTime = 161;</code>
+       * <code>uint64 CreationTime = 162;</code>
        * @return This builder for chaining.
        */
       public Builder clearCreationTime() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         creationTime_ = 0L;
         onChanged();
         return this;
@@ -5697,7 +5924,7 @@ public final class Market {
 
       private long updateDate_ ;
       /**
-       * <code>uint64 UpdateDate = 162;</code>
+       * <code>uint64 UpdateDate = 163;</code>
        * @return The updateDate.
        */
       @java.lang.Override
@@ -5705,23 +5932,23 @@ public final class Market {
         return updateDate_;
       }
       /**
-       * <code>uint64 UpdateDate = 162;</code>
+       * <code>uint64 UpdateDate = 163;</code>
        * @param value The updateDate to set.
        * @return This builder for chaining.
        */
       public Builder setUpdateDate(long value) {
 
         updateDate_ = value;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 UpdateDate = 162;</code>
+       * <code>uint64 UpdateDate = 163;</code>
        * @return This builder for chaining.
        */
       public Builder clearUpdateDate() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         updateDate_ = 0L;
         onChanged();
         return this;
@@ -5729,7 +5956,7 @@ public final class Market {
 
       private long updateTime_ ;
       /**
-       * <code>uint64 UpdateTime = 163;</code>
+       * <code>uint64 UpdateTime = 164;</code>
        * @return The updateTime.
        */
       @java.lang.Override
@@ -5737,23 +5964,23 @@ public final class Market {
         return updateTime_;
       }
       /**
-       * <code>uint64 UpdateTime = 163;</code>
+       * <code>uint64 UpdateTime = 164;</code>
        * @param value The updateTime to set.
        * @return This builder for chaining.
        */
       public Builder setUpdateTime(long value) {
 
         updateTime_ = value;
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 UpdateTime = 163;</code>
+       * <code>uint64 UpdateTime = 164;</code>
        * @return This builder for chaining.
        */
       public Builder clearUpdateTime() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         updateTime_ = 0L;
         onChanged();
         return this;
@@ -5761,7 +5988,7 @@ public final class Market {
 
       private long validityDate_ ;
       /**
-       * <code>uint64 ValidityDate = 164;</code>
+       * <code>uint64 ValidityDate = 165;</code>
        * @return The validityDate.
        */
       @java.lang.Override
@@ -5769,23 +5996,23 @@ public final class Market {
         return validityDate_;
       }
       /**
-       * <code>uint64 ValidityDate = 164;</code>
+       * <code>uint64 ValidityDate = 165;</code>
        * @param value The validityDate to set.
        * @return This builder for chaining.
        */
       public Builder setValidityDate(long value) {
 
         validityDate_ = value;
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 ValidityDate = 164;</code>
+       * <code>uint64 ValidityDate = 165;</code>
        * @return This builder for chaining.
        */
       public Builder clearValidityDate() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         validityDate_ = 0L;
         onChanged();
         return this;
@@ -5793,7 +6020,7 @@ public final class Market {
 
       private long validityTime_ ;
       /**
-       * <code>uint64 ValidityTime = 165;</code>
+       * <code>uint64 ValidityTime = 166;</code>
        * @return The validityTime.
        */
       @java.lang.Override
@@ -5801,23 +6028,23 @@ public final class Market {
         return validityTime_;
       }
       /**
-       * <code>uint64 ValidityTime = 165;</code>
+       * <code>uint64 ValidityTime = 166;</code>
        * @param value The validityTime to set.
        * @return This builder for chaining.
        */
       public Builder setValidityTime(long value) {
 
         validityTime_ = value;
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 ValidityTime = 165;</code>
+       * <code>uint64 ValidityTime = 166;</code>
        * @return This builder for chaining.
        */
       public Builder clearValidityTime() {
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         validityTime_ = 0L;
         onChanged();
         return this;
@@ -5825,25 +6052,25 @@ public final class Market {
 
       private int status_ = 0;
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 166;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 167;</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 166;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 167;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
         status_ = value;
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 166;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 167;</code>
        * @return The status.
        */
       @java.lang.Override
@@ -5852,7 +6079,7 @@ public final class Market {
         return result == null ? org.example.Market.QuoteRequestStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 166;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 167;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -5860,17 +6087,17 @@ public final class Market {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         status_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 166;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 167;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         status_ = 0;
         onChanged();
         return this;
@@ -5878,25 +6105,25 @@ public final class Market {
 
       private int processStatus_ = 0;
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 167;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 168;</code>
        * @return The enum numeric value on the wire for processStatus.
        */
       @java.lang.Override public int getProcessStatusValue() {
         return processStatus_;
       }
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 167;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 168;</code>
        * @param value The enum numeric value on the wire for processStatus to set.
        * @return This builder for chaining.
        */
       public Builder setProcessStatusValue(int value) {
         processStatus_ = value;
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 167;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 168;</code>
        * @return The processStatus.
        */
       @java.lang.Override
@@ -5905,7 +6132,7 @@ public final class Market {
         return result == null ? org.example.Market.ProcessStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 167;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 168;</code>
        * @param value The processStatus to set.
        * @return This builder for chaining.
        */
@@ -5913,20 +6140,141 @@ public final class Market {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         processStatus_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 167;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 168;</code>
        * @return This builder for chaining.
        */
       public Builder clearProcessStatus() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         processStatus_ = 0;
         onChanged();
         return this;
+      }
+
+      private org.example.Market.InternalInfo internals_;
+      private com.google.protobuf.SingleFieldBuilder<
+          org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder> internalsBuilder_;
+      /**
+       * <code>.org.example.InternalInfo Internals = 499;</code>
+       * @return Whether the internals field is set.
+       */
+      public boolean hasInternals() {
+        return ((bitField0_ & 0x00080000) != 0);
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 499;</code>
+       * @return The internals.
+       */
+      public org.example.Market.InternalInfo getInternals() {
+        if (internalsBuilder_ == null) {
+          return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+        } else {
+          return internalsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 499;</code>
+       */
+      public Builder setInternals(org.example.Market.InternalInfo value) {
+        if (internalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          internals_ = value;
+        } else {
+          internalsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00080000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 499;</code>
+       */
+      public Builder setInternals(
+          org.example.Market.InternalInfo.Builder builderForValue) {
+        if (internalsBuilder_ == null) {
+          internals_ = builderForValue.build();
+        } else {
+          internalsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00080000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 499;</code>
+       */
+      public Builder mergeInternals(org.example.Market.InternalInfo value) {
+        if (internalsBuilder_ == null) {
+          if (((bitField0_ & 0x00080000) != 0) &&
+            internals_ != null &&
+            internals_ != org.example.Market.InternalInfo.getDefaultInstance()) {
+            getInternalsBuilder().mergeFrom(value);
+          } else {
+            internals_ = value;
+          }
+        } else {
+          internalsBuilder_.mergeFrom(value);
+        }
+        if (internals_ != null) {
+          bitField0_ |= 0x00080000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 499;</code>
+       */
+      public Builder clearInternals() {
+        bitField0_ = (bitField0_ & ~0x00080000);
+        internals_ = null;
+        if (internalsBuilder_ != null) {
+          internalsBuilder_.dispose();
+          internalsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 499;</code>
+       */
+      public org.example.Market.InternalInfo.Builder getInternalsBuilder() {
+        bitField0_ |= 0x00080000;
+        onChanged();
+        return getInternalsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 499;</code>
+       */
+      public org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder() {
+        if (internalsBuilder_ != null) {
+          return internalsBuilder_.getMessageOrBuilder();
+        } else {
+          return internals_ == null ?
+              org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+        }
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 499;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder> 
+          getInternalsFieldBuilder() {
+        if (internalsBuilder_ == null) {
+          internalsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder>(
+                  getInternals(),
+                  getParentForChildren(),
+                  isClean());
+          internals_ = null;
+        }
+        return internalsBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:org.example.MarketQuoteRequest)
@@ -5997,189 +6345,216 @@ public final class Market {
         getQuoteIDBytes();
 
     /**
-     * <code>string QuoteRequestID = 501;</code>
+     * <code>string ClientQuoteID = 501;</code>
+     * @return The clientQuoteID.
+     */
+    java.lang.String getClientQuoteID();
+    /**
+     * <code>string ClientQuoteID = 501;</code>
+     * @return The bytes for clientQuoteID.
+     */
+    com.google.protobuf.ByteString
+        getClientQuoteIDBytes();
+
+    /**
+     * <code>string QuoteRequestID = 502;</code>
      * @return The quoteRequestID.
      */
     java.lang.String getQuoteRequestID();
     /**
-     * <code>string QuoteRequestID = 501;</code>
+     * <code>string QuoteRequestID = 502;</code>
      * @return The bytes for quoteRequestID.
      */
     com.google.protobuf.ByteString
         getQuoteRequestIDBytes();
 
     /**
-     * <code>.org.example.QuoteRequestMLegType MlegType = 502;</code>
+     * <code>.org.example.QuoteRequestMLegType MlegType = 503;</code>
      * @return The enum numeric value on the wire for mlegType.
      */
     int getMlegTypeValue();
     /**
-     * <code>.org.example.QuoteRequestMLegType MlegType = 502;</code>
+     * <code>.org.example.QuoteRequestMLegType MlegType = 503;</code>
      * @return The mlegType.
      */
     org.example.Market.QuoteRequestMLegType getMlegType();
 
     /**
-     * <code>.org.example.QuoteRequestType Type = 503;</code>
+     * <code>.org.example.QuoteRequestType Type = 504;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
-     * <code>.org.example.QuoteRequestType Type = 503;</code>
+     * <code>.org.example.QuoteRequestType Type = 504;</code>
      * @return The type.
      */
     org.example.Market.QuoteRequestType getType();
 
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
      * @return Whether the firstLeg field is set.
      */
     boolean hasFirstLeg();
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
      * @return The firstLeg.
      */
     org.example.Market.QuoteLeg getFirstLeg();
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
      */
     org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder();
 
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
      * @return Whether the secondLeg field is set.
      */
     boolean hasSecondLeg();
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
      * @return The secondLeg.
      */
     org.example.Market.QuoteLeg getSecondLeg();
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
      */
     org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder();
 
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
      * @return Whether the thirdLeg field is set.
      */
     boolean hasThirdLeg();
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
      * @return The thirdLeg.
      */
     org.example.Market.QuoteLeg getThirdLeg();
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
      */
     org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder();
 
     /**
-     * <code>string IssuerMemberID = 507;</code>
+     * <code>string IssuerMemberID = 508;</code>
      * @return The issuerMemberID.
      */
     java.lang.String getIssuerMemberID();
     /**
-     * <code>string IssuerMemberID = 507;</code>
+     * <code>string IssuerMemberID = 508;</code>
      * @return The bytes for issuerMemberID.
      */
     com.google.protobuf.ByteString
         getIssuerMemberIDBytes();
 
     /**
-     * <code>string IssuerOperatorID = 508;</code>
+     * <code>string IssuerOperatorID = 509;</code>
      * @return The issuerOperatorID.
      */
     java.lang.String getIssuerOperatorID();
     /**
-     * <code>string IssuerOperatorID = 508;</code>
+     * <code>string IssuerOperatorID = 509;</code>
      * @return The bytes for issuerOperatorID.
      */
     com.google.protobuf.ByteString
         getIssuerOperatorIDBytes();
 
     /**
-     * <code>string CounterpartMemberID = 509;</code>
+     * <code>string CounterpartMemberID = 510;</code>
      * @return The counterpartMemberID.
      */
     java.lang.String getCounterpartMemberID();
     /**
-     * <code>string CounterpartMemberID = 509;</code>
+     * <code>string CounterpartMemberID = 510;</code>
      * @return The bytes for counterpartMemberID.
      */
     com.google.protobuf.ByteString
         getCounterpartMemberIDBytes();
 
     /**
-     * <code>string CounterpartOperatorID = 510;</code>
+     * <code>string CounterpartOperatorID = 511;</code>
      * @return The counterpartOperatorID.
      */
     java.lang.String getCounterpartOperatorID();
     /**
-     * <code>string CounterpartOperatorID = 510;</code>
+     * <code>string CounterpartOperatorID = 511;</code>
      * @return The bytes for counterpartOperatorID.
      */
     com.google.protobuf.ByteString
         getCounterpartOperatorIDBytes();
 
     /**
-     * <code>uint64 CreationDate = 511;</code>
+     * <code>uint64 CreationDate = 512;</code>
      * @return The creationDate.
      */
     long getCreationDate();
 
     /**
-     * <code>uint64 CreationTime = 512;</code>
+     * <code>uint64 CreationTime = 513;</code>
      * @return The creationTime.
      */
     long getCreationTime();
 
     /**
-     * <code>uint64 UpdateDate = 513;</code>
+     * <code>uint64 UpdateDate = 514;</code>
      * @return The updateDate.
      */
     long getUpdateDate();
 
     /**
-     * <code>uint64 UpdateTime = 514;</code>
+     * <code>uint64 UpdateTime = 515;</code>
      * @return The updateTime.
      */
     long getUpdateTime();
 
     /**
-     * <code>uint64 ValidityDate = 515;</code>
+     * <code>uint64 ValidityDate = 516;</code>
      * @return The validityDate.
      */
     long getValidityDate();
 
     /**
-     * <code>uint64 ValidityTime = 516;</code>
+     * <code>uint64 ValidityTime = 517;</code>
      * @return The validityTime.
      */
     long getValidityTime();
 
     /**
-     * <code>.org.example.QuoteRequestStatus Status = 517;</code>
+     * <code>.org.example.QuoteRequestStatus Status = 518;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.org.example.QuoteRequestStatus Status = 517;</code>
+     * <code>.org.example.QuoteRequestStatus Status = 518;</code>
      * @return The status.
      */
     org.example.Market.QuoteRequestStatus getStatus();
 
     /**
-     * <code>.org.example.ProcessStatus ProcessStatus = 518;</code>
+     * <code>.org.example.ProcessStatus ProcessStatus = 519;</code>
      * @return The enum numeric value on the wire for processStatus.
      */
     int getProcessStatusValue();
     /**
-     * <code>.org.example.ProcessStatus ProcessStatus = 518;</code>
+     * <code>.org.example.ProcessStatus ProcessStatus = 519;</code>
      * @return The processStatus.
      */
     org.example.Market.ProcessStatus getProcessStatus();
+
+    /**
+     * <code>.org.example.InternalInfo Internals = 999;</code>
+     * @return Whether the internals field is set.
+     */
+    boolean hasInternals();
+    /**
+     * <code>.org.example.InternalInfo Internals = 999;</code>
+     * @return The internals.
+     */
+    org.example.Market.InternalInfo getInternals();
+    /**
+     * <code>.org.example.InternalInfo Internals = 999;</code>
+     */
+    org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder();
   }
   /**
    * <pre>
@@ -6208,6 +6583,7 @@ public final class Market {
     }
     private MarketQuote() {
       quoteID_ = "";
+      clientQuoteID_ = "";
       quoteRequestID_ = "";
       mlegType_ = 0;
       type_ = 0;
@@ -6272,11 +6648,50 @@ public final class Market {
       }
     }
 
-    public static final int QUOTEREQUESTID_FIELD_NUMBER = 501;
+    public static final int CLIENTQUOTEID_FIELD_NUMBER = 501;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientQuoteID_ = "";
+    /**
+     * <code>string ClientQuoteID = 501;</code>
+     * @return The clientQuoteID.
+     */
+    @java.lang.Override
+    public java.lang.String getClientQuoteID() {
+      java.lang.Object ref = clientQuoteID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientQuoteID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ClientQuoteID = 501;</code>
+     * @return The bytes for clientQuoteID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientQuoteIDBytes() {
+      java.lang.Object ref = clientQuoteID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientQuoteID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUOTEREQUESTID_FIELD_NUMBER = 502;
     @SuppressWarnings("serial")
     private volatile java.lang.Object quoteRequestID_ = "";
     /**
-     * <code>string QuoteRequestID = 501;</code>
+     * <code>string QuoteRequestID = 502;</code>
      * @return The quoteRequestID.
      */
     @java.lang.Override
@@ -6293,7 +6708,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string QuoteRequestID = 501;</code>
+     * <code>string QuoteRequestID = 502;</code>
      * @return The bytes for quoteRequestID.
      */
     @java.lang.Override
@@ -6311,17 +6726,17 @@ public final class Market {
       }
     }
 
-    public static final int MLEGTYPE_FIELD_NUMBER = 502;
+    public static final int MLEGTYPE_FIELD_NUMBER = 503;
     private int mlegType_ = 0;
     /**
-     * <code>.org.example.QuoteRequestMLegType MlegType = 502;</code>
+     * <code>.org.example.QuoteRequestMLegType MlegType = 503;</code>
      * @return The enum numeric value on the wire for mlegType.
      */
     @java.lang.Override public int getMlegTypeValue() {
       return mlegType_;
     }
     /**
-     * <code>.org.example.QuoteRequestMLegType MlegType = 502;</code>
+     * <code>.org.example.QuoteRequestMLegType MlegType = 503;</code>
      * @return The mlegType.
      */
     @java.lang.Override public org.example.Market.QuoteRequestMLegType getMlegType() {
@@ -6329,17 +6744,17 @@ public final class Market {
       return result == null ? org.example.Market.QuoteRequestMLegType.UNRECOGNIZED : result;
     }
 
-    public static final int TYPE_FIELD_NUMBER = 503;
+    public static final int TYPE_FIELD_NUMBER = 504;
     private int type_ = 0;
     /**
-     * <code>.org.example.QuoteRequestType Type = 503;</code>
+     * <code>.org.example.QuoteRequestType Type = 504;</code>
      * @return The enum numeric value on the wire for type.
      */
     @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
-     * <code>.org.example.QuoteRequestType Type = 503;</code>
+     * <code>.org.example.QuoteRequestType Type = 504;</code>
      * @return The type.
      */
     @java.lang.Override public org.example.Market.QuoteRequestType getType() {
@@ -6347,10 +6762,10 @@ public final class Market {
       return result == null ? org.example.Market.QuoteRequestType.UNRECOGNIZED : result;
     }
 
-    public static final int FIRSTLEG_FIELD_NUMBER = 504;
+    public static final int FIRSTLEG_FIELD_NUMBER = 505;
     private org.example.Market.QuoteLeg firstLeg_;
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
      * @return Whether the firstLeg field is set.
      */
     @java.lang.Override
@@ -6358,7 +6773,7 @@ public final class Market {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
      * @return The firstLeg.
      */
     @java.lang.Override
@@ -6366,17 +6781,17 @@ public final class Market {
       return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
     }
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
      */
     @java.lang.Override
     public org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder() {
       return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
     }
 
-    public static final int SECONDLEG_FIELD_NUMBER = 505;
+    public static final int SECONDLEG_FIELD_NUMBER = 506;
     private org.example.Market.QuoteLeg secondLeg_;
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
      * @return Whether the secondLeg field is set.
      */
     @java.lang.Override
@@ -6384,7 +6799,7 @@ public final class Market {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
      * @return The secondLeg.
      */
     @java.lang.Override
@@ -6392,17 +6807,17 @@ public final class Market {
       return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
     }
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
      */
     @java.lang.Override
     public org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder() {
       return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
     }
 
-    public static final int THIRDLEG_FIELD_NUMBER = 506;
+    public static final int THIRDLEG_FIELD_NUMBER = 507;
     private org.example.Market.QuoteLeg thirdLeg_;
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
      * @return Whether the thirdLeg field is set.
      */
     @java.lang.Override
@@ -6410,7 +6825,7 @@ public final class Market {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
      * @return The thirdLeg.
      */
     @java.lang.Override
@@ -6418,18 +6833,18 @@ public final class Market {
       return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
     }
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
      */
     @java.lang.Override
     public org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder() {
       return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
     }
 
-    public static final int ISSUERMEMBERID_FIELD_NUMBER = 507;
+    public static final int ISSUERMEMBERID_FIELD_NUMBER = 508;
     @SuppressWarnings("serial")
     private volatile java.lang.Object issuerMemberID_ = "";
     /**
-     * <code>string IssuerMemberID = 507;</code>
+     * <code>string IssuerMemberID = 508;</code>
      * @return The issuerMemberID.
      */
     @java.lang.Override
@@ -6446,7 +6861,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string IssuerMemberID = 507;</code>
+     * <code>string IssuerMemberID = 508;</code>
      * @return The bytes for issuerMemberID.
      */
     @java.lang.Override
@@ -6464,11 +6879,11 @@ public final class Market {
       }
     }
 
-    public static final int ISSUEROPERATORID_FIELD_NUMBER = 508;
+    public static final int ISSUEROPERATORID_FIELD_NUMBER = 509;
     @SuppressWarnings("serial")
     private volatile java.lang.Object issuerOperatorID_ = "";
     /**
-     * <code>string IssuerOperatorID = 508;</code>
+     * <code>string IssuerOperatorID = 509;</code>
      * @return The issuerOperatorID.
      */
     @java.lang.Override
@@ -6485,7 +6900,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string IssuerOperatorID = 508;</code>
+     * <code>string IssuerOperatorID = 509;</code>
      * @return The bytes for issuerOperatorID.
      */
     @java.lang.Override
@@ -6503,11 +6918,11 @@ public final class Market {
       }
     }
 
-    public static final int COUNTERPARTMEMBERID_FIELD_NUMBER = 509;
+    public static final int COUNTERPARTMEMBERID_FIELD_NUMBER = 510;
     @SuppressWarnings("serial")
     private volatile java.lang.Object counterpartMemberID_ = "";
     /**
-     * <code>string CounterpartMemberID = 509;</code>
+     * <code>string CounterpartMemberID = 510;</code>
      * @return The counterpartMemberID.
      */
     @java.lang.Override
@@ -6524,7 +6939,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string CounterpartMemberID = 509;</code>
+     * <code>string CounterpartMemberID = 510;</code>
      * @return The bytes for counterpartMemberID.
      */
     @java.lang.Override
@@ -6542,11 +6957,11 @@ public final class Market {
       }
     }
 
-    public static final int COUNTERPARTOPERATORID_FIELD_NUMBER = 510;
+    public static final int COUNTERPARTOPERATORID_FIELD_NUMBER = 511;
     @SuppressWarnings("serial")
     private volatile java.lang.Object counterpartOperatorID_ = "";
     /**
-     * <code>string CounterpartOperatorID = 510;</code>
+     * <code>string CounterpartOperatorID = 511;</code>
      * @return The counterpartOperatorID.
      */
     @java.lang.Override
@@ -6563,7 +6978,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string CounterpartOperatorID = 510;</code>
+     * <code>string CounterpartOperatorID = 511;</code>
      * @return The bytes for counterpartOperatorID.
      */
     @java.lang.Override
@@ -6581,10 +6996,10 @@ public final class Market {
       }
     }
 
-    public static final int CREATIONDATE_FIELD_NUMBER = 511;
+    public static final int CREATIONDATE_FIELD_NUMBER = 512;
     private long creationDate_ = 0L;
     /**
-     * <code>uint64 CreationDate = 511;</code>
+     * <code>uint64 CreationDate = 512;</code>
      * @return The creationDate.
      */
     @java.lang.Override
@@ -6592,10 +7007,10 @@ public final class Market {
       return creationDate_;
     }
 
-    public static final int CREATIONTIME_FIELD_NUMBER = 512;
+    public static final int CREATIONTIME_FIELD_NUMBER = 513;
     private long creationTime_ = 0L;
     /**
-     * <code>uint64 CreationTime = 512;</code>
+     * <code>uint64 CreationTime = 513;</code>
      * @return The creationTime.
      */
     @java.lang.Override
@@ -6603,10 +7018,10 @@ public final class Market {
       return creationTime_;
     }
 
-    public static final int UPDATEDATE_FIELD_NUMBER = 513;
+    public static final int UPDATEDATE_FIELD_NUMBER = 514;
     private long updateDate_ = 0L;
     /**
-     * <code>uint64 UpdateDate = 513;</code>
+     * <code>uint64 UpdateDate = 514;</code>
      * @return The updateDate.
      */
     @java.lang.Override
@@ -6614,10 +7029,10 @@ public final class Market {
       return updateDate_;
     }
 
-    public static final int UPDATETIME_FIELD_NUMBER = 514;
+    public static final int UPDATETIME_FIELD_NUMBER = 515;
     private long updateTime_ = 0L;
     /**
-     * <code>uint64 UpdateTime = 514;</code>
+     * <code>uint64 UpdateTime = 515;</code>
      * @return The updateTime.
      */
     @java.lang.Override
@@ -6625,10 +7040,10 @@ public final class Market {
       return updateTime_;
     }
 
-    public static final int VALIDITYDATE_FIELD_NUMBER = 515;
+    public static final int VALIDITYDATE_FIELD_NUMBER = 516;
     private long validityDate_ = 0L;
     /**
-     * <code>uint64 ValidityDate = 515;</code>
+     * <code>uint64 ValidityDate = 516;</code>
      * @return The validityDate.
      */
     @java.lang.Override
@@ -6636,10 +7051,10 @@ public final class Market {
       return validityDate_;
     }
 
-    public static final int VALIDITYTIME_FIELD_NUMBER = 516;
+    public static final int VALIDITYTIME_FIELD_NUMBER = 517;
     private long validityTime_ = 0L;
     /**
-     * <code>uint64 ValidityTime = 516;</code>
+     * <code>uint64 ValidityTime = 517;</code>
      * @return The validityTime.
      */
     @java.lang.Override
@@ -6647,17 +7062,17 @@ public final class Market {
       return validityTime_;
     }
 
-    public static final int STATUS_FIELD_NUMBER = 517;
+    public static final int STATUS_FIELD_NUMBER = 518;
     private int status_ = 0;
     /**
-     * <code>.org.example.QuoteRequestStatus Status = 517;</code>
+     * <code>.org.example.QuoteRequestStatus Status = 518;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.org.example.QuoteRequestStatus Status = 517;</code>
+     * <code>.org.example.QuoteRequestStatus Status = 518;</code>
      * @return The status.
      */
     @java.lang.Override public org.example.Market.QuoteRequestStatus getStatus() {
@@ -6665,22 +7080,48 @@ public final class Market {
       return result == null ? org.example.Market.QuoteRequestStatus.UNRECOGNIZED : result;
     }
 
-    public static final int PROCESSSTATUS_FIELD_NUMBER = 518;
+    public static final int PROCESSSTATUS_FIELD_NUMBER = 519;
     private int processStatus_ = 0;
     /**
-     * <code>.org.example.ProcessStatus ProcessStatus = 518;</code>
+     * <code>.org.example.ProcessStatus ProcessStatus = 519;</code>
      * @return The enum numeric value on the wire for processStatus.
      */
     @java.lang.Override public int getProcessStatusValue() {
       return processStatus_;
     }
     /**
-     * <code>.org.example.ProcessStatus ProcessStatus = 518;</code>
+     * <code>.org.example.ProcessStatus ProcessStatus = 519;</code>
      * @return The processStatus.
      */
     @java.lang.Override public org.example.Market.ProcessStatus getProcessStatus() {
       org.example.Market.ProcessStatus result = org.example.Market.ProcessStatus.forNumber(processStatus_);
       return result == null ? org.example.Market.ProcessStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int INTERNALS_FIELD_NUMBER = 999;
+    private org.example.Market.InternalInfo internals_;
+    /**
+     * <code>.org.example.InternalInfo Internals = 999;</code>
+     * @return Whether the internals field is set.
+     */
+    @java.lang.Override
+    public boolean hasInternals() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.org.example.InternalInfo Internals = 999;</code>
+     * @return The internals.
+     */
+    @java.lang.Override
+    public org.example.Market.InternalInfo getInternals() {
+      return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+    }
+    /**
+     * <code>.org.example.InternalInfo Internals = 999;</code>
+     */
+    @java.lang.Override
+    public org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder() {
+      return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6700,59 +7141,65 @@ public final class Market {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteID_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 500, quoteID_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 501, clientQuoteID_);
+      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteRequestID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 501, quoteRequestID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 502, quoteRequestID_);
       }
       if (mlegType_ != org.example.Market.QuoteRequestMLegType.MLEG_Outright.getNumber()) {
-        output.writeEnum(502, mlegType_);
+        output.writeEnum(503, mlegType_);
       }
       if (type_ != org.example.Market.QuoteRequestType.TYPE_RequestBidOffer.getNumber()) {
-        output.writeEnum(503, type_);
+        output.writeEnum(504, type_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(504, getFirstLeg());
+        output.writeMessage(505, getFirstLeg());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(505, getSecondLeg());
+        output.writeMessage(506, getSecondLeg());
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeMessage(506, getThirdLeg());
+        output.writeMessage(507, getThirdLeg());
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuerMemberID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 507, issuerMemberID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 508, issuerMemberID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuerOperatorID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 508, issuerOperatorID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 509, issuerOperatorID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(counterpartMemberID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 509, counterpartMemberID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 510, counterpartMemberID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(counterpartOperatorID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 510, counterpartOperatorID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 511, counterpartOperatorID_);
       }
       if (creationDate_ != 0L) {
-        output.writeUInt64(511, creationDate_);
+        output.writeUInt64(512, creationDate_);
       }
       if (creationTime_ != 0L) {
-        output.writeUInt64(512, creationTime_);
+        output.writeUInt64(513, creationTime_);
       }
       if (updateDate_ != 0L) {
-        output.writeUInt64(513, updateDate_);
+        output.writeUInt64(514, updateDate_);
       }
       if (updateTime_ != 0L) {
-        output.writeUInt64(514, updateTime_);
+        output.writeUInt64(515, updateTime_);
       }
       if (validityDate_ != 0L) {
-        output.writeUInt64(515, validityDate_);
+        output.writeUInt64(516, validityDate_);
       }
       if (validityTime_ != 0L) {
-        output.writeUInt64(516, validityTime_);
+        output.writeUInt64(517, validityTime_);
       }
       if (status_ != org.example.Market.QuoteRequestStatus.STATUS_Active.getNumber()) {
-        output.writeEnum(517, status_);
+        output.writeEnum(518, status_);
       }
       if (processStatus_ != org.example.Market.ProcessStatus.PROCESSED_NotProcessed.getNumber()) {
-        output.writeEnum(518, processStatus_);
+        output.writeEnum(519, processStatus_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(999, getInternals());
       }
       getUnknownFields().writeTo(output);
     }
@@ -6766,72 +7213,79 @@ public final class Market {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteID_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(500, quoteID_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(501, clientQuoteID_);
+      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteRequestID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(501, quoteRequestID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(502, quoteRequestID_);
       }
       if (mlegType_ != org.example.Market.QuoteRequestMLegType.MLEG_Outright.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(502, mlegType_);
+          .computeEnumSize(503, mlegType_);
       }
       if (type_ != org.example.Market.QuoteRequestType.TYPE_RequestBidOffer.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(503, type_);
+          .computeEnumSize(504, type_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(504, getFirstLeg());
+          .computeMessageSize(505, getFirstLeg());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(505, getSecondLeg());
+          .computeMessageSize(506, getSecondLeg());
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(506, getThirdLeg());
+          .computeMessageSize(507, getThirdLeg());
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuerMemberID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(507, issuerMemberID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(508, issuerMemberID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuerOperatorID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(508, issuerOperatorID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(509, issuerOperatorID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(counterpartMemberID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(509, counterpartMemberID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(510, counterpartMemberID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(counterpartOperatorID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(510, counterpartOperatorID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(511, counterpartOperatorID_);
       }
       if (creationDate_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(511, creationDate_);
+          .computeUInt64Size(512, creationDate_);
       }
       if (creationTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(512, creationTime_);
+          .computeUInt64Size(513, creationTime_);
       }
       if (updateDate_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(513, updateDate_);
+          .computeUInt64Size(514, updateDate_);
       }
       if (updateTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(514, updateTime_);
+          .computeUInt64Size(515, updateTime_);
       }
       if (validityDate_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(515, validityDate_);
+          .computeUInt64Size(516, validityDate_);
       }
       if (validityTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(516, validityTime_);
+          .computeUInt64Size(517, validityTime_);
       }
       if (status_ != org.example.Market.QuoteRequestStatus.STATUS_Active.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(517, status_);
+          .computeEnumSize(518, status_);
       }
       if (processStatus_ != org.example.Market.ProcessStatus.PROCESSED_NotProcessed.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(518, processStatus_);
+          .computeEnumSize(519, processStatus_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(999, getInternals());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -6850,6 +7304,8 @@ public final class Market {
 
       if (!getQuoteID()
           .equals(other.getQuoteID())) return false;
+      if (!getClientQuoteID()
+          .equals(other.getClientQuoteID())) return false;
       if (!getQuoteRequestID()
           .equals(other.getQuoteRequestID())) return false;
       if (mlegType_ != other.mlegType_) return false;
@@ -6891,6 +7347,11 @@ public final class Market {
           != other.getValidityTime()) return false;
       if (status_ != other.status_) return false;
       if (processStatus_ != other.processStatus_) return false;
+      if (hasInternals() != other.hasInternals()) return false;
+      if (hasInternals()) {
+        if (!getInternals()
+            .equals(other.getInternals())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6904,6 +7365,8 @@ public final class Market {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + QUOTEID_FIELD_NUMBER;
       hash = (53 * hash) + getQuoteID().hashCode();
+      hash = (37 * hash) + CLIENTQUOTEID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientQuoteID().hashCode();
       hash = (37 * hash) + QUOTEREQUESTID_FIELD_NUMBER;
       hash = (53 * hash) + getQuoteRequestID().hashCode();
       hash = (37 * hash) + MLEGTYPE_FIELD_NUMBER;
@@ -6952,6 +7415,10 @@ public final class Market {
       hash = (53 * hash) + status_;
       hash = (37 * hash) + PROCESSSTATUS_FIELD_NUMBER;
       hash = (53 * hash) + processStatus_;
+      if (hasInternals()) {
+        hash = (37 * hash) + INTERNALS_FIELD_NUMBER;
+        hash = (53 * hash) + getInternals().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7089,6 +7556,7 @@ public final class Market {
           getFirstLegFieldBuilder();
           getSecondLegFieldBuilder();
           getThirdLegFieldBuilder();
+          getInternalsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -7096,6 +7564,7 @@ public final class Market {
         super.clear();
         bitField0_ = 0;
         quoteID_ = "";
+        clientQuoteID_ = "";
         quoteRequestID_ = "";
         mlegType_ = 0;
         type_ = 0;
@@ -7126,6 +7595,11 @@ public final class Market {
         validityTime_ = 0L;
         status_ = 0;
         processStatus_ = 0;
+        internals_ = null;
+        if (internalsBuilder_ != null) {
+          internalsBuilder_.dispose();
+          internalsBuilder_ = null;
+        }
         return this;
       }
 
@@ -7163,68 +7637,77 @@ public final class Market {
           result.quoteID_ = quoteID_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.quoteRequestID_ = quoteRequestID_;
+          result.clientQuoteID_ = clientQuoteID_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.mlegType_ = mlegType_;
+          result.quoteRequestID_ = quoteRequestID_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.mlegType_ = mlegType_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
           result.type_ = type_;
         }
         int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.firstLeg_ = firstLegBuilder_ == null
               ? firstLeg_
               : firstLegBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000040) != 0)) {
           result.secondLeg_ = secondLegBuilder_ == null
               ? secondLeg_
               : secondLegBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000080) != 0)) {
           result.thirdLeg_ = thirdLegBuilder_ == null
               ? thirdLeg_
               : thirdLegBuilder_.build();
           to_bitField0_ |= 0x00000004;
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
+        if (((from_bitField0_ & 0x00000100) != 0)) {
           result.issuerMemberID_ = issuerMemberID_;
         }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (((from_bitField0_ & 0x00000200) != 0)) {
           result.issuerOperatorID_ = issuerOperatorID_;
         }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
+        if (((from_bitField0_ & 0x00000400) != 0)) {
           result.counterpartMemberID_ = counterpartMemberID_;
         }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           result.counterpartOperatorID_ = counterpartOperatorID_;
         }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
+        if (((from_bitField0_ & 0x00001000) != 0)) {
           result.creationDate_ = creationDate_;
         }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
+        if (((from_bitField0_ & 0x00002000) != 0)) {
           result.creationTime_ = creationTime_;
         }
-        if (((from_bitField0_ & 0x00002000) != 0)) {
+        if (((from_bitField0_ & 0x00004000) != 0)) {
           result.updateDate_ = updateDate_;
         }
-        if (((from_bitField0_ & 0x00004000) != 0)) {
+        if (((from_bitField0_ & 0x00008000) != 0)) {
           result.updateTime_ = updateTime_;
         }
-        if (((from_bitField0_ & 0x00008000) != 0)) {
+        if (((from_bitField0_ & 0x00010000) != 0)) {
           result.validityDate_ = validityDate_;
         }
-        if (((from_bitField0_ & 0x00010000) != 0)) {
+        if (((from_bitField0_ & 0x00020000) != 0)) {
           result.validityTime_ = validityTime_;
         }
-        if (((from_bitField0_ & 0x00020000) != 0)) {
+        if (((from_bitField0_ & 0x00040000) != 0)) {
           result.status_ = status_;
         }
-        if (((from_bitField0_ & 0x00040000) != 0)) {
+        if (((from_bitField0_ & 0x00080000) != 0)) {
           result.processStatus_ = processStatus_;
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.internals_ = internalsBuilder_ == null
+              ? internals_
+              : internalsBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -7246,9 +7729,14 @@ public final class Market {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (!other.getClientQuoteID().isEmpty()) {
+          clientQuoteID_ = other.clientQuoteID_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         if (!other.getQuoteRequestID().isEmpty()) {
           quoteRequestID_ = other.quoteRequestID_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.mlegType_ != 0) {
@@ -7268,22 +7756,22 @@ public final class Market {
         }
         if (!other.getIssuerMemberID().isEmpty()) {
           issuerMemberID_ = other.issuerMemberID_;
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (!other.getIssuerOperatorID().isEmpty()) {
           issuerOperatorID_ = other.issuerOperatorID_;
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000200;
           onChanged();
         }
         if (!other.getCounterpartMemberID().isEmpty()) {
           counterpartMemberID_ = other.counterpartMemberID_;
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         if (!other.getCounterpartOperatorID().isEmpty()) {
           counterpartOperatorID_ = other.counterpartOperatorID_;
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000800;
           onChanged();
         }
         if (other.getCreationDate() != 0L) {
@@ -7309,6 +7797,9 @@ public final class Market {
         }
         if (other.processStatus_ != 0) {
           setProcessStatusValue(other.getProcessStatusValue());
+        }
+        if (other.hasInternals()) {
+          mergeInternals(other.getInternals());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -7342,101 +7833,113 @@ public final class Market {
                 break;
               } // case 4002
               case 4010: {
-                quoteRequestID_ = input.readStringRequireUtf8();
+                clientQuoteID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 4010
-              case 4016: {
-                mlegType_ = input.readEnum();
+              case 4018: {
+                quoteRequestID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
-              } // case 4016
+              } // case 4018
               case 4024: {
-                type_ = input.readEnum();
+                mlegType_ = input.readEnum();
                 bitField0_ |= 0x00000008;
                 break;
               } // case 4024
-              case 4034: {
-                input.readMessage(
-                    getFirstLegFieldBuilder().getBuilder(),
-                    extensionRegistry);
+              case 4032: {
+                type_ = input.readEnum();
                 bitField0_ |= 0x00000010;
                 break;
-              } // case 4034
+              } // case 4032
               case 4042: {
                 input.readMessage(
-                    getSecondLegFieldBuilder().getBuilder(),
+                    getFirstLegFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000020;
                 break;
               } // case 4042
               case 4050: {
                 input.readMessage(
-                    getThirdLegFieldBuilder().getBuilder(),
+                    getSecondLegFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000040;
                 break;
               } // case 4050
               case 4058: {
-                issuerMemberID_ = input.readStringRequireUtf8();
+                input.readMessage(
+                    getThirdLegFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000080;
                 break;
               } // case 4058
               case 4066: {
-                issuerOperatorID_ = input.readStringRequireUtf8();
+                issuerMemberID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000100;
                 break;
               } // case 4066
               case 4074: {
-                counterpartMemberID_ = input.readStringRequireUtf8();
+                issuerOperatorID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000200;
                 break;
               } // case 4074
               case 4082: {
-                counterpartOperatorID_ = input.readStringRequireUtf8();
+                counterpartMemberID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000400;
                 break;
               } // case 4082
-              case 4088: {
-                creationDate_ = input.readUInt64();
+              case 4090: {
+                counterpartOperatorID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000800;
                 break;
-              } // case 4088
+              } // case 4090
               case 4096: {
-                creationTime_ = input.readUInt64();
+                creationDate_ = input.readUInt64();
                 bitField0_ |= 0x00001000;
                 break;
               } // case 4096
               case 4104: {
-                updateDate_ = input.readUInt64();
+                creationTime_ = input.readUInt64();
                 bitField0_ |= 0x00002000;
                 break;
               } // case 4104
               case 4112: {
-                updateTime_ = input.readUInt64();
+                updateDate_ = input.readUInt64();
                 bitField0_ |= 0x00004000;
                 break;
               } // case 4112
               case 4120: {
-                validityDate_ = input.readUInt64();
+                updateTime_ = input.readUInt64();
                 bitField0_ |= 0x00008000;
                 break;
               } // case 4120
               case 4128: {
-                validityTime_ = input.readUInt64();
+                validityDate_ = input.readUInt64();
                 bitField0_ |= 0x00010000;
                 break;
               } // case 4128
               case 4136: {
-                status_ = input.readEnum();
+                validityTime_ = input.readUInt64();
                 bitField0_ |= 0x00020000;
                 break;
               } // case 4136
               case 4144: {
-                processStatus_ = input.readEnum();
+                status_ = input.readEnum();
                 bitField0_ |= 0x00040000;
                 break;
               } // case 4144
+              case 4152: {
+                processStatus_ = input.readEnum();
+                bitField0_ |= 0x00080000;
+                break;
+              } // case 4152
+              case 7994: {
+                input.readMessage(
+                    getInternalsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00100000;
+                break;
+              } // case 7994
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -7526,9 +8029,81 @@ public final class Market {
         return this;
       }
 
+      private java.lang.Object clientQuoteID_ = "";
+      /**
+       * <code>string ClientQuoteID = 501;</code>
+       * @return The clientQuoteID.
+       */
+      public java.lang.String getClientQuoteID() {
+        java.lang.Object ref = clientQuoteID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientQuoteID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteID = 501;</code>
+       * @return The bytes for clientQuoteID.
+       */
+      public com.google.protobuf.ByteString
+          getClientQuoteIDBytes() {
+        java.lang.Object ref = clientQuoteID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientQuoteID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteID = 501;</code>
+       * @param value The clientQuoteID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientQuoteID_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteID = 501;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientQuoteID() {
+        clientQuoteID_ = getDefaultInstance().getClientQuoteID();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteID = 501;</code>
+       * @param value The bytes for clientQuoteID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientQuoteID_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object quoteRequestID_ = "";
       /**
-       * <code>string QuoteRequestID = 501;</code>
+       * <code>string QuoteRequestID = 502;</code>
        * @return The quoteRequestID.
        */
       public java.lang.String getQuoteRequestID() {
@@ -7544,7 +8119,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string QuoteRequestID = 501;</code>
+       * <code>string QuoteRequestID = 502;</code>
        * @return The bytes for quoteRequestID.
        */
       public com.google.protobuf.ByteString
@@ -7561,7 +8136,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string QuoteRequestID = 501;</code>
+       * <code>string QuoteRequestID = 502;</code>
        * @param value The quoteRequestID to set.
        * @return This builder for chaining.
        */
@@ -7569,22 +8144,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         quoteRequestID_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string QuoteRequestID = 501;</code>
+       * <code>string QuoteRequestID = 502;</code>
        * @return This builder for chaining.
        */
       public Builder clearQuoteRequestID() {
         quoteRequestID_ = getDefaultInstance().getQuoteRequestID();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string QuoteRequestID = 501;</code>
+       * <code>string QuoteRequestID = 502;</code>
        * @param value The bytes for quoteRequestID to set.
        * @return This builder for chaining.
        */
@@ -7593,32 +8168,32 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         quoteRequestID_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
       private int mlegType_ = 0;
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 502;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 503;</code>
        * @return The enum numeric value on the wire for mlegType.
        */
       @java.lang.Override public int getMlegTypeValue() {
         return mlegType_;
       }
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 502;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 503;</code>
        * @param value The enum numeric value on the wire for mlegType to set.
        * @return This builder for chaining.
        */
       public Builder setMlegTypeValue(int value) {
         mlegType_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 502;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 503;</code>
        * @return The mlegType.
        */
       @java.lang.Override
@@ -7627,7 +8202,7 @@ public final class Market {
         return result == null ? org.example.Market.QuoteRequestMLegType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 502;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 503;</code>
        * @param value The mlegType to set.
        * @return This builder for chaining.
        */
@@ -7635,17 +8210,17 @@ public final class Market {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         mlegType_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 502;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 503;</code>
        * @return This builder for chaining.
        */
       public Builder clearMlegType() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         mlegType_ = 0;
         onChanged();
         return this;
@@ -7653,25 +8228,25 @@ public final class Market {
 
       private int type_ = 0;
       /**
-       * <code>.org.example.QuoteRequestType Type = 503;</code>
+       * <code>.org.example.QuoteRequestType Type = 504;</code>
        * @return The enum numeric value on the wire for type.
        */
       @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
-       * <code>.org.example.QuoteRequestType Type = 503;</code>
+       * <code>.org.example.QuoteRequestType Type = 504;</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
         type_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestType Type = 503;</code>
+       * <code>.org.example.QuoteRequestType Type = 504;</code>
        * @return The type.
        */
       @java.lang.Override
@@ -7680,7 +8255,7 @@ public final class Market {
         return result == null ? org.example.Market.QuoteRequestType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.org.example.QuoteRequestType Type = 503;</code>
+       * <code>.org.example.QuoteRequestType Type = 504;</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -7688,17 +8263,17 @@ public final class Market {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         type_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestType Type = 503;</code>
+       * <code>.org.example.QuoteRequestType Type = 504;</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         type_ = 0;
         onChanged();
         return this;
@@ -7708,14 +8283,14 @@ public final class Market {
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> firstLegBuilder_;
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
        * @return Whether the firstLeg field is set.
        */
       public boolean hasFirstLeg() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
        * @return The firstLeg.
        */
       public org.example.Market.QuoteLeg getFirstLeg() {
@@ -7726,7 +8301,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
        */
       public Builder setFirstLeg(org.example.Market.QuoteLeg value) {
         if (firstLegBuilder_ == null) {
@@ -7737,12 +8312,12 @@ public final class Market {
         } else {
           firstLegBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
        */
       public Builder setFirstLeg(
           org.example.Market.QuoteLeg.Builder builderForValue) {
@@ -7751,16 +8326,16 @@ public final class Market {
         } else {
           firstLegBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
        */
       public Builder mergeFirstLeg(org.example.Market.QuoteLeg value) {
         if (firstLegBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
+          if (((bitField0_ & 0x00000020) != 0) &&
             firstLeg_ != null &&
             firstLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getFirstLegBuilder().mergeFrom(value);
@@ -7771,16 +8346,16 @@ public final class Market {
           firstLegBuilder_.mergeFrom(value);
         }
         if (firstLeg_ != null) {
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
        */
       public Builder clearFirstLeg() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         firstLeg_ = null;
         if (firstLegBuilder_ != null) {
           firstLegBuilder_.dispose();
@@ -7790,15 +8365,15 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
        */
       public org.example.Market.QuoteLeg.Builder getFirstLegBuilder() {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return getFirstLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
        */
       public org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder() {
         if (firstLegBuilder_ != null) {
@@ -7809,7 +8384,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 504;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 505;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
@@ -7829,14 +8404,14 @@ public final class Market {
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> secondLegBuilder_;
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
        * @return Whether the secondLeg field is set.
        */
       public boolean hasSecondLeg() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
        * @return The secondLeg.
        */
       public org.example.Market.QuoteLeg getSecondLeg() {
@@ -7847,7 +8422,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
        */
       public Builder setSecondLeg(org.example.Market.QuoteLeg value) {
         if (secondLegBuilder_ == null) {
@@ -7858,12 +8433,12 @@ public final class Market {
         } else {
           secondLegBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
        */
       public Builder setSecondLeg(
           org.example.Market.QuoteLeg.Builder builderForValue) {
@@ -7872,16 +8447,16 @@ public final class Market {
         } else {
           secondLegBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
        */
       public Builder mergeSecondLeg(org.example.Market.QuoteLeg value) {
         if (secondLegBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
+          if (((bitField0_ & 0x00000040) != 0) &&
             secondLeg_ != null &&
             secondLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getSecondLegBuilder().mergeFrom(value);
@@ -7892,16 +8467,16 @@ public final class Market {
           secondLegBuilder_.mergeFrom(value);
         }
         if (secondLeg_ != null) {
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
        */
       public Builder clearSecondLeg() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         secondLeg_ = null;
         if (secondLegBuilder_ != null) {
           secondLegBuilder_.dispose();
@@ -7911,15 +8486,15 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
        */
       public org.example.Market.QuoteLeg.Builder getSecondLegBuilder() {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return getSecondLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
        */
       public org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder() {
         if (secondLegBuilder_ != null) {
@@ -7930,7 +8505,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 505;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 506;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
@@ -7950,14 +8525,14 @@ public final class Market {
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> thirdLegBuilder_;
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
        * @return Whether the thirdLeg field is set.
        */
       public boolean hasThirdLeg() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
        * @return The thirdLeg.
        */
       public org.example.Market.QuoteLeg getThirdLeg() {
@@ -7968,7 +8543,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
        */
       public Builder setThirdLeg(org.example.Market.QuoteLeg value) {
         if (thirdLegBuilder_ == null) {
@@ -7979,12 +8554,12 @@ public final class Market {
         } else {
           thirdLegBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
        */
       public Builder setThirdLeg(
           org.example.Market.QuoteLeg.Builder builderForValue) {
@@ -7993,16 +8568,16 @@ public final class Market {
         } else {
           thirdLegBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
        */
       public Builder mergeThirdLeg(org.example.Market.QuoteLeg value) {
         if (thirdLegBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
+          if (((bitField0_ & 0x00000080) != 0) &&
             thirdLeg_ != null &&
             thirdLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getThirdLegBuilder().mergeFrom(value);
@@ -8013,16 +8588,16 @@ public final class Market {
           thirdLegBuilder_.mergeFrom(value);
         }
         if (thirdLeg_ != null) {
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
        */
       public Builder clearThirdLeg() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         thirdLeg_ = null;
         if (thirdLegBuilder_ != null) {
           thirdLegBuilder_.dispose();
@@ -8032,15 +8607,15 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
        */
       public org.example.Market.QuoteLeg.Builder getThirdLegBuilder() {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return getThirdLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
        */
       public org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder() {
         if (thirdLegBuilder_ != null) {
@@ -8051,7 +8626,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 506;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 507;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
@@ -8069,7 +8644,7 @@ public final class Market {
 
       private java.lang.Object issuerMemberID_ = "";
       /**
-       * <code>string IssuerMemberID = 507;</code>
+       * <code>string IssuerMemberID = 508;</code>
        * @return The issuerMemberID.
        */
       public java.lang.String getIssuerMemberID() {
@@ -8085,7 +8660,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string IssuerMemberID = 507;</code>
+       * <code>string IssuerMemberID = 508;</code>
        * @return The bytes for issuerMemberID.
        */
       public com.google.protobuf.ByteString
@@ -8102,7 +8677,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string IssuerMemberID = 507;</code>
+       * <code>string IssuerMemberID = 508;</code>
        * @param value The issuerMemberID to set.
        * @return This builder for chaining.
        */
@@ -8110,22 +8685,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         issuerMemberID_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
-       * <code>string IssuerMemberID = 507;</code>
+       * <code>string IssuerMemberID = 508;</code>
        * @return This builder for chaining.
        */
       public Builder clearIssuerMemberID() {
         issuerMemberID_ = getDefaultInstance().getIssuerMemberID();
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
       /**
-       * <code>string IssuerMemberID = 507;</code>
+       * <code>string IssuerMemberID = 508;</code>
        * @param value The bytes for issuerMemberID to set.
        * @return This builder for chaining.
        */
@@ -8134,14 +8709,14 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         issuerMemberID_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
 
       private java.lang.Object issuerOperatorID_ = "";
       /**
-       * <code>string IssuerOperatorID = 508;</code>
+       * <code>string IssuerOperatorID = 509;</code>
        * @return The issuerOperatorID.
        */
       public java.lang.String getIssuerOperatorID() {
@@ -8157,7 +8732,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string IssuerOperatorID = 508;</code>
+       * <code>string IssuerOperatorID = 509;</code>
        * @return The bytes for issuerOperatorID.
        */
       public com.google.protobuf.ByteString
@@ -8174,7 +8749,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string IssuerOperatorID = 508;</code>
+       * <code>string IssuerOperatorID = 509;</code>
        * @param value The issuerOperatorID to set.
        * @return This builder for chaining.
        */
@@ -8182,22 +8757,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         issuerOperatorID_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
       /**
-       * <code>string IssuerOperatorID = 508;</code>
+       * <code>string IssuerOperatorID = 509;</code>
        * @return This builder for chaining.
        */
       public Builder clearIssuerOperatorID() {
         issuerOperatorID_ = getDefaultInstance().getIssuerOperatorID();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
       /**
-       * <code>string IssuerOperatorID = 508;</code>
+       * <code>string IssuerOperatorID = 509;</code>
        * @param value The bytes for issuerOperatorID to set.
        * @return This builder for chaining.
        */
@@ -8206,14 +8781,14 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         issuerOperatorID_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
 
       private java.lang.Object counterpartMemberID_ = "";
       /**
-       * <code>string CounterpartMemberID = 509;</code>
+       * <code>string CounterpartMemberID = 510;</code>
        * @return The counterpartMemberID.
        */
       public java.lang.String getCounterpartMemberID() {
@@ -8229,7 +8804,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string CounterpartMemberID = 509;</code>
+       * <code>string CounterpartMemberID = 510;</code>
        * @return The bytes for counterpartMemberID.
        */
       public com.google.protobuf.ByteString
@@ -8246,7 +8821,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string CounterpartMemberID = 509;</code>
+       * <code>string CounterpartMemberID = 510;</code>
        * @param value The counterpartMemberID to set.
        * @return This builder for chaining.
        */
@@ -8254,22 +8829,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         counterpartMemberID_ = value;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
       /**
-       * <code>string CounterpartMemberID = 509;</code>
+       * <code>string CounterpartMemberID = 510;</code>
        * @return This builder for chaining.
        */
       public Builder clearCounterpartMemberID() {
         counterpartMemberID_ = getDefaultInstance().getCounterpartMemberID();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
       /**
-       * <code>string CounterpartMemberID = 509;</code>
+       * <code>string CounterpartMemberID = 510;</code>
        * @param value The bytes for counterpartMemberID to set.
        * @return This builder for chaining.
        */
@@ -8278,14 +8853,14 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         counterpartMemberID_ = value;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
 
       private java.lang.Object counterpartOperatorID_ = "";
       /**
-       * <code>string CounterpartOperatorID = 510;</code>
+       * <code>string CounterpartOperatorID = 511;</code>
        * @return The counterpartOperatorID.
        */
       public java.lang.String getCounterpartOperatorID() {
@@ -8301,7 +8876,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string CounterpartOperatorID = 510;</code>
+       * <code>string CounterpartOperatorID = 511;</code>
        * @return The bytes for counterpartOperatorID.
        */
       public com.google.protobuf.ByteString
@@ -8318,7 +8893,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string CounterpartOperatorID = 510;</code>
+       * <code>string CounterpartOperatorID = 511;</code>
        * @param value The counterpartOperatorID to set.
        * @return This builder for chaining.
        */
@@ -8326,22 +8901,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         counterpartOperatorID_ = value;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
       /**
-       * <code>string CounterpartOperatorID = 510;</code>
+       * <code>string CounterpartOperatorID = 511;</code>
        * @return This builder for chaining.
        */
       public Builder clearCounterpartOperatorID() {
         counterpartOperatorID_ = getDefaultInstance().getCounterpartOperatorID();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
         return this;
       }
       /**
-       * <code>string CounterpartOperatorID = 510;</code>
+       * <code>string CounterpartOperatorID = 511;</code>
        * @param value The bytes for counterpartOperatorID to set.
        * @return This builder for chaining.
        */
@@ -8350,14 +8925,14 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         counterpartOperatorID_ = value;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
 
       private long creationDate_ ;
       /**
-       * <code>uint64 CreationDate = 511;</code>
+       * <code>uint64 CreationDate = 512;</code>
        * @return The creationDate.
        */
       @java.lang.Override
@@ -8365,23 +8940,23 @@ public final class Market {
         return creationDate_;
       }
       /**
-       * <code>uint64 CreationDate = 511;</code>
+       * <code>uint64 CreationDate = 512;</code>
        * @param value The creationDate to set.
        * @return This builder for chaining.
        */
       public Builder setCreationDate(long value) {
 
         creationDate_ = value;
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 CreationDate = 511;</code>
+       * <code>uint64 CreationDate = 512;</code>
        * @return This builder for chaining.
        */
       public Builder clearCreationDate() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         creationDate_ = 0L;
         onChanged();
         return this;
@@ -8389,7 +8964,7 @@ public final class Market {
 
       private long creationTime_ ;
       /**
-       * <code>uint64 CreationTime = 512;</code>
+       * <code>uint64 CreationTime = 513;</code>
        * @return The creationTime.
        */
       @java.lang.Override
@@ -8397,23 +8972,23 @@ public final class Market {
         return creationTime_;
       }
       /**
-       * <code>uint64 CreationTime = 512;</code>
+       * <code>uint64 CreationTime = 513;</code>
        * @param value The creationTime to set.
        * @return This builder for chaining.
        */
       public Builder setCreationTime(long value) {
 
         creationTime_ = value;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 CreationTime = 512;</code>
+       * <code>uint64 CreationTime = 513;</code>
        * @return This builder for chaining.
        */
       public Builder clearCreationTime() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         creationTime_ = 0L;
         onChanged();
         return this;
@@ -8421,7 +8996,7 @@ public final class Market {
 
       private long updateDate_ ;
       /**
-       * <code>uint64 UpdateDate = 513;</code>
+       * <code>uint64 UpdateDate = 514;</code>
        * @return The updateDate.
        */
       @java.lang.Override
@@ -8429,23 +9004,23 @@ public final class Market {
         return updateDate_;
       }
       /**
-       * <code>uint64 UpdateDate = 513;</code>
+       * <code>uint64 UpdateDate = 514;</code>
        * @param value The updateDate to set.
        * @return This builder for chaining.
        */
       public Builder setUpdateDate(long value) {
 
         updateDate_ = value;
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 UpdateDate = 513;</code>
+       * <code>uint64 UpdateDate = 514;</code>
        * @return This builder for chaining.
        */
       public Builder clearUpdateDate() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         updateDate_ = 0L;
         onChanged();
         return this;
@@ -8453,7 +9028,7 @@ public final class Market {
 
       private long updateTime_ ;
       /**
-       * <code>uint64 UpdateTime = 514;</code>
+       * <code>uint64 UpdateTime = 515;</code>
        * @return The updateTime.
        */
       @java.lang.Override
@@ -8461,23 +9036,23 @@ public final class Market {
         return updateTime_;
       }
       /**
-       * <code>uint64 UpdateTime = 514;</code>
+       * <code>uint64 UpdateTime = 515;</code>
        * @param value The updateTime to set.
        * @return This builder for chaining.
        */
       public Builder setUpdateTime(long value) {
 
         updateTime_ = value;
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 UpdateTime = 514;</code>
+       * <code>uint64 UpdateTime = 515;</code>
        * @return This builder for chaining.
        */
       public Builder clearUpdateTime() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         updateTime_ = 0L;
         onChanged();
         return this;
@@ -8485,7 +9060,7 @@ public final class Market {
 
       private long validityDate_ ;
       /**
-       * <code>uint64 ValidityDate = 515;</code>
+       * <code>uint64 ValidityDate = 516;</code>
        * @return The validityDate.
        */
       @java.lang.Override
@@ -8493,23 +9068,23 @@ public final class Market {
         return validityDate_;
       }
       /**
-       * <code>uint64 ValidityDate = 515;</code>
+       * <code>uint64 ValidityDate = 516;</code>
        * @param value The validityDate to set.
        * @return This builder for chaining.
        */
       public Builder setValidityDate(long value) {
 
         validityDate_ = value;
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 ValidityDate = 515;</code>
+       * <code>uint64 ValidityDate = 516;</code>
        * @return This builder for chaining.
        */
       public Builder clearValidityDate() {
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         validityDate_ = 0L;
         onChanged();
         return this;
@@ -8517,7 +9092,7 @@ public final class Market {
 
       private long validityTime_ ;
       /**
-       * <code>uint64 ValidityTime = 516;</code>
+       * <code>uint64 ValidityTime = 517;</code>
        * @return The validityTime.
        */
       @java.lang.Override
@@ -8525,23 +9100,23 @@ public final class Market {
         return validityTime_;
       }
       /**
-       * <code>uint64 ValidityTime = 516;</code>
+       * <code>uint64 ValidityTime = 517;</code>
        * @param value The validityTime to set.
        * @return This builder for chaining.
        */
       public Builder setValidityTime(long value) {
 
         validityTime_ = value;
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 ValidityTime = 516;</code>
+       * <code>uint64 ValidityTime = 517;</code>
        * @return This builder for chaining.
        */
       public Builder clearValidityTime() {
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         validityTime_ = 0L;
         onChanged();
         return this;
@@ -8549,25 +9124,25 @@ public final class Market {
 
       private int status_ = 0;
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 517;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 518;</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 517;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 518;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
         status_ = value;
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 517;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 518;</code>
        * @return The status.
        */
       @java.lang.Override
@@ -8576,7 +9151,7 @@ public final class Market {
         return result == null ? org.example.Market.QuoteRequestStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 517;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 518;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -8584,17 +9159,17 @@ public final class Market {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         status_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 517;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 518;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         status_ = 0;
         onChanged();
         return this;
@@ -8602,25 +9177,25 @@ public final class Market {
 
       private int processStatus_ = 0;
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 518;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 519;</code>
        * @return The enum numeric value on the wire for processStatus.
        */
       @java.lang.Override public int getProcessStatusValue() {
         return processStatus_;
       }
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 518;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 519;</code>
        * @param value The enum numeric value on the wire for processStatus to set.
        * @return This builder for chaining.
        */
       public Builder setProcessStatusValue(int value) {
         processStatus_ = value;
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 518;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 519;</code>
        * @return The processStatus.
        */
       @java.lang.Override
@@ -8629,7 +9204,7 @@ public final class Market {
         return result == null ? org.example.Market.ProcessStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 518;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 519;</code>
        * @param value The processStatus to set.
        * @return This builder for chaining.
        */
@@ -8637,20 +9212,141 @@ public final class Market {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         processStatus_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 518;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 519;</code>
        * @return This builder for chaining.
        */
       public Builder clearProcessStatus() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         processStatus_ = 0;
         onChanged();
         return this;
+      }
+
+      private org.example.Market.InternalInfo internals_;
+      private com.google.protobuf.SingleFieldBuilder<
+          org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder> internalsBuilder_;
+      /**
+       * <code>.org.example.InternalInfo Internals = 999;</code>
+       * @return Whether the internals field is set.
+       */
+      public boolean hasInternals() {
+        return ((bitField0_ & 0x00100000) != 0);
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 999;</code>
+       * @return The internals.
+       */
+      public org.example.Market.InternalInfo getInternals() {
+        if (internalsBuilder_ == null) {
+          return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+        } else {
+          return internalsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 999;</code>
+       */
+      public Builder setInternals(org.example.Market.InternalInfo value) {
+        if (internalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          internals_ = value;
+        } else {
+          internalsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00100000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 999;</code>
+       */
+      public Builder setInternals(
+          org.example.Market.InternalInfo.Builder builderForValue) {
+        if (internalsBuilder_ == null) {
+          internals_ = builderForValue.build();
+        } else {
+          internalsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00100000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 999;</code>
+       */
+      public Builder mergeInternals(org.example.Market.InternalInfo value) {
+        if (internalsBuilder_ == null) {
+          if (((bitField0_ & 0x00100000) != 0) &&
+            internals_ != null &&
+            internals_ != org.example.Market.InternalInfo.getDefaultInstance()) {
+            getInternalsBuilder().mergeFrom(value);
+          } else {
+            internals_ = value;
+          }
+        } else {
+          internalsBuilder_.mergeFrom(value);
+        }
+        if (internals_ != null) {
+          bitField0_ |= 0x00100000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 999;</code>
+       */
+      public Builder clearInternals() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        internals_ = null;
+        if (internalsBuilder_ != null) {
+          internalsBuilder_.dispose();
+          internalsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 999;</code>
+       */
+      public org.example.Market.InternalInfo.Builder getInternalsBuilder() {
+        bitField0_ |= 0x00100000;
+        onChanged();
+        return getInternalsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 999;</code>
+       */
+      public org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder() {
+        if (internalsBuilder_ != null) {
+          return internalsBuilder_.getMessageOrBuilder();
+        } else {
+          return internals_ == null ?
+              org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+        }
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 999;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder> 
+          getInternalsFieldBuilder() {
+        if (internalsBuilder_ == null) {
+          internalsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder>(
+                  getInternals(),
+                  getParentForChildren(),
+                  isClean());
+          internals_ = null;
+        }
+        return internalsBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:org.example.MarketQuote)
@@ -8721,201 +9417,228 @@ public final class Market {
         getQuoteResponseIDBytes();
 
     /**
-     * <code>string QuoteRequestID = 1001;</code>
+     * <code>string ClientQuoteResponseID = 1001;</code>
+     * @return The clientQuoteResponseID.
+     */
+    java.lang.String getClientQuoteResponseID();
+    /**
+     * <code>string ClientQuoteResponseID = 1001;</code>
+     * @return The bytes for clientQuoteResponseID.
+     */
+    com.google.protobuf.ByteString
+        getClientQuoteResponseIDBytes();
+
+    /**
+     * <code>string QuoteRequestID = 1002;</code>
      * @return The quoteRequestID.
      */
     java.lang.String getQuoteRequestID();
     /**
-     * <code>string QuoteRequestID = 1001;</code>
+     * <code>string QuoteRequestID = 1002;</code>
      * @return The bytes for quoteRequestID.
      */
     com.google.protobuf.ByteString
         getQuoteRequestIDBytes();
 
     /**
-     * <code>string QuoteID = 1002;</code>
+     * <code>string QuoteID = 1003;</code>
      * @return The quoteID.
      */
     java.lang.String getQuoteID();
     /**
-     * <code>string QuoteID = 1002;</code>
+     * <code>string QuoteID = 1003;</code>
      * @return The bytes for quoteID.
      */
     com.google.protobuf.ByteString
         getQuoteIDBytes();
 
     /**
-     * <code>.org.example.QuoteRequestMLegType MlegType = 1003;</code>
+     * <code>.org.example.QuoteRequestMLegType MlegType = 1004;</code>
      * @return The enum numeric value on the wire for mlegType.
      */
     int getMlegTypeValue();
     /**
-     * <code>.org.example.QuoteRequestMLegType MlegType = 1003;</code>
+     * <code>.org.example.QuoteRequestMLegType MlegType = 1004;</code>
      * @return The mlegType.
      */
     org.example.Market.QuoteRequestMLegType getMlegType();
 
     /**
-     * <code>.org.example.QuoteRequestType Type = 1004;</code>
+     * <code>.org.example.QuoteRequestType Type = 1005;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
-     * <code>.org.example.QuoteRequestType Type = 1004;</code>
+     * <code>.org.example.QuoteRequestType Type = 1005;</code>
      * @return The type.
      */
     org.example.Market.QuoteRequestType getType();
 
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
      * @return Whether the firstLeg field is set.
      */
     boolean hasFirstLeg();
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
      * @return The firstLeg.
      */
     org.example.Market.QuoteLeg getFirstLeg();
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
      */
     org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder();
 
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
      * @return Whether the secondLeg field is set.
      */
     boolean hasSecondLeg();
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
      * @return The secondLeg.
      */
     org.example.Market.QuoteLeg getSecondLeg();
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
      */
     org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder();
 
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
      * @return Whether the thirdLeg field is set.
      */
     boolean hasThirdLeg();
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
      * @return The thirdLeg.
      */
     org.example.Market.QuoteLeg getThirdLeg();
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
      */
     org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder();
 
     /**
-     * <code>string IssuerMemberID = 1008;</code>
+     * <code>string IssuerMemberID = 1009;</code>
      * @return The issuerMemberID.
      */
     java.lang.String getIssuerMemberID();
     /**
-     * <code>string IssuerMemberID = 1008;</code>
+     * <code>string IssuerMemberID = 1009;</code>
      * @return The bytes for issuerMemberID.
      */
     com.google.protobuf.ByteString
         getIssuerMemberIDBytes();
 
     /**
-     * <code>string IssuerOperatorID = 1009;</code>
+     * <code>string IssuerOperatorID = 1010;</code>
      * @return The issuerOperatorID.
      */
     java.lang.String getIssuerOperatorID();
     /**
-     * <code>string IssuerOperatorID = 1009;</code>
+     * <code>string IssuerOperatorID = 1010;</code>
      * @return The bytes for issuerOperatorID.
      */
     com.google.protobuf.ByteString
         getIssuerOperatorIDBytes();
 
     /**
-     * <code>string CounterpartMemberID = 1010;</code>
+     * <code>string CounterpartMemberID = 1011;</code>
      * @return The counterpartMemberID.
      */
     java.lang.String getCounterpartMemberID();
     /**
-     * <code>string CounterpartMemberID = 1010;</code>
+     * <code>string CounterpartMemberID = 1011;</code>
      * @return The bytes for counterpartMemberID.
      */
     com.google.protobuf.ByteString
         getCounterpartMemberIDBytes();
 
     /**
-     * <code>string CounterpartOperatorID = 1011;</code>
+     * <code>string CounterpartOperatorID = 1012;</code>
      * @return The counterpartOperatorID.
      */
     java.lang.String getCounterpartOperatorID();
     /**
-     * <code>string CounterpartOperatorID = 1011;</code>
+     * <code>string CounterpartOperatorID = 1012;</code>
      * @return The bytes for counterpartOperatorID.
      */
     com.google.protobuf.ByteString
         getCounterpartOperatorIDBytes();
 
     /**
-     * <code>uint64 CreationDate = 1012;</code>
+     * <code>uint64 CreationDate = 1013;</code>
      * @return The creationDate.
      */
     long getCreationDate();
 
     /**
-     * <code>uint64 CreationTime = 1013;</code>
+     * <code>uint64 CreationTime = 1014;</code>
      * @return The creationTime.
      */
     long getCreationTime();
 
     /**
-     * <code>uint64 UpdateDate = 1014;</code>
+     * <code>uint64 UpdateDate = 1015;</code>
      * @return The updateDate.
      */
     long getUpdateDate();
 
     /**
-     * <code>uint64 UpdateTime = 1015;</code>
+     * <code>uint64 UpdateTime = 1016;</code>
      * @return The updateTime.
      */
     long getUpdateTime();
 
     /**
-     * <code>uint64 ValidityDate = 1016;</code>
+     * <code>uint64 ValidityDate = 1017;</code>
      * @return The validityDate.
      */
     long getValidityDate();
 
     /**
-     * <code>uint64 ValidityTime = 1017;</code>
+     * <code>uint64 ValidityTime = 1018;</code>
      * @return The validityTime.
      */
     long getValidityTime();
 
     /**
-     * <code>.org.example.QuoteRequestStatus Status = 1018;</code>
+     * <code>.org.example.QuoteRequestStatus Status = 1019;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
-     * <code>.org.example.QuoteRequestStatus Status = 1018;</code>
+     * <code>.org.example.QuoteRequestStatus Status = 1019;</code>
      * @return The status.
      */
     org.example.Market.QuoteRequestStatus getStatus();
 
     /**
-     * <code>.org.example.ProcessStatus ProcessStatus = 1019;</code>
+     * <code>.org.example.ProcessStatus ProcessStatus = 1020;</code>
      * @return The enum numeric value on the wire for processStatus.
      */
     int getProcessStatusValue();
     /**
-     * <code>.org.example.ProcessStatus ProcessStatus = 1019;</code>
+     * <code>.org.example.ProcessStatus ProcessStatus = 1020;</code>
      * @return The processStatus.
      */
     org.example.Market.ProcessStatus getProcessStatus();
+
+    /**
+     * <code>.org.example.InternalInfo Internals = 1499;</code>
+     * @return Whether the internals field is set.
+     */
+    boolean hasInternals();
+    /**
+     * <code>.org.example.InternalInfo Internals = 1499;</code>
+     * @return The internals.
+     */
+    org.example.Market.InternalInfo getInternals();
+    /**
+     * <code>.org.example.InternalInfo Internals = 1499;</code>
+     */
+    org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder();
   }
   /**
    * <pre>
@@ -8944,6 +9667,7 @@ public final class Market {
     }
     private MarketQuoteResponse() {
       quoteResponseID_ = "";
+      clientQuoteResponseID_ = "";
       quoteRequestID_ = "";
       quoteID_ = "";
       mlegType_ = 0;
@@ -9009,11 +9733,50 @@ public final class Market {
       }
     }
 
-    public static final int QUOTEREQUESTID_FIELD_NUMBER = 1001;
+    public static final int CLIENTQUOTERESPONSEID_FIELD_NUMBER = 1001;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientQuoteResponseID_ = "";
+    /**
+     * <code>string ClientQuoteResponseID = 1001;</code>
+     * @return The clientQuoteResponseID.
+     */
+    @java.lang.Override
+    public java.lang.String getClientQuoteResponseID() {
+      java.lang.Object ref = clientQuoteResponseID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientQuoteResponseID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ClientQuoteResponseID = 1001;</code>
+     * @return The bytes for clientQuoteResponseID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientQuoteResponseIDBytes() {
+      java.lang.Object ref = clientQuoteResponseID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientQuoteResponseID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUOTEREQUESTID_FIELD_NUMBER = 1002;
     @SuppressWarnings("serial")
     private volatile java.lang.Object quoteRequestID_ = "";
     /**
-     * <code>string QuoteRequestID = 1001;</code>
+     * <code>string QuoteRequestID = 1002;</code>
      * @return The quoteRequestID.
      */
     @java.lang.Override
@@ -9030,7 +9793,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string QuoteRequestID = 1001;</code>
+     * <code>string QuoteRequestID = 1002;</code>
      * @return The bytes for quoteRequestID.
      */
     @java.lang.Override
@@ -9048,11 +9811,11 @@ public final class Market {
       }
     }
 
-    public static final int QUOTEID_FIELD_NUMBER = 1002;
+    public static final int QUOTEID_FIELD_NUMBER = 1003;
     @SuppressWarnings("serial")
     private volatile java.lang.Object quoteID_ = "";
     /**
-     * <code>string QuoteID = 1002;</code>
+     * <code>string QuoteID = 1003;</code>
      * @return The quoteID.
      */
     @java.lang.Override
@@ -9069,7 +9832,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string QuoteID = 1002;</code>
+     * <code>string QuoteID = 1003;</code>
      * @return The bytes for quoteID.
      */
     @java.lang.Override
@@ -9087,17 +9850,17 @@ public final class Market {
       }
     }
 
-    public static final int MLEGTYPE_FIELD_NUMBER = 1003;
+    public static final int MLEGTYPE_FIELD_NUMBER = 1004;
     private int mlegType_ = 0;
     /**
-     * <code>.org.example.QuoteRequestMLegType MlegType = 1003;</code>
+     * <code>.org.example.QuoteRequestMLegType MlegType = 1004;</code>
      * @return The enum numeric value on the wire for mlegType.
      */
     @java.lang.Override public int getMlegTypeValue() {
       return mlegType_;
     }
     /**
-     * <code>.org.example.QuoteRequestMLegType MlegType = 1003;</code>
+     * <code>.org.example.QuoteRequestMLegType MlegType = 1004;</code>
      * @return The mlegType.
      */
     @java.lang.Override public org.example.Market.QuoteRequestMLegType getMlegType() {
@@ -9105,17 +9868,17 @@ public final class Market {
       return result == null ? org.example.Market.QuoteRequestMLegType.UNRECOGNIZED : result;
     }
 
-    public static final int TYPE_FIELD_NUMBER = 1004;
+    public static final int TYPE_FIELD_NUMBER = 1005;
     private int type_ = 0;
     /**
-     * <code>.org.example.QuoteRequestType Type = 1004;</code>
+     * <code>.org.example.QuoteRequestType Type = 1005;</code>
      * @return The enum numeric value on the wire for type.
      */
     @java.lang.Override public int getTypeValue() {
       return type_;
     }
     /**
-     * <code>.org.example.QuoteRequestType Type = 1004;</code>
+     * <code>.org.example.QuoteRequestType Type = 1005;</code>
      * @return The type.
      */
     @java.lang.Override public org.example.Market.QuoteRequestType getType() {
@@ -9123,10 +9886,10 @@ public final class Market {
       return result == null ? org.example.Market.QuoteRequestType.UNRECOGNIZED : result;
     }
 
-    public static final int FIRSTLEG_FIELD_NUMBER = 1005;
+    public static final int FIRSTLEG_FIELD_NUMBER = 1006;
     private org.example.Market.QuoteLeg firstLeg_;
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
      * @return Whether the firstLeg field is set.
      */
     @java.lang.Override
@@ -9134,7 +9897,7 @@ public final class Market {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
      * @return The firstLeg.
      */
     @java.lang.Override
@@ -9142,17 +9905,17 @@ public final class Market {
       return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
     }
     /**
-     * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+     * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
      */
     @java.lang.Override
     public org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder() {
       return firstLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : firstLeg_;
     }
 
-    public static final int SECONDLEG_FIELD_NUMBER = 1006;
+    public static final int SECONDLEG_FIELD_NUMBER = 1007;
     private org.example.Market.QuoteLeg secondLeg_;
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
      * @return Whether the secondLeg field is set.
      */
     @java.lang.Override
@@ -9160,7 +9923,7 @@ public final class Market {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
      * @return The secondLeg.
      */
     @java.lang.Override
@@ -9168,17 +9931,17 @@ public final class Market {
       return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
     }
     /**
-     * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+     * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
      */
     @java.lang.Override
     public org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder() {
       return secondLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : secondLeg_;
     }
 
-    public static final int THIRDLEG_FIELD_NUMBER = 1007;
+    public static final int THIRDLEG_FIELD_NUMBER = 1008;
     private org.example.Market.QuoteLeg thirdLeg_;
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
      * @return Whether the thirdLeg field is set.
      */
     @java.lang.Override
@@ -9186,7 +9949,7 @@ public final class Market {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
      * @return The thirdLeg.
      */
     @java.lang.Override
@@ -9194,18 +9957,18 @@ public final class Market {
       return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
     }
     /**
-     * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+     * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
      */
     @java.lang.Override
     public org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder() {
       return thirdLeg_ == null ? org.example.Market.QuoteLeg.getDefaultInstance() : thirdLeg_;
     }
 
-    public static final int ISSUERMEMBERID_FIELD_NUMBER = 1008;
+    public static final int ISSUERMEMBERID_FIELD_NUMBER = 1009;
     @SuppressWarnings("serial")
     private volatile java.lang.Object issuerMemberID_ = "";
     /**
-     * <code>string IssuerMemberID = 1008;</code>
+     * <code>string IssuerMemberID = 1009;</code>
      * @return The issuerMemberID.
      */
     @java.lang.Override
@@ -9222,7 +9985,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string IssuerMemberID = 1008;</code>
+     * <code>string IssuerMemberID = 1009;</code>
      * @return The bytes for issuerMemberID.
      */
     @java.lang.Override
@@ -9240,11 +10003,11 @@ public final class Market {
       }
     }
 
-    public static final int ISSUEROPERATORID_FIELD_NUMBER = 1009;
+    public static final int ISSUEROPERATORID_FIELD_NUMBER = 1010;
     @SuppressWarnings("serial")
     private volatile java.lang.Object issuerOperatorID_ = "";
     /**
-     * <code>string IssuerOperatorID = 1009;</code>
+     * <code>string IssuerOperatorID = 1010;</code>
      * @return The issuerOperatorID.
      */
     @java.lang.Override
@@ -9261,7 +10024,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string IssuerOperatorID = 1009;</code>
+     * <code>string IssuerOperatorID = 1010;</code>
      * @return The bytes for issuerOperatorID.
      */
     @java.lang.Override
@@ -9279,11 +10042,11 @@ public final class Market {
       }
     }
 
-    public static final int COUNTERPARTMEMBERID_FIELD_NUMBER = 1010;
+    public static final int COUNTERPARTMEMBERID_FIELD_NUMBER = 1011;
     @SuppressWarnings("serial")
     private volatile java.lang.Object counterpartMemberID_ = "";
     /**
-     * <code>string CounterpartMemberID = 1010;</code>
+     * <code>string CounterpartMemberID = 1011;</code>
      * @return The counterpartMemberID.
      */
     @java.lang.Override
@@ -9300,7 +10063,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string CounterpartMemberID = 1010;</code>
+     * <code>string CounterpartMemberID = 1011;</code>
      * @return The bytes for counterpartMemberID.
      */
     @java.lang.Override
@@ -9318,11 +10081,11 @@ public final class Market {
       }
     }
 
-    public static final int COUNTERPARTOPERATORID_FIELD_NUMBER = 1011;
+    public static final int COUNTERPARTOPERATORID_FIELD_NUMBER = 1012;
     @SuppressWarnings("serial")
     private volatile java.lang.Object counterpartOperatorID_ = "";
     /**
-     * <code>string CounterpartOperatorID = 1011;</code>
+     * <code>string CounterpartOperatorID = 1012;</code>
      * @return The counterpartOperatorID.
      */
     @java.lang.Override
@@ -9339,7 +10102,7 @@ public final class Market {
       }
     }
     /**
-     * <code>string CounterpartOperatorID = 1011;</code>
+     * <code>string CounterpartOperatorID = 1012;</code>
      * @return The bytes for counterpartOperatorID.
      */
     @java.lang.Override
@@ -9357,10 +10120,10 @@ public final class Market {
       }
     }
 
-    public static final int CREATIONDATE_FIELD_NUMBER = 1012;
+    public static final int CREATIONDATE_FIELD_NUMBER = 1013;
     private long creationDate_ = 0L;
     /**
-     * <code>uint64 CreationDate = 1012;</code>
+     * <code>uint64 CreationDate = 1013;</code>
      * @return The creationDate.
      */
     @java.lang.Override
@@ -9368,10 +10131,10 @@ public final class Market {
       return creationDate_;
     }
 
-    public static final int CREATIONTIME_FIELD_NUMBER = 1013;
+    public static final int CREATIONTIME_FIELD_NUMBER = 1014;
     private long creationTime_ = 0L;
     /**
-     * <code>uint64 CreationTime = 1013;</code>
+     * <code>uint64 CreationTime = 1014;</code>
      * @return The creationTime.
      */
     @java.lang.Override
@@ -9379,10 +10142,10 @@ public final class Market {
       return creationTime_;
     }
 
-    public static final int UPDATEDATE_FIELD_NUMBER = 1014;
+    public static final int UPDATEDATE_FIELD_NUMBER = 1015;
     private long updateDate_ = 0L;
     /**
-     * <code>uint64 UpdateDate = 1014;</code>
+     * <code>uint64 UpdateDate = 1015;</code>
      * @return The updateDate.
      */
     @java.lang.Override
@@ -9390,10 +10153,10 @@ public final class Market {
       return updateDate_;
     }
 
-    public static final int UPDATETIME_FIELD_NUMBER = 1015;
+    public static final int UPDATETIME_FIELD_NUMBER = 1016;
     private long updateTime_ = 0L;
     /**
-     * <code>uint64 UpdateTime = 1015;</code>
+     * <code>uint64 UpdateTime = 1016;</code>
      * @return The updateTime.
      */
     @java.lang.Override
@@ -9401,10 +10164,10 @@ public final class Market {
       return updateTime_;
     }
 
-    public static final int VALIDITYDATE_FIELD_NUMBER = 1016;
+    public static final int VALIDITYDATE_FIELD_NUMBER = 1017;
     private long validityDate_ = 0L;
     /**
-     * <code>uint64 ValidityDate = 1016;</code>
+     * <code>uint64 ValidityDate = 1017;</code>
      * @return The validityDate.
      */
     @java.lang.Override
@@ -9412,10 +10175,10 @@ public final class Market {
       return validityDate_;
     }
 
-    public static final int VALIDITYTIME_FIELD_NUMBER = 1017;
+    public static final int VALIDITYTIME_FIELD_NUMBER = 1018;
     private long validityTime_ = 0L;
     /**
-     * <code>uint64 ValidityTime = 1017;</code>
+     * <code>uint64 ValidityTime = 1018;</code>
      * @return The validityTime.
      */
     @java.lang.Override
@@ -9423,17 +10186,17 @@ public final class Market {
       return validityTime_;
     }
 
-    public static final int STATUS_FIELD_NUMBER = 1018;
+    public static final int STATUS_FIELD_NUMBER = 1019;
     private int status_ = 0;
     /**
-     * <code>.org.example.QuoteRequestStatus Status = 1018;</code>
+     * <code>.org.example.QuoteRequestStatus Status = 1019;</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
       return status_;
     }
     /**
-     * <code>.org.example.QuoteRequestStatus Status = 1018;</code>
+     * <code>.org.example.QuoteRequestStatus Status = 1019;</code>
      * @return The status.
      */
     @java.lang.Override public org.example.Market.QuoteRequestStatus getStatus() {
@@ -9441,22 +10204,48 @@ public final class Market {
       return result == null ? org.example.Market.QuoteRequestStatus.UNRECOGNIZED : result;
     }
 
-    public static final int PROCESSSTATUS_FIELD_NUMBER = 1019;
+    public static final int PROCESSSTATUS_FIELD_NUMBER = 1020;
     private int processStatus_ = 0;
     /**
-     * <code>.org.example.ProcessStatus ProcessStatus = 1019;</code>
+     * <code>.org.example.ProcessStatus ProcessStatus = 1020;</code>
      * @return The enum numeric value on the wire for processStatus.
      */
     @java.lang.Override public int getProcessStatusValue() {
       return processStatus_;
     }
     /**
-     * <code>.org.example.ProcessStatus ProcessStatus = 1019;</code>
+     * <code>.org.example.ProcessStatus ProcessStatus = 1020;</code>
      * @return The processStatus.
      */
     @java.lang.Override public org.example.Market.ProcessStatus getProcessStatus() {
       org.example.Market.ProcessStatus result = org.example.Market.ProcessStatus.forNumber(processStatus_);
       return result == null ? org.example.Market.ProcessStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int INTERNALS_FIELD_NUMBER = 1499;
+    private org.example.Market.InternalInfo internals_;
+    /**
+     * <code>.org.example.InternalInfo Internals = 1499;</code>
+     * @return Whether the internals field is set.
+     */
+    @java.lang.Override
+    public boolean hasInternals() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.org.example.InternalInfo Internals = 1499;</code>
+     * @return The internals.
+     */
+    @java.lang.Override
+    public org.example.Market.InternalInfo getInternals() {
+      return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+    }
+    /**
+     * <code>.org.example.InternalInfo Internals = 1499;</code>
+     */
+    @java.lang.Override
+    public org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder() {
+      return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9476,62 +10265,68 @@ public final class Market {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteResponseID_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1000, quoteResponseID_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteResponseID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1001, clientQuoteResponseID_);
+      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteRequestID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1001, quoteRequestID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 1002, quoteRequestID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1002, quoteID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 1003, quoteID_);
       }
       if (mlegType_ != org.example.Market.QuoteRequestMLegType.MLEG_Outright.getNumber()) {
-        output.writeEnum(1003, mlegType_);
+        output.writeEnum(1004, mlegType_);
       }
       if (type_ != org.example.Market.QuoteRequestType.TYPE_RequestBidOffer.getNumber()) {
-        output.writeEnum(1004, type_);
+        output.writeEnum(1005, type_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1005, getFirstLeg());
+        output.writeMessage(1006, getFirstLeg());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(1006, getSecondLeg());
+        output.writeMessage(1007, getSecondLeg());
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeMessage(1007, getThirdLeg());
+        output.writeMessage(1008, getThirdLeg());
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuerMemberID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1008, issuerMemberID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 1009, issuerMemberID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuerOperatorID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1009, issuerOperatorID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 1010, issuerOperatorID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(counterpartMemberID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1010, counterpartMemberID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 1011, counterpartMemberID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(counterpartOperatorID_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1011, counterpartOperatorID_);
+        com.google.protobuf.GeneratedMessage.writeString(output, 1012, counterpartOperatorID_);
       }
       if (creationDate_ != 0L) {
-        output.writeUInt64(1012, creationDate_);
+        output.writeUInt64(1013, creationDate_);
       }
       if (creationTime_ != 0L) {
-        output.writeUInt64(1013, creationTime_);
+        output.writeUInt64(1014, creationTime_);
       }
       if (updateDate_ != 0L) {
-        output.writeUInt64(1014, updateDate_);
+        output.writeUInt64(1015, updateDate_);
       }
       if (updateTime_ != 0L) {
-        output.writeUInt64(1015, updateTime_);
+        output.writeUInt64(1016, updateTime_);
       }
       if (validityDate_ != 0L) {
-        output.writeUInt64(1016, validityDate_);
+        output.writeUInt64(1017, validityDate_);
       }
       if (validityTime_ != 0L) {
-        output.writeUInt64(1017, validityTime_);
+        output.writeUInt64(1018, validityTime_);
       }
       if (status_ != org.example.Market.QuoteRequestStatus.STATUS_Active.getNumber()) {
-        output.writeEnum(1018, status_);
+        output.writeEnum(1019, status_);
       }
       if (processStatus_ != org.example.Market.ProcessStatus.PROCESSED_NotProcessed.getNumber()) {
-        output.writeEnum(1019, processStatus_);
+        output.writeEnum(1020, processStatus_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(1499, getInternals());
       }
       getUnknownFields().writeTo(output);
     }
@@ -9545,75 +10340,82 @@ public final class Market {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteResponseID_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1000, quoteResponseID_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteResponseID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1001, clientQuoteResponseID_);
+      }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteRequestID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1001, quoteRequestID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1002, quoteRequestID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1002, quoteID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1003, quoteID_);
       }
       if (mlegType_ != org.example.Market.QuoteRequestMLegType.MLEG_Outright.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1003, mlegType_);
+          .computeEnumSize(1004, mlegType_);
       }
       if (type_ != org.example.Market.QuoteRequestType.TYPE_RequestBidOffer.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1004, type_);
+          .computeEnumSize(1005, type_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1005, getFirstLeg());
+          .computeMessageSize(1006, getFirstLeg());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1006, getSecondLeg());
+          .computeMessageSize(1007, getSecondLeg());
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1007, getThirdLeg());
+          .computeMessageSize(1008, getThirdLeg());
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuerMemberID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1008, issuerMemberID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1009, issuerMemberID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(issuerOperatorID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1009, issuerOperatorID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1010, issuerOperatorID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(counterpartMemberID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1010, counterpartMemberID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1011, counterpartMemberID_);
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(counterpartOperatorID_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1011, counterpartOperatorID_);
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1012, counterpartOperatorID_);
       }
       if (creationDate_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1012, creationDate_);
+          .computeUInt64Size(1013, creationDate_);
       }
       if (creationTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1013, creationTime_);
+          .computeUInt64Size(1014, creationTime_);
       }
       if (updateDate_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1014, updateDate_);
+          .computeUInt64Size(1015, updateDate_);
       }
       if (updateTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1015, updateTime_);
+          .computeUInt64Size(1016, updateTime_);
       }
       if (validityDate_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1016, validityDate_);
+          .computeUInt64Size(1017, validityDate_);
       }
       if (validityTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(1017, validityTime_);
+          .computeUInt64Size(1018, validityTime_);
       }
       if (status_ != org.example.Market.QuoteRequestStatus.STATUS_Active.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1018, status_);
+          .computeEnumSize(1019, status_);
       }
       if (processStatus_ != org.example.Market.ProcessStatus.PROCESSED_NotProcessed.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1019, processStatus_);
+          .computeEnumSize(1020, processStatus_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1499, getInternals());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -9632,6 +10434,8 @@ public final class Market {
 
       if (!getQuoteResponseID()
           .equals(other.getQuoteResponseID())) return false;
+      if (!getClientQuoteResponseID()
+          .equals(other.getClientQuoteResponseID())) return false;
       if (!getQuoteRequestID()
           .equals(other.getQuoteRequestID())) return false;
       if (!getQuoteID()
@@ -9675,6 +10479,11 @@ public final class Market {
           != other.getValidityTime()) return false;
       if (status_ != other.status_) return false;
       if (processStatus_ != other.processStatus_) return false;
+      if (hasInternals() != other.hasInternals()) return false;
+      if (hasInternals()) {
+        if (!getInternals()
+            .equals(other.getInternals())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -9688,6 +10497,8 @@ public final class Market {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + QUOTERESPONSEID_FIELD_NUMBER;
       hash = (53 * hash) + getQuoteResponseID().hashCode();
+      hash = (37 * hash) + CLIENTQUOTERESPONSEID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientQuoteResponseID().hashCode();
       hash = (37 * hash) + QUOTEREQUESTID_FIELD_NUMBER;
       hash = (53 * hash) + getQuoteRequestID().hashCode();
       hash = (37 * hash) + QUOTEID_FIELD_NUMBER;
@@ -9738,6 +10549,10 @@ public final class Market {
       hash = (53 * hash) + status_;
       hash = (37 * hash) + PROCESSSTATUS_FIELD_NUMBER;
       hash = (53 * hash) + processStatus_;
+      if (hasInternals()) {
+        hash = (37 * hash) + INTERNALS_FIELD_NUMBER;
+        hash = (53 * hash) + getInternals().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9875,6 +10690,7 @@ public final class Market {
           getFirstLegFieldBuilder();
           getSecondLegFieldBuilder();
           getThirdLegFieldBuilder();
+          getInternalsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -9882,6 +10698,7 @@ public final class Market {
         super.clear();
         bitField0_ = 0;
         quoteResponseID_ = "";
+        clientQuoteResponseID_ = "";
         quoteRequestID_ = "";
         quoteID_ = "";
         mlegType_ = 0;
@@ -9913,6 +10730,11 @@ public final class Market {
         validityTime_ = 0L;
         status_ = 0;
         processStatus_ = 0;
+        internals_ = null;
+        if (internalsBuilder_ != null) {
+          internalsBuilder_.dispose();
+          internalsBuilder_ = null;
+        }
         return this;
       }
 
@@ -9950,71 +10772,80 @@ public final class Market {
           result.quoteResponseID_ = quoteResponseID_;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.quoteRequestID_ = quoteRequestID_;
+          result.clientQuoteResponseID_ = clientQuoteResponseID_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.quoteID_ = quoteID_;
+          result.quoteRequestID_ = quoteRequestID_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.mlegType_ = mlegType_;
+          result.quoteID_ = quoteID_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.mlegType_ = mlegType_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.type_ = type_;
         }
         int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000040) != 0)) {
           result.firstLeg_ = firstLegBuilder_ == null
               ? firstLeg_
               : firstLegBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
+        if (((from_bitField0_ & 0x00000080) != 0)) {
           result.secondLeg_ = secondLegBuilder_ == null
               ? secondLeg_
               : secondLegBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
+        if (((from_bitField0_ & 0x00000100) != 0)) {
           result.thirdLeg_ = thirdLegBuilder_ == null
               ? thirdLeg_
               : thirdLegBuilder_.build();
           to_bitField0_ |= 0x00000004;
         }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (((from_bitField0_ & 0x00000200) != 0)) {
           result.issuerMemberID_ = issuerMemberID_;
         }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
+        if (((from_bitField0_ & 0x00000400) != 0)) {
           result.issuerOperatorID_ = issuerOperatorID_;
         }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           result.counterpartMemberID_ = counterpartMemberID_;
         }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
+        if (((from_bitField0_ & 0x00001000) != 0)) {
           result.counterpartOperatorID_ = counterpartOperatorID_;
         }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
+        if (((from_bitField0_ & 0x00002000) != 0)) {
           result.creationDate_ = creationDate_;
         }
-        if (((from_bitField0_ & 0x00002000) != 0)) {
+        if (((from_bitField0_ & 0x00004000) != 0)) {
           result.creationTime_ = creationTime_;
         }
-        if (((from_bitField0_ & 0x00004000) != 0)) {
+        if (((from_bitField0_ & 0x00008000) != 0)) {
           result.updateDate_ = updateDate_;
         }
-        if (((from_bitField0_ & 0x00008000) != 0)) {
+        if (((from_bitField0_ & 0x00010000) != 0)) {
           result.updateTime_ = updateTime_;
         }
-        if (((from_bitField0_ & 0x00010000) != 0)) {
+        if (((from_bitField0_ & 0x00020000) != 0)) {
           result.validityDate_ = validityDate_;
         }
-        if (((from_bitField0_ & 0x00020000) != 0)) {
+        if (((from_bitField0_ & 0x00040000) != 0)) {
           result.validityTime_ = validityTime_;
         }
-        if (((from_bitField0_ & 0x00040000) != 0)) {
+        if (((from_bitField0_ & 0x00080000) != 0)) {
           result.status_ = status_;
         }
-        if (((from_bitField0_ & 0x00080000) != 0)) {
+        if (((from_bitField0_ & 0x00100000) != 0)) {
           result.processStatus_ = processStatus_;
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.internals_ = internalsBuilder_ == null
+              ? internals_
+              : internalsBuilder_.build();
+          to_bitField0_ |= 0x00000008;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -10036,14 +10867,19 @@ public final class Market {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (!other.getClientQuoteResponseID().isEmpty()) {
+          clientQuoteResponseID_ = other.clientQuoteResponseID_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         if (!other.getQuoteRequestID().isEmpty()) {
           quoteRequestID_ = other.quoteRequestID_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getQuoteID().isEmpty()) {
           quoteID_ = other.quoteID_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.mlegType_ != 0) {
@@ -10063,22 +10899,22 @@ public final class Market {
         }
         if (!other.getIssuerMemberID().isEmpty()) {
           issuerMemberID_ = other.issuerMemberID_;
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000200;
           onChanged();
         }
         if (!other.getIssuerOperatorID().isEmpty()) {
           issuerOperatorID_ = other.issuerOperatorID_;
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         if (!other.getCounterpartMemberID().isEmpty()) {
           counterpartMemberID_ = other.counterpartMemberID_;
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000800;
           onChanged();
         }
         if (!other.getCounterpartOperatorID().isEmpty()) {
           counterpartOperatorID_ = other.counterpartOperatorID_;
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00001000;
           onChanged();
         }
         if (other.getCreationDate() != 0L) {
@@ -10104,6 +10940,9 @@ public final class Market {
         }
         if (other.processStatus_ != 0) {
           setProcessStatusValue(other.getProcessStatusValue());
+        }
+        if (other.hasInternals()) {
+          mergeInternals(other.getInternals());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -10137,106 +10976,118 @@ public final class Market {
                 break;
               } // case 8002
               case 8010: {
-                quoteRequestID_ = input.readStringRequireUtf8();
+                clientQuoteResponseID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000002;
                 break;
               } // case 8010
               case 8018: {
-                quoteID_ = input.readStringRequireUtf8();
+                quoteRequestID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 8018
-              case 8024: {
-                mlegType_ = input.readEnum();
+              case 8026: {
+                quoteID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 8024
+              } // case 8026
               case 8032: {
-                type_ = input.readEnum();
+                mlegType_ = input.readEnum();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 8032
-              case 8042: {
-                input.readMessage(
-                    getFirstLegFieldBuilder().getBuilder(),
-                    extensionRegistry);
+              case 8040: {
+                type_ = input.readEnum();
                 bitField0_ |= 0x00000020;
                 break;
-              } // case 8042
+              } // case 8040
               case 8050: {
                 input.readMessage(
-                    getSecondLegFieldBuilder().getBuilder(),
+                    getFirstLegFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000040;
                 break;
               } // case 8050
               case 8058: {
                 input.readMessage(
-                    getThirdLegFieldBuilder().getBuilder(),
+                    getSecondLegFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000080;
                 break;
               } // case 8058
               case 8066: {
-                issuerMemberID_ = input.readStringRequireUtf8();
+                input.readMessage(
+                    getThirdLegFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 bitField0_ |= 0x00000100;
                 break;
               } // case 8066
               case 8074: {
-                issuerOperatorID_ = input.readStringRequireUtf8();
+                issuerMemberID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000200;
                 break;
               } // case 8074
               case 8082: {
-                counterpartMemberID_ = input.readStringRequireUtf8();
+                issuerOperatorID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000400;
                 break;
               } // case 8082
               case 8090: {
-                counterpartOperatorID_ = input.readStringRequireUtf8();
+                counterpartMemberID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000800;
                 break;
               } // case 8090
-              case 8096: {
-                creationDate_ = input.readUInt64();
+              case 8098: {
+                counterpartOperatorID_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00001000;
                 break;
-              } // case 8096
+              } // case 8098
               case 8104: {
-                creationTime_ = input.readUInt64();
+                creationDate_ = input.readUInt64();
                 bitField0_ |= 0x00002000;
                 break;
               } // case 8104
               case 8112: {
-                updateDate_ = input.readUInt64();
+                creationTime_ = input.readUInt64();
                 bitField0_ |= 0x00004000;
                 break;
               } // case 8112
               case 8120: {
-                updateTime_ = input.readUInt64();
+                updateDate_ = input.readUInt64();
                 bitField0_ |= 0x00008000;
                 break;
               } // case 8120
               case 8128: {
-                validityDate_ = input.readUInt64();
+                updateTime_ = input.readUInt64();
                 bitField0_ |= 0x00010000;
                 break;
               } // case 8128
               case 8136: {
-                validityTime_ = input.readUInt64();
+                validityDate_ = input.readUInt64();
                 bitField0_ |= 0x00020000;
                 break;
               } // case 8136
               case 8144: {
-                status_ = input.readEnum();
+                validityTime_ = input.readUInt64();
                 bitField0_ |= 0x00040000;
                 break;
               } // case 8144
               case 8152: {
-                processStatus_ = input.readEnum();
+                status_ = input.readEnum();
                 bitField0_ |= 0x00080000;
                 break;
               } // case 8152
+              case 8160: {
+                processStatus_ = input.readEnum();
+                bitField0_ |= 0x00100000;
+                break;
+              } // case 8160
+              case 11994: {
+                input.readMessage(
+                    getInternalsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00200000;
+                break;
+              } // case 11994
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -10326,9 +11177,81 @@ public final class Market {
         return this;
       }
 
+      private java.lang.Object clientQuoteResponseID_ = "";
+      /**
+       * <code>string ClientQuoteResponseID = 1001;</code>
+       * @return The clientQuoteResponseID.
+       */
+      public java.lang.String getClientQuoteResponseID() {
+        java.lang.Object ref = clientQuoteResponseID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientQuoteResponseID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteResponseID = 1001;</code>
+       * @return The bytes for clientQuoteResponseID.
+       */
+      public com.google.protobuf.ByteString
+          getClientQuoteResponseIDBytes() {
+        java.lang.Object ref = clientQuoteResponseID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientQuoteResponseID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteResponseID = 1001;</code>
+       * @param value The clientQuoteResponseID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteResponseID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientQuoteResponseID_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteResponseID = 1001;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientQuoteResponseID() {
+        clientQuoteResponseID_ = getDefaultInstance().getClientQuoteResponseID();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteResponseID = 1001;</code>
+       * @param value The bytes for clientQuoteResponseID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteResponseIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientQuoteResponseID_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object quoteRequestID_ = "";
       /**
-       * <code>string QuoteRequestID = 1001;</code>
+       * <code>string QuoteRequestID = 1002;</code>
        * @return The quoteRequestID.
        */
       public java.lang.String getQuoteRequestID() {
@@ -10344,7 +11267,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string QuoteRequestID = 1001;</code>
+       * <code>string QuoteRequestID = 1002;</code>
        * @return The bytes for quoteRequestID.
        */
       public com.google.protobuf.ByteString
@@ -10361,7 +11284,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string QuoteRequestID = 1001;</code>
+       * <code>string QuoteRequestID = 1002;</code>
        * @param value The quoteRequestID to set.
        * @return This builder for chaining.
        */
@@ -10369,22 +11292,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         quoteRequestID_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>string QuoteRequestID = 1001;</code>
+       * <code>string QuoteRequestID = 1002;</code>
        * @return This builder for chaining.
        */
       public Builder clearQuoteRequestID() {
         quoteRequestID_ = getDefaultInstance().getQuoteRequestID();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
-       * <code>string QuoteRequestID = 1001;</code>
+       * <code>string QuoteRequestID = 1002;</code>
        * @param value The bytes for quoteRequestID to set.
        * @return This builder for chaining.
        */
@@ -10393,14 +11316,14 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         quoteRequestID_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
       private java.lang.Object quoteID_ = "";
       /**
-       * <code>string QuoteID = 1002;</code>
+       * <code>string QuoteID = 1003;</code>
        * @return The quoteID.
        */
       public java.lang.String getQuoteID() {
@@ -10416,7 +11339,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string QuoteID = 1002;</code>
+       * <code>string QuoteID = 1003;</code>
        * @return The bytes for quoteID.
        */
       public com.google.protobuf.ByteString
@@ -10433,7 +11356,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string QuoteID = 1002;</code>
+       * <code>string QuoteID = 1003;</code>
        * @param value The quoteID to set.
        * @return This builder for chaining.
        */
@@ -10441,22 +11364,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         quoteID_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>string QuoteID = 1002;</code>
+       * <code>string QuoteID = 1003;</code>
        * @return This builder for chaining.
        */
       public Builder clearQuoteID() {
         quoteID_ = getDefaultInstance().getQuoteID();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>string QuoteID = 1002;</code>
+       * <code>string QuoteID = 1003;</code>
        * @param value The bytes for quoteID to set.
        * @return This builder for chaining.
        */
@@ -10465,32 +11388,32 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         quoteID_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
 
       private int mlegType_ = 0;
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 1003;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 1004;</code>
        * @return The enum numeric value on the wire for mlegType.
        */
       @java.lang.Override public int getMlegTypeValue() {
         return mlegType_;
       }
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 1003;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 1004;</code>
        * @param value The enum numeric value on the wire for mlegType to set.
        * @return This builder for chaining.
        */
       public Builder setMlegTypeValue(int value) {
         mlegType_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 1003;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 1004;</code>
        * @return The mlegType.
        */
       @java.lang.Override
@@ -10499,7 +11422,7 @@ public final class Market {
         return result == null ? org.example.Market.QuoteRequestMLegType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 1003;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 1004;</code>
        * @param value The mlegType to set.
        * @return This builder for chaining.
        */
@@ -10507,17 +11430,17 @@ public final class Market {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         mlegType_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestMLegType MlegType = 1003;</code>
+       * <code>.org.example.QuoteRequestMLegType MlegType = 1004;</code>
        * @return This builder for chaining.
        */
       public Builder clearMlegType() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         mlegType_ = 0;
         onChanged();
         return this;
@@ -10525,25 +11448,25 @@ public final class Market {
 
       private int type_ = 0;
       /**
-       * <code>.org.example.QuoteRequestType Type = 1004;</code>
+       * <code>.org.example.QuoteRequestType Type = 1005;</code>
        * @return The enum numeric value on the wire for type.
        */
       @java.lang.Override public int getTypeValue() {
         return type_;
       }
       /**
-       * <code>.org.example.QuoteRequestType Type = 1004;</code>
+       * <code>.org.example.QuoteRequestType Type = 1005;</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
         type_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestType Type = 1004;</code>
+       * <code>.org.example.QuoteRequestType Type = 1005;</code>
        * @return The type.
        */
       @java.lang.Override
@@ -10552,7 +11475,7 @@ public final class Market {
         return result == null ? org.example.Market.QuoteRequestType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.org.example.QuoteRequestType Type = 1004;</code>
+       * <code>.org.example.QuoteRequestType Type = 1005;</code>
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -10560,17 +11483,17 @@ public final class Market {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         type_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestType Type = 1004;</code>
+       * <code>.org.example.QuoteRequestType Type = 1005;</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         type_ = 0;
         onChanged();
         return this;
@@ -10580,14 +11503,14 @@ public final class Market {
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> firstLegBuilder_;
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
        * @return Whether the firstLeg field is set.
        */
       public boolean hasFirstLeg() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
        * @return The firstLeg.
        */
       public org.example.Market.QuoteLeg getFirstLeg() {
@@ -10598,7 +11521,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
        */
       public Builder setFirstLeg(org.example.Market.QuoteLeg value) {
         if (firstLegBuilder_ == null) {
@@ -10609,12 +11532,12 @@ public final class Market {
         } else {
           firstLegBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
        */
       public Builder setFirstLeg(
           org.example.Market.QuoteLeg.Builder builderForValue) {
@@ -10623,16 +11546,16 @@ public final class Market {
         } else {
           firstLegBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
        */
       public Builder mergeFirstLeg(org.example.Market.QuoteLeg value) {
         if (firstLegBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
+          if (((bitField0_ & 0x00000040) != 0) &&
             firstLeg_ != null &&
             firstLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getFirstLegBuilder().mergeFrom(value);
@@ -10643,16 +11566,16 @@ public final class Market {
           firstLegBuilder_.mergeFrom(value);
         }
         if (firstLeg_ != null) {
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
        */
       public Builder clearFirstLeg() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         firstLeg_ = null;
         if (firstLegBuilder_ != null) {
           firstLegBuilder_.dispose();
@@ -10662,15 +11585,15 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
        */
       public org.example.Market.QuoteLeg.Builder getFirstLegBuilder() {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
         return getFirstLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
        */
       public org.example.Market.QuoteLegOrBuilder getFirstLegOrBuilder() {
         if (firstLegBuilder_ != null) {
@@ -10681,7 +11604,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg FirstLeg = 1005;</code>
+       * <code>.org.example.QuoteLeg FirstLeg = 1006;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
@@ -10701,14 +11624,14 @@ public final class Market {
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> secondLegBuilder_;
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
        * @return Whether the secondLeg field is set.
        */
       public boolean hasSecondLeg() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
        * @return The secondLeg.
        */
       public org.example.Market.QuoteLeg getSecondLeg() {
@@ -10719,7 +11642,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
        */
       public Builder setSecondLeg(org.example.Market.QuoteLeg value) {
         if (secondLegBuilder_ == null) {
@@ -10730,12 +11653,12 @@ public final class Market {
         } else {
           secondLegBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
        */
       public Builder setSecondLeg(
           org.example.Market.QuoteLeg.Builder builderForValue) {
@@ -10744,16 +11667,16 @@ public final class Market {
         } else {
           secondLegBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
        */
       public Builder mergeSecondLeg(org.example.Market.QuoteLeg value) {
         if (secondLegBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
+          if (((bitField0_ & 0x00000080) != 0) &&
             secondLeg_ != null &&
             secondLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getSecondLegBuilder().mergeFrom(value);
@@ -10764,16 +11687,16 @@ public final class Market {
           secondLegBuilder_.mergeFrom(value);
         }
         if (secondLeg_ != null) {
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
        */
       public Builder clearSecondLeg() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         secondLeg_ = null;
         if (secondLegBuilder_ != null) {
           secondLegBuilder_.dispose();
@@ -10783,15 +11706,15 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
        */
       public org.example.Market.QuoteLeg.Builder getSecondLegBuilder() {
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
         return getSecondLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
        */
       public org.example.Market.QuoteLegOrBuilder getSecondLegOrBuilder() {
         if (secondLegBuilder_ != null) {
@@ -10802,7 +11725,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg SecondLeg = 1006;</code>
+       * <code>.org.example.QuoteLeg SecondLeg = 1007;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
@@ -10822,14 +11745,14 @@ public final class Market {
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> thirdLegBuilder_;
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
        * @return Whether the thirdLeg field is set.
        */
       public boolean hasThirdLeg() {
-        return ((bitField0_ & 0x00000080) != 0);
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
        * @return The thirdLeg.
        */
       public org.example.Market.QuoteLeg getThirdLeg() {
@@ -10840,7 +11763,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
        */
       public Builder setThirdLeg(org.example.Market.QuoteLeg value) {
         if (thirdLegBuilder_ == null) {
@@ -10851,12 +11774,12 @@ public final class Market {
         } else {
           thirdLegBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
        */
       public Builder setThirdLeg(
           org.example.Market.QuoteLeg.Builder builderForValue) {
@@ -10865,16 +11788,16 @@ public final class Market {
         } else {
           thirdLegBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
        */
       public Builder mergeThirdLeg(org.example.Market.QuoteLeg value) {
         if (thirdLegBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0) &&
+          if (((bitField0_ & 0x00000100) != 0) &&
             thirdLeg_ != null &&
             thirdLeg_ != org.example.Market.QuoteLeg.getDefaultInstance()) {
             getThirdLegBuilder().mergeFrom(value);
@@ -10885,16 +11808,16 @@ public final class Market {
           thirdLegBuilder_.mergeFrom(value);
         }
         if (thirdLeg_ != null) {
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
        */
       public Builder clearThirdLeg() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000100);
         thirdLeg_ = null;
         if (thirdLegBuilder_ != null) {
           thirdLegBuilder_.dispose();
@@ -10904,15 +11827,15 @@ public final class Market {
         return this;
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
        */
       public org.example.Market.QuoteLeg.Builder getThirdLegBuilder() {
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
         return getThirdLegFieldBuilder().getBuilder();
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
        */
       public org.example.Market.QuoteLegOrBuilder getThirdLegOrBuilder() {
         if (thirdLegBuilder_ != null) {
@@ -10923,7 +11846,7 @@ public final class Market {
         }
       }
       /**
-       * <code>.org.example.QuoteLeg ThirdLeg = 1007;</code>
+       * <code>.org.example.QuoteLeg ThirdLeg = 1008;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.QuoteLeg, org.example.Market.QuoteLeg.Builder, org.example.Market.QuoteLegOrBuilder> 
@@ -10941,7 +11864,7 @@ public final class Market {
 
       private java.lang.Object issuerMemberID_ = "";
       /**
-       * <code>string IssuerMemberID = 1008;</code>
+       * <code>string IssuerMemberID = 1009;</code>
        * @return The issuerMemberID.
        */
       public java.lang.String getIssuerMemberID() {
@@ -10957,7 +11880,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string IssuerMemberID = 1008;</code>
+       * <code>string IssuerMemberID = 1009;</code>
        * @return The bytes for issuerMemberID.
        */
       public com.google.protobuf.ByteString
@@ -10974,7 +11897,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string IssuerMemberID = 1008;</code>
+       * <code>string IssuerMemberID = 1009;</code>
        * @param value The issuerMemberID to set.
        * @return This builder for chaining.
        */
@@ -10982,22 +11905,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         issuerMemberID_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
       /**
-       * <code>string IssuerMemberID = 1008;</code>
+       * <code>string IssuerMemberID = 1009;</code>
        * @return This builder for chaining.
        */
       public Builder clearIssuerMemberID() {
         issuerMemberID_ = getDefaultInstance().getIssuerMemberID();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
       /**
-       * <code>string IssuerMemberID = 1008;</code>
+       * <code>string IssuerMemberID = 1009;</code>
        * @param value The bytes for issuerMemberID to set.
        * @return This builder for chaining.
        */
@@ -11006,14 +11929,14 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         issuerMemberID_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
 
       private java.lang.Object issuerOperatorID_ = "";
       /**
-       * <code>string IssuerOperatorID = 1009;</code>
+       * <code>string IssuerOperatorID = 1010;</code>
        * @return The issuerOperatorID.
        */
       public java.lang.String getIssuerOperatorID() {
@@ -11029,7 +11952,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string IssuerOperatorID = 1009;</code>
+       * <code>string IssuerOperatorID = 1010;</code>
        * @return The bytes for issuerOperatorID.
        */
       public com.google.protobuf.ByteString
@@ -11046,7 +11969,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string IssuerOperatorID = 1009;</code>
+       * <code>string IssuerOperatorID = 1010;</code>
        * @param value The issuerOperatorID to set.
        * @return This builder for chaining.
        */
@@ -11054,22 +11977,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         issuerOperatorID_ = value;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
       /**
-       * <code>string IssuerOperatorID = 1009;</code>
+       * <code>string IssuerOperatorID = 1010;</code>
        * @return This builder for chaining.
        */
       public Builder clearIssuerOperatorID() {
         issuerOperatorID_ = getDefaultInstance().getIssuerOperatorID();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
       /**
-       * <code>string IssuerOperatorID = 1009;</code>
+       * <code>string IssuerOperatorID = 1010;</code>
        * @param value The bytes for issuerOperatorID to set.
        * @return This builder for chaining.
        */
@@ -11078,14 +12001,14 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         issuerOperatorID_ = value;
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
 
       private java.lang.Object counterpartMemberID_ = "";
       /**
-       * <code>string CounterpartMemberID = 1010;</code>
+       * <code>string CounterpartMemberID = 1011;</code>
        * @return The counterpartMemberID.
        */
       public java.lang.String getCounterpartMemberID() {
@@ -11101,7 +12024,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string CounterpartMemberID = 1010;</code>
+       * <code>string CounterpartMemberID = 1011;</code>
        * @return The bytes for counterpartMemberID.
        */
       public com.google.protobuf.ByteString
@@ -11118,7 +12041,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string CounterpartMemberID = 1010;</code>
+       * <code>string CounterpartMemberID = 1011;</code>
        * @param value The counterpartMemberID to set.
        * @return This builder for chaining.
        */
@@ -11126,22 +12049,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         counterpartMemberID_ = value;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
       /**
-       * <code>string CounterpartMemberID = 1010;</code>
+       * <code>string CounterpartMemberID = 1011;</code>
        * @return This builder for chaining.
        */
       public Builder clearCounterpartMemberID() {
         counterpartMemberID_ = getDefaultInstance().getCounterpartMemberID();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
         return this;
       }
       /**
-       * <code>string CounterpartMemberID = 1010;</code>
+       * <code>string CounterpartMemberID = 1011;</code>
        * @param value The bytes for counterpartMemberID to set.
        * @return This builder for chaining.
        */
@@ -11150,14 +12073,14 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         counterpartMemberID_ = value;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
 
       private java.lang.Object counterpartOperatorID_ = "";
       /**
-       * <code>string CounterpartOperatorID = 1011;</code>
+       * <code>string CounterpartOperatorID = 1012;</code>
        * @return The counterpartOperatorID.
        */
       public java.lang.String getCounterpartOperatorID() {
@@ -11173,7 +12096,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string CounterpartOperatorID = 1011;</code>
+       * <code>string CounterpartOperatorID = 1012;</code>
        * @return The bytes for counterpartOperatorID.
        */
       public com.google.protobuf.ByteString
@@ -11190,7 +12113,7 @@ public final class Market {
         }
       }
       /**
-       * <code>string CounterpartOperatorID = 1011;</code>
+       * <code>string CounterpartOperatorID = 1012;</code>
        * @param value The counterpartOperatorID to set.
        * @return This builder for chaining.
        */
@@ -11198,22 +12121,22 @@ public final class Market {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         counterpartOperatorID_ = value;
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
       /**
-       * <code>string CounterpartOperatorID = 1011;</code>
+       * <code>string CounterpartOperatorID = 1012;</code>
        * @return This builder for chaining.
        */
       public Builder clearCounterpartOperatorID() {
         counterpartOperatorID_ = getDefaultInstance().getCounterpartOperatorID();
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
         return this;
       }
       /**
-       * <code>string CounterpartOperatorID = 1011;</code>
+       * <code>string CounterpartOperatorID = 1012;</code>
        * @param value The bytes for counterpartOperatorID to set.
        * @return This builder for chaining.
        */
@@ -11222,14 +12145,14 @@ public final class Market {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         counterpartOperatorID_ = value;
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
 
       private long creationDate_ ;
       /**
-       * <code>uint64 CreationDate = 1012;</code>
+       * <code>uint64 CreationDate = 1013;</code>
        * @return The creationDate.
        */
       @java.lang.Override
@@ -11237,23 +12160,23 @@ public final class Market {
         return creationDate_;
       }
       /**
-       * <code>uint64 CreationDate = 1012;</code>
+       * <code>uint64 CreationDate = 1013;</code>
        * @param value The creationDate to set.
        * @return This builder for chaining.
        */
       public Builder setCreationDate(long value) {
 
         creationDate_ = value;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 CreationDate = 1012;</code>
+       * <code>uint64 CreationDate = 1013;</code>
        * @return This builder for chaining.
        */
       public Builder clearCreationDate() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         creationDate_ = 0L;
         onChanged();
         return this;
@@ -11261,7 +12184,7 @@ public final class Market {
 
       private long creationTime_ ;
       /**
-       * <code>uint64 CreationTime = 1013;</code>
+       * <code>uint64 CreationTime = 1014;</code>
        * @return The creationTime.
        */
       @java.lang.Override
@@ -11269,23 +12192,23 @@ public final class Market {
         return creationTime_;
       }
       /**
-       * <code>uint64 CreationTime = 1013;</code>
+       * <code>uint64 CreationTime = 1014;</code>
        * @param value The creationTime to set.
        * @return This builder for chaining.
        */
       public Builder setCreationTime(long value) {
 
         creationTime_ = value;
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 CreationTime = 1013;</code>
+       * <code>uint64 CreationTime = 1014;</code>
        * @return This builder for chaining.
        */
       public Builder clearCreationTime() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         creationTime_ = 0L;
         onChanged();
         return this;
@@ -11293,7 +12216,7 @@ public final class Market {
 
       private long updateDate_ ;
       /**
-       * <code>uint64 UpdateDate = 1014;</code>
+       * <code>uint64 UpdateDate = 1015;</code>
        * @return The updateDate.
        */
       @java.lang.Override
@@ -11301,23 +12224,23 @@ public final class Market {
         return updateDate_;
       }
       /**
-       * <code>uint64 UpdateDate = 1014;</code>
+       * <code>uint64 UpdateDate = 1015;</code>
        * @param value The updateDate to set.
        * @return This builder for chaining.
        */
       public Builder setUpdateDate(long value) {
 
         updateDate_ = value;
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 UpdateDate = 1014;</code>
+       * <code>uint64 UpdateDate = 1015;</code>
        * @return This builder for chaining.
        */
       public Builder clearUpdateDate() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         updateDate_ = 0L;
         onChanged();
         return this;
@@ -11325,7 +12248,7 @@ public final class Market {
 
       private long updateTime_ ;
       /**
-       * <code>uint64 UpdateTime = 1015;</code>
+       * <code>uint64 UpdateTime = 1016;</code>
        * @return The updateTime.
        */
       @java.lang.Override
@@ -11333,23 +12256,23 @@ public final class Market {
         return updateTime_;
       }
       /**
-       * <code>uint64 UpdateTime = 1015;</code>
+       * <code>uint64 UpdateTime = 1016;</code>
        * @param value The updateTime to set.
        * @return This builder for chaining.
        */
       public Builder setUpdateTime(long value) {
 
         updateTime_ = value;
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 UpdateTime = 1015;</code>
+       * <code>uint64 UpdateTime = 1016;</code>
        * @return This builder for chaining.
        */
       public Builder clearUpdateTime() {
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         updateTime_ = 0L;
         onChanged();
         return this;
@@ -11357,7 +12280,7 @@ public final class Market {
 
       private long validityDate_ ;
       /**
-       * <code>uint64 ValidityDate = 1016;</code>
+       * <code>uint64 ValidityDate = 1017;</code>
        * @return The validityDate.
        */
       @java.lang.Override
@@ -11365,23 +12288,23 @@ public final class Market {
         return validityDate_;
       }
       /**
-       * <code>uint64 ValidityDate = 1016;</code>
+       * <code>uint64 ValidityDate = 1017;</code>
        * @param value The validityDate to set.
        * @return This builder for chaining.
        */
       public Builder setValidityDate(long value) {
 
         validityDate_ = value;
-        bitField0_ |= 0x00010000;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 ValidityDate = 1016;</code>
+       * <code>uint64 ValidityDate = 1017;</code>
        * @return This builder for chaining.
        */
       public Builder clearValidityDate() {
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         validityDate_ = 0L;
         onChanged();
         return this;
@@ -11389,7 +12312,7 @@ public final class Market {
 
       private long validityTime_ ;
       /**
-       * <code>uint64 ValidityTime = 1017;</code>
+       * <code>uint64 ValidityTime = 1018;</code>
        * @return The validityTime.
        */
       @java.lang.Override
@@ -11397,23 +12320,23 @@ public final class Market {
         return validityTime_;
       }
       /**
-       * <code>uint64 ValidityTime = 1017;</code>
+       * <code>uint64 ValidityTime = 1018;</code>
        * @param value The validityTime to set.
        * @return This builder for chaining.
        */
       public Builder setValidityTime(long value) {
 
         validityTime_ = value;
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 ValidityTime = 1017;</code>
+       * <code>uint64 ValidityTime = 1018;</code>
        * @return This builder for chaining.
        */
       public Builder clearValidityTime() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         validityTime_ = 0L;
         onChanged();
         return this;
@@ -11421,25 +12344,25 @@ public final class Market {
 
       private int status_ = 0;
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 1018;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 1019;</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override public int getStatusValue() {
         return status_;
       }
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 1018;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 1019;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
         status_ = value;
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 1018;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 1019;</code>
        * @return The status.
        */
       @java.lang.Override
@@ -11448,7 +12371,7 @@ public final class Market {
         return result == null ? org.example.Market.QuoteRequestStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 1018;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 1019;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -11456,17 +12379,17 @@ public final class Market {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         status_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.QuoteRequestStatus Status = 1018;</code>
+       * <code>.org.example.QuoteRequestStatus Status = 1019;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         status_ = 0;
         onChanged();
         return this;
@@ -11474,25 +12397,25 @@ public final class Market {
 
       private int processStatus_ = 0;
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 1019;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 1020;</code>
        * @return The enum numeric value on the wire for processStatus.
        */
       @java.lang.Override public int getProcessStatusValue() {
         return processStatus_;
       }
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 1019;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 1020;</code>
        * @param value The enum numeric value on the wire for processStatus to set.
        * @return This builder for chaining.
        */
       public Builder setProcessStatusValue(int value) {
         processStatus_ = value;
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 1019;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 1020;</code>
        * @return The processStatus.
        */
       @java.lang.Override
@@ -11501,7 +12424,7 @@ public final class Market {
         return result == null ? org.example.Market.ProcessStatus.UNRECOGNIZED : result;
       }
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 1019;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 1020;</code>
        * @param value The processStatus to set.
        * @return This builder for chaining.
        */
@@ -11509,20 +12432,141 @@ public final class Market {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00100000;
         processStatus_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.org.example.ProcessStatus ProcessStatus = 1019;</code>
+       * <code>.org.example.ProcessStatus ProcessStatus = 1020;</code>
        * @return This builder for chaining.
        */
       public Builder clearProcessStatus() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         processStatus_ = 0;
         onChanged();
         return this;
+      }
+
+      private org.example.Market.InternalInfo internals_;
+      private com.google.protobuf.SingleFieldBuilder<
+          org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder> internalsBuilder_;
+      /**
+       * <code>.org.example.InternalInfo Internals = 1499;</code>
+       * @return Whether the internals field is set.
+       */
+      public boolean hasInternals() {
+        return ((bitField0_ & 0x00200000) != 0);
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1499;</code>
+       * @return The internals.
+       */
+      public org.example.Market.InternalInfo getInternals() {
+        if (internalsBuilder_ == null) {
+          return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+        } else {
+          return internalsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1499;</code>
+       */
+      public Builder setInternals(org.example.Market.InternalInfo value) {
+        if (internalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          internals_ = value;
+        } else {
+          internalsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00200000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1499;</code>
+       */
+      public Builder setInternals(
+          org.example.Market.InternalInfo.Builder builderForValue) {
+        if (internalsBuilder_ == null) {
+          internals_ = builderForValue.build();
+        } else {
+          internalsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00200000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1499;</code>
+       */
+      public Builder mergeInternals(org.example.Market.InternalInfo value) {
+        if (internalsBuilder_ == null) {
+          if (((bitField0_ & 0x00200000) != 0) &&
+            internals_ != null &&
+            internals_ != org.example.Market.InternalInfo.getDefaultInstance()) {
+            getInternalsBuilder().mergeFrom(value);
+          } else {
+            internals_ = value;
+          }
+        } else {
+          internalsBuilder_.mergeFrom(value);
+        }
+        if (internals_ != null) {
+          bitField0_ |= 0x00200000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1499;</code>
+       */
+      public Builder clearInternals() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        internals_ = null;
+        if (internalsBuilder_ != null) {
+          internalsBuilder_.dispose();
+          internalsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1499;</code>
+       */
+      public org.example.Market.InternalInfo.Builder getInternalsBuilder() {
+        bitField0_ |= 0x00200000;
+        onChanged();
+        return getInternalsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1499;</code>
+       */
+      public org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder() {
+        if (internalsBuilder_ != null) {
+          return internalsBuilder_.getMessageOrBuilder();
+        } else {
+          return internals_ == null ?
+              org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+        }
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1499;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder> 
+          getInternalsFieldBuilder() {
+        if (internalsBuilder_ == null) {
+          internalsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder>(
+                  getInternals(),
+                  getParentForChildren(),
+                  isClean());
+          internals_ = null;
+        }
+        return internalsBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:org.example.MarketQuoteResponse)
@@ -11786,6 +12830,93 @@ public final class Market {
      * @return The settlementAmount.
      */
     double getSettlementAmount();
+
+    /**
+     * <code>string QuoteRequestID = 1523;</code>
+     * @return The quoteRequestID.
+     */
+    java.lang.String getQuoteRequestID();
+    /**
+     * <code>string QuoteRequestID = 1523;</code>
+     * @return The bytes for quoteRequestID.
+     */
+    com.google.protobuf.ByteString
+        getQuoteRequestIDBytes();
+
+    /**
+     * <code>string ClientQuoteRequestID = 1524;</code>
+     * @return The clientQuoteRequestID.
+     */
+    java.lang.String getClientQuoteRequestID();
+    /**
+     * <code>string ClientQuoteRequestID = 1524;</code>
+     * @return The bytes for clientQuoteRequestID.
+     */
+    com.google.protobuf.ByteString
+        getClientQuoteRequestIDBytes();
+
+    /**
+     * <code>string QuoteID = 1525;</code>
+     * @return The quoteID.
+     */
+    java.lang.String getQuoteID();
+    /**
+     * <code>string QuoteID = 1525;</code>
+     * @return The bytes for quoteID.
+     */
+    com.google.protobuf.ByteString
+        getQuoteIDBytes();
+
+    /**
+     * <code>string ClientQuoteID = 1526;</code>
+     * @return The clientQuoteID.
+     */
+    java.lang.String getClientQuoteID();
+    /**
+     * <code>string ClientQuoteID = 1526;</code>
+     * @return The bytes for clientQuoteID.
+     */
+    com.google.protobuf.ByteString
+        getClientQuoteIDBytes();
+
+    /**
+     * <code>string QuoteResponseID = 1527;</code>
+     * @return The quoteResponseID.
+     */
+    java.lang.String getQuoteResponseID();
+    /**
+     * <code>string QuoteResponseID = 1527;</code>
+     * @return The bytes for quoteResponseID.
+     */
+    com.google.protobuf.ByteString
+        getQuoteResponseIDBytes();
+
+    /**
+     * <code>string ClientQuoteResponseID = 1528;</code>
+     * @return The clientQuoteResponseID.
+     */
+    java.lang.String getClientQuoteResponseID();
+    /**
+     * <code>string ClientQuoteResponseID = 1528;</code>
+     * @return The bytes for clientQuoteResponseID.
+     */
+    com.google.protobuf.ByteString
+        getClientQuoteResponseIDBytes();
+
+    /**
+     * <code>.org.example.InternalInfo Internals = 1999;</code>
+     * @return Whether the internals field is set.
+     */
+    boolean hasInternals();
+    /**
+     * <code>.org.example.InternalInfo Internals = 1999;</code>
+     * @return The internals.
+     */
+    org.example.Market.InternalInfo getInternals();
+    /**
+     * <code>.org.example.InternalInfo Internals = 1999;</code>
+     */
+    org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder();
   }
   /**
    * <pre>
@@ -11826,6 +12957,12 @@ public final class Market {
       providerOperatorID_ = "";
       providerSource_ = 0;
       providerSourceID_ = "";
+      quoteRequestID_ = "";
+      clientQuoteRequestID_ = "";
+      quoteID_ = "";
+      clientQuoteID_ = "";
+      quoteResponseID_ = "";
+      clientQuoteResponseID_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -11841,6 +12978,7 @@ public final class Market {
               org.example.Market.MarketTrade.class, org.example.Market.MarketTrade.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TRADEID_FIELD_NUMBER = 1500;
     @SuppressWarnings("serial")
     private volatile java.lang.Object tradeID_ = "";
@@ -12384,6 +13522,266 @@ public final class Market {
       return settlementAmount_;
     }
 
+    public static final int QUOTEREQUESTID_FIELD_NUMBER = 1523;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object quoteRequestID_ = "";
+    /**
+     * <code>string QuoteRequestID = 1523;</code>
+     * @return The quoteRequestID.
+     */
+    @java.lang.Override
+    public java.lang.String getQuoteRequestID() {
+      java.lang.Object ref = quoteRequestID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        quoteRequestID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string QuoteRequestID = 1523;</code>
+     * @return The bytes for quoteRequestID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuoteRequestIDBytes() {
+      java.lang.Object ref = quoteRequestID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        quoteRequestID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENTQUOTEREQUESTID_FIELD_NUMBER = 1524;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientQuoteRequestID_ = "";
+    /**
+     * <code>string ClientQuoteRequestID = 1524;</code>
+     * @return The clientQuoteRequestID.
+     */
+    @java.lang.Override
+    public java.lang.String getClientQuoteRequestID() {
+      java.lang.Object ref = clientQuoteRequestID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientQuoteRequestID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ClientQuoteRequestID = 1524;</code>
+     * @return The bytes for clientQuoteRequestID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientQuoteRequestIDBytes() {
+      java.lang.Object ref = clientQuoteRequestID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientQuoteRequestID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUOTEID_FIELD_NUMBER = 1525;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object quoteID_ = "";
+    /**
+     * <code>string QuoteID = 1525;</code>
+     * @return The quoteID.
+     */
+    @java.lang.Override
+    public java.lang.String getQuoteID() {
+      java.lang.Object ref = quoteID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        quoteID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string QuoteID = 1525;</code>
+     * @return The bytes for quoteID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuoteIDBytes() {
+      java.lang.Object ref = quoteID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        quoteID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENTQUOTEID_FIELD_NUMBER = 1526;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientQuoteID_ = "";
+    /**
+     * <code>string ClientQuoteID = 1526;</code>
+     * @return The clientQuoteID.
+     */
+    @java.lang.Override
+    public java.lang.String getClientQuoteID() {
+      java.lang.Object ref = clientQuoteID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientQuoteID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ClientQuoteID = 1526;</code>
+     * @return The bytes for clientQuoteID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientQuoteIDBytes() {
+      java.lang.Object ref = clientQuoteID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientQuoteID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUOTERESPONSEID_FIELD_NUMBER = 1527;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object quoteResponseID_ = "";
+    /**
+     * <code>string QuoteResponseID = 1527;</code>
+     * @return The quoteResponseID.
+     */
+    @java.lang.Override
+    public java.lang.String getQuoteResponseID() {
+      java.lang.Object ref = quoteResponseID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        quoteResponseID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string QuoteResponseID = 1527;</code>
+     * @return The bytes for quoteResponseID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getQuoteResponseIDBytes() {
+      java.lang.Object ref = quoteResponseID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        quoteResponseID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENTQUOTERESPONSEID_FIELD_NUMBER = 1528;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientQuoteResponseID_ = "";
+    /**
+     * <code>string ClientQuoteResponseID = 1528;</code>
+     * @return The clientQuoteResponseID.
+     */
+    @java.lang.Override
+    public java.lang.String getClientQuoteResponseID() {
+      java.lang.Object ref = clientQuoteResponseID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientQuoteResponseID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ClientQuoteResponseID = 1528;</code>
+     * @return The bytes for clientQuoteResponseID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientQuoteResponseIDBytes() {
+      java.lang.Object ref = clientQuoteResponseID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientQuoteResponseID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INTERNALS_FIELD_NUMBER = 1999;
+    private org.example.Market.InternalInfo internals_;
+    /**
+     * <code>.org.example.InternalInfo Internals = 1999;</code>
+     * @return Whether the internals field is set.
+     */
+    @java.lang.Override
+    public boolean hasInternals() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.org.example.InternalInfo Internals = 1999;</code>
+     * @return The internals.
+     */
+    @java.lang.Override
+    public org.example.Market.InternalInfo getInternals() {
+      return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+    }
+    /**
+     * <code>.org.example.InternalInfo Internals = 1999;</code>
+     */
+    @java.lang.Override
+    public org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder() {
+      return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12463,6 +13861,27 @@ public final class Market {
       }
       if (java.lang.Double.doubleToRawLongBits(settlementAmount_) != 0) {
         output.writeDouble(1522, settlementAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteRequestID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1523, quoteRequestID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteRequestID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1524, clientQuoteRequestID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1525, quoteID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1526, clientQuoteID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteResponseID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1527, quoteResponseID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteResponseID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1528, clientQuoteResponseID_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1999, getInternals());
       }
       getUnknownFields().writeTo(output);
     }
@@ -12551,6 +13970,28 @@ public final class Market {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(1522, settlementAmount_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteRequestID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1523, quoteRequestID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteRequestID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1524, clientQuoteRequestID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1525, quoteID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1526, clientQuoteID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(quoteResponseID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1527, quoteResponseID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteResponseID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1528, clientQuoteResponseID_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1999, getInternals());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -12612,6 +14053,23 @@ public final class Market {
       if (java.lang.Double.doubleToLongBits(getSettlementAmount())
           != java.lang.Double.doubleToLongBits(
               other.getSettlementAmount())) return false;
+      if (!getQuoteRequestID()
+          .equals(other.getQuoteRequestID())) return false;
+      if (!getClientQuoteRequestID()
+          .equals(other.getClientQuoteRequestID())) return false;
+      if (!getQuoteID()
+          .equals(other.getQuoteID())) return false;
+      if (!getClientQuoteID()
+          .equals(other.getClientQuoteID())) return false;
+      if (!getQuoteResponseID()
+          .equals(other.getQuoteResponseID())) return false;
+      if (!getClientQuoteResponseID()
+          .equals(other.getClientQuoteResponseID())) return false;
+      if (hasInternals() != other.hasInternals()) return false;
+      if (hasInternals()) {
+        if (!getInternals()
+            .equals(other.getInternals())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -12676,6 +14134,22 @@ public final class Market {
       hash = (37 * hash) + SETTLEMENTAMOUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getSettlementAmount()));
+      hash = (37 * hash) + QUOTEREQUESTID_FIELD_NUMBER;
+      hash = (53 * hash) + getQuoteRequestID().hashCode();
+      hash = (37 * hash) + CLIENTQUOTEREQUESTID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientQuoteRequestID().hashCode();
+      hash = (37 * hash) + QUOTEID_FIELD_NUMBER;
+      hash = (53 * hash) + getQuoteID().hashCode();
+      hash = (37 * hash) + CLIENTQUOTEID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientQuoteID().hashCode();
+      hash = (37 * hash) + QUOTERESPONSEID_FIELD_NUMBER;
+      hash = (53 * hash) + getQuoteResponseID().hashCode();
+      hash = (37 * hash) + CLIENTQUOTERESPONSEID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientQuoteResponseID().hashCode();
+      if (hasInternals()) {
+        hash = (37 * hash) + INTERNALS_FIELD_NUMBER;
+        hash = (53 * hash) + getInternals().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12799,13 +14273,19 @@ public final class Market {
 
       // Construct using org.example.Market.MarketTrade.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getInternalsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -12833,6 +14313,17 @@ public final class Market {
         updateDate_ = 0L;
         updateTime_ = 0L;
         settlementAmount_ = 0D;
+        quoteRequestID_ = "";
+        clientQuoteRequestID_ = "";
+        quoteID_ = "";
+        clientQuoteID_ = "";
+        quoteResponseID_ = "";
+        clientQuoteResponseID_ = "";
+        internals_ = null;
+        if (internalsBuilder_ != null) {
+          internalsBuilder_.dispose();
+          internalsBuilder_ = null;
+        }
         return this;
       }
 
@@ -12932,6 +14423,32 @@ public final class Market {
         if (((from_bitField0_ & 0x00200000) != 0)) {
           result.settlementAmount_ = settlementAmount_;
         }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.quoteRequestID_ = quoteRequestID_;
+        }
+        if (((from_bitField0_ & 0x00800000) != 0)) {
+          result.clientQuoteRequestID_ = clientQuoteRequestID_;
+        }
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          result.quoteID_ = quoteID_;
+        }
+        if (((from_bitField0_ & 0x02000000) != 0)) {
+          result.clientQuoteID_ = clientQuoteID_;
+        }
+        if (((from_bitField0_ & 0x04000000) != 0)) {
+          result.quoteResponseID_ = quoteResponseID_;
+        }
+        if (((from_bitField0_ & 0x08000000) != 0)) {
+          result.clientQuoteResponseID_ = clientQuoteResponseID_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x10000000) != 0)) {
+          result.internals_ = internalsBuilder_ == null
+              ? internals_
+              : internalsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -13031,6 +14548,39 @@ public final class Market {
         }
         if (other.getSettlementAmount() != 0D) {
           setSettlementAmount(other.getSettlementAmount());
+        }
+        if (!other.getQuoteRequestID().isEmpty()) {
+          quoteRequestID_ = other.quoteRequestID_;
+          bitField0_ |= 0x00400000;
+          onChanged();
+        }
+        if (!other.getClientQuoteRequestID().isEmpty()) {
+          clientQuoteRequestID_ = other.clientQuoteRequestID_;
+          bitField0_ |= 0x00800000;
+          onChanged();
+        }
+        if (!other.getQuoteID().isEmpty()) {
+          quoteID_ = other.quoteID_;
+          bitField0_ |= 0x01000000;
+          onChanged();
+        }
+        if (!other.getClientQuoteID().isEmpty()) {
+          clientQuoteID_ = other.clientQuoteID_;
+          bitField0_ |= 0x02000000;
+          onChanged();
+        }
+        if (!other.getQuoteResponseID().isEmpty()) {
+          quoteResponseID_ = other.quoteResponseID_;
+          bitField0_ |= 0x04000000;
+          onChanged();
+        }
+        if (!other.getClientQuoteResponseID().isEmpty()) {
+          clientQuoteResponseID_ = other.clientQuoteResponseID_;
+          bitField0_ |= 0x08000000;
+          onChanged();
+        }
+        if (other.hasInternals()) {
+          mergeInternals(other.getInternals());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -13168,6 +14718,43 @@ public final class Market {
                 bitField0_ |= 0x00200000;
                 break;
               } // case 12177
+              case 12186: {
+                quoteRequestID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00400000;
+                break;
+              } // case 12186
+              case 12194: {
+                clientQuoteRequestID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00800000;
+                break;
+              } // case 12194
+              case 12202: {
+                quoteID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x01000000;
+                break;
+              } // case 12202
+              case 12210: {
+                clientQuoteID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x02000000;
+                break;
+              } // case 12210
+              case 12218: {
+                quoteResponseID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x04000000;
+                break;
+              } // case 12218
+              case 12226: {
+                clientQuoteResponseID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x08000000;
+                break;
+              } // case 12226
+              case 15994: {
+                input.readMessage(
+                    getInternalsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x10000000;
+                break;
+              } // case 15994
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -14352,6 +15939,559 @@ public final class Market {
         return this;
       }
 
+      private java.lang.Object quoteRequestID_ = "";
+      /**
+       * <code>string QuoteRequestID = 1523;</code>
+       * @return The quoteRequestID.
+       */
+      public java.lang.String getQuoteRequestID() {
+        java.lang.Object ref = quoteRequestID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          quoteRequestID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string QuoteRequestID = 1523;</code>
+       * @return The bytes for quoteRequestID.
+       */
+      public com.google.protobuf.ByteString
+          getQuoteRequestIDBytes() {
+        java.lang.Object ref = quoteRequestID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quoteRequestID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string QuoteRequestID = 1523;</code>
+       * @param value The quoteRequestID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuoteRequestID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        quoteRequestID_ = value;
+        bitField0_ |= 0x00400000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string QuoteRequestID = 1523;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuoteRequestID() {
+        quoteRequestID_ = getDefaultInstance().getQuoteRequestID();
+        bitField0_ = (bitField0_ & ~0x00400000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string QuoteRequestID = 1523;</code>
+       * @param value The bytes for quoteRequestID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuoteRequestIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        quoteRequestID_ = value;
+        bitField0_ |= 0x00400000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientQuoteRequestID_ = "";
+      /**
+       * <code>string ClientQuoteRequestID = 1524;</code>
+       * @return The clientQuoteRequestID.
+       */
+      public java.lang.String getClientQuoteRequestID() {
+        java.lang.Object ref = clientQuoteRequestID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientQuoteRequestID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 1524;</code>
+       * @return The bytes for clientQuoteRequestID.
+       */
+      public com.google.protobuf.ByteString
+          getClientQuoteRequestIDBytes() {
+        java.lang.Object ref = clientQuoteRequestID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientQuoteRequestID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 1524;</code>
+       * @param value The clientQuoteRequestID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteRequestID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientQuoteRequestID_ = value;
+        bitField0_ |= 0x00800000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 1524;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientQuoteRequestID() {
+        clientQuoteRequestID_ = getDefaultInstance().getClientQuoteRequestID();
+        bitField0_ = (bitField0_ & ~0x00800000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 1524;</code>
+       * @param value The bytes for clientQuoteRequestID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteRequestIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientQuoteRequestID_ = value;
+        bitField0_ |= 0x00800000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object quoteID_ = "";
+      /**
+       * <code>string QuoteID = 1525;</code>
+       * @return The quoteID.
+       */
+      public java.lang.String getQuoteID() {
+        java.lang.Object ref = quoteID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          quoteID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string QuoteID = 1525;</code>
+       * @return The bytes for quoteID.
+       */
+      public com.google.protobuf.ByteString
+          getQuoteIDBytes() {
+        java.lang.Object ref = quoteID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quoteID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string QuoteID = 1525;</code>
+       * @param value The quoteID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuoteID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        quoteID_ = value;
+        bitField0_ |= 0x01000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string QuoteID = 1525;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuoteID() {
+        quoteID_ = getDefaultInstance().getQuoteID();
+        bitField0_ = (bitField0_ & ~0x01000000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string QuoteID = 1525;</code>
+       * @param value The bytes for quoteID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuoteIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        quoteID_ = value;
+        bitField0_ |= 0x01000000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientQuoteID_ = "";
+      /**
+       * <code>string ClientQuoteID = 1526;</code>
+       * @return The clientQuoteID.
+       */
+      public java.lang.String getClientQuoteID() {
+        java.lang.Object ref = clientQuoteID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientQuoteID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteID = 1526;</code>
+       * @return The bytes for clientQuoteID.
+       */
+      public com.google.protobuf.ByteString
+          getClientQuoteIDBytes() {
+        java.lang.Object ref = clientQuoteID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientQuoteID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteID = 1526;</code>
+       * @param value The clientQuoteID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientQuoteID_ = value;
+        bitField0_ |= 0x02000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteID = 1526;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientQuoteID() {
+        clientQuoteID_ = getDefaultInstance().getClientQuoteID();
+        bitField0_ = (bitField0_ & ~0x02000000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteID = 1526;</code>
+       * @param value The bytes for clientQuoteID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientQuoteID_ = value;
+        bitField0_ |= 0x02000000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object quoteResponseID_ = "";
+      /**
+       * <code>string QuoteResponseID = 1527;</code>
+       * @return The quoteResponseID.
+       */
+      public java.lang.String getQuoteResponseID() {
+        java.lang.Object ref = quoteResponseID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          quoteResponseID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string QuoteResponseID = 1527;</code>
+       * @return The bytes for quoteResponseID.
+       */
+      public com.google.protobuf.ByteString
+          getQuoteResponseIDBytes() {
+        java.lang.Object ref = quoteResponseID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          quoteResponseID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string QuoteResponseID = 1527;</code>
+       * @param value The quoteResponseID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuoteResponseID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        quoteResponseID_ = value;
+        bitField0_ |= 0x04000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string QuoteResponseID = 1527;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuoteResponseID() {
+        quoteResponseID_ = getDefaultInstance().getQuoteResponseID();
+        bitField0_ = (bitField0_ & ~0x04000000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string QuoteResponseID = 1527;</code>
+       * @param value The bytes for quoteResponseID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuoteResponseIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        quoteResponseID_ = value;
+        bitField0_ |= 0x04000000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientQuoteResponseID_ = "";
+      /**
+       * <code>string ClientQuoteResponseID = 1528;</code>
+       * @return The clientQuoteResponseID.
+       */
+      public java.lang.String getClientQuoteResponseID() {
+        java.lang.Object ref = clientQuoteResponseID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientQuoteResponseID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteResponseID = 1528;</code>
+       * @return The bytes for clientQuoteResponseID.
+       */
+      public com.google.protobuf.ByteString
+          getClientQuoteResponseIDBytes() {
+        java.lang.Object ref = clientQuoteResponseID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientQuoteResponseID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteResponseID = 1528;</code>
+       * @param value The clientQuoteResponseID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteResponseID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientQuoteResponseID_ = value;
+        bitField0_ |= 0x08000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteResponseID = 1528;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientQuoteResponseID() {
+        clientQuoteResponseID_ = getDefaultInstance().getClientQuoteResponseID();
+        bitField0_ = (bitField0_ & ~0x08000000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteResponseID = 1528;</code>
+       * @param value The bytes for clientQuoteResponseID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteResponseIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientQuoteResponseID_ = value;
+        bitField0_ |= 0x08000000;
+        onChanged();
+        return this;
+      }
+
+      private org.example.Market.InternalInfo internals_;
+      private com.google.protobuf.SingleFieldBuilder<
+          org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder> internalsBuilder_;
+      /**
+       * <code>.org.example.InternalInfo Internals = 1999;</code>
+       * @return Whether the internals field is set.
+       */
+      public boolean hasInternals() {
+        return ((bitField0_ & 0x10000000) != 0);
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1999;</code>
+       * @return The internals.
+       */
+      public org.example.Market.InternalInfo getInternals() {
+        if (internalsBuilder_ == null) {
+          return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+        } else {
+          return internalsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1999;</code>
+       */
+      public Builder setInternals(org.example.Market.InternalInfo value) {
+        if (internalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          internals_ = value;
+        } else {
+          internalsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x10000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1999;</code>
+       */
+      public Builder setInternals(
+          org.example.Market.InternalInfo.Builder builderForValue) {
+        if (internalsBuilder_ == null) {
+          internals_ = builderForValue.build();
+        } else {
+          internalsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x10000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1999;</code>
+       */
+      public Builder mergeInternals(org.example.Market.InternalInfo value) {
+        if (internalsBuilder_ == null) {
+          if (((bitField0_ & 0x10000000) != 0) &&
+            internals_ != null &&
+            internals_ != org.example.Market.InternalInfo.getDefaultInstance()) {
+            getInternalsBuilder().mergeFrom(value);
+          } else {
+            internals_ = value;
+          }
+        } else {
+          internalsBuilder_.mergeFrom(value);
+        }
+        if (internals_ != null) {
+          bitField0_ |= 0x10000000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1999;</code>
+       */
+      public Builder clearInternals() {
+        bitField0_ = (bitField0_ & ~0x10000000);
+        internals_ = null;
+        if (internalsBuilder_ != null) {
+          internalsBuilder_.dispose();
+          internalsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1999;</code>
+       */
+      public org.example.Market.InternalInfo.Builder getInternalsBuilder() {
+        bitField0_ |= 0x10000000;
+        onChanged();
+        return getInternalsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1999;</code>
+       */
+      public org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder() {
+        if (internalsBuilder_ != null) {
+          return internalsBuilder_.getMessageOrBuilder();
+        } else {
+          return internals_ == null ?
+              org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+        }
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 1999;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder> 
+          getInternalsFieldBuilder() {
+        if (internalsBuilder_ == null) {
+          internalsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder>(
+                  getInternals(),
+                  getParentForChildren(),
+                  isClean());
+          internals_ = null;
+        }
+        return internalsBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:org.example.MarketTrade)
     }
 
@@ -14602,6 +16742,21 @@ public final class Market {
      */
     com.google.protobuf.ByteString
         getMemberIDBytes();
+
+    /**
+     * <code>.org.example.InternalInfo Internals = 2499;</code>
+     * @return Whether the internals field is set.
+     */
+    boolean hasInternals();
+    /**
+     * <code>.org.example.InternalInfo Internals = 2499;</code>
+     * @return The internals.
+     */
+    org.example.Market.InternalInfo getInternals();
+    /**
+     * <code>.org.example.InternalInfo Internals = 2499;</code>
+     */
+    org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder();
   }
   /**
    * Protobuf type {@code org.example.MarketPrice}
@@ -14648,6 +16803,7 @@ public final class Market {
               org.example.Market.MarketPrice.class, org.example.Market.MarketPrice.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SECURITYID_FIELD_NUMBER = 2000;
     @SuppressWarnings("serial")
     private volatile java.lang.Object securityID_ = "";
@@ -15105,6 +17261,32 @@ public final class Market {
       }
     }
 
+    public static final int INTERNALS_FIELD_NUMBER = 2499;
+    private org.example.Market.InternalInfo internals_;
+    /**
+     * <code>.org.example.InternalInfo Internals = 2499;</code>
+     * @return Whether the internals field is set.
+     */
+    @java.lang.Override
+    public boolean hasInternals() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.org.example.InternalInfo Internals = 2499;</code>
+     * @return The internals.
+     */
+    @java.lang.Override
+    public org.example.Market.InternalInfo getInternals() {
+      return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+    }
+    /**
+     * <code>.org.example.InternalInfo Internals = 2499;</code>
+     */
+    @java.lang.Override
+    public org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder() {
+      return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15193,6 +17375,9 @@ public final class Market {
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(memberID_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2024, memberID_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(2499, getInternals());
       }
       getUnknownFields().writeTo(output);
     }
@@ -15297,6 +17482,10 @@ public final class Market {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(memberID_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2024, memberID_);
       }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2499, getInternals());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -15373,6 +17562,11 @@ public final class Market {
           .equals(other.getMarketID())) return false;
       if (!getMemberID()
           .equals(other.getMemberID())) return false;
+      if (hasInternals() != other.hasInternals()) return false;
+      if (hasInternals()) {
+        if (!getInternals()
+            .equals(other.getInternals())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -15451,6 +17645,10 @@ public final class Market {
       hash = (53 * hash) + getMarketID().hashCode();
       hash = (37 * hash) + MEMBERID_FIELD_NUMBER;
       hash = (53 * hash) + getMemberID().hashCode();
+      if (hasInternals()) {
+        hash = (37 * hash) + INTERNALS_FIELD_NUMBER;
+        hash = (53 * hash) + getInternals().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15570,13 +17768,19 @@ public final class Market {
 
       // Construct using org.example.Market.MarketPrice.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getInternalsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -15607,6 +17811,11 @@ public final class Market {
         updateTime_ = 0L;
         marketID_ = "";
         memberID_ = "";
+        internals_ = null;
+        if (internalsBuilder_ != null) {
+          internalsBuilder_.dispose();
+          internalsBuilder_ = null;
+        }
         return this;
       }
 
@@ -15715,6 +17924,14 @@ public final class Market {
         if (((from_bitField0_ & 0x01000000) != 0)) {
           result.memberID_ = memberID_;
         }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x02000000) != 0)) {
+          result.internals_ = internalsBuilder_ == null
+              ? internals_
+              : internalsBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15815,6 +18032,9 @@ public final class Market {
           memberID_ = other.memberID_;
           bitField0_ |= 0x01000000;
           onChanged();
+        }
+        if (other.hasInternals()) {
+          mergeInternals(other.getInternals());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -15967,6 +18187,13 @@ public final class Market {
                 bitField0_ |= 0x01000000;
                 break;
               } // case 16194
+              case 19994: {
+                input.readMessage(
+                    getInternalsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x02000000;
+                break;
+              } // case 19994
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -17064,6 +19291,127 @@ public final class Market {
         bitField0_ |= 0x01000000;
         onChanged();
         return this;
+      }
+
+      private org.example.Market.InternalInfo internals_;
+      private com.google.protobuf.SingleFieldBuilder<
+          org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder> internalsBuilder_;
+      /**
+       * <code>.org.example.InternalInfo Internals = 2499;</code>
+       * @return Whether the internals field is set.
+       */
+      public boolean hasInternals() {
+        return ((bitField0_ & 0x02000000) != 0);
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 2499;</code>
+       * @return The internals.
+       */
+      public org.example.Market.InternalInfo getInternals() {
+        if (internalsBuilder_ == null) {
+          return internals_ == null ? org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+        } else {
+          return internalsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 2499;</code>
+       */
+      public Builder setInternals(org.example.Market.InternalInfo value) {
+        if (internalsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          internals_ = value;
+        } else {
+          internalsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x02000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 2499;</code>
+       */
+      public Builder setInternals(
+          org.example.Market.InternalInfo.Builder builderForValue) {
+        if (internalsBuilder_ == null) {
+          internals_ = builderForValue.build();
+        } else {
+          internalsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x02000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 2499;</code>
+       */
+      public Builder mergeInternals(org.example.Market.InternalInfo value) {
+        if (internalsBuilder_ == null) {
+          if (((bitField0_ & 0x02000000) != 0) &&
+            internals_ != null &&
+            internals_ != org.example.Market.InternalInfo.getDefaultInstance()) {
+            getInternalsBuilder().mergeFrom(value);
+          } else {
+            internals_ = value;
+          }
+        } else {
+          internalsBuilder_.mergeFrom(value);
+        }
+        if (internals_ != null) {
+          bitField0_ |= 0x02000000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 2499;</code>
+       */
+      public Builder clearInternals() {
+        bitField0_ = (bitField0_ & ~0x02000000);
+        internals_ = null;
+        if (internalsBuilder_ != null) {
+          internalsBuilder_.dispose();
+          internalsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 2499;</code>
+       */
+      public org.example.Market.InternalInfo.Builder getInternalsBuilder() {
+        bitField0_ |= 0x02000000;
+        onChanged();
+        return getInternalsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 2499;</code>
+       */
+      public org.example.Market.InternalInfoOrBuilder getInternalsOrBuilder() {
+        if (internalsBuilder_ != null) {
+          return internalsBuilder_.getMessageOrBuilder();
+        } else {
+          return internals_ == null ?
+              org.example.Market.InternalInfo.getDefaultInstance() : internals_;
+        }
+      }
+      /**
+       * <code>.org.example.InternalInfo Internals = 2499;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder> 
+          getInternalsFieldBuilder() {
+        if (internalsBuilder_ == null) {
+          internalsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              org.example.Market.InternalInfo, org.example.Market.InternalInfo.Builder, org.example.Market.InternalInfoOrBuilder>(
+                  getInternals(),
+                  getParentForChildren(),
+                  isClean());
+          internals_ = null;
+        }
+        return internalsBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:org.example.MarketPrice)
@@ -20597,117 +22945,129 @@ public final class Market {
       "Time\030\004 \001(\004\022\030\n\020TakenFromBusTime\030\005 \001(\004\022\025\n\r" +
       "ProcessedTime\030\006 \001(\004\022\031\n\021SentBackToBusTime" +
       "\030\007 \001(\004\022\034\n\024TakenBackFromBusTime\030\010 \001(\004\022\034\n\024" +
-      "CloseTransactionTime\030\t \001(\004\"\354\004\n\022MarketQuo" +
-      "teRequest\022\022\n\tRequestID\030\226\001 \001(\t\0224\n\010MlegTyp" +
-      "e\030\227\001 \001(\0162!.org.example.QuoteRequestMLegT" +
-      "ype\022,\n\004Type\030\230\001 \001(\0162\035.org.example.QuoteRe" +
-      "questType\022(\n\010FirstLeg\030\231\001 \001(\0132\025.org.examp" +
-      "le.QuoteLeg\022)\n\tSecondLeg\030\232\001 \001(\0132\025.org.ex" +
-      "ample.QuoteLeg\022(\n\010ThirdLeg\030\233\001 \001(\0132\025.org." +
-      "example.QuoteLeg\022\027\n\016IssuerMemberID\030\234\001 \001(" +
-      "\t\022\031\n\020IssuerOperatorID\030\235\001 \001(\t\022#\n\032NumberOf" +
-      "DestinationMembers\030\236\001 \001(\005\022\032\n\021Destination" +
-      "Member\030\237\001 \003(\t\022\025\n\014CreationDate\030\240\001 \001(\004\022\025\n\014" +
-      "CreationTime\030\241\001 \001(\004\022\023\n\nUpdateDate\030\242\001 \001(\004" +
-      "\022\023\n\nUpdateTime\030\243\001 \001(\004\022\025\n\014ValidityDate\030\244\001" +
-      " \001(\004\022\025\n\014ValidityTime\030\245\001 \001(\004\0220\n\006Status\030\246\001" +
-      " \001(\0162\037.org.example.QuoteRequestStatus\0222\n" +
-      "\rProcessStatus\030\247\001 \001(\0162\032.org.example.Proc" +
-      "essStatus\"\371\004\n\013MarketQuote\022\020\n\007QuoteID\030\364\003 " +
-      "\001(\t\022\027\n\016QuoteRequestID\030\365\003 \001(\t\0224\n\010MlegType" +
-      "\030\366\003 \001(\0162!.org.example.QuoteRequestMLegTy" +
-      "pe\022,\n\004Type\030\367\003 \001(\0162\035.org.example.QuoteReq" +
-      "uestType\022(\n\010FirstLeg\030\370\003 \001(\0132\025.org.exampl" +
-      "e.QuoteLeg\022)\n\tSecondLeg\030\371\003 \001(\0132\025.org.exa" +
-      "mple.QuoteLeg\022(\n\010ThirdLeg\030\372\003 \001(\0132\025.org.e" +
-      "xample.QuoteLeg\022\027\n\016IssuerMemberID\030\373\003 \001(\t" +
-      "\022\031\n\020IssuerOperatorID\030\374\003 \001(\t\022\034\n\023Counterpa" +
-      "rtMemberID\030\375\003 \001(\t\022\036\n\025CounterpartOperator" +
-      "ID\030\376\003 \001(\t\022\025\n\014CreationDate\030\377\003 \001(\004\022\025\n\014Crea" +
-      "tionTime\030\200\004 \001(\004\022\023\n\nUpdateDate\030\201\004 \001(\004\022\023\n\n" +
-      "UpdateTime\030\202\004 \001(\004\022\025\n\014ValidityDate\030\203\004 \001(\004" +
-      "\022\025\n\014ValidityTime\030\204\004 \001(\004\0220\n\006Status\030\205\004 \001(\016" +
+      "CloseTransactionTime\030\t \001(\004\"\277\005\n\022MarketQuo" +
+      "teRequest\022\027\n\016QuoteRequestID\030\226\001 \001(\t\022\035\n\024Cl" +
+      "ientQuoteRequestID\030\227\001 \001(\t\0224\n\010MlegType\030\230\001" +
+      " \001(\0162!.org.example.QuoteRequestMLegType\022" +
+      ",\n\004Type\030\231\001 \001(\0162\035.org.example.QuoteReques" +
+      "tType\022(\n\010FirstLeg\030\232\001 \001(\0132\025.org.example.Q" +
+      "uoteLeg\022)\n\tSecondLeg\030\233\001 \001(\0132\025.org.exampl" +
+      "e.QuoteLeg\022(\n\010ThirdLeg\030\234\001 \001(\0132\025.org.exam" +
+      "ple.QuoteLeg\022\027\n\016IssuerMemberID\030\235\001 \001(\t\022\031\n" +
+      "\020IssuerOperatorID\030\236\001 \001(\t\022#\n\032NumberOfDest" +
+      "inationMembers\030\237\001 \001(\005\022\032\n\021DestinationMemb" +
+      "er\030\240\001 \003(\t\022\025\n\014CreationDate\030\241\001 \001(\004\022\025\n\014Crea" +
+      "tionTime\030\242\001 \001(\004\022\023\n\nUpdateDate\030\243\001 \001(\004\022\023\n\n" +
+      "UpdateTime\030\244\001 \001(\004\022\025\n\014ValidityDate\030\245\001 \001(\004" +
+      "\022\025\n\014ValidityTime\030\246\001 \001(\004\0220\n\006Status\030\247\001 \001(\016" +
       "2\037.org.example.QuoteRequestStatus\0222\n\rPro" +
-      "cessStatus\030\206\004 \001(\0162\032.org.example.ProcessS" +
-      "tatus\"\233\005\n\023MarketQuoteResponse\022\030\n\017QuoteRe" +
-      "sponseID\030\350\007 \001(\t\022\027\n\016QuoteRequestID\030\351\007 \001(\t" +
-      "\022\020\n\007QuoteID\030\352\007 \001(\t\0224\n\010MlegType\030\353\007 \001(\0162!." +
-      "org.example.QuoteRequestMLegType\022,\n\004Type" +
-      "\030\354\007 \001(\0162\035.org.example.QuoteRequestType\022(" +
-      "\n\010FirstLeg\030\355\007 \001(\0132\025.org.example.QuoteLeg" +
-      "\022)\n\tSecondLeg\030\356\007 \001(\0132\025.org.example.Quote" +
-      "Leg\022(\n\010ThirdLeg\030\357\007 \001(\0132\025.org.example.Quo" +
-      "teLeg\022\027\n\016IssuerMemberID\030\360\007 \001(\t\022\031\n\020Issuer" +
-      "OperatorID\030\361\007 \001(\t\022\034\n\023CounterpartMemberID" +
-      "\030\362\007 \001(\t\022\036\n\025CounterpartOperatorID\030\363\007 \001(\t\022" +
-      "\025\n\014CreationDate\030\364\007 \001(\004\022\025\n\014CreationTime\030\365" +
-      "\007 \001(\004\022\023\n\nUpdateDate\030\366\007 \001(\004\022\023\n\nUpdateTime" +
-      "\030\367\007 \001(\004\022\025\n\014ValidityDate\030\370\007 \001(\004\022\025\n\014Validi" +
-      "tyTime\030\371\007 \001(\004\0220\n\006Status\030\372\007 \001(\0162\037.org.exa" +
-      "mple.QuoteRequestStatus\0222\n\rProcessStatus" +
-      "\030\373\007 \001(\0162\032.org.example.ProcessStatus\"\320\004\n\013" +
-      "MarketTrade\022\020\n\007TradeID\030\334\013 \001(\t\022\023\n\nSecurit" +
-      "yID\030\336\013 \001(\t\022\021\n\010ISINCode\030\337\013 \001(\t\022\016\n\005CUSIP\030\340" +
-      "\013 \001(\t\022\016\n\005Price\030\341\013 \001(\001\022\016\n\005Yield\030\342\013 \001(\001\022\021\n" +
-      "\010Quantity\030\343\013 \001(\001\022\023\n\nMinimumQty\030\344\013 \001(\001\022,\n" +
-      "\rAggressorVerb\030\345\013 \001(\0162\024.org.example.LegV" +
-      "erb\022\032\n\021AggressorMemberID\030\346\013 \001(\t\022\034\n\023Aggre" +
-      "ssorOperatorID\030\347\013 \001(\t\0222\n\017AggressorSource" +
-      "\030\350\013 \001(\0162\030.org.example.TradeSource\022\032\n\021Agg" +
-      "ressorSourceID\030\351\013 \001(\t\022\031\n\020ProviderMemberI" +
-      "D\030\352\013 \001(\t\022\033\n\022ProviderOperatorID\030\353\013 \001(\t\0221\n" +
-      "\016ProviderSource\030\354\013 \001(\0162\030.org.example.Tra" +
-      "deSource\022\031\n\020ProviderSourceID\030\355\013 \001(\t\022\025\n\014C" +
-      "reationDate\030\356\013 \001(\004\022\025\n\014CreationTime\030\357\013 \001(" +
-      "\004\022\023\n\nUpdateDate\030\360\013 \001(\004\022\023\n\nUpdateTime\030\361\013 " +
-      "\001(\004\022\031\n\020SettlementAmount\030\362\013 \001(\001\"\232\004\n\013Marke" +
-      "tPrice\022\023\n\nSecurityID\030\320\017 \001(\t\022\021\n\010ISINCode\030" +
-      "\321\017 \001(\t\022\016\n\005CUSIP\030\322\017 \001(\t\022\023\n\nTradeClass\030\323\017 " +
-      "\001(\t\022%\n\004Type\030\324\017 \001(\0162\026.org.example.PriceTy" +
-      "pe\022\021\n\010BidPrice\030\325\017 \001(\001\022\021\n\010BidYield\030\326\017 \001(\001" +
-      "\022\022\n\tBidSpread\030\327\017 \001(\001\022\017\n\006BidAxe\030\330\017 \001(\001\022\017\n" +
-      "\006BidQty\030\331\017 \001(\001\022\021\n\010AskPrice\030\332\017 \001(\001\022\021\n\010Ask" +
-      "Yield\030\333\017 \001(\001\022\022\n\tAskSpread\030\334\017 \001(\001\022\017\n\006AskA" +
-      "xe\030\335\017 \001(\001\022\017\n\006AskQty\030\336\017 \001(\001\022\023\n\nDeltaPrice" +
-      "\030\337\017 \001(\001\022\023\n\nDeltaYield\030\340\017 \001(\001\022\024\n\013DeltaSpr" +
-      "ead\030\341\017 \001(\001\022\'\n\005State\030\342\017 \001(\0162\027.org.example" +
-      ".PriceState\022\022\n\tPriceDate\030\343\017 \001(\004\022\022\n\tPrice" +
-      "Time\030\344\017 \001(\004\022\023\n\nUpdateDate\030\345\017 \001(\004\022\023\n\nUpda" +
-      "teTime\030\346\017 \001(\004\022\021\n\010MarketID\030\347\017 \001(\t\022\021\n\010Memb" +
-      "erID\030\350\017 \001(\t\"L\n\rMarketSection\022\021\n\010MarketID" +
-      "\030\366\023 \001(\t\022\022\n\tSectionID\030\367\023 \001(\t\022\024\n\013Descripti" +
-      "on\030\370\023 \001(\t\"\321\003\n\020MarketInstrument\022\023\n\nSecuri" +
-      "tyID\030\250\024 \001(\t\022\024\n\013Description\030\251\024 \001(\t\022\021\n\010ISI" +
-      "NCode\030\263\024 \001(\t\022\016\n\005CUSIP\030\264\024 \001(\t\022\021\n\010MarketID" +
-      "\030\265\024 \001(\t\022\022\n\tSectionID\030\266\024 \001(\t\022\023\n\nTradeClas" +
-      "s\030\267\024 \001(\t\022\021\n\010Currency\030\271\024 \001(\t\022\017\n\006Issuer\030\272\024" +
-      " \001(\t\022,\n\005Class\030\273\024 \001(\0162\034.org.example.Instr" +
-      "umentClass\022\022\n\tPriceTick\030\274\024 \001(\001\022\020\n\007QtyTic" +
-      "k\030\275\024 \001(\001\022\027\n\016MinTradableQty\030\276\024 \001(\001\022\020\n\007Lot" +
-      "Size\030\277\024 \001(\001\022\025\n\014ClosingPrice\030\300\024 \001(\001\022\022\n\tIs" +
-      "sueDate\030\301\024 \001(\004\022\031\n\020TradingStartDate\030\302\024 \001(" +
-      "\004\022\030\n\017TradingStopDate\030\303\024 \001(\004\022\022\n\tYieldTick" +
-      "\030\304\024 \001(\001\022\034\n\023BenchmarkSecurityID\030\305\024 \001(\t*&\n" +
-      "\007LegVerb\022\014\n\010VERB_BUY\020\000\022\r\n\tVERB_SELL\020\001*N\n" +
-      "\024QuoteRequestMLegType\022\021\n\rMLEG_Outright\020\000" +
-      "\022\017\n\013MLEG_Switch\020\001\022\022\n\016MLEG_Butterfly\020\002*X\n" +
-      "\020QuoteRequestType\022\030\n\024TYPE_RequestBidOffe" +
-      "r\020\000\022\025\n\021TYPE_MyBidMyOffer\020\001\022\023\n\017TYPE_Limit" +
-      "Order\020\002*m\n\022QuoteRequestStatus\022\021\n\rSTATUS_" +
-      "Active\020\000\022\021\n\rSTATUS_Filled\020\001\022\024\n\020STATUS_Ca" +
-      "ncelled\020\002\022\033\n\027STATUS_RejectedByMarket\020\003*D" +
-      "\n\rProcessStatus\022\032\n\026PROCESSED_NotProcesse" +
-      "d\020\000\022\027\n\023PROCESSED_Processed\020\001*R\n\013TradeSou" +
-      "rce\022\027\n\023SOURCE_QuoteRequest\020\000\022\020\n\014SOURCE_Q" +
-      "uote\020\001\022\030\n\024SOURCE_QuoteResponse\020\002*\177\n\tPric" +
-      "eType\022\022\n\016TYPE_Composite\020\000\022\023\n\017TYPE_Indica" +
-      "tive\020\001\022\r\n\tTYPE_Tier\020\002\022\030\n\024TYPE_CorporateS" +
-      "pread\020\003\022\020\n\014TYPE_CORP4PM\020\004\022\016\n\nTYPE_CD4PM\020" +
-      "\005*R\n\nPriceState\022\016\n\nSTATE_None\020\000\022\016\n\nSTATE" +
-      "_Firm\020\001\022\021\n\rSTATE_Subject\020\002\022\021\n\rSTATE_Dele" +
-      "ted\020\003*W\n\017InstrumentClass\022\030\n\024CLASS_Govern" +
-      "mentBond\020\000\022\027\n\023CLASS_CorporateBond\020\001\022\021\n\rC" +
-      "LASS_Futures\020\002b\006proto3"
+      "cessStatus\030\250\001 \001(\0162\032.org.example.ProcessS" +
+      "tatus\022-\n\tInternals\030\363\003 \001(\0132\031.org.example." +
+      "InternalInfo\"\300\005\n\013MarketQuote\022\020\n\007QuoteID\030" +
+      "\364\003 \001(\t\022\026\n\rClientQuoteID\030\365\003 \001(\t\022\027\n\016QuoteR" +
+      "equestID\030\366\003 \001(\t\0224\n\010MlegType\030\367\003 \001(\0162!.org" +
+      ".example.QuoteRequestMLegType\022,\n\004Type\030\370\003" +
+      " \001(\0162\035.org.example.QuoteRequestType\022(\n\010F" +
+      "irstLeg\030\371\003 \001(\0132\025.org.example.QuoteLeg\022)\n" +
+      "\tSecondLeg\030\372\003 \001(\0132\025.org.example.QuoteLeg" +
+      "\022(\n\010ThirdLeg\030\373\003 \001(\0132\025.org.example.QuoteL" +
+      "eg\022\027\n\016IssuerMemberID\030\374\003 \001(\t\022\031\n\020IssuerOpe" +
+      "ratorID\030\375\003 \001(\t\022\034\n\023CounterpartMemberID\030\376\003" +
+      " \001(\t\022\036\n\025CounterpartOperatorID\030\377\003 \001(\t\022\025\n\014" +
+      "CreationDate\030\200\004 \001(\004\022\025\n\014CreationTime\030\201\004 \001" +
+      "(\004\022\023\n\nUpdateDate\030\202\004 \001(\004\022\023\n\nUpdateTime\030\203\004" +
+      " \001(\004\022\025\n\014ValidityDate\030\204\004 \001(\004\022\025\n\014ValidityT" +
+      "ime\030\205\004 \001(\004\0220\n\006Status\030\206\004 \001(\0162\037.org.exampl" +
+      "e.QuoteRequestStatus\0222\n\rProcessStatus\030\207\004" +
+      " \001(\0162\032.org.example.ProcessStatus\022-\n\tInte" +
+      "rnals\030\347\007 \001(\0132\031.org.example.InternalInfo\"" +
+      "\352\005\n\023MarketQuoteResponse\022\030\n\017QuoteResponse" +
+      "ID\030\350\007 \001(\t\022\036\n\025ClientQuoteResponseID\030\351\007 \001(" +
+      "\t\022\027\n\016QuoteRequestID\030\352\007 \001(\t\022\020\n\007QuoteID\030\353\007" +
+      " \001(\t\0224\n\010MlegType\030\354\007 \001(\0162!.org.example.Qu" +
+      "oteRequestMLegType\022,\n\004Type\030\355\007 \001(\0162\035.org." +
+      "example.QuoteRequestType\022(\n\010FirstLeg\030\356\007 " +
+      "\001(\0132\025.org.example.QuoteLeg\022)\n\tSecondLeg\030" +
+      "\357\007 \001(\0132\025.org.example.QuoteLeg\022(\n\010ThirdLe" +
+      "g\030\360\007 \001(\0132\025.org.example.QuoteLeg\022\027\n\016Issue" +
+      "rMemberID\030\361\007 \001(\t\022\031\n\020IssuerOperatorID\030\362\007 " +
+      "\001(\t\022\034\n\023CounterpartMemberID\030\363\007 \001(\t\022\036\n\025Cou" +
+      "nterpartOperatorID\030\364\007 \001(\t\022\025\n\014CreationDat" +
+      "e\030\365\007 \001(\004\022\025\n\014CreationTime\030\366\007 \001(\004\022\023\n\nUpdat" +
+      "eDate\030\367\007 \001(\004\022\023\n\nUpdateTime\030\370\007 \001(\004\022\025\n\014Val" +
+      "idityDate\030\371\007 \001(\004\022\025\n\014ValidityTime\030\372\007 \001(\004\022" +
+      "0\n\006Status\030\373\007 \001(\0162\037.org.example.QuoteRequ" +
+      "estStatus\0222\n\rProcessStatus\030\374\007 \001(\0162\032.org." +
+      "example.ProcessStatus\022-\n\tInternals\030\333\013 \001(" +
+      "\0132\031.org.example.InternalInfo\"\233\006\n\013MarketT" +
+      "rade\022\020\n\007TradeID\030\334\013 \001(\t\022\023\n\nSecurityID\030\336\013 " +
+      "\001(\t\022\021\n\010ISINCode\030\337\013 \001(\t\022\016\n\005CUSIP\030\340\013 \001(\t\022\016" +
+      "\n\005Price\030\341\013 \001(\001\022\016\n\005Yield\030\342\013 \001(\001\022\021\n\010Quanti" +
+      "ty\030\343\013 \001(\001\022\023\n\nMinimumQty\030\344\013 \001(\001\022,\n\rAggres" +
+      "sorVerb\030\345\013 \001(\0162\024.org.example.LegVerb\022\032\n\021" +
+      "AggressorMemberID\030\346\013 \001(\t\022\034\n\023AggressorOpe" +
+      "ratorID\030\347\013 \001(\t\0222\n\017AggressorSource\030\350\013 \001(\016" +
+      "2\030.org.example.TradeSource\022\032\n\021AggressorS" +
+      "ourceID\030\351\013 \001(\t\022\031\n\020ProviderMemberID\030\352\013 \001(" +
+      "\t\022\033\n\022ProviderOperatorID\030\353\013 \001(\t\0221\n\016Provid" +
+      "erSource\030\354\013 \001(\0162\030.org.example.TradeSourc" +
+      "e\022\031\n\020ProviderSourceID\030\355\013 \001(\t\022\025\n\014Creation" +
+      "Date\030\356\013 \001(\004\022\025\n\014CreationTime\030\357\013 \001(\004\022\023\n\nUp" +
+      "dateDate\030\360\013 \001(\004\022\023\n\nUpdateTime\030\361\013 \001(\004\022\031\n\020" +
+      "SettlementAmount\030\362\013 \001(\001\022\027\n\016QuoteRequestI" +
+      "D\030\363\013 \001(\t\022\035\n\024ClientQuoteRequestID\030\364\013 \001(\t\022" +
+      "\020\n\007QuoteID\030\365\013 \001(\t\022\026\n\rClientQuoteID\030\366\013 \001(" +
+      "\t\022\030\n\017QuoteResponseID\030\367\013 \001(\t\022\036\n\025ClientQuo" +
+      "teResponseID\030\370\013 \001(\t\022-\n\tInternals\030\317\017 \001(\0132" +
+      "\031.org.example.InternalInfo\"\311\004\n\013MarketPri" +
+      "ce\022\023\n\nSecurityID\030\320\017 \001(\t\022\021\n\010ISINCode\030\321\017 \001" +
+      "(\t\022\016\n\005CUSIP\030\322\017 \001(\t\022\023\n\nTradeClass\030\323\017 \001(\t\022" +
+      "%\n\004Type\030\324\017 \001(\0162\026.org.example.PriceType\022\021" +
+      "\n\010BidPrice\030\325\017 \001(\001\022\021\n\010BidYield\030\326\017 \001(\001\022\022\n\t" +
+      "BidSpread\030\327\017 \001(\001\022\017\n\006BidAxe\030\330\017 \001(\001\022\017\n\006Bid" +
+      "Qty\030\331\017 \001(\001\022\021\n\010AskPrice\030\332\017 \001(\001\022\021\n\010AskYiel" +
+      "d\030\333\017 \001(\001\022\022\n\tAskSpread\030\334\017 \001(\001\022\017\n\006AskAxe\030\335" +
+      "\017 \001(\001\022\017\n\006AskQty\030\336\017 \001(\001\022\023\n\nDeltaPrice\030\337\017 " +
+      "\001(\001\022\023\n\nDeltaYield\030\340\017 \001(\001\022\024\n\013DeltaSpread\030" +
+      "\341\017 \001(\001\022\'\n\005State\030\342\017 \001(\0162\027.org.example.Pri" +
+      "ceState\022\022\n\tPriceDate\030\343\017 \001(\004\022\022\n\tPriceTime" +
+      "\030\344\017 \001(\004\022\023\n\nUpdateDate\030\345\017 \001(\004\022\023\n\nUpdateTi" +
+      "me\030\346\017 \001(\004\022\021\n\010MarketID\030\347\017 \001(\t\022\021\n\010MemberID" +
+      "\030\350\017 \001(\t\022-\n\tInternals\030\303\023 \001(\0132\031.org.exampl" +
+      "e.InternalInfo\"L\n\rMarketSection\022\021\n\010Marke" +
+      "tID\030\366\023 \001(\t\022\022\n\tSectionID\030\367\023 \001(\t\022\024\n\013Descri" +
+      "ption\030\370\023 \001(\t\"\321\003\n\020MarketInstrument\022\023\n\nSec" +
+      "urityID\030\250\024 \001(\t\022\024\n\013Description\030\251\024 \001(\t\022\021\n\010" +
+      "ISINCode\030\263\024 \001(\t\022\016\n\005CUSIP\030\264\024 \001(\t\022\021\n\010Marke" +
+      "tID\030\265\024 \001(\t\022\022\n\tSectionID\030\266\024 \001(\t\022\023\n\nTradeC" +
+      "lass\030\267\024 \001(\t\022\021\n\010Currency\030\271\024 \001(\t\022\017\n\006Issuer" +
+      "\030\272\024 \001(\t\022,\n\005Class\030\273\024 \001(\0162\034.org.example.In" +
+      "strumentClass\022\022\n\tPriceTick\030\274\024 \001(\001\022\020\n\007Qty" +
+      "Tick\030\275\024 \001(\001\022\027\n\016MinTradableQty\030\276\024 \001(\001\022\020\n\007" +
+      "LotSize\030\277\024 \001(\001\022\025\n\014ClosingPrice\030\300\024 \001(\001\022\022\n" +
+      "\tIssueDate\030\301\024 \001(\004\022\031\n\020TradingStartDate\030\302\024" +
+      " \001(\004\022\030\n\017TradingStopDate\030\303\024 \001(\004\022\022\n\tYieldT" +
+      "ick\030\304\024 \001(\001\022\034\n\023BenchmarkSecurityID\030\305\024 \001(\t" +
+      "*&\n\007LegVerb\022\014\n\010VERB_BUY\020\000\022\r\n\tVERB_SELL\020\001" +
+      "*N\n\024QuoteRequestMLegType\022\021\n\rMLEG_Outrigh" +
+      "t\020\000\022\017\n\013MLEG_Switch\020\001\022\022\n\016MLEG_Butterfly\020\002" +
+      "*X\n\020QuoteRequestType\022\030\n\024TYPE_RequestBidO" +
+      "ffer\020\000\022\025\n\021TYPE_MyBidMyOffer\020\001\022\023\n\017TYPE_Li" +
+      "mitOrder\020\002*m\n\022QuoteRequestStatus\022\021\n\rSTAT" +
+      "US_Active\020\000\022\021\n\rSTATUS_Filled\020\001\022\024\n\020STATUS" +
+      "_Cancelled\020\002\022\033\n\027STATUS_RejectedByMarket\020" +
+      "\003*D\n\rProcessStatus\022\032\n\026PROCESSED_NotProce" +
+      "ssed\020\000\022\027\n\023PROCESSED_Processed\020\001*R\n\013Trade" +
+      "Source\022\027\n\023SOURCE_QuoteRequest\020\000\022\020\n\014SOURC" +
+      "E_Quote\020\001\022\030\n\024SOURCE_QuoteResponse\020\002*\177\n\tP" +
+      "riceType\022\022\n\016TYPE_Composite\020\000\022\023\n\017TYPE_Ind" +
+      "icative\020\001\022\r\n\tTYPE_Tier\020\002\022\030\n\024TYPE_Corpora" +
+      "teSpread\020\003\022\020\n\014TYPE_CORP4PM\020\004\022\016\n\nTYPE_CD4" +
+      "PM\020\005*R\n\nPriceState\022\016\n\nSTATE_None\020\000\022\016\n\nST" +
+      "ATE_Firm\020\001\022\021\n\rSTATE_Subject\020\002\022\021\n\rSTATE_D" +
+      "eleted\020\003*W\n\017InstrumentClass\022\030\n\024CLASS_Gov" +
+      "ernmentBond\020\000\022\027\n\023CLASS_CorporateBond\020\001\022\021" +
+      "\n\rCLASS_Futures\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -20730,31 +23090,31 @@ public final class Market {
     internal_static_org_example_MarketQuoteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_MarketQuoteRequest_descriptor,
-        new java.lang.String[] { "RequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "NumberOfDestinationMembers", "DestinationMember", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", });
+        new java.lang.String[] { "QuoteRequestID", "ClientQuoteRequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "NumberOfDestinationMembers", "DestinationMember", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", "Internals", });
     internal_static_org_example_MarketQuote_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_org_example_MarketQuote_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_MarketQuote_descriptor,
-        new java.lang.String[] { "QuoteID", "QuoteRequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", });
+        new java.lang.String[] { "QuoteID", "ClientQuoteID", "QuoteRequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", "Internals", });
     internal_static_org_example_MarketQuoteResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_org_example_MarketQuoteResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_MarketQuoteResponse_descriptor,
-        new java.lang.String[] { "QuoteResponseID", "QuoteRequestID", "QuoteID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", });
+        new java.lang.String[] { "QuoteResponseID", "ClientQuoteResponseID", "QuoteRequestID", "QuoteID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", "Internals", });
     internal_static_org_example_MarketTrade_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_org_example_MarketTrade_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_MarketTrade_descriptor,
-        new java.lang.String[] { "TradeID", "SecurityID", "ISINCode", "CUSIP", "Price", "Yield", "Quantity", "MinimumQty", "AggressorVerb", "AggressorMemberID", "AggressorOperatorID", "AggressorSource", "AggressorSourceID", "ProviderMemberID", "ProviderOperatorID", "ProviderSource", "ProviderSourceID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "SettlementAmount", });
+        new java.lang.String[] { "TradeID", "SecurityID", "ISINCode", "CUSIP", "Price", "Yield", "Quantity", "MinimumQty", "AggressorVerb", "AggressorMemberID", "AggressorOperatorID", "AggressorSource", "AggressorSourceID", "ProviderMemberID", "ProviderOperatorID", "ProviderSource", "ProviderSourceID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "SettlementAmount", "QuoteRequestID", "ClientQuoteRequestID", "QuoteID", "ClientQuoteID", "QuoteResponseID", "ClientQuoteResponseID", "Internals", });
     internal_static_org_example_MarketPrice_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_org_example_MarketPrice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_MarketPrice_descriptor,
-        new java.lang.String[] { "SecurityID", "ISINCode", "CUSIP", "TradeClass", "Type", "BidPrice", "BidYield", "BidSpread", "BidAxe", "BidQty", "AskPrice", "AskYield", "AskSpread", "AskAxe", "AskQty", "DeltaPrice", "DeltaYield", "DeltaSpread", "State", "PriceDate", "PriceTime", "UpdateDate", "UpdateTime", "MarketID", "MemberID", });
+        new java.lang.String[] { "SecurityID", "ISINCode", "CUSIP", "TradeClass", "Type", "BidPrice", "BidYield", "BidSpread", "BidAxe", "BidQty", "AskPrice", "AskYield", "AskSpread", "AskAxe", "AskQty", "DeltaPrice", "DeltaYield", "DeltaSpread", "State", "PriceDate", "PriceTime", "UpdateDate", "UpdateTime", "MarketID", "MemberID", "Internals", });
     internal_static_org_example_MarketSection_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_org_example_MarketSection_fieldAccessorTable = new

@@ -22,7 +22,7 @@ import org.example.Market.MarketQuoteResponse;
 import org.example.Market.MarketPrice;
 import org.example.Market.MarketQuote;
 import org.example.Utils;
-import org.example.Market.PriceType;
+import org.example.Market.MarketPriceType;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -312,22 +312,22 @@ public class MKTBusManager {
         String  priceType;
 
         switch (marketPrice.getType().getNumber()){
-            case PriceType.TYPE_Composite_VALUE:
+            case MarketPriceType.TYPE_Composite_VALUE:
                 priceType = new String("COMP");
                 break;
-            case PriceType.TYPE_Indicative_VALUE:
+            case MarketPriceType.TYPE_Indicative_VALUE:
                 priceType = new String("IND");
                 break;
-            case PriceType.TYPE_Tier_VALUE:
+            case MarketPriceType.TYPE_Tier_VALUE:
                 priceType = new String("TIER");
                 break;
-            case PriceType.TYPE_CD4PM_VALUE:
+            case MarketPriceType.TYPE_CD4PM_VALUE:
                 priceType = new String("CD4PM");
                 break;
-            case PriceType.TYPE_CORP4PM_VALUE:
+            case MarketPriceType.TYPE_CORP4PM_VALUE:
                 priceType = new String("CORP4PM");
                 break;
-            case PriceType.TYPE_CorporateSpread_VALUE:
+            case MarketPriceType.TYPE_CorporateSpread_VALUE:
                 priceType = new String("CORPSPREAD");
                 break;
             default:

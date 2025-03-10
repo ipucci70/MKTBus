@@ -551,6 +551,10 @@ public final class Market {
      * <code>PROCESSED_Processed = 1;</code>
      */
     PROCESSED_Processed(1),
+    /**
+     * <code>PROCESSED_Rejected = 2;</code>
+     */
+    PROCESSED_Rejected(2),
     UNRECOGNIZED(-1),
     ;
 
@@ -571,6 +575,10 @@ public final class Market {
      * <code>PROCESSED_Processed = 1;</code>
      */
     public static final int PROCESSED_Processed_VALUE = 1;
+    /**
+     * <code>PROCESSED_Rejected = 2;</code>
+     */
+    public static final int PROCESSED_Rejected_VALUE = 2;
 
 
     public final int getNumber() {
@@ -599,6 +607,7 @@ public final class Market {
       switch (value) {
         case 0: return PROCESSED_NotProcessed;
         case 1: return PROCESSED_Processed;
+        case 2: return PROCESSED_Rejected;
         default: return null;
       }
     }
@@ -2291,43 +2300,66 @@ public final class Market {
         getFlowIDBytes();
 
     /**
-     * <code>uint64 TransactionCreationTime = 3;</code>
+     * <code>.org.example.MarketProcessStatus ProcessStatus = 3;</code>
+     * @return The enum numeric value on the wire for processStatus.
+     */
+    int getProcessStatusValue();
+    /**
+     * <code>.org.example.MarketProcessStatus ProcessStatus = 3;</code>
+     * @return The processStatus.
+     */
+    org.example.Market.MarketProcessStatus getProcessStatus();
+
+    /**
+     * <code>string ProcessStatusDescription = 4;</code>
+     * @return The processStatusDescription.
+     */
+    java.lang.String getProcessStatusDescription();
+    /**
+     * <code>string ProcessStatusDescription = 4;</code>
+     * @return The bytes for processStatusDescription.
+     */
+    com.google.protobuf.ByteString
+        getProcessStatusDescriptionBytes();
+
+    /**
+     * <code>uint64 TransactionCreationTime = 5;</code>
      * @return The transactionCreationTime.
      */
     long getTransactionCreationTime();
 
     /**
-     * <code>uint64 SentOnBusTime = 4;</code>
+     * <code>uint64 SentOnBusTime = 6;</code>
      * @return The sentOnBusTime.
      */
     long getSentOnBusTime();
 
     /**
-     * <code>uint64 TakenFromBusTime = 5;</code>
+     * <code>uint64 TakenFromBusTime = 7;</code>
      * @return The takenFromBusTime.
      */
     long getTakenFromBusTime();
 
     /**
-     * <code>uint64 ProcessedTime = 6;</code>
+     * <code>uint64 ProcessedTime = 8;</code>
      * @return The processedTime.
      */
     long getProcessedTime();
 
     /**
-     * <code>uint64 SentBackToBusTime = 7;</code>
+     * <code>uint64 SentBackToBusTime = 9;</code>
      * @return The sentBackToBusTime.
      */
     long getSentBackToBusTime();
 
     /**
-     * <code>uint64 TakenBackFromBusTime = 8;</code>
+     * <code>uint64 TakenBackFromBusTime = 10;</code>
      * @return The takenBackFromBusTime.
      */
     long getTakenBackFromBusTime();
 
     /**
-     * <code>uint64 CloseTransactionTime = 9;</code>
+     * <code>uint64 CloseTransactionTime = 11;</code>
      * @return The closeTransactionTime.
      */
     long getCloseTransactionTime();
@@ -2356,6 +2388,8 @@ public final class Market {
     private MarketInternalInfo() {
       sessionID_ = "";
       flowID_ = "";
+      processStatus_ = 0;
+      processStatusDescription_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -2449,10 +2483,67 @@ public final class Market {
       }
     }
 
-    public static final int TRANSACTIONCREATIONTIME_FIELD_NUMBER = 3;
+    public static final int PROCESSSTATUS_FIELD_NUMBER = 3;
+    private int processStatus_ = 0;
+    /**
+     * <code>.org.example.MarketProcessStatus ProcessStatus = 3;</code>
+     * @return The enum numeric value on the wire for processStatus.
+     */
+    @java.lang.Override public int getProcessStatusValue() {
+      return processStatus_;
+    }
+    /**
+     * <code>.org.example.MarketProcessStatus ProcessStatus = 3;</code>
+     * @return The processStatus.
+     */
+    @java.lang.Override public org.example.Market.MarketProcessStatus getProcessStatus() {
+      org.example.Market.MarketProcessStatus result = org.example.Market.MarketProcessStatus.forNumber(processStatus_);
+      return result == null ? org.example.Market.MarketProcessStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int PROCESSSTATUSDESCRIPTION_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object processStatusDescription_ = "";
+    /**
+     * <code>string ProcessStatusDescription = 4;</code>
+     * @return The processStatusDescription.
+     */
+    @java.lang.Override
+    public java.lang.String getProcessStatusDescription() {
+      java.lang.Object ref = processStatusDescription_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        processStatusDescription_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ProcessStatusDescription = 4;</code>
+     * @return The bytes for processStatusDescription.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProcessStatusDescriptionBytes() {
+      java.lang.Object ref = processStatusDescription_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        processStatusDescription_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSACTIONCREATIONTIME_FIELD_NUMBER = 5;
     private long transactionCreationTime_ = 0L;
     /**
-     * <code>uint64 TransactionCreationTime = 3;</code>
+     * <code>uint64 TransactionCreationTime = 5;</code>
      * @return The transactionCreationTime.
      */
     @java.lang.Override
@@ -2460,10 +2551,10 @@ public final class Market {
       return transactionCreationTime_;
     }
 
-    public static final int SENTONBUSTIME_FIELD_NUMBER = 4;
+    public static final int SENTONBUSTIME_FIELD_NUMBER = 6;
     private long sentOnBusTime_ = 0L;
     /**
-     * <code>uint64 SentOnBusTime = 4;</code>
+     * <code>uint64 SentOnBusTime = 6;</code>
      * @return The sentOnBusTime.
      */
     @java.lang.Override
@@ -2471,10 +2562,10 @@ public final class Market {
       return sentOnBusTime_;
     }
 
-    public static final int TAKENFROMBUSTIME_FIELD_NUMBER = 5;
+    public static final int TAKENFROMBUSTIME_FIELD_NUMBER = 7;
     private long takenFromBusTime_ = 0L;
     /**
-     * <code>uint64 TakenFromBusTime = 5;</code>
+     * <code>uint64 TakenFromBusTime = 7;</code>
      * @return The takenFromBusTime.
      */
     @java.lang.Override
@@ -2482,10 +2573,10 @@ public final class Market {
       return takenFromBusTime_;
     }
 
-    public static final int PROCESSEDTIME_FIELD_NUMBER = 6;
+    public static final int PROCESSEDTIME_FIELD_NUMBER = 8;
     private long processedTime_ = 0L;
     /**
-     * <code>uint64 ProcessedTime = 6;</code>
+     * <code>uint64 ProcessedTime = 8;</code>
      * @return The processedTime.
      */
     @java.lang.Override
@@ -2493,10 +2584,10 @@ public final class Market {
       return processedTime_;
     }
 
-    public static final int SENTBACKTOBUSTIME_FIELD_NUMBER = 7;
+    public static final int SENTBACKTOBUSTIME_FIELD_NUMBER = 9;
     private long sentBackToBusTime_ = 0L;
     /**
-     * <code>uint64 SentBackToBusTime = 7;</code>
+     * <code>uint64 SentBackToBusTime = 9;</code>
      * @return The sentBackToBusTime.
      */
     @java.lang.Override
@@ -2504,10 +2595,10 @@ public final class Market {
       return sentBackToBusTime_;
     }
 
-    public static final int TAKENBACKFROMBUSTIME_FIELD_NUMBER = 8;
+    public static final int TAKENBACKFROMBUSTIME_FIELD_NUMBER = 10;
     private long takenBackFromBusTime_ = 0L;
     /**
-     * <code>uint64 TakenBackFromBusTime = 8;</code>
+     * <code>uint64 TakenBackFromBusTime = 10;</code>
      * @return The takenBackFromBusTime.
      */
     @java.lang.Override
@@ -2515,10 +2606,10 @@ public final class Market {
       return takenBackFromBusTime_;
     }
 
-    public static final int CLOSETRANSACTIONTIME_FIELD_NUMBER = 9;
+    public static final int CLOSETRANSACTIONTIME_FIELD_NUMBER = 11;
     private long closeTransactionTime_ = 0L;
     /**
-     * <code>uint64 CloseTransactionTime = 9;</code>
+     * <code>uint64 CloseTransactionTime = 11;</code>
      * @return The closeTransactionTime.
      */
     @java.lang.Override
@@ -2546,26 +2637,32 @@ public final class Market {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(flowID_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2, flowID_);
       }
+      if (processStatus_ != org.example.Market.MarketProcessStatus.PROCESSED_NotProcessed.getNumber()) {
+        output.writeEnum(3, processStatus_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(processStatusDescription_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, processStatusDescription_);
+      }
       if (transactionCreationTime_ != 0L) {
-        output.writeUInt64(3, transactionCreationTime_);
+        output.writeUInt64(5, transactionCreationTime_);
       }
       if (sentOnBusTime_ != 0L) {
-        output.writeUInt64(4, sentOnBusTime_);
+        output.writeUInt64(6, sentOnBusTime_);
       }
       if (takenFromBusTime_ != 0L) {
-        output.writeUInt64(5, takenFromBusTime_);
+        output.writeUInt64(7, takenFromBusTime_);
       }
       if (processedTime_ != 0L) {
-        output.writeUInt64(6, processedTime_);
+        output.writeUInt64(8, processedTime_);
       }
       if (sentBackToBusTime_ != 0L) {
-        output.writeUInt64(7, sentBackToBusTime_);
+        output.writeUInt64(9, sentBackToBusTime_);
       }
       if (takenBackFromBusTime_ != 0L) {
-        output.writeUInt64(8, takenBackFromBusTime_);
+        output.writeUInt64(10, takenBackFromBusTime_);
       }
       if (closeTransactionTime_ != 0L) {
-        output.writeUInt64(9, closeTransactionTime_);
+        output.writeUInt64(11, closeTransactionTime_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2582,33 +2679,40 @@ public final class Market {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(flowID_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2, flowID_);
       }
+      if (processStatus_ != org.example.Market.MarketProcessStatus.PROCESSED_NotProcessed.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, processStatus_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(processStatusDescription_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, processStatusDescription_);
+      }
       if (transactionCreationTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, transactionCreationTime_);
+          .computeUInt64Size(5, transactionCreationTime_);
       }
       if (sentOnBusTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(4, sentOnBusTime_);
+          .computeUInt64Size(6, sentOnBusTime_);
       }
       if (takenFromBusTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(5, takenFromBusTime_);
+          .computeUInt64Size(7, takenFromBusTime_);
       }
       if (processedTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(6, processedTime_);
+          .computeUInt64Size(8, processedTime_);
       }
       if (sentBackToBusTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(7, sentBackToBusTime_);
+          .computeUInt64Size(9, sentBackToBusTime_);
       }
       if (takenBackFromBusTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(8, takenBackFromBusTime_);
+          .computeUInt64Size(10, takenBackFromBusTime_);
       }
       if (closeTransactionTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(9, closeTransactionTime_);
+          .computeUInt64Size(11, closeTransactionTime_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2629,6 +2733,9 @@ public final class Market {
           .equals(other.getSessionID())) return false;
       if (!getFlowID()
           .equals(other.getFlowID())) return false;
+      if (processStatus_ != other.processStatus_) return false;
+      if (!getProcessStatusDescription()
+          .equals(other.getProcessStatusDescription())) return false;
       if (getTransactionCreationTime()
           != other.getTransactionCreationTime()) return false;
       if (getSentOnBusTime()
@@ -2658,6 +2765,10 @@ public final class Market {
       hash = (53 * hash) + getSessionID().hashCode();
       hash = (37 * hash) + FLOWID_FIELD_NUMBER;
       hash = (53 * hash) + getFlowID().hashCode();
+      hash = (37 * hash) + PROCESSSTATUS_FIELD_NUMBER;
+      hash = (53 * hash) + processStatus_;
+      hash = (37 * hash) + PROCESSSTATUSDESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getProcessStatusDescription().hashCode();
       hash = (37 * hash) + TRANSACTIONCREATIONTIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getTransactionCreationTime());
@@ -2812,6 +2923,8 @@ public final class Market {
         bitField0_ = 0;
         sessionID_ = "";
         flowID_ = "";
+        processStatus_ = 0;
+        processStatusDescription_ = "";
         transactionCreationTime_ = 0L;
         sentOnBusTime_ = 0L;
         takenFromBusTime_ = 0L;
@@ -2859,24 +2972,30 @@ public final class Market {
           result.flowID_ = flowID_;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.transactionCreationTime_ = transactionCreationTime_;
+          result.processStatus_ = processStatus_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.sentOnBusTime_ = sentOnBusTime_;
+          result.processStatusDescription_ = processStatusDescription_;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.takenFromBusTime_ = takenFromBusTime_;
+          result.transactionCreationTime_ = transactionCreationTime_;
         }
         if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.processedTime_ = processedTime_;
+          result.sentOnBusTime_ = sentOnBusTime_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.sentBackToBusTime_ = sentBackToBusTime_;
+          result.takenFromBusTime_ = takenFromBusTime_;
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.takenBackFromBusTime_ = takenBackFromBusTime_;
+          result.processedTime_ = processedTime_;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.sentBackToBusTime_ = sentBackToBusTime_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.takenBackFromBusTime_ = takenBackFromBusTime_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
           result.closeTransactionTime_ = closeTransactionTime_;
         }
       }
@@ -2901,6 +3020,14 @@ public final class Market {
         if (!other.getFlowID().isEmpty()) {
           flowID_ = other.flowID_;
           bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.processStatus_ != 0) {
+          setProcessStatusValue(other.getProcessStatusValue());
+        }
+        if (!other.getProcessStatusDescription().isEmpty()) {
+          processStatusDescription_ = other.processStatusDescription_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.getTransactionCreationTime() != 0L) {
@@ -2961,40 +3088,50 @@ public final class Market {
                 break;
               } // case 18
               case 24: {
-                transactionCreationTime_ = input.readUInt64();
+                processStatus_ = input.readEnum();
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
-              case 32: {
-                sentOnBusTime_ = input.readUInt64();
+              case 34: {
+                processStatusDescription_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000008;
                 break;
-              } // case 32
+              } // case 34
               case 40: {
-                takenFromBusTime_ = input.readUInt64();
+                transactionCreationTime_ = input.readUInt64();
                 bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 48: {
-                processedTime_ = input.readUInt64();
+                sentOnBusTime_ = input.readUInt64();
                 bitField0_ |= 0x00000020;
                 break;
               } // case 48
               case 56: {
-                sentBackToBusTime_ = input.readUInt64();
+                takenFromBusTime_ = input.readUInt64();
                 bitField0_ |= 0x00000040;
                 break;
               } // case 56
               case 64: {
-                takenBackFromBusTime_ = input.readUInt64();
+                processedTime_ = input.readUInt64();
                 bitField0_ |= 0x00000080;
                 break;
               } // case 64
               case 72: {
-                closeTransactionTime_ = input.readUInt64();
+                sentBackToBusTime_ = input.readUInt64();
                 bitField0_ |= 0x00000100;
                 break;
               } // case 72
+              case 80: {
+                takenBackFromBusTime_ = input.readUInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 88: {
+                closeTransactionTime_ = input.readUInt64();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3156,9 +3293,134 @@ public final class Market {
         return this;
       }
 
+      private int processStatus_ = 0;
+      /**
+       * <code>.org.example.MarketProcessStatus ProcessStatus = 3;</code>
+       * @return The enum numeric value on the wire for processStatus.
+       */
+      @java.lang.Override public int getProcessStatusValue() {
+        return processStatus_;
+      }
+      /**
+       * <code>.org.example.MarketProcessStatus ProcessStatus = 3;</code>
+       * @param value The enum numeric value on the wire for processStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProcessStatusValue(int value) {
+        processStatus_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.MarketProcessStatus ProcessStatus = 3;</code>
+       * @return The processStatus.
+       */
+      @java.lang.Override
+      public org.example.Market.MarketProcessStatus getProcessStatus() {
+        org.example.Market.MarketProcessStatus result = org.example.Market.MarketProcessStatus.forNumber(processStatus_);
+        return result == null ? org.example.Market.MarketProcessStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.org.example.MarketProcessStatus ProcessStatus = 3;</code>
+       * @param value The processStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProcessStatus(org.example.Market.MarketProcessStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        processStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.org.example.MarketProcessStatus ProcessStatus = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProcessStatus() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        processStatus_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object processStatusDescription_ = "";
+      /**
+       * <code>string ProcessStatusDescription = 4;</code>
+       * @return The processStatusDescription.
+       */
+      public java.lang.String getProcessStatusDescription() {
+        java.lang.Object ref = processStatusDescription_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          processStatusDescription_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ProcessStatusDescription = 4;</code>
+       * @return The bytes for processStatusDescription.
+       */
+      public com.google.protobuf.ByteString
+          getProcessStatusDescriptionBytes() {
+        java.lang.Object ref = processStatusDescription_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          processStatusDescription_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ProcessStatusDescription = 4;</code>
+       * @param value The processStatusDescription to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProcessStatusDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        processStatusDescription_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ProcessStatusDescription = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProcessStatusDescription() {
+        processStatusDescription_ = getDefaultInstance().getProcessStatusDescription();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ProcessStatusDescription = 4;</code>
+       * @param value The bytes for processStatusDescription to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProcessStatusDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        processStatusDescription_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
       private long transactionCreationTime_ ;
       /**
-       * <code>uint64 TransactionCreationTime = 3;</code>
+       * <code>uint64 TransactionCreationTime = 5;</code>
        * @return The transactionCreationTime.
        */
       @java.lang.Override
@@ -3166,23 +3428,23 @@ public final class Market {
         return transactionCreationTime_;
       }
       /**
-       * <code>uint64 TransactionCreationTime = 3;</code>
+       * <code>uint64 TransactionCreationTime = 5;</code>
        * @param value The transactionCreationTime to set.
        * @return This builder for chaining.
        */
       public Builder setTransactionCreationTime(long value) {
 
         transactionCreationTime_ = value;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 TransactionCreationTime = 3;</code>
+       * <code>uint64 TransactionCreationTime = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearTransactionCreationTime() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000010);
         transactionCreationTime_ = 0L;
         onChanged();
         return this;
@@ -3190,7 +3452,7 @@ public final class Market {
 
       private long sentOnBusTime_ ;
       /**
-       * <code>uint64 SentOnBusTime = 4;</code>
+       * <code>uint64 SentOnBusTime = 6;</code>
        * @return The sentOnBusTime.
        */
       @java.lang.Override
@@ -3198,23 +3460,23 @@ public final class Market {
         return sentOnBusTime_;
       }
       /**
-       * <code>uint64 SentOnBusTime = 4;</code>
+       * <code>uint64 SentOnBusTime = 6;</code>
        * @param value The sentOnBusTime to set.
        * @return This builder for chaining.
        */
       public Builder setSentOnBusTime(long value) {
 
         sentOnBusTime_ = value;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 SentOnBusTime = 4;</code>
+       * <code>uint64 SentOnBusTime = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearSentOnBusTime() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000020);
         sentOnBusTime_ = 0L;
         onChanged();
         return this;
@@ -3222,7 +3484,7 @@ public final class Market {
 
       private long takenFromBusTime_ ;
       /**
-       * <code>uint64 TakenFromBusTime = 5;</code>
+       * <code>uint64 TakenFromBusTime = 7;</code>
        * @return The takenFromBusTime.
        */
       @java.lang.Override
@@ -3230,23 +3492,23 @@ public final class Market {
         return takenFromBusTime_;
       }
       /**
-       * <code>uint64 TakenFromBusTime = 5;</code>
+       * <code>uint64 TakenFromBusTime = 7;</code>
        * @param value The takenFromBusTime to set.
        * @return This builder for chaining.
        */
       public Builder setTakenFromBusTime(long value) {
 
         takenFromBusTime_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 TakenFromBusTime = 5;</code>
+       * <code>uint64 TakenFromBusTime = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearTakenFromBusTime() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000040);
         takenFromBusTime_ = 0L;
         onChanged();
         return this;
@@ -3254,7 +3516,7 @@ public final class Market {
 
       private long processedTime_ ;
       /**
-       * <code>uint64 ProcessedTime = 6;</code>
+       * <code>uint64 ProcessedTime = 8;</code>
        * @return The processedTime.
        */
       @java.lang.Override
@@ -3262,23 +3524,23 @@ public final class Market {
         return processedTime_;
       }
       /**
-       * <code>uint64 ProcessedTime = 6;</code>
+       * <code>uint64 ProcessedTime = 8;</code>
        * @param value The processedTime to set.
        * @return This builder for chaining.
        */
       public Builder setProcessedTime(long value) {
 
         processedTime_ = value;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 ProcessedTime = 6;</code>
+       * <code>uint64 ProcessedTime = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearProcessedTime() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000080);
         processedTime_ = 0L;
         onChanged();
         return this;
@@ -3286,7 +3548,7 @@ public final class Market {
 
       private long sentBackToBusTime_ ;
       /**
-       * <code>uint64 SentBackToBusTime = 7;</code>
+       * <code>uint64 SentBackToBusTime = 9;</code>
        * @return The sentBackToBusTime.
        */
       @java.lang.Override
@@ -3294,23 +3556,23 @@ public final class Market {
         return sentBackToBusTime_;
       }
       /**
-       * <code>uint64 SentBackToBusTime = 7;</code>
+       * <code>uint64 SentBackToBusTime = 9;</code>
        * @param value The sentBackToBusTime to set.
        * @return This builder for chaining.
        */
       public Builder setSentBackToBusTime(long value) {
 
         sentBackToBusTime_ = value;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 SentBackToBusTime = 7;</code>
+       * <code>uint64 SentBackToBusTime = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearSentBackToBusTime() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000100);
         sentBackToBusTime_ = 0L;
         onChanged();
         return this;
@@ -3318,7 +3580,7 @@ public final class Market {
 
       private long takenBackFromBusTime_ ;
       /**
-       * <code>uint64 TakenBackFromBusTime = 8;</code>
+       * <code>uint64 TakenBackFromBusTime = 10;</code>
        * @return The takenBackFromBusTime.
        */
       @java.lang.Override
@@ -3326,23 +3588,23 @@ public final class Market {
         return takenBackFromBusTime_;
       }
       /**
-       * <code>uint64 TakenBackFromBusTime = 8;</code>
+       * <code>uint64 TakenBackFromBusTime = 10;</code>
        * @param value The takenBackFromBusTime to set.
        * @return This builder for chaining.
        */
       public Builder setTakenBackFromBusTime(long value) {
 
         takenBackFromBusTime_ = value;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 TakenBackFromBusTime = 8;</code>
+       * <code>uint64 TakenBackFromBusTime = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearTakenBackFromBusTime() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000200);
         takenBackFromBusTime_ = 0L;
         onChanged();
         return this;
@@ -3350,7 +3612,7 @@ public final class Market {
 
       private long closeTransactionTime_ ;
       /**
-       * <code>uint64 CloseTransactionTime = 9;</code>
+       * <code>uint64 CloseTransactionTime = 11;</code>
        * @return The closeTransactionTime.
        */
       @java.lang.Override
@@ -3358,23 +3620,23 @@ public final class Market {
         return closeTransactionTime_;
       }
       /**
-       * <code>uint64 CloseTransactionTime = 9;</code>
+       * <code>uint64 CloseTransactionTime = 11;</code>
        * @param value The closeTransactionTime to set.
        * @return This builder for chaining.
        */
       public Builder setCloseTransactionTime(long value) {
 
         closeTransactionTime_ = value;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 CloseTransactionTime = 9;</code>
+       * <code>uint64 CloseTransactionTime = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearCloseTransactionTime() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000400);
         closeTransactionTime_ = 0L;
         onChanged();
         return this;
@@ -3629,17 +3891,6 @@ public final class Market {
     org.example.Market.MarketQuoteRequestStatus getStatus();
 
     /**
-     * <code>.org.example.MarketProcessStatus ProcessStatus = 168;</code>
-     * @return The enum numeric value on the wire for processStatus.
-     */
-    int getProcessStatusValue();
-    /**
-     * <code>.org.example.MarketProcessStatus ProcessStatus = 168;</code>
-     * @return The processStatus.
-     */
-    org.example.Market.MarketProcessStatus getProcessStatus();
-
-    /**
      * <code>.org.example.MarketInternalInfo Internals = 499;</code>
      * @return Whether the internals field is set.
      */
@@ -3685,7 +3936,6 @@ public final class Market {
       destinationMember_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       status_ = 0;
-      processStatus_ = 0;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -4104,24 +4354,6 @@ public final class Market {
       return result == null ? org.example.Market.MarketQuoteRequestStatus.UNRECOGNIZED : result;
     }
 
-    public static final int PROCESSSTATUS_FIELD_NUMBER = 168;
-    private int processStatus_ = 0;
-    /**
-     * <code>.org.example.MarketProcessStatus ProcessStatus = 168;</code>
-     * @return The enum numeric value on the wire for processStatus.
-     */
-    @java.lang.Override public int getProcessStatusValue() {
-      return processStatus_;
-    }
-    /**
-     * <code>.org.example.MarketProcessStatus ProcessStatus = 168;</code>
-     * @return The processStatus.
-     */
-    @java.lang.Override public org.example.Market.MarketProcessStatus getProcessStatus() {
-      org.example.Market.MarketProcessStatus result = org.example.Market.MarketProcessStatus.forNumber(processStatus_);
-      return result == null ? org.example.Market.MarketProcessStatus.UNRECOGNIZED : result;
-    }
-
     public static final int INTERNALS_FIELD_NUMBER = 499;
     private org.example.Market.MarketInternalInfo internals_;
     /**
@@ -4216,9 +4448,6 @@ public final class Market {
       if (status_ != org.example.Market.MarketQuoteRequestStatus.STATUS_Active.getNumber()) {
         output.writeEnum(167, status_);
       }
-      if (processStatus_ != org.example.Market.MarketProcessStatus.PROCESSED_NotProcessed.getNumber()) {
-        output.writeEnum(168, processStatus_);
-      }
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(499, getInternals());
       }
@@ -4303,10 +4532,6 @@ public final class Market {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(167, status_);
       }
-      if (processStatus_ != org.example.Market.MarketProcessStatus.PROCESSED_NotProcessed.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(168, processStatus_);
-      }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(499, getInternals());
@@ -4368,7 +4593,6 @@ public final class Market {
       if (getValidityTime()
           != other.getValidityTime()) return false;
       if (status_ != other.status_) return false;
-      if (processStatus_ != other.processStatus_) return false;
       if (hasInternals() != other.hasInternals()) return false;
       if (hasInternals()) {
         if (!getInternals()
@@ -4435,8 +4659,6 @@ public final class Market {
           getValidityTime());
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
-      hash = (37 * hash) + PROCESSSTATUS_FIELD_NUMBER;
-      hash = (53 * hash) + processStatus_;
       if (hasInternals()) {
         hash = (37 * hash) + INTERNALS_FIELD_NUMBER;
         hash = (53 * hash) + getInternals().hashCode();
@@ -4612,7 +4834,6 @@ public final class Market {
         validityDate_ = 0L;
         validityTime_ = 0L;
         status_ = 0;
-        processStatus_ = 0;
         internals_ = null;
         if (internalsBuilder_ != null) {
           internalsBuilder_.dispose();
@@ -4717,9 +4938,6 @@ public final class Market {
           result.status_ = status_;
         }
         if (((from_bitField0_ & 0x00040000) != 0)) {
-          result.processStatus_ = processStatus_;
-        }
-        if (((from_bitField0_ & 0x00080000) != 0)) {
           result.internals_ = internalsBuilder_ == null
               ? internals_
               : internalsBuilder_.build();
@@ -4808,9 +5026,6 @@ public final class Market {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
-        }
-        if (other.processStatus_ != 0) {
-          setProcessStatusValue(other.getProcessStatusValue());
         }
         if (other.hasInternals()) {
           mergeInternals(other.getInternals());
@@ -4938,16 +5153,11 @@ public final class Market {
                 bitField0_ |= 0x00020000;
                 break;
               } // case 1336
-              case 1344: {
-                processStatus_ = input.readEnum();
-                bitField0_ |= 0x00040000;
-                break;
-              } // case 1344
               case 3994: {
                 input.readMessage(
                     getInternalsFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00080000;
+                bitField0_ |= 0x00040000;
                 break;
               } // case 3994
               default: {
@@ -6112,59 +6322,6 @@ public final class Market {
         return this;
       }
 
-      private int processStatus_ = 0;
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 168;</code>
-       * @return The enum numeric value on the wire for processStatus.
-       */
-      @java.lang.Override public int getProcessStatusValue() {
-        return processStatus_;
-      }
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 168;</code>
-       * @param value The enum numeric value on the wire for processStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProcessStatusValue(int value) {
-        processStatus_ = value;
-        bitField0_ |= 0x00040000;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 168;</code>
-       * @return The processStatus.
-       */
-      @java.lang.Override
-      public org.example.Market.MarketProcessStatus getProcessStatus() {
-        org.example.Market.MarketProcessStatus result = org.example.Market.MarketProcessStatus.forNumber(processStatus_);
-        return result == null ? org.example.Market.MarketProcessStatus.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 168;</code>
-       * @param value The processStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProcessStatus(org.example.Market.MarketProcessStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00040000;
-        processStatus_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 168;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProcessStatus() {
-        bitField0_ = (bitField0_ & ~0x00040000);
-        processStatus_ = 0;
-        onChanged();
-        return this;
-      }
-
       private org.example.Market.MarketInternalInfo internals_;
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.MarketInternalInfo, org.example.Market.MarketInternalInfo.Builder, org.example.Market.MarketInternalInfoOrBuilder> internalsBuilder_;
@@ -6173,7 +6330,7 @@ public final class Market {
        * @return Whether the internals field is set.
        */
       public boolean hasInternals() {
-        return ((bitField0_ & 0x00080000) != 0);
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <code>.org.example.MarketInternalInfo Internals = 499;</code>
@@ -6198,7 +6355,7 @@ public final class Market {
         } else {
           internalsBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -6212,7 +6369,7 @@ public final class Market {
         } else {
           internalsBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -6221,7 +6378,7 @@ public final class Market {
        */
       public Builder mergeInternals(org.example.Market.MarketInternalInfo value) {
         if (internalsBuilder_ == null) {
-          if (((bitField0_ & 0x00080000) != 0) &&
+          if (((bitField0_ & 0x00040000) != 0) &&
             internals_ != null &&
             internals_ != org.example.Market.MarketInternalInfo.getDefaultInstance()) {
             getInternalsBuilder().mergeFrom(value);
@@ -6232,7 +6389,7 @@ public final class Market {
           internalsBuilder_.mergeFrom(value);
         }
         if (internals_ != null) {
-          bitField0_ |= 0x00080000;
+          bitField0_ |= 0x00040000;
           onChanged();
         }
         return this;
@@ -6241,7 +6398,7 @@ public final class Market {
        * <code>.org.example.MarketInternalInfo Internals = 499;</code>
        */
       public Builder clearInternals() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         internals_ = null;
         if (internalsBuilder_ != null) {
           internalsBuilder_.dispose();
@@ -6254,7 +6411,7 @@ public final class Market {
        * <code>.org.example.MarketInternalInfo Internals = 499;</code>
        */
       public org.example.Market.MarketInternalInfo.Builder getInternalsBuilder() {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00040000;
         onChanged();
         return getInternalsFieldBuilder().getBuilder();
       }
@@ -6540,17 +6697,6 @@ public final class Market {
     org.example.Market.MarketQuoteRequestStatus getStatus();
 
     /**
-     * <code>.org.example.MarketProcessStatus ProcessStatus = 519;</code>
-     * @return The enum numeric value on the wire for processStatus.
-     */
-    int getProcessStatusValue();
-    /**
-     * <code>.org.example.MarketProcessStatus ProcessStatus = 519;</code>
-     * @return The processStatus.
-     */
-    org.example.Market.MarketProcessStatus getProcessStatus();
-
-    /**
      * <code>.org.example.MarketInternalInfo Internals = 999;</code>
      * @return Whether the internals field is set.
      */
@@ -6601,7 +6747,6 @@ public final class Market {
       counterpartMemberID_ = "";
       counterpartOperatorID_ = "";
       status_ = 0;
-      processStatus_ = 0;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -7089,24 +7234,6 @@ public final class Market {
       return result == null ? org.example.Market.MarketQuoteRequestStatus.UNRECOGNIZED : result;
     }
 
-    public static final int PROCESSSTATUS_FIELD_NUMBER = 519;
-    private int processStatus_ = 0;
-    /**
-     * <code>.org.example.MarketProcessStatus ProcessStatus = 519;</code>
-     * @return The enum numeric value on the wire for processStatus.
-     */
-    @java.lang.Override public int getProcessStatusValue() {
-      return processStatus_;
-    }
-    /**
-     * <code>.org.example.MarketProcessStatus ProcessStatus = 519;</code>
-     * @return The processStatus.
-     */
-    @java.lang.Override public org.example.Market.MarketProcessStatus getProcessStatus() {
-      org.example.Market.MarketProcessStatus result = org.example.Market.MarketProcessStatus.forNumber(processStatus_);
-      return result == null ? org.example.Market.MarketProcessStatus.UNRECOGNIZED : result;
-    }
-
     public static final int INTERNALS_FIELD_NUMBER = 999;
     private org.example.Market.MarketInternalInfo internals_;
     /**
@@ -7204,9 +7331,6 @@ public final class Market {
       if (status_ != org.example.Market.MarketQuoteRequestStatus.STATUS_Active.getNumber()) {
         output.writeEnum(518, status_);
       }
-      if (processStatus_ != org.example.Market.MarketProcessStatus.PROCESSED_NotProcessed.getNumber()) {
-        output.writeEnum(519, processStatus_);
-      }
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(999, getInternals());
       }
@@ -7288,10 +7412,6 @@ public final class Market {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(518, status_);
       }
-      if (processStatus_ != org.example.Market.MarketProcessStatus.PROCESSED_NotProcessed.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(519, processStatus_);
-      }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(999, getInternals());
@@ -7355,7 +7475,6 @@ public final class Market {
       if (getValidityTime()
           != other.getValidityTime()) return false;
       if (status_ != other.status_) return false;
-      if (processStatus_ != other.processStatus_) return false;
       if (hasInternals() != other.hasInternals()) return false;
       if (hasInternals()) {
         if (!getInternals()
@@ -7422,8 +7541,6 @@ public final class Market {
           getValidityTime());
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
-      hash = (37 * hash) + PROCESSSTATUS_FIELD_NUMBER;
-      hash = (53 * hash) + processStatus_;
       if (hasInternals()) {
         hash = (37 * hash) + INTERNALS_FIELD_NUMBER;
         hash = (53 * hash) + getInternals().hashCode();
@@ -7603,7 +7720,6 @@ public final class Market {
         validityDate_ = 0L;
         validityTime_ = 0L;
         status_ = 0;
-        processStatus_ = 0;
         internals_ = null;
         if (internalsBuilder_ != null) {
           internalsBuilder_.dispose();
@@ -7710,9 +7826,6 @@ public final class Market {
           result.status_ = status_;
         }
         if (((from_bitField0_ & 0x00080000) != 0)) {
-          result.processStatus_ = processStatus_;
-        }
-        if (((from_bitField0_ & 0x00100000) != 0)) {
           result.internals_ = internalsBuilder_ == null
               ? internals_
               : internalsBuilder_.build();
@@ -7803,9 +7916,6 @@ public final class Market {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
-        }
-        if (other.processStatus_ != 0) {
-          setProcessStatusValue(other.getProcessStatusValue());
         }
         if (other.hasInternals()) {
           mergeInternals(other.getInternals());
@@ -7937,16 +8047,11 @@ public final class Market {
                 bitField0_ |= 0x00040000;
                 break;
               } // case 4144
-              case 4152: {
-                processStatus_ = input.readEnum();
-                bitField0_ |= 0x00080000;
-                break;
-              } // case 4152
               case 7994: {
                 input.readMessage(
                     getInternalsFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00100000;
+                bitField0_ |= 0x00080000;
                 break;
               } // case 7994
               default: {
@@ -9184,59 +9289,6 @@ public final class Market {
         return this;
       }
 
-      private int processStatus_ = 0;
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 519;</code>
-       * @return The enum numeric value on the wire for processStatus.
-       */
-      @java.lang.Override public int getProcessStatusValue() {
-        return processStatus_;
-      }
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 519;</code>
-       * @param value The enum numeric value on the wire for processStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProcessStatusValue(int value) {
-        processStatus_ = value;
-        bitField0_ |= 0x00080000;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 519;</code>
-       * @return The processStatus.
-       */
-      @java.lang.Override
-      public org.example.Market.MarketProcessStatus getProcessStatus() {
-        org.example.Market.MarketProcessStatus result = org.example.Market.MarketProcessStatus.forNumber(processStatus_);
-        return result == null ? org.example.Market.MarketProcessStatus.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 519;</code>
-       * @param value The processStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProcessStatus(org.example.Market.MarketProcessStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00080000;
-        processStatus_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 519;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProcessStatus() {
-        bitField0_ = (bitField0_ & ~0x00080000);
-        processStatus_ = 0;
-        onChanged();
-        return this;
-      }
-
       private org.example.Market.MarketInternalInfo internals_;
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.MarketInternalInfo, org.example.Market.MarketInternalInfo.Builder, org.example.Market.MarketInternalInfoOrBuilder> internalsBuilder_;
@@ -9245,7 +9297,7 @@ public final class Market {
        * @return Whether the internals field is set.
        */
       public boolean hasInternals() {
-        return ((bitField0_ & 0x00100000) != 0);
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <code>.org.example.MarketInternalInfo Internals = 999;</code>
@@ -9270,7 +9322,7 @@ public final class Market {
         } else {
           internalsBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
@@ -9284,7 +9336,7 @@ public final class Market {
         } else {
           internalsBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
@@ -9293,7 +9345,7 @@ public final class Market {
        */
       public Builder mergeInternals(org.example.Market.MarketInternalInfo value) {
         if (internalsBuilder_ == null) {
-          if (((bitField0_ & 0x00100000) != 0) &&
+          if (((bitField0_ & 0x00080000) != 0) &&
             internals_ != null &&
             internals_ != org.example.Market.MarketInternalInfo.getDefaultInstance()) {
             getInternalsBuilder().mergeFrom(value);
@@ -9304,7 +9356,7 @@ public final class Market {
           internalsBuilder_.mergeFrom(value);
         }
         if (internals_ != null) {
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x00080000;
           onChanged();
         }
         return this;
@@ -9313,7 +9365,7 @@ public final class Market {
        * <code>.org.example.MarketInternalInfo Internals = 999;</code>
        */
       public Builder clearInternals() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         internals_ = null;
         if (internalsBuilder_ != null) {
           internalsBuilder_.dispose();
@@ -9326,7 +9378,7 @@ public final class Market {
        * <code>.org.example.MarketInternalInfo Internals = 999;</code>
        */
       public org.example.Market.MarketInternalInfo.Builder getInternalsBuilder() {
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00080000;
         onChanged();
         return getInternalsFieldBuilder().getBuilder();
       }
@@ -9624,17 +9676,6 @@ public final class Market {
     org.example.Market.MarketQuoteRequestStatus getStatus();
 
     /**
-     * <code>.org.example.MarketProcessStatus ProcessStatus = 1020;</code>
-     * @return The enum numeric value on the wire for processStatus.
-     */
-    int getProcessStatusValue();
-    /**
-     * <code>.org.example.MarketProcessStatus ProcessStatus = 1020;</code>
-     * @return The processStatus.
-     */
-    org.example.Market.MarketProcessStatus getProcessStatus();
-
-    /**
      * <code>.org.example.MarketInternalInfo Internals = 1499;</code>
      * @return Whether the internals field is set.
      */
@@ -9686,7 +9727,6 @@ public final class Market {
       counterpartMemberID_ = "";
       counterpartOperatorID_ = "";
       status_ = 0;
-      processStatus_ = 0;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -10213,24 +10253,6 @@ public final class Market {
       return result == null ? org.example.Market.MarketQuoteRequestStatus.UNRECOGNIZED : result;
     }
 
-    public static final int PROCESSSTATUS_FIELD_NUMBER = 1020;
-    private int processStatus_ = 0;
-    /**
-     * <code>.org.example.MarketProcessStatus ProcessStatus = 1020;</code>
-     * @return The enum numeric value on the wire for processStatus.
-     */
-    @java.lang.Override public int getProcessStatusValue() {
-      return processStatus_;
-    }
-    /**
-     * <code>.org.example.MarketProcessStatus ProcessStatus = 1020;</code>
-     * @return The processStatus.
-     */
-    @java.lang.Override public org.example.Market.MarketProcessStatus getProcessStatus() {
-      org.example.Market.MarketProcessStatus result = org.example.Market.MarketProcessStatus.forNumber(processStatus_);
-      return result == null ? org.example.Market.MarketProcessStatus.UNRECOGNIZED : result;
-    }
-
     public static final int INTERNALS_FIELD_NUMBER = 1499;
     private org.example.Market.MarketInternalInfo internals_;
     /**
@@ -10331,9 +10353,6 @@ public final class Market {
       if (status_ != org.example.Market.MarketQuoteRequestStatus.STATUS_Active.getNumber()) {
         output.writeEnum(1019, status_);
       }
-      if (processStatus_ != org.example.Market.MarketProcessStatus.PROCESSED_NotProcessed.getNumber()) {
-        output.writeEnum(1020, processStatus_);
-      }
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(1499, getInternals());
       }
@@ -10418,10 +10437,6 @@ public final class Market {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1019, status_);
       }
-      if (processStatus_ != org.example.Market.MarketProcessStatus.PROCESSED_NotProcessed.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1020, processStatus_);
-      }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1499, getInternals());
@@ -10487,7 +10502,6 @@ public final class Market {
       if (getValidityTime()
           != other.getValidityTime()) return false;
       if (status_ != other.status_) return false;
-      if (processStatus_ != other.processStatus_) return false;
       if (hasInternals() != other.hasInternals()) return false;
       if (hasInternals()) {
         if (!getInternals()
@@ -10556,8 +10570,6 @@ public final class Market {
           getValidityTime());
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
-      hash = (37 * hash) + PROCESSSTATUS_FIELD_NUMBER;
-      hash = (53 * hash) + processStatus_;
       if (hasInternals()) {
         hash = (37 * hash) + INTERNALS_FIELD_NUMBER;
         hash = (53 * hash) + getInternals().hashCode();
@@ -10738,7 +10750,6 @@ public final class Market {
         validityDate_ = 0L;
         validityTime_ = 0L;
         status_ = 0;
-        processStatus_ = 0;
         internals_ = null;
         if (internalsBuilder_ != null) {
           internalsBuilder_.dispose();
@@ -10848,9 +10859,6 @@ public final class Market {
           result.status_ = status_;
         }
         if (((from_bitField0_ & 0x00100000) != 0)) {
-          result.processStatus_ = processStatus_;
-        }
-        if (((from_bitField0_ & 0x00200000) != 0)) {
           result.internals_ = internalsBuilder_ == null
               ? internals_
               : internalsBuilder_.build();
@@ -10946,9 +10954,6 @@ public final class Market {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
-        }
-        if (other.processStatus_ != 0) {
-          setProcessStatusValue(other.getProcessStatusValue());
         }
         if (other.hasInternals()) {
           mergeInternals(other.getInternals());
@@ -11085,16 +11090,11 @@ public final class Market {
                 bitField0_ |= 0x00080000;
                 break;
               } // case 8152
-              case 8160: {
-                processStatus_ = input.readEnum();
-                bitField0_ |= 0x00100000;
-                break;
-              } // case 8160
               case 11994: {
                 input.readMessage(
                     getInternalsFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00200000;
+                bitField0_ |= 0x00100000;
                 break;
               } // case 11994
               default: {
@@ -12404,59 +12404,6 @@ public final class Market {
         return this;
       }
 
-      private int processStatus_ = 0;
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 1020;</code>
-       * @return The enum numeric value on the wire for processStatus.
-       */
-      @java.lang.Override public int getProcessStatusValue() {
-        return processStatus_;
-      }
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 1020;</code>
-       * @param value The enum numeric value on the wire for processStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProcessStatusValue(int value) {
-        processStatus_ = value;
-        bitField0_ |= 0x00100000;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 1020;</code>
-       * @return The processStatus.
-       */
-      @java.lang.Override
-      public org.example.Market.MarketProcessStatus getProcessStatus() {
-        org.example.Market.MarketProcessStatus result = org.example.Market.MarketProcessStatus.forNumber(processStatus_);
-        return result == null ? org.example.Market.MarketProcessStatus.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 1020;</code>
-       * @param value The processStatus to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProcessStatus(org.example.Market.MarketProcessStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00100000;
-        processStatus_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.org.example.MarketProcessStatus ProcessStatus = 1020;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProcessStatus() {
-        bitField0_ = (bitField0_ & ~0x00100000);
-        processStatus_ = 0;
-        onChanged();
-        return this;
-      }
-
       private org.example.Market.MarketInternalInfo internals_;
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.MarketInternalInfo, org.example.Market.MarketInternalInfo.Builder, org.example.Market.MarketInternalInfoOrBuilder> internalsBuilder_;
@@ -12465,7 +12412,7 @@ public final class Market {
        * @return Whether the internals field is set.
        */
       public boolean hasInternals() {
-        return ((bitField0_ & 0x00200000) != 0);
+        return ((bitField0_ & 0x00100000) != 0);
       }
       /**
        * <code>.org.example.MarketInternalInfo Internals = 1499;</code>
@@ -12490,7 +12437,7 @@ public final class Market {
         } else {
           internalsBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
@@ -12504,7 +12451,7 @@ public final class Market {
         } else {
           internalsBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
@@ -12513,7 +12460,7 @@ public final class Market {
        */
       public Builder mergeInternals(org.example.Market.MarketInternalInfo value) {
         if (internalsBuilder_ == null) {
-          if (((bitField0_ & 0x00200000) != 0) &&
+          if (((bitField0_ & 0x00100000) != 0) &&
             internals_ != null &&
             internals_ != org.example.Market.MarketInternalInfo.getDefaultInstance()) {
             getInternalsBuilder().mergeFrom(value);
@@ -12524,7 +12471,7 @@ public final class Market {
           internalsBuilder_.mergeFrom(value);
         }
         if (internals_ != null) {
-          bitField0_ |= 0x00200000;
+          bitField0_ |= 0x00100000;
           onChanged();
         }
         return this;
@@ -12533,7 +12480,7 @@ public final class Market {
        * <code>.org.example.MarketInternalInfo Internals = 1499;</code>
        */
       public Builder clearInternals() {
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         internals_ = null;
         if (internalsBuilder_ != null) {
           internalsBuilder_.dispose();
@@ -12546,7 +12493,7 @@ public final class Market {
        * <code>.org.example.MarketInternalInfo Internals = 1499;</code>
        */
       public org.example.Market.MarketInternalInfo.Builder getInternalsBuilder() {
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x00100000;
         onChanged();
         return getInternalsFieldBuilder().getBuilder();
       }
@@ -22948,142 +22895,141 @@ public final class Market {
       "oteLeg\022\022\n\nSecurityID\030\001 \001(\t\022\r\n\005Price\030\002 \001(" +
       "\001\022\r\n\005Yield\030\003 \001(\001\022\020\n\010Quantity\030\004 \001(\001\022\022\n\nMi" +
       "nimumQty\030\005 \001(\001\022(\n\004Verb\030\006 \001(\0162\032.org.examp" +
-      "le.MarketLegVerb\022\020\n\010MarketID\030\007 \001(\t\"\367\001\n\022M" +
+      "le.MarketLegVerb\022\020\n\010MarketID\030\007 \001(\t\"\322\002\n\022M" +
       "arketInternalInfo\022\021\n\tSessionID\030\001 \001(\t\022\016\n\006" +
-      "FlowID\030\002 \001(\t\022\037\n\027TransactionCreationTime\030" +
-      "\003 \001(\004\022\025\n\rSentOnBusTime\030\004 \001(\004\022\030\n\020TakenFro" +
-      "mBusTime\030\005 \001(\004\022\025\n\rProcessedTime\030\006 \001(\004\022\031\n" +
-      "\021SentBackToBusTime\030\007 \001(\004\022\034\n\024TakenBackFro" +
-      "mBusTime\030\010 \001(\004\022\034\n\024CloseTransactionTime\030\t" +
-      " \001(\004\"\357\005\n\022MarketQuoteRequest\022\027\n\016QuoteRequ" +
-      "estID\030\226\001 \001(\t\022\035\n\024ClientQuoteRequestID\030\227\001 " +
-      "\001(\t\022:\n\010MlegType\030\230\001 \001(\0162\'.org.example.Mar" +
-      "ketQuoteRequestMLegType\0222\n\004Type\030\231\001 \001(\0162#" +
-      ".org.example.MarketQuoteRequestType\022.\n\010F" +
-      "irstLeg\030\232\001 \001(\0132\033.org.example.MarketQuote" +
-      "Leg\022/\n\tSecondLeg\030\233\001 \001(\0132\033.org.example.Ma" +
-      "rketQuoteLeg\022.\n\010ThirdLeg\030\234\001 \001(\0132\033.org.ex" +
-      "ample.MarketQuoteLeg\022\027\n\016IssuerMemberID\030\235" +
-      "\001 \001(\t\022\031\n\020IssuerOperatorID\030\236\001 \001(\t\022#\n\032Numb" +
-      "erOfDestinationMembers\030\237\001 \001(\005\022\032\n\021Destina" +
-      "tionMember\030\240\001 \003(\t\022\025\n\014CreationDate\030\241\001 \001(\004" +
-      "\022\025\n\014CreationTime\030\242\001 \001(\004\022\023\n\nUpdateDate\030\243\001" +
-      " \001(\004\022\023\n\nUpdateTime\030\244\001 \001(\004\022\025\n\014ValidityDat" +
-      "e\030\245\001 \001(\004\022\025\n\014ValidityTime\030\246\001 \001(\004\0226\n\006Statu" +
-      "s\030\247\001 \001(\0162%.org.example.MarketQuoteReques" +
-      "tStatus\0228\n\rProcessStatus\030\250\001 \001(\0162 .org.ex" +
-      "ample.MarketProcessStatus\0223\n\tInternals\030\363" +
-      "\003 \001(\0132\037.org.example.MarketInternalInfo\"\360" +
-      "\005\n\013MarketQuote\022\020\n\007QuoteID\030\364\003 \001(\t\022\026\n\rClie" +
-      "ntQuoteID\030\365\003 \001(\t\022\027\n\016QuoteRequestID\030\366\003 \001(" +
-      "\t\022:\n\010MlegType\030\367\003 \001(\0162\'.org.example.Marke" +
-      "tQuoteRequestMLegType\0222\n\004Type\030\370\003 \001(\0162#.o" +
-      "rg.example.MarketQuoteRequestType\022.\n\010Fir" +
-      "stLeg\030\371\003 \001(\0132\033.org.example.MarketQuoteLe" +
-      "g\022/\n\tSecondLeg\030\372\003 \001(\0132\033.org.example.Mark" +
-      "etQuoteLeg\022.\n\010ThirdLeg\030\373\003 \001(\0132\033.org.exam" +
-      "ple.MarketQuoteLeg\022\027\n\016IssuerMemberID\030\374\003 " +
-      "\001(\t\022\031\n\020IssuerOperatorID\030\375\003 \001(\t\022\034\n\023Counte" +
-      "rpartMemberID\030\376\003 \001(\t\022\036\n\025CounterpartOpera" +
-      "torID\030\377\003 \001(\t\022\025\n\014CreationDate\030\200\004 \001(\004\022\025\n\014C" +
-      "reationTime\030\201\004 \001(\004\022\023\n\nUpdateDate\030\202\004 \001(\004\022" +
-      "\023\n\nUpdateTime\030\203\004 \001(\004\022\025\n\014ValidityDate\030\204\004 " +
-      "\001(\004\022\025\n\014ValidityTime\030\205\004 \001(\004\0226\n\006Status\030\206\004 " +
-      "\001(\0162%.org.example.MarketQuoteRequestStat" +
-      "us\0228\n\rProcessStatus\030\207\004 \001(\0162 .org.example" +
-      ".MarketProcessStatus\0223\n\tInternals\030\347\007 \001(\013" +
-      "2\037.org.example.MarketInternalInfo\"\232\006\n\023Ma" +
-      "rketQuoteResponse\022\030\n\017QuoteResponseID\030\350\007 " +
-      "\001(\t\022\036\n\025ClientQuoteResponseID\030\351\007 \001(\t\022\027\n\016Q" +
-      "uoteRequestID\030\352\007 \001(\t\022\020\n\007QuoteID\030\353\007 \001(\t\022:" +
-      "\n\010MlegType\030\354\007 \001(\0162\'.org.example.MarketQu" +
-      "oteRequestMLegType\0222\n\004Type\030\355\007 \001(\0162#.org." +
-      "example.MarketQuoteRequestType\022.\n\010FirstL" +
-      "eg\030\356\007 \001(\0132\033.org.example.MarketQuoteLeg\022/" +
-      "\n\tSecondLeg\030\357\007 \001(\0132\033.org.example.MarketQ" +
-      "uoteLeg\022.\n\010ThirdLeg\030\360\007 \001(\0132\033.org.example" +
-      ".MarketQuoteLeg\022\027\n\016IssuerMemberID\030\361\007 \001(\t" +
-      "\022\031\n\020IssuerOperatorID\030\362\007 \001(\t\022\034\n\023Counterpa" +
-      "rtMemberID\030\363\007 \001(\t\022\036\n\025CounterpartOperator" +
-      "ID\030\364\007 \001(\t\022\025\n\014CreationDate\030\365\007 \001(\004\022\025\n\014Crea" +
-      "tionTime\030\366\007 \001(\004\022\023\n\nUpdateDate\030\367\007 \001(\004\022\023\n\n" +
-      "UpdateTime\030\370\007 \001(\004\022\025\n\014ValidityDate\030\371\007 \001(\004" +
-      "\022\025\n\014ValidityTime\030\372\007 \001(\004\0226\n\006Status\030\373\007 \001(\016" +
-      "2%.org.example.MarketQuoteRequestStatus\022" +
-      "8\n\rProcessStatus\030\374\007 \001(\0162 .org.example.Ma" +
-      "rketProcessStatus\0223\n\tInternals\030\333\013 \001(\0132\037." +
-      "org.example.MarketInternalInfo\"\263\006\n\013Marke" +
-      "tTrade\022\020\n\007TradeID\030\334\013 \001(\t\022\023\n\nSecurityID\030\336" +
-      "\013 \001(\t\022\021\n\010ISINCode\030\337\013 \001(\t\022\016\n\005CUSIP\030\340\013 \001(\t" +
-      "\022\016\n\005Price\030\341\013 \001(\001\022\016\n\005Yield\030\342\013 \001(\001\022\021\n\010Quan" +
-      "tity\030\343\013 \001(\001\022\023\n\nMinimumQty\030\344\013 \001(\001\0222\n\rAggr" +
-      "essorVerb\030\345\013 \001(\0162\032.org.example.MarketLeg" +
-      "Verb\022\032\n\021AggressorMemberID\030\346\013 \001(\t\022\034\n\023Aggr" +
-      "essorOperatorID\030\347\013 \001(\t\0228\n\017AggressorSourc" +
-      "e\030\350\013 \001(\0162\036.org.example.MarketTradeSource" +
-      "\022\032\n\021AggressorSourceID\030\351\013 \001(\t\022\031\n\020Provider" +
-      "MemberID\030\352\013 \001(\t\022\033\n\022ProviderOperatorID\030\353\013" +
-      " \001(\t\0227\n\016ProviderSource\030\354\013 \001(\0162\036.org.exam" +
-      "ple.MarketTradeSource\022\031\n\020ProviderSourceI" +
-      "D\030\355\013 \001(\t\022\025\n\014CreationDate\030\356\013 \001(\004\022\025\n\014Creat" +
-      "ionTime\030\357\013 \001(\004\022\023\n\nUpdateDate\030\360\013 \001(\004\022\023\n\nU" +
-      "pdateTime\030\361\013 \001(\004\022\031\n\020SettlementAmount\030\362\013 " +
-      "\001(\001\022\027\n\016QuoteRequestID\030\363\013 \001(\t\022\035\n\024ClientQu" +
-      "oteRequestID\030\364\013 \001(\t\022\020\n\007QuoteID\030\365\013 \001(\t\022\026\n" +
-      "\rClientQuoteID\030\366\013 \001(\t\022\030\n\017QuoteResponseID" +
-      "\030\367\013 \001(\t\022\036\n\025ClientQuoteResponseID\030\370\013 \001(\t\022" +
-      "3\n\tInternals\030\317\017 \001(\0132\037.org.example.Market" +
-      "InternalInfo\"\333\004\n\013MarketPrice\022\023\n\nSecurity" +
-      "ID\030\320\017 \001(\t\022\021\n\010ISINCode\030\321\017 \001(\t\022\016\n\005CUSIP\030\322\017" +
-      " \001(\t\022\023\n\nTradeClass\030\323\017 \001(\t\022+\n\004Type\030\324\017 \001(\016" +
-      "2\034.org.example.MarketPriceType\022\021\n\010BidPri" +
-      "ce\030\325\017 \001(\001\022\021\n\010BidYield\030\326\017 \001(\001\022\022\n\tBidSprea" +
-      "d\030\327\017 \001(\001\022\017\n\006BidAxe\030\330\017 \001(\001\022\017\n\006BidQty\030\331\017 \001" +
-      "(\001\022\021\n\010AskPrice\030\332\017 \001(\001\022\021\n\010AskYield\030\333\017 \001(\001" +
-      "\022\022\n\tAskSpread\030\334\017 \001(\001\022\017\n\006AskAxe\030\335\017 \001(\001\022\017\n" +
-      "\006AskQty\030\336\017 \001(\001\022\023\n\nDeltaPrice\030\337\017 \001(\001\022\023\n\nD" +
-      "eltaYield\030\340\017 \001(\001\022\024\n\013DeltaSpread\030\341\017 \001(\001\022-" +
-      "\n\005State\030\342\017 \001(\0162\035.org.example.MarketPrice" +
-      "State\022\022\n\tPriceDate\030\343\017 \001(\004\022\022\n\tPriceTime\030\344" +
-      "\017 \001(\004\022\023\n\nUpdateDate\030\345\017 \001(\004\022\023\n\nUpdateTime" +
-      "\030\346\017 \001(\004\022\021\n\010MarketID\030\347\017 \001(\t\022\021\n\010MemberID\030\350" +
-      "\017 \001(\t\0223\n\tInternals\030\303\023 \001(\0132\037.org.example." +
-      "MarketInternalInfo\"L\n\rMarketSection\022\021\n\010M" +
-      "arketID\030\366\023 \001(\t\022\022\n\tSectionID\030\367\023 \001(\t\022\024\n\013De" +
-      "scription\030\370\023 \001(\t\"\327\003\n\020MarketInstrument\022\023\n" +
-      "\nSecurityID\030\250\024 \001(\t\022\024\n\013Description\030\251\024 \001(\t" +
-      "\022\021\n\010ISINCode\030\263\024 \001(\t\022\016\n\005CUSIP\030\264\024 \001(\t\022\021\n\010M" +
-      "arketID\030\265\024 \001(\t\022\022\n\tSectionID\030\266\024 \001(\t\022\023\n\nTr" +
-      "adeClass\030\267\024 \001(\t\022\021\n\010Currency\030\271\024 \001(\t\022\017\n\006Is" +
-      "suer\030\272\024 \001(\t\0222\n\005Class\030\273\024 \001(\0162\".org.exampl" +
-      "e.MarketInstrumentClass\022\022\n\tPriceTick\030\274\024 " +
-      "\001(\001\022\020\n\007QtyTick\030\275\024 \001(\001\022\027\n\016MinTradableQty\030" +
-      "\276\024 \001(\001\022\020\n\007LotSize\030\277\024 \001(\001\022\025\n\014ClosingPrice" +
-      "\030\300\024 \001(\001\022\022\n\tIssueDate\030\301\024 \001(\004\022\031\n\020TradingSt" +
-      "artDate\030\302\024 \001(\004\022\030\n\017TradingStopDate\030\303\024 \001(\004" +
-      "\022\022\n\tYieldTick\030\304\024 \001(\001\022\034\n\023BenchmarkSecurit" +
-      "yID\030\305\024 \001(\t*,\n\rMarketLegVerb\022\014\n\010VERB_BUY\020" +
-      "\000\022\r\n\tVERB_SELL\020\001*g\n\032MarketQuoteRequestML" +
-      "egType\022\021\n\rMLEG_ZeroLegs\020\000\022\021\n\rMLEG_Outrig" +
-      "ht\020\001\022\017\n\013MLEG_Switch\020\002\022\022\n\016MLEG_Butterfly\020" +
-      "\003*^\n\026MarketQuoteRequestType\022\030\n\024TYPE_Requ" +
-      "estBidOffer\020\000\022\025\n\021TYPE_MyBidMyOffer\020\001\022\023\n\017" +
-      "TYPE_LimitOrder\020\002*s\n\030MarketQuoteRequestS" +
-      "tatus\022\021\n\rSTATUS_Active\020\000\022\021\n\rSTATUS_Fille" +
-      "d\020\001\022\024\n\020STATUS_Cancelled\020\002\022\033\n\027STATUS_Reje" +
-      "ctedByMarket\020\003*J\n\023MarketProcessStatus\022\032\n" +
-      "\026PROCESSED_NotProcessed\020\000\022\027\n\023PROCESSED_P" +
-      "rocessed\020\001*X\n\021MarketTradeSource\022\027\n\023SOURC" +
-      "E_QuoteRequest\020\000\022\020\n\014SOURCE_Quote\020\001\022\030\n\024SO" +
-      "URCE_QuoteResponse\020\002*\205\001\n\017MarketPriceType" +
-      "\022\022\n\016TYPE_Composite\020\000\022\023\n\017TYPE_Indicative\020" +
-      "\001\022\r\n\tTYPE_Tier\020\002\022\030\n\024TYPE_CorporateSpread" +
-      "\020\003\022\020\n\014TYPE_CORP4PM\020\004\022\016\n\nTYPE_CD4PM\020\005*X\n\020" +
-      "MarketPriceState\022\016\n\nSTATE_None\020\000\022\016\n\nSTAT" +
-      "E_Firm\020\001\022\021\n\rSTATE_Subject\020\002\022\021\n\rSTATE_Del" +
-      "eted\020\003*]\n\025MarketInstrumentClass\022\030\n\024CLASS" +
-      "_GovernmentBond\020\000\022\027\n\023CLASS_CorporateBond" +
-      "\020\001\022\021\n\rCLASS_Futures\020\002b\006proto3"
+      "FlowID\030\002 \001(\t\0227\n\rProcessStatus\030\003 \001(\0162 .or" +
+      "g.example.MarketProcessStatus\022 \n\030Process" +
+      "StatusDescription\030\004 \001(\t\022\037\n\027TransactionCr" +
+      "eationTime\030\005 \001(\004\022\025\n\rSentOnBusTime\030\006 \001(\004\022" +
+      "\030\n\020TakenFromBusTime\030\007 \001(\004\022\025\n\rProcessedTi" +
+      "me\030\010 \001(\004\022\031\n\021SentBackToBusTime\030\t \001(\004\022\034\n\024T" +
+      "akenBackFromBusTime\030\n \001(\004\022\034\n\024CloseTransa" +
+      "ctionTime\030\013 \001(\004\"\265\005\n\022MarketQuoteRequest\022\027" +
+      "\n\016QuoteRequestID\030\226\001 \001(\t\022\035\n\024ClientQuoteRe" +
+      "questID\030\227\001 \001(\t\022:\n\010MlegType\030\230\001 \001(\0162\'.org." +
+      "example.MarketQuoteRequestMLegType\0222\n\004Ty" +
+      "pe\030\231\001 \001(\0162#.org.example.MarketQuoteReque" +
+      "stType\022.\n\010FirstLeg\030\232\001 \001(\0132\033.org.example." +
+      "MarketQuoteLeg\022/\n\tSecondLeg\030\233\001 \001(\0132\033.org" +
+      ".example.MarketQuoteLeg\022.\n\010ThirdLeg\030\234\001 \001" +
+      "(\0132\033.org.example.MarketQuoteLeg\022\027\n\016Issue" +
+      "rMemberID\030\235\001 \001(\t\022\031\n\020IssuerOperatorID\030\236\001 " +
+      "\001(\t\022#\n\032NumberOfDestinationMembers\030\237\001 \001(\005" +
+      "\022\032\n\021DestinationMember\030\240\001 \003(\t\022\025\n\014Creation" +
+      "Date\030\241\001 \001(\004\022\025\n\014CreationTime\030\242\001 \001(\004\022\023\n\nUp" +
+      "dateDate\030\243\001 \001(\004\022\023\n\nUpdateTime\030\244\001 \001(\004\022\025\n\014" +
+      "ValidityDate\030\245\001 \001(\004\022\025\n\014ValidityTime\030\246\001 \001" +
+      "(\004\0226\n\006Status\030\247\001 \001(\0162%.org.example.Market" +
+      "QuoteRequestStatus\0223\n\tInternals\030\363\003 \001(\0132\037" +
+      ".org.example.MarketInternalInfo\"\266\005\n\013Mark" +
+      "etQuote\022\020\n\007QuoteID\030\364\003 \001(\t\022\026\n\rClientQuote" +
+      "ID\030\365\003 \001(\t\022\027\n\016QuoteRequestID\030\366\003 \001(\t\022:\n\010Ml" +
+      "egType\030\367\003 \001(\0162\'.org.example.MarketQuoteR" +
+      "equestMLegType\0222\n\004Type\030\370\003 \001(\0162#.org.exam" +
+      "ple.MarketQuoteRequestType\022.\n\010FirstLeg\030\371" +
+      "\003 \001(\0132\033.org.example.MarketQuoteLeg\022/\n\tSe" +
+      "condLeg\030\372\003 \001(\0132\033.org.example.MarketQuote" +
+      "Leg\022.\n\010ThirdLeg\030\373\003 \001(\0132\033.org.example.Mar" +
+      "ketQuoteLeg\022\027\n\016IssuerMemberID\030\374\003 \001(\t\022\031\n\020" +
+      "IssuerOperatorID\030\375\003 \001(\t\022\034\n\023CounterpartMe" +
+      "mberID\030\376\003 \001(\t\022\036\n\025CounterpartOperatorID\030\377" +
+      "\003 \001(\t\022\025\n\014CreationDate\030\200\004 \001(\004\022\025\n\014Creation" +
+      "Time\030\201\004 \001(\004\022\023\n\nUpdateDate\030\202\004 \001(\004\022\023\n\nUpda" +
+      "teTime\030\203\004 \001(\004\022\025\n\014ValidityDate\030\204\004 \001(\004\022\025\n\014" +
+      "ValidityTime\030\205\004 \001(\004\0226\n\006Status\030\206\004 \001(\0162%.o" +
+      "rg.example.MarketQuoteRequestStatus\0223\n\tI" +
+      "nternals\030\347\007 \001(\0132\037.org.example.MarketInte" +
+      "rnalInfo\"\340\005\n\023MarketQuoteResponse\022\030\n\017Quot" +
+      "eResponseID\030\350\007 \001(\t\022\036\n\025ClientQuoteRespons" +
+      "eID\030\351\007 \001(\t\022\027\n\016QuoteRequestID\030\352\007 \001(\t\022\020\n\007Q" +
+      "uoteID\030\353\007 \001(\t\022:\n\010MlegType\030\354\007 \001(\0162\'.org.e" +
+      "xample.MarketQuoteRequestMLegType\0222\n\004Typ" +
+      "e\030\355\007 \001(\0162#.org.example.MarketQuoteReques" +
+      "tType\022.\n\010FirstLeg\030\356\007 \001(\0132\033.org.example.M" +
+      "arketQuoteLeg\022/\n\tSecondLeg\030\357\007 \001(\0132\033.org." +
+      "example.MarketQuoteLeg\022.\n\010ThirdLeg\030\360\007 \001(" +
+      "\0132\033.org.example.MarketQuoteLeg\022\027\n\016Issuer" +
+      "MemberID\030\361\007 \001(\t\022\031\n\020IssuerOperatorID\030\362\007 \001" +
+      "(\t\022\034\n\023CounterpartMemberID\030\363\007 \001(\t\022\036\n\025Coun" +
+      "terpartOperatorID\030\364\007 \001(\t\022\025\n\014CreationDate" +
+      "\030\365\007 \001(\004\022\025\n\014CreationTime\030\366\007 \001(\004\022\023\n\nUpdate" +
+      "Date\030\367\007 \001(\004\022\023\n\nUpdateTime\030\370\007 \001(\004\022\025\n\014Vali" +
+      "dityDate\030\371\007 \001(\004\022\025\n\014ValidityTime\030\372\007 \001(\004\0226" +
+      "\n\006Status\030\373\007 \001(\0162%.org.example.MarketQuot" +
+      "eRequestStatus\0223\n\tInternals\030\333\013 \001(\0132\037.org" +
+      ".example.MarketInternalInfo\"\263\006\n\013MarketTr" +
+      "ade\022\020\n\007TradeID\030\334\013 \001(\t\022\023\n\nSecurityID\030\336\013 \001" +
+      "(\t\022\021\n\010ISINCode\030\337\013 \001(\t\022\016\n\005CUSIP\030\340\013 \001(\t\022\016\n" +
+      "\005Price\030\341\013 \001(\001\022\016\n\005Yield\030\342\013 \001(\001\022\021\n\010Quantit" +
+      "y\030\343\013 \001(\001\022\023\n\nMinimumQty\030\344\013 \001(\001\0222\n\rAggress" +
+      "orVerb\030\345\013 \001(\0162\032.org.example.MarketLegVer" +
+      "b\022\032\n\021AggressorMemberID\030\346\013 \001(\t\022\034\n\023Aggress" +
+      "orOperatorID\030\347\013 \001(\t\0228\n\017AggressorSource\030\350" +
+      "\013 \001(\0162\036.org.example.MarketTradeSource\022\032\n" +
+      "\021AggressorSourceID\030\351\013 \001(\t\022\031\n\020ProviderMem" +
+      "berID\030\352\013 \001(\t\022\033\n\022ProviderOperatorID\030\353\013 \001(" +
+      "\t\0227\n\016ProviderSource\030\354\013 \001(\0162\036.org.example" +
+      ".MarketTradeSource\022\031\n\020ProviderSourceID\030\355" +
+      "\013 \001(\t\022\025\n\014CreationDate\030\356\013 \001(\004\022\025\n\014Creation" +
+      "Time\030\357\013 \001(\004\022\023\n\nUpdateDate\030\360\013 \001(\004\022\023\n\nUpda" +
+      "teTime\030\361\013 \001(\004\022\031\n\020SettlementAmount\030\362\013 \001(\001" +
+      "\022\027\n\016QuoteRequestID\030\363\013 \001(\t\022\035\n\024ClientQuote" +
+      "RequestID\030\364\013 \001(\t\022\020\n\007QuoteID\030\365\013 \001(\t\022\026\n\rCl" +
+      "ientQuoteID\030\366\013 \001(\t\022\030\n\017QuoteResponseID\030\367\013" +
+      " \001(\t\022\036\n\025ClientQuoteResponseID\030\370\013 \001(\t\0223\n\t" +
+      "Internals\030\317\017 \001(\0132\037.org.example.MarketInt" +
+      "ernalInfo\"\333\004\n\013MarketPrice\022\023\n\nSecurityID\030" +
+      "\320\017 \001(\t\022\021\n\010ISINCode\030\321\017 \001(\t\022\016\n\005CUSIP\030\322\017 \001(" +
+      "\t\022\023\n\nTradeClass\030\323\017 \001(\t\022+\n\004Type\030\324\017 \001(\0162\034." +
+      "org.example.MarketPriceType\022\021\n\010BidPrice\030" +
+      "\325\017 \001(\001\022\021\n\010BidYield\030\326\017 \001(\001\022\022\n\tBidSpread\030\327" +
+      "\017 \001(\001\022\017\n\006BidAxe\030\330\017 \001(\001\022\017\n\006BidQty\030\331\017 \001(\001\022" +
+      "\021\n\010AskPrice\030\332\017 \001(\001\022\021\n\010AskYield\030\333\017 \001(\001\022\022\n" +
+      "\tAskSpread\030\334\017 \001(\001\022\017\n\006AskAxe\030\335\017 \001(\001\022\017\n\006As" +
+      "kQty\030\336\017 \001(\001\022\023\n\nDeltaPrice\030\337\017 \001(\001\022\023\n\nDelt" +
+      "aYield\030\340\017 \001(\001\022\024\n\013DeltaSpread\030\341\017 \001(\001\022-\n\005S" +
+      "tate\030\342\017 \001(\0162\035.org.example.MarketPriceSta" +
+      "te\022\022\n\tPriceDate\030\343\017 \001(\004\022\022\n\tPriceTime\030\344\017 \001" +
+      "(\004\022\023\n\nUpdateDate\030\345\017 \001(\004\022\023\n\nUpdateTime\030\346\017" +
+      " \001(\004\022\021\n\010MarketID\030\347\017 \001(\t\022\021\n\010MemberID\030\350\017 \001" +
+      "(\t\0223\n\tInternals\030\303\023 \001(\0132\037.org.example.Mar" +
+      "ketInternalInfo\"L\n\rMarketSection\022\021\n\010Mark" +
+      "etID\030\366\023 \001(\t\022\022\n\tSectionID\030\367\023 \001(\t\022\024\n\013Descr" +
+      "iption\030\370\023 \001(\t\"\327\003\n\020MarketInstrument\022\023\n\nSe" +
+      "curityID\030\250\024 \001(\t\022\024\n\013Description\030\251\024 \001(\t\022\021\n" +
+      "\010ISINCode\030\263\024 \001(\t\022\016\n\005CUSIP\030\264\024 \001(\t\022\021\n\010Mark" +
+      "etID\030\265\024 \001(\t\022\022\n\tSectionID\030\266\024 \001(\t\022\023\n\nTrade" +
+      "Class\030\267\024 \001(\t\022\021\n\010Currency\030\271\024 \001(\t\022\017\n\006Issue" +
+      "r\030\272\024 \001(\t\0222\n\005Class\030\273\024 \001(\0162\".org.example.M" +
+      "arketInstrumentClass\022\022\n\tPriceTick\030\274\024 \001(\001" +
+      "\022\020\n\007QtyTick\030\275\024 \001(\001\022\027\n\016MinTradableQty\030\276\024 " +
+      "\001(\001\022\020\n\007LotSize\030\277\024 \001(\001\022\025\n\014ClosingPrice\030\300\024" +
+      " \001(\001\022\022\n\tIssueDate\030\301\024 \001(\004\022\031\n\020TradingStart" +
+      "Date\030\302\024 \001(\004\022\030\n\017TradingStopDate\030\303\024 \001(\004\022\022\n" +
+      "\tYieldTick\030\304\024 \001(\001\022\034\n\023BenchmarkSecurityID" +
+      "\030\305\024 \001(\t*,\n\rMarketLegVerb\022\014\n\010VERB_BUY\020\000\022\r" +
+      "\n\tVERB_SELL\020\001*g\n\032MarketQuoteRequestMLegT" +
+      "ype\022\021\n\rMLEG_ZeroLegs\020\000\022\021\n\rMLEG_Outright\020" +
+      "\001\022\017\n\013MLEG_Switch\020\002\022\022\n\016MLEG_Butterfly\020\003*^" +
+      "\n\026MarketQuoteRequestType\022\030\n\024TYPE_Request" +
+      "BidOffer\020\000\022\025\n\021TYPE_MyBidMyOffer\020\001\022\023\n\017TYP" +
+      "E_LimitOrder\020\002*s\n\030MarketQuoteRequestStat" +
+      "us\022\021\n\rSTATUS_Active\020\000\022\021\n\rSTATUS_Filled\020\001" +
+      "\022\024\n\020STATUS_Cancelled\020\002\022\033\n\027STATUS_Rejecte" +
+      "dByMarket\020\003*b\n\023MarketProcessStatus\022\032\n\026PR" +
+      "OCESSED_NotProcessed\020\000\022\027\n\023PROCESSED_Proc" +
+      "essed\020\001\022\026\n\022PROCESSED_Rejected\020\002*X\n\021Marke" +
+      "tTradeSource\022\027\n\023SOURCE_QuoteRequest\020\000\022\020\n" +
+      "\014SOURCE_Quote\020\001\022\030\n\024SOURCE_QuoteResponse\020" +
+      "\002*\205\001\n\017MarketPriceType\022\022\n\016TYPE_Composite\020" +
+      "\000\022\023\n\017TYPE_Indicative\020\001\022\r\n\tTYPE_Tier\020\002\022\030\n" +
+      "\024TYPE_CorporateSpread\020\003\022\020\n\014TYPE_CORP4PM\020" +
+      "\004\022\016\n\nTYPE_CD4PM\020\005*X\n\020MarketPriceState\022\016\n" +
+      "\nSTATE_None\020\000\022\016\n\nSTATE_Firm\020\001\022\021\n\rSTATE_S" +
+      "ubject\020\002\022\021\n\rSTATE_Deleted\020\003*]\n\025MarketIns" +
+      "trumentClass\022\030\n\024CLASS_GovernmentBond\020\000\022\027" +
+      "\n\023CLASS_CorporateBond\020\001\022\021\n\rCLASS_Futures" +
+      "\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23100,25 +23046,25 @@ public final class Market {
     internal_static_org_example_MarketInternalInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_MarketInternalInfo_descriptor,
-        new java.lang.String[] { "SessionID", "FlowID", "TransactionCreationTime", "SentOnBusTime", "TakenFromBusTime", "ProcessedTime", "SentBackToBusTime", "TakenBackFromBusTime", "CloseTransactionTime", });
+        new java.lang.String[] { "SessionID", "FlowID", "ProcessStatus", "ProcessStatusDescription", "TransactionCreationTime", "SentOnBusTime", "TakenFromBusTime", "ProcessedTime", "SentBackToBusTime", "TakenBackFromBusTime", "CloseTransactionTime", });
     internal_static_org_example_MarketQuoteRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_org_example_MarketQuoteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_MarketQuoteRequest_descriptor,
-        new java.lang.String[] { "QuoteRequestID", "ClientQuoteRequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "NumberOfDestinationMembers", "DestinationMember", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", "Internals", });
+        new java.lang.String[] { "QuoteRequestID", "ClientQuoteRequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "NumberOfDestinationMembers", "DestinationMember", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "Internals", });
     internal_static_org_example_MarketQuote_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_org_example_MarketQuote_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_MarketQuote_descriptor,
-        new java.lang.String[] { "QuoteID", "ClientQuoteID", "QuoteRequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", "Internals", });
+        new java.lang.String[] { "QuoteID", "ClientQuoteID", "QuoteRequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "Internals", });
     internal_static_org_example_MarketQuoteResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_org_example_MarketQuoteResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_MarketQuoteResponse_descriptor,
-        new java.lang.String[] { "QuoteResponseID", "ClientQuoteResponseID", "QuoteRequestID", "QuoteID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ProcessStatus", "Internals", });
+        new java.lang.String[] { "QuoteResponseID", "ClientQuoteResponseID", "QuoteRequestID", "QuoteID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "Internals", });
     internal_static_org_example_MarketTrade_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_org_example_MarketTrade_fieldAccessorTable = new

@@ -184,7 +184,7 @@ public class MKTBusManager {
     }
 
     //used to send transactions to matching engine
-    public String SendOnBus(MarketQuoteRequest marketQuoteRequest) throws IOException
+    public String sendOnBus(MarketQuoteRequest marketQuoteRequest) throws IOException
     {
         if (busConnection==null){
             return MISSING_CONNECTION;
@@ -204,8 +204,29 @@ public class MKTBusManager {
         return SENT_OK;
     }
 
+    //used to send transactions back from matching engine
+    public String sendBackOnBus(MarketQuoteRequest marketQuoteRequest) throws IOException
+    {
+        if (busConnection==null){
+            return MISSING_CONNECTION;
+        }
+        if (busChannel==null){
+            return MISSING_CHANNEL;
+        }
+        byte[] serializedQuoteRequest = marketQuoteRequest.toByteArray();
+        try {
+            busChannel.basicPublish("", QUOTEREQ_QUEUE_NAME_IN, null, serializedQuoteRequest);
+        }
+        catch (IOException  e){
+            LOG.error("Error sending Quote Request " + marketQuoteRequest + e.getLocalizedMessage(), Utils.stackTraceToString(e));
+            return SEND_ERROR;
+        }
+        LOG.info(" [x] Sent back'" + marketQuoteRequest + "'");
+        return SENT_OK;
+    }
+
     //used to send transactions to matching engine
-    public String SendOnBus(MarketQuoteResponse marketQuoteResponse) throws IOException
+    public String sendOnBus(MarketQuoteResponse marketQuoteResponse) throws IOException
     {
         if (busConnection==null){
             return MISSING_CONNECTION;
@@ -225,8 +246,29 @@ public class MKTBusManager {
         return SENT_OK;
     }
 
+    //used to send transactions back from matching engine
+    public String sendBackOnBus(MarketQuoteResponse marketQuoteResponse) throws IOException
+    {
+        if (busConnection==null){
+            return MISSING_CONNECTION;
+        }
+        if (busChannel==null){
+            return MISSING_CHANNEL;
+        }
+        byte[] serializedQuoteResponse = marketQuoteResponse.toByteArray();
+        try {
+            busChannel.basicPublish("", QUOTERES_QUEUE_NAME_IN, null, serializedQuoteResponse);
+        }
+        catch (IOException  e){
+            LOG.error("Error sending Quote Response " + marketQuoteResponse + e.getLocalizedMessage(), Utils.stackTraceToString(e));
+            return SEND_ERROR;
+        }
+        LOG.info(" [x] Sent '" + marketQuoteResponse + "'");
+        return SENT_OK;
+    }
+
     //used to send transactions to matching engine
-    public String SendOnBus(MarketQuote marketQuote) throws IOException
+    public String sendOnBus(MarketQuote marketQuote) throws IOException
     {
         if (busConnection==null){
             return MISSING_CONNECTION;
@@ -246,8 +288,29 @@ public class MKTBusManager {
         return SENT_OK;
     }
 
+    //used to send transactions to matching engine
+    public String sendBackOnBus(MarketQuote marketQuote) throws IOException
+    {
+        if (busConnection==null){
+            return MISSING_CONNECTION;
+        }
+        if (busChannel==null){
+            return MISSING_CHANNEL;
+        }
+        byte[] serializedQuote = marketQuote.toByteArray();
+        try{
+            busChannel.basicPublish("", QUOTE_QUEUE_NAME_IN, null, serializedQuote);
+        }
+        catch (IOException  e){
+            LOG.error("Error sending Quote" + marketQuote + e.getLocalizedMessage(), Utils.stackTraceToString(e));
+            return SEND_ERROR;
+        }
+        LOG.info(" [x] Sent '" + marketQuote + "'");
+        return SENT_OK;
+    }
+
     //used to publish prices
-    public String SendOnBus(MarketPrice marketPrice) throws IOException
+    public String sendOnBus(MarketPrice marketPrice) throws IOException
     {
         if (busConnection==null){
             return MISSING_CONNECTION;
@@ -292,22 +355,22 @@ public class MKTBusManager {
      * 
      * 
      */
-    public String GetTopic(MarketQuoteRequest marketQuoteRequest)
+    public String getTopic(MarketQuoteRequest marketQuoteRequest)
     {
         return "QUOTEREQ." + "BOND." + marketQuoteRequest.getTypeValue() + "." + marketQuoteRequest.getIssuerMemberID() + "." + marketQuoteRequest.getFirstLeg().getSecurityID();
     }
 
-    public String GetTopic(MarketQuote marketQuote)
+    public String getTopic(MarketQuote marketQuote)
     {
         return "QUOTE." + "BOND." + marketQuote.getTypeValue() + "." + marketQuote.getCounterpartMemberID() + "." + marketQuote.getFirstLeg().getSecurityID();
     }
 
-    public String GetTopic(MarketQuoteResponse marketQuoteResponse)
+    public String getTopic(MarketQuoteResponse marketQuoteResponse)
     {
         return "QUOTERES." + "BOND." + marketQuoteResponse.getTypeValue() + "." + marketQuoteResponse.getIssuerMemberID() + "." + marketQuoteResponse.getFirstLeg().getSecurityID();
     }
 
-    public String GetTopic(MarketPrice marketPrice)
+    public String getTopic(MarketPrice marketPrice)
     {
         String  priceType;
 

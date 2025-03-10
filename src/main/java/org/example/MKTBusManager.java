@@ -80,6 +80,7 @@ public class MKTBusManager {
         this.virtualHost = virtualHost;
         this.port = port;
         this.password = password;
+        this.userName = userName;
         connectionAttempts = 0;
         isConnecting = false;
         isConnected = false;
@@ -91,14 +92,14 @@ public class MKTBusManager {
 		Hostname	"localhost"
 		port	5672 for regular connections, 5671 for connections that use TLS
 		*/
-
+        LOG.info("created Bus Manager host {} port {} username {} ", this.hostName, this.port, this.userName);
     }
 
     public boolean connect()
     {
         try {
             isConnecting =true;
-            LOG.info("creating bus factory {}@{}", userName, hostName);
+            LOG.info("creating bus factory {}@{}:{}", userName, hostName, port);
             // Set up the connection and channel
             busFactory = new ConnectionFactory();
             busFactory.setUsername(userName);
@@ -106,10 +107,10 @@ public class MKTBusManager {
             busFactory.setVirtualHost(virtualHost);
             busFactory.setHost(hostName);
             busFactory.setPort(port);
-            LOG.info("successfully created bus factory {}@{},  connecting", userName, hostName);
+            LOG.info("successfully created bus factory {}@{}:{},  connecting", userName, hostName, port);
 
             busConnection = busFactory.newConnection();
-            LOG.info("successfully created connection {}@{}, creating bus channel", userName, hostName);
+            LOG.info("successfully created connection {}@{}:{}, creating bus channel", userName, hostName, port);
 
             busChannel = busConnection.createChannel();
             busChannel.exchangeDeclare(EXCHANGE_NAME, "topic");
@@ -123,7 +124,7 @@ public class MKTBusManager {
             busChannel.queueDeclare(QUOTE_QUEUE_NAME_IN, false, false, false, null);
             busChannel.queueDeclare(TRADE_QUEUE_NAME_IN, false, false, false, null);
         
-            LOG.info("successfully created bus channel {}@{}, binding queues", userName, hostName);
+            LOG.info("successfully created bus channel {}@{}:{}, binding queues", userName, hostName, port);
             
             busChannel.queueBind(QUOTEREQ_QUEUE_NAME_OUT, EXCHANGE_NAME, "QUOTEREQ.BOND.*.*");
             busChannel.queueBind(QUOTE_QUEUE_NAME_OUT, EXCHANGE_NAME, "QUOTE.BOND.*.*");

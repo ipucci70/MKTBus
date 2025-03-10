@@ -13,6 +13,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.TimerTask;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeoutException;
 import com.google.common.base.Strings;
 import com.google.protobuf.InvalidProtocolBufferException;
@@ -69,6 +71,8 @@ public class MKTBusManager {
 
     private static volatile boolean isConnecting;
     private static volatile boolean isConnected;
+
+    private ExecutorService threadPool = Executors.newFixedThreadPool(20);
 
     public MKTBusManager(String hostName, String virtualHost, int port, String userName, String password) 
     {
@@ -442,21 +446,23 @@ public class MKTBusManager {
         void handle(MarketPrice marketPrice);
     }
 
-    //used by matching engine to receive transactions
+    //used by matching engine to receive transactions, be aware that the callback will be running on a separate (pool) thread
     public boolean receiveMarketQuoteRequest(QuoteRequestCallback quoteRequestCallback){
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-            byte[] body = delivery.getBody();
-            try {
-                // Decode the Protocol Buffer message
-                MarketQuoteRequest marketQuoteRequest = MarketQuoteRequest.parseFrom(body);
-                LOG.info("received a quote request from bus" + marketQuoteRequest.toString());
-                quoteRequestCallback.handle(marketQuoteRequest);
-            } catch (InvalidProtocolBufferException e) {
-                LOG.error("Failed to parse Protocol Buffer message: " + 
-                e.getLocalizedMessage(),
-                Utils.stackTraceToString(e));
-            }
+            threadPool.submit(() -> {
+                byte[] body = delivery.getBody();
+                try {
+                    // Decode the Protocol Buffer message
+                    MarketQuoteRequest marketQuoteRequest = MarketQuoteRequest.parseFrom(body);
+                    LOG.info("received a quote request from bus" + marketQuoteRequest.toString());
+                    quoteRequestCallback.handle(marketQuoteRequest);
+                } catch (InvalidProtocolBufferException e) {
+                    LOG.error("Failed to parse Protocol Buffer message: " + 
+                    e.getLocalizedMessage(),
+                    Utils.stackTraceToString(e));
+                }
+            });
         };
 
         try {
@@ -471,21 +477,54 @@ public class MKTBusManager {
         return true;
     }
 
-    //used by matching engine to receive transactions
+    //used by access points to receive back transactions, be aware that the callback will be running on a separate (pool) thread
+    public boolean receiveBackMarketQuoteRequest(QuoteRequestCallback quoteRequestCallback){
+
+        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+            threadPool.submit(() -> {
+                byte[] body = delivery.getBody();
+                try {
+                    // Decode the Protocol Buffer message
+                    MarketQuoteRequest marketQuoteRequest = MarketQuoteRequest.parseFrom(body);
+                    LOG.info("received a quote request from bus" + marketQuoteRequest.toString());
+                    quoteRequestCallback.handle(marketQuoteRequest);
+                } catch (InvalidProtocolBufferException e) {
+                    LOG.error("Failed to parse Protocol Buffer message: " + 
+                    e.getLocalizedMessage(),
+                    Utils.stackTraceToString(e));
+                }
+            });
+        };
+
+        try {
+            busChannel.basicConsume(QUOTEREQ_QUEUE_NAME_IN, true, deliverCallback, consumerTag -> {});
+        }catch (IOException e){
+            LOG.error("Exception in basicConsume: " + 
+            e.getLocalizedMessage(),
+            Utils.stackTraceToString(e));
+            return false;
+        }
+
+        return true;
+    }
+
+    //used by matching engine to receive transactions, be aware that the callback will be running on a separate (pool) thread
     public boolean receiveMarketQuote(QuoteCallback quoteCallback){
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-            byte[] body = delivery.getBody();
-            try {
-                // Decode the Protocol Buffer message
-                MarketQuote marketQuote = MarketQuote.parseFrom(body);
-                LOG.info("received a quote from bus" + marketQuote.toString());
-                quoteCallback.handle(marketQuote);
-            } catch (InvalidProtocolBufferException e) {
-                LOG.error("Failed to parse Protocol Buffer message: " + 
-                e.getLocalizedMessage(),
-                Utils.stackTraceToString(e));
-            }
+            threadPool.submit(() -> {
+                byte[] body = delivery.getBody();
+                try {
+                    // Decode the Protocol Buffer message
+                    MarketQuote marketQuote = MarketQuote.parseFrom(body);
+                    LOG.info("received a quote from bus" + marketQuote.toString());
+                    quoteCallback.handle(marketQuote);
+                } catch (InvalidProtocolBufferException e) {
+                    LOG.error("Failed to parse Protocol Buffer message: " + 
+                    e.getLocalizedMessage(),
+                    Utils.stackTraceToString(e));
+                }
+            });
         };
 
         try {
@@ -500,21 +539,54 @@ public class MKTBusManager {
         return true;
     }
 
-    //used by matching engine to receive transactions
+    //used by access points to receive transactions, be aware that the callback will be running on a separate (pool) thread
+    public boolean receiveBackMarketQuote(QuoteCallback quoteCallback){
+
+        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+            threadPool.submit(() -> {
+                byte[] body = delivery.getBody();
+                try {
+                    // Decode the Protocol Buffer message
+                    MarketQuote marketQuote = MarketQuote.parseFrom(body);
+                    LOG.info("received a quote from bus" + marketQuote.toString());
+                    quoteCallback.handle(marketQuote);
+                } catch (InvalidProtocolBufferException e) {
+                    LOG.error("Failed to parse Protocol Buffer message: " + 
+                    e.getLocalizedMessage(),
+                    Utils.stackTraceToString(e));
+                }
+            });
+        };
+
+        try {
+            busChannel.basicConsume(QUOTE_QUEUE_NAME_IN, true, deliverCallback, consumerTag -> {});
+        }catch (IOException e){
+            LOG.error("Exception in basicConsume: " + 
+            e.getLocalizedMessage(),
+            Utils.stackTraceToString(e));
+            return false;
+        }
+
+        return true;
+    }
+
+    //used by matching engine to receive transactions, be aware that the callback will be running on a separate (pool) thread
     public boolean receiveMarketQuoteResponse(QuoteResponseCallback quoteResponseCallback){
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-            byte[] body = delivery.getBody();
-            try {
-                // Decode the Protocol Buffer message
-                MarketQuoteResponse marketQuoteResponse = MarketQuoteResponse.parseFrom(body);
-                LOG.info("received a quote response from bus" + marketQuoteResponse.toString());
-                quoteResponseCallback.handle(marketQuoteResponse);
-            } catch (InvalidProtocolBufferException e) {
-                LOG.error("Failed to parse Protocol Buffer message: " + 
-                e.getLocalizedMessage(),
-                Utils.stackTraceToString(e));
-            }
+            threadPool.submit(() -> {
+                byte[] body = delivery.getBody();
+                try {
+                    // Decode the Protocol Buffer message
+                    MarketQuoteResponse marketQuoteResponse = MarketQuoteResponse.parseFrom(body);
+                    LOG.info("received a quote response from bus" + marketQuoteResponse.toString());
+                    quoteResponseCallback.handle(marketQuoteResponse);
+                } catch (InvalidProtocolBufferException e) {
+                    LOG.error("Failed to parse Protocol Buffer message: " + 
+                    e.getLocalizedMessage(),
+                    Utils.stackTraceToString(e));
+                }
+            });
         };
 
         try {
@@ -529,21 +601,53 @@ public class MKTBusManager {
         return true;
     }
 
-    //used to read prices received by the CIP
+    //used by access points to receive back transactions, be aware that the callback will be running on a separate (pool) thread
+    public boolean receiveBackMarketQuoteResponse(QuoteResponseCallback quoteResponseCallback){
+
+        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+            threadPool.submit(() -> {
+                byte[] body = delivery.getBody();
+                try {
+                    // Decode the Protocol Buffer message
+                    MarketQuoteResponse marketQuoteResponse = MarketQuoteResponse.parseFrom(body);
+                    LOG.info("received a quote response from bus" + marketQuoteResponse.toString());
+                    quoteResponseCallback.handle(marketQuoteResponse);
+                } catch (InvalidProtocolBufferException e) {
+                    LOG.error("Failed to parse Protocol Buffer message: " + 
+                    e.getLocalizedMessage(),
+                    Utils.stackTraceToString(e));
+                }
+            });
+        };
+
+        try {
+            busChannel.basicConsume(QUOTERES_QUEUE_NAME_IN, true, deliverCallback, consumerTag -> {});
+        }catch (IOException e){
+            LOG.error("Exception in basicConsume: " + 
+            e.getLocalizedMessage(),
+            Utils.stackTraceToString(e));
+            return false;
+        }
+
+        return true;
+    }
+    //used to read prices received by the CIP, be aware that the callback will be running on a separate (pool) thread
     public boolean receiveMarketPrice(PriceCallback priceCallback){
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-            byte[] body = delivery.getBody();
-            try {
-                // Decode the Protocol Buffer message
-                MarketPrice marketPrice = MarketPrice.parseFrom(body);
-                LOG.info("received a price from bus" + marketPrice.toString());
-                priceCallback.handle(marketPrice);
-            } catch (InvalidProtocolBufferException e) {
-                LOG.error("Failed to parse Protocol Buffer message: " + 
-                e.getLocalizedMessage(),
-                Utils.stackTraceToString(e));
-            }
+            threadPool.submit(() -> {
+                byte[] body = delivery.getBody();
+                try {
+                    // Decode the Protocol Buffer message
+                    MarketPrice marketPrice = MarketPrice.parseFrom(body);
+                    LOG.info("received a price from bus" + marketPrice.toString());
+                    priceCallback.handle(marketPrice);
+                } catch (InvalidProtocolBufferException e) {
+                    LOG.error("Failed to parse Protocol Buffer message: " + 
+                    e.getLocalizedMessage(),
+                    Utils.stackTraceToString(e));
+                }
+            });
         };
 
         try {

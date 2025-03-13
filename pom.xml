@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>MKTBus</artifactId>
-    <version>0.1.16</version>
+    <artifactId>mkt-bus</artifactId>
+    <version>0.1.17</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -49,8 +49,8 @@
         </dependency>
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>MKTUtils</artifactId>
-            <version>0.1.4</version>
+            <artifactId>mkt-utils</artifactId>
+            <version>0.1.6</version>
         </dependency>
     </dependencies>
 </project>

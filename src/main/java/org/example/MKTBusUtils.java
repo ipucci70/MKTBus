@@ -67,4 +67,20 @@ public class MKTBusUtils {
         marketInternalInfoBuilder.setCloseTransactionTime(timeNow);
         return marketInternalInfoBuilder.build();
     }
+
+    // transactionid is formed as <prefix>-<local time in nanoseconds>-<counter 6 decimal digits>
+    public static String createNewTransactionID(String prefix, int counter)
+    {
+        long timeNowNanoSeconds = Utils.getTimeNowNanoseconds();
+        String transactionID = prefix + "-" + String.format("%16d", timeNowNanoSeconds) + "-" + String.format("%06d", counter);
+
+        return transactionID;
+    }
+
+    public static MarketInternalInfo setTransactionIDInInternals(MarketInternalInfo marketInternalInfo, String transactionID){
+        MarketInternalInfo.Builder marketInternalInfoBuilder = marketInternalInfo.toBuilder();
+
+        marketInternalInfoBuilder.setTransactionID(transactionID);
+        return marketInternalInfoBuilder.build();
+    }
 }

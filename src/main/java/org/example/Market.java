@@ -2363,6 +2363,18 @@ public final class Market {
      * @return The closeTransactionTime.
      */
     long getCloseTransactionTime();
+
+    /**
+     * <code>string TransactionID = 12;</code>
+     * @return The transactionID.
+     */
+    java.lang.String getTransactionID();
+    /**
+     * <code>string TransactionID = 12;</code>
+     * @return The bytes for transactionID.
+     */
+    com.google.protobuf.ByteString
+        getTransactionIDBytes();
   }
   /**
    * Protobuf type {@code org.example.MarketInternalInfo}
@@ -2390,6 +2402,7 @@ public final class Market {
       flowID_ = "";
       processStatus_ = 0;
       processStatusDescription_ = "";
+      transactionID_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -2617,6 +2630,45 @@ public final class Market {
       return closeTransactionTime_;
     }
 
+    public static final int TRANSACTIONID_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transactionID_ = "";
+    /**
+     * <code>string TransactionID = 12;</code>
+     * @return The transactionID.
+     */
+    @java.lang.Override
+    public java.lang.String getTransactionID() {
+      java.lang.Object ref = transactionID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transactionID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string TransactionID = 12;</code>
+     * @return The bytes for transactionID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransactionIDBytes() {
+      java.lang.Object ref = transactionID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transactionID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2663,6 +2715,9 @@ public final class Market {
       }
       if (closeTransactionTime_ != 0L) {
         output.writeUInt64(11, closeTransactionTime_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(transactionID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 12, transactionID_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -2714,6 +2769,9 @@ public final class Market {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(11, closeTransactionTime_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(transactionID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(12, transactionID_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2750,6 +2808,8 @@ public final class Market {
           != other.getTakenBackFromBusTime()) return false;
       if (getCloseTransactionTime()
           != other.getCloseTransactionTime()) return false;
+      if (!getTransactionID()
+          .equals(other.getTransactionID())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2790,6 +2850,8 @@ public final class Market {
       hash = (37 * hash) + CLOSETRANSACTIONTIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getCloseTransactionTime());
+      hash = (37 * hash) + TRANSACTIONID_FIELD_NUMBER;
+      hash = (53 * hash) + getTransactionID().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2932,6 +2994,7 @@ public final class Market {
         sentBackToBusTime_ = 0L;
         takenBackFromBusTime_ = 0L;
         closeTransactionTime_ = 0L;
+        transactionID_ = "";
         return this;
       }
 
@@ -2998,6 +3061,9 @@ public final class Market {
         if (((from_bitField0_ & 0x00000400) != 0)) {
           result.closeTransactionTime_ = closeTransactionTime_;
         }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.transactionID_ = transactionID_;
+        }
       }
 
       @java.lang.Override
@@ -3050,6 +3116,11 @@ public final class Market {
         }
         if (other.getCloseTransactionTime() != 0L) {
           setCloseTransactionTime(other.getCloseTransactionTime());
+        }
+        if (!other.getTransactionID().isEmpty()) {
+          transactionID_ = other.transactionID_;
+          bitField0_ |= 0x00000800;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3132,6 +3203,11 @@ public final class Market {
                 bitField0_ |= 0x00000400;
                 break;
               } // case 88
+              case 98: {
+                transactionID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3638,6 +3714,78 @@ public final class Market {
       public Builder clearCloseTransactionTime() {
         bitField0_ = (bitField0_ & ~0x00000400);
         closeTransactionTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object transactionID_ = "";
+      /**
+       * <code>string TransactionID = 12;</code>
+       * @return The transactionID.
+       */
+      public java.lang.String getTransactionID() {
+        java.lang.Object ref = transactionID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transactionID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string TransactionID = 12;</code>
+       * @return The bytes for transactionID.
+       */
+      public com.google.protobuf.ByteString
+          getTransactionIDBytes() {
+        java.lang.Object ref = transactionID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transactionID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string TransactionID = 12;</code>
+       * @param value The transactionID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transactionID_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string TransactionID = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransactionID() {
+        transactionID_ = getDefaultInstance().getTransactionID();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string TransactionID = 12;</code>
+       * @param value The bytes for transactionID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transactionID_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -22895,7 +23043,7 @@ public final class Market {
       "oteLeg\022\022\n\nSecurityID\030\001 \001(\t\022\r\n\005Price\030\002 \001(" +
       "\001\022\r\n\005Yield\030\003 \001(\001\022\020\n\010Quantity\030\004 \001(\001\022\022\n\nMi" +
       "nimumQty\030\005 \001(\001\022(\n\004Verb\030\006 \001(\0162\032.org.examp" +
-      "le.MarketLegVerb\022\020\n\010MarketID\030\007 \001(\t\"\322\002\n\022M" +
+      "le.MarketLegVerb\022\020\n\010MarketID\030\007 \001(\t\"\351\002\n\022M" +
       "arketInternalInfo\022\021\n\tSessionID\030\001 \001(\t\022\016\n\006" +
       "FlowID\030\002 \001(\t\0227\n\rProcessStatus\030\003 \001(\0162 .or" +
       "g.example.MarketProcessStatus\022 \n\030Process" +
@@ -22904,132 +23052,132 @@ public final class Market {
       "\030\n\020TakenFromBusTime\030\007 \001(\004\022\025\n\rProcessedTi" +
       "me\030\010 \001(\004\022\031\n\021SentBackToBusTime\030\t \001(\004\022\034\n\024T" +
       "akenBackFromBusTime\030\n \001(\004\022\034\n\024CloseTransa" +
-      "ctionTime\030\013 \001(\004\"\265\005\n\022MarketQuoteRequest\022\027" +
-      "\n\016QuoteRequestID\030\226\001 \001(\t\022\035\n\024ClientQuoteRe" +
-      "questID\030\227\001 \001(\t\022:\n\010MlegType\030\230\001 \001(\0162\'.org." +
-      "example.MarketQuoteRequestMLegType\0222\n\004Ty" +
-      "pe\030\231\001 \001(\0162#.org.example.MarketQuoteReque" +
-      "stType\022.\n\010FirstLeg\030\232\001 \001(\0132\033.org.example." +
-      "MarketQuoteLeg\022/\n\tSecondLeg\030\233\001 \001(\0132\033.org" +
-      ".example.MarketQuoteLeg\022.\n\010ThirdLeg\030\234\001 \001" +
-      "(\0132\033.org.example.MarketQuoteLeg\022\027\n\016Issue" +
-      "rMemberID\030\235\001 \001(\t\022\031\n\020IssuerOperatorID\030\236\001 " +
-      "\001(\t\022#\n\032NumberOfDestinationMembers\030\237\001 \001(\005" +
-      "\022\032\n\021DestinationMember\030\240\001 \003(\t\022\025\n\014Creation" +
-      "Date\030\241\001 \001(\004\022\025\n\014CreationTime\030\242\001 \001(\004\022\023\n\nUp" +
-      "dateDate\030\243\001 \001(\004\022\023\n\nUpdateTime\030\244\001 \001(\004\022\025\n\014" +
-      "ValidityDate\030\245\001 \001(\004\022\025\n\014ValidityTime\030\246\001 \001" +
-      "(\004\0226\n\006Status\030\247\001 \001(\0162%.org.example.Market" +
-      "QuoteRequestStatus\0223\n\tInternals\030\363\003 \001(\0132\037" +
-      ".org.example.MarketInternalInfo\"\266\005\n\013Mark" +
-      "etQuote\022\020\n\007QuoteID\030\364\003 \001(\t\022\026\n\rClientQuote" +
-      "ID\030\365\003 \001(\t\022\027\n\016QuoteRequestID\030\366\003 \001(\t\022:\n\010Ml" +
-      "egType\030\367\003 \001(\0162\'.org.example.MarketQuoteR" +
-      "equestMLegType\0222\n\004Type\030\370\003 \001(\0162#.org.exam" +
-      "ple.MarketQuoteRequestType\022.\n\010FirstLeg\030\371" +
-      "\003 \001(\0132\033.org.example.MarketQuoteLeg\022/\n\tSe" +
-      "condLeg\030\372\003 \001(\0132\033.org.example.MarketQuote" +
-      "Leg\022.\n\010ThirdLeg\030\373\003 \001(\0132\033.org.example.Mar" +
-      "ketQuoteLeg\022\027\n\016IssuerMemberID\030\374\003 \001(\t\022\031\n\020" +
-      "IssuerOperatorID\030\375\003 \001(\t\022\034\n\023CounterpartMe" +
-      "mberID\030\376\003 \001(\t\022\036\n\025CounterpartOperatorID\030\377" +
-      "\003 \001(\t\022\025\n\014CreationDate\030\200\004 \001(\004\022\025\n\014Creation" +
-      "Time\030\201\004 \001(\004\022\023\n\nUpdateDate\030\202\004 \001(\004\022\023\n\nUpda" +
-      "teTime\030\203\004 \001(\004\022\025\n\014ValidityDate\030\204\004 \001(\004\022\025\n\014" +
-      "ValidityTime\030\205\004 \001(\004\0226\n\006Status\030\206\004 \001(\0162%.o" +
-      "rg.example.MarketQuoteRequestStatus\0223\n\tI" +
-      "nternals\030\347\007 \001(\0132\037.org.example.MarketInte" +
-      "rnalInfo\"\340\005\n\023MarketQuoteResponse\022\030\n\017Quot" +
-      "eResponseID\030\350\007 \001(\t\022\036\n\025ClientQuoteRespons" +
-      "eID\030\351\007 \001(\t\022\027\n\016QuoteRequestID\030\352\007 \001(\t\022\020\n\007Q" +
-      "uoteID\030\353\007 \001(\t\022:\n\010MlegType\030\354\007 \001(\0162\'.org.e" +
-      "xample.MarketQuoteRequestMLegType\0222\n\004Typ" +
-      "e\030\355\007 \001(\0162#.org.example.MarketQuoteReques" +
-      "tType\022.\n\010FirstLeg\030\356\007 \001(\0132\033.org.example.M" +
-      "arketQuoteLeg\022/\n\tSecondLeg\030\357\007 \001(\0132\033.org." +
-      "example.MarketQuoteLeg\022.\n\010ThirdLeg\030\360\007 \001(" +
-      "\0132\033.org.example.MarketQuoteLeg\022\027\n\016Issuer" +
-      "MemberID\030\361\007 \001(\t\022\031\n\020IssuerOperatorID\030\362\007 \001" +
-      "(\t\022\034\n\023CounterpartMemberID\030\363\007 \001(\t\022\036\n\025Coun" +
-      "terpartOperatorID\030\364\007 \001(\t\022\025\n\014CreationDate" +
-      "\030\365\007 \001(\004\022\025\n\014CreationTime\030\366\007 \001(\004\022\023\n\nUpdate" +
-      "Date\030\367\007 \001(\004\022\023\n\nUpdateTime\030\370\007 \001(\004\022\025\n\014Vali" +
-      "dityDate\030\371\007 \001(\004\022\025\n\014ValidityTime\030\372\007 \001(\004\0226" +
-      "\n\006Status\030\373\007 \001(\0162%.org.example.MarketQuot" +
-      "eRequestStatus\0223\n\tInternals\030\333\013 \001(\0132\037.org" +
-      ".example.MarketInternalInfo\"\263\006\n\013MarketTr" +
-      "ade\022\020\n\007TradeID\030\334\013 \001(\t\022\023\n\nSecurityID\030\336\013 \001" +
-      "(\t\022\021\n\010ISINCode\030\337\013 \001(\t\022\016\n\005CUSIP\030\340\013 \001(\t\022\016\n" +
-      "\005Price\030\341\013 \001(\001\022\016\n\005Yield\030\342\013 \001(\001\022\021\n\010Quantit" +
-      "y\030\343\013 \001(\001\022\023\n\nMinimumQty\030\344\013 \001(\001\0222\n\rAggress" +
-      "orVerb\030\345\013 \001(\0162\032.org.example.MarketLegVer" +
-      "b\022\032\n\021AggressorMemberID\030\346\013 \001(\t\022\034\n\023Aggress" +
-      "orOperatorID\030\347\013 \001(\t\0228\n\017AggressorSource\030\350" +
-      "\013 \001(\0162\036.org.example.MarketTradeSource\022\032\n" +
-      "\021AggressorSourceID\030\351\013 \001(\t\022\031\n\020ProviderMem" +
-      "berID\030\352\013 \001(\t\022\033\n\022ProviderOperatorID\030\353\013 \001(" +
-      "\t\0227\n\016ProviderSource\030\354\013 \001(\0162\036.org.example" +
-      ".MarketTradeSource\022\031\n\020ProviderSourceID\030\355" +
-      "\013 \001(\t\022\025\n\014CreationDate\030\356\013 \001(\004\022\025\n\014Creation" +
-      "Time\030\357\013 \001(\004\022\023\n\nUpdateDate\030\360\013 \001(\004\022\023\n\nUpda" +
-      "teTime\030\361\013 \001(\004\022\031\n\020SettlementAmount\030\362\013 \001(\001" +
-      "\022\027\n\016QuoteRequestID\030\363\013 \001(\t\022\035\n\024ClientQuote" +
-      "RequestID\030\364\013 \001(\t\022\020\n\007QuoteID\030\365\013 \001(\t\022\026\n\rCl" +
-      "ientQuoteID\030\366\013 \001(\t\022\030\n\017QuoteResponseID\030\367\013" +
-      " \001(\t\022\036\n\025ClientQuoteResponseID\030\370\013 \001(\t\0223\n\t" +
-      "Internals\030\317\017 \001(\0132\037.org.example.MarketInt" +
-      "ernalInfo\"\333\004\n\013MarketPrice\022\023\n\nSecurityID\030" +
-      "\320\017 \001(\t\022\021\n\010ISINCode\030\321\017 \001(\t\022\016\n\005CUSIP\030\322\017 \001(" +
-      "\t\022\023\n\nTradeClass\030\323\017 \001(\t\022+\n\004Type\030\324\017 \001(\0162\034." +
-      "org.example.MarketPriceType\022\021\n\010BidPrice\030" +
-      "\325\017 \001(\001\022\021\n\010BidYield\030\326\017 \001(\001\022\022\n\tBidSpread\030\327" +
-      "\017 \001(\001\022\017\n\006BidAxe\030\330\017 \001(\001\022\017\n\006BidQty\030\331\017 \001(\001\022" +
-      "\021\n\010AskPrice\030\332\017 \001(\001\022\021\n\010AskYield\030\333\017 \001(\001\022\022\n" +
-      "\tAskSpread\030\334\017 \001(\001\022\017\n\006AskAxe\030\335\017 \001(\001\022\017\n\006As" +
-      "kQty\030\336\017 \001(\001\022\023\n\nDeltaPrice\030\337\017 \001(\001\022\023\n\nDelt" +
-      "aYield\030\340\017 \001(\001\022\024\n\013DeltaSpread\030\341\017 \001(\001\022-\n\005S" +
-      "tate\030\342\017 \001(\0162\035.org.example.MarketPriceSta" +
-      "te\022\022\n\tPriceDate\030\343\017 \001(\004\022\022\n\tPriceTime\030\344\017 \001" +
-      "(\004\022\023\n\nUpdateDate\030\345\017 \001(\004\022\023\n\nUpdateTime\030\346\017" +
-      " \001(\004\022\021\n\010MarketID\030\347\017 \001(\t\022\021\n\010MemberID\030\350\017 \001" +
-      "(\t\0223\n\tInternals\030\303\023 \001(\0132\037.org.example.Mar" +
-      "ketInternalInfo\"L\n\rMarketSection\022\021\n\010Mark" +
-      "etID\030\366\023 \001(\t\022\022\n\tSectionID\030\367\023 \001(\t\022\024\n\013Descr" +
-      "iption\030\370\023 \001(\t\"\327\003\n\020MarketInstrument\022\023\n\nSe" +
-      "curityID\030\250\024 \001(\t\022\024\n\013Description\030\251\024 \001(\t\022\021\n" +
-      "\010ISINCode\030\263\024 \001(\t\022\016\n\005CUSIP\030\264\024 \001(\t\022\021\n\010Mark" +
-      "etID\030\265\024 \001(\t\022\022\n\tSectionID\030\266\024 \001(\t\022\023\n\nTrade" +
-      "Class\030\267\024 \001(\t\022\021\n\010Currency\030\271\024 \001(\t\022\017\n\006Issue" +
-      "r\030\272\024 \001(\t\0222\n\005Class\030\273\024 \001(\0162\".org.example.M" +
-      "arketInstrumentClass\022\022\n\tPriceTick\030\274\024 \001(\001" +
-      "\022\020\n\007QtyTick\030\275\024 \001(\001\022\027\n\016MinTradableQty\030\276\024 " +
-      "\001(\001\022\020\n\007LotSize\030\277\024 \001(\001\022\025\n\014ClosingPrice\030\300\024" +
-      " \001(\001\022\022\n\tIssueDate\030\301\024 \001(\004\022\031\n\020TradingStart" +
-      "Date\030\302\024 \001(\004\022\030\n\017TradingStopDate\030\303\024 \001(\004\022\022\n" +
-      "\tYieldTick\030\304\024 \001(\001\022\034\n\023BenchmarkSecurityID" +
-      "\030\305\024 \001(\t*,\n\rMarketLegVerb\022\014\n\010VERB_BUY\020\000\022\r" +
-      "\n\tVERB_SELL\020\001*g\n\032MarketQuoteRequestMLegT" +
-      "ype\022\021\n\rMLEG_ZeroLegs\020\000\022\021\n\rMLEG_Outright\020" +
-      "\001\022\017\n\013MLEG_Switch\020\002\022\022\n\016MLEG_Butterfly\020\003*^" +
-      "\n\026MarketQuoteRequestType\022\030\n\024TYPE_Request" +
-      "BidOffer\020\000\022\025\n\021TYPE_MyBidMyOffer\020\001\022\023\n\017TYP" +
-      "E_LimitOrder\020\002*s\n\030MarketQuoteRequestStat" +
-      "us\022\021\n\rSTATUS_Active\020\000\022\021\n\rSTATUS_Filled\020\001" +
-      "\022\024\n\020STATUS_Cancelled\020\002\022\033\n\027STATUS_Rejecte" +
-      "dByMarket\020\003*b\n\023MarketProcessStatus\022\032\n\026PR" +
-      "OCESSED_NotProcessed\020\000\022\027\n\023PROCESSED_Proc" +
-      "essed\020\001\022\026\n\022PROCESSED_Rejected\020\002*X\n\021Marke" +
-      "tTradeSource\022\027\n\023SOURCE_QuoteRequest\020\000\022\020\n" +
-      "\014SOURCE_Quote\020\001\022\030\n\024SOURCE_QuoteResponse\020" +
-      "\002*\205\001\n\017MarketPriceType\022\022\n\016TYPE_Composite\020" +
-      "\000\022\023\n\017TYPE_Indicative\020\001\022\r\n\tTYPE_Tier\020\002\022\030\n" +
-      "\024TYPE_CorporateSpread\020\003\022\020\n\014TYPE_CORP4PM\020" +
-      "\004\022\016\n\nTYPE_CD4PM\020\005*X\n\020MarketPriceState\022\016\n" +
-      "\nSTATE_None\020\000\022\016\n\nSTATE_Firm\020\001\022\021\n\rSTATE_S" +
-      "ubject\020\002\022\021\n\rSTATE_Deleted\020\003*]\n\025MarketIns" +
-      "trumentClass\022\030\n\024CLASS_GovernmentBond\020\000\022\027" +
-      "\n\023CLASS_CorporateBond\020\001\022\021\n\rCLASS_Futures" +
-      "\020\002b\006proto3"
+      "ctionTime\030\013 \001(\004\022\025\n\rTransactionID\030\014 \001(\t\"\265" +
+      "\005\n\022MarketQuoteRequest\022\027\n\016QuoteRequestID\030" +
+      "\226\001 \001(\t\022\035\n\024ClientQuoteRequestID\030\227\001 \001(\t\022:\n" +
+      "\010MlegType\030\230\001 \001(\0162\'.org.example.MarketQuo" +
+      "teRequestMLegType\0222\n\004Type\030\231\001 \001(\0162#.org.e" +
+      "xample.MarketQuoteRequestType\022.\n\010FirstLe" +
+      "g\030\232\001 \001(\0132\033.org.example.MarketQuoteLeg\022/\n" +
+      "\tSecondLeg\030\233\001 \001(\0132\033.org.example.MarketQu" +
+      "oteLeg\022.\n\010ThirdLeg\030\234\001 \001(\0132\033.org.example." +
+      "MarketQuoteLeg\022\027\n\016IssuerMemberID\030\235\001 \001(\t\022" +
+      "\031\n\020IssuerOperatorID\030\236\001 \001(\t\022#\n\032NumberOfDe" +
+      "stinationMembers\030\237\001 \001(\005\022\032\n\021DestinationMe" +
+      "mber\030\240\001 \003(\t\022\025\n\014CreationDate\030\241\001 \001(\004\022\025\n\014Cr" +
+      "eationTime\030\242\001 \001(\004\022\023\n\nUpdateDate\030\243\001 \001(\004\022\023" +
+      "\n\nUpdateTime\030\244\001 \001(\004\022\025\n\014ValidityDate\030\245\001 \001" +
+      "(\004\022\025\n\014ValidityTime\030\246\001 \001(\004\0226\n\006Status\030\247\001 \001" +
+      "(\0162%.org.example.MarketQuoteRequestStatu" +
+      "s\0223\n\tInternals\030\363\003 \001(\0132\037.org.example.Mark" +
+      "etInternalInfo\"\266\005\n\013MarketQuote\022\020\n\007QuoteI" +
+      "D\030\364\003 \001(\t\022\026\n\rClientQuoteID\030\365\003 \001(\t\022\027\n\016Quot" +
+      "eRequestID\030\366\003 \001(\t\022:\n\010MlegType\030\367\003 \001(\0162\'.o" +
+      "rg.example.MarketQuoteRequestMLegType\0222\n" +
+      "\004Type\030\370\003 \001(\0162#.org.example.MarketQuoteRe" +
+      "questType\022.\n\010FirstLeg\030\371\003 \001(\0132\033.org.examp" +
+      "le.MarketQuoteLeg\022/\n\tSecondLeg\030\372\003 \001(\0132\033." +
+      "org.example.MarketQuoteLeg\022.\n\010ThirdLeg\030\373" +
+      "\003 \001(\0132\033.org.example.MarketQuoteLeg\022\027\n\016Is" +
+      "suerMemberID\030\374\003 \001(\t\022\031\n\020IssuerOperatorID\030" +
+      "\375\003 \001(\t\022\034\n\023CounterpartMemberID\030\376\003 \001(\t\022\036\n\025" +
+      "CounterpartOperatorID\030\377\003 \001(\t\022\025\n\014Creation" +
+      "Date\030\200\004 \001(\004\022\025\n\014CreationTime\030\201\004 \001(\004\022\023\n\nUp" +
+      "dateDate\030\202\004 \001(\004\022\023\n\nUpdateTime\030\203\004 \001(\004\022\025\n\014" +
+      "ValidityDate\030\204\004 \001(\004\022\025\n\014ValidityTime\030\205\004 \001" +
+      "(\004\0226\n\006Status\030\206\004 \001(\0162%.org.example.Market" +
+      "QuoteRequestStatus\0223\n\tInternals\030\347\007 \001(\0132\037" +
+      ".org.example.MarketInternalInfo\"\340\005\n\023Mark" +
+      "etQuoteResponse\022\030\n\017QuoteResponseID\030\350\007 \001(" +
+      "\t\022\036\n\025ClientQuoteResponseID\030\351\007 \001(\t\022\027\n\016Quo" +
+      "teRequestID\030\352\007 \001(\t\022\020\n\007QuoteID\030\353\007 \001(\t\022:\n\010" +
+      "MlegType\030\354\007 \001(\0162\'.org.example.MarketQuot" +
+      "eRequestMLegType\0222\n\004Type\030\355\007 \001(\0162#.org.ex" +
+      "ample.MarketQuoteRequestType\022.\n\010FirstLeg" +
+      "\030\356\007 \001(\0132\033.org.example.MarketQuoteLeg\022/\n\t" +
+      "SecondLeg\030\357\007 \001(\0132\033.org.example.MarketQuo" +
+      "teLeg\022.\n\010ThirdLeg\030\360\007 \001(\0132\033.org.example.M" +
+      "arketQuoteLeg\022\027\n\016IssuerMemberID\030\361\007 \001(\t\022\031" +
+      "\n\020IssuerOperatorID\030\362\007 \001(\t\022\034\n\023Counterpart" +
+      "MemberID\030\363\007 \001(\t\022\036\n\025CounterpartOperatorID" +
+      "\030\364\007 \001(\t\022\025\n\014CreationDate\030\365\007 \001(\004\022\025\n\014Creati" +
+      "onTime\030\366\007 \001(\004\022\023\n\nUpdateDate\030\367\007 \001(\004\022\023\n\nUp" +
+      "dateTime\030\370\007 \001(\004\022\025\n\014ValidityDate\030\371\007 \001(\004\022\025" +
+      "\n\014ValidityTime\030\372\007 \001(\004\0226\n\006Status\030\373\007 \001(\0162%" +
+      ".org.example.MarketQuoteRequestStatus\0223\n" +
+      "\tInternals\030\333\013 \001(\0132\037.org.example.MarketIn" +
+      "ternalInfo\"\263\006\n\013MarketTrade\022\020\n\007TradeID\030\334\013" +
+      " \001(\t\022\023\n\nSecurityID\030\336\013 \001(\t\022\021\n\010ISINCode\030\337\013" +
+      " \001(\t\022\016\n\005CUSIP\030\340\013 \001(\t\022\016\n\005Price\030\341\013 \001(\001\022\016\n\005" +
+      "Yield\030\342\013 \001(\001\022\021\n\010Quantity\030\343\013 \001(\001\022\023\n\nMinim" +
+      "umQty\030\344\013 \001(\001\0222\n\rAggressorVerb\030\345\013 \001(\0162\032.o" +
+      "rg.example.MarketLegVerb\022\032\n\021AggressorMem" +
+      "berID\030\346\013 \001(\t\022\034\n\023AggressorOperatorID\030\347\013 \001" +
+      "(\t\0228\n\017AggressorSource\030\350\013 \001(\0162\036.org.examp" +
+      "le.MarketTradeSource\022\032\n\021AggressorSourceI" +
+      "D\030\351\013 \001(\t\022\031\n\020ProviderMemberID\030\352\013 \001(\t\022\033\n\022P" +
+      "roviderOperatorID\030\353\013 \001(\t\0227\n\016ProviderSour" +
+      "ce\030\354\013 \001(\0162\036.org.example.MarketTradeSourc" +
+      "e\022\031\n\020ProviderSourceID\030\355\013 \001(\t\022\025\n\014Creation" +
+      "Date\030\356\013 \001(\004\022\025\n\014CreationTime\030\357\013 \001(\004\022\023\n\nUp" +
+      "dateDate\030\360\013 \001(\004\022\023\n\nUpdateTime\030\361\013 \001(\004\022\031\n\020" +
+      "SettlementAmount\030\362\013 \001(\001\022\027\n\016QuoteRequestI" +
+      "D\030\363\013 \001(\t\022\035\n\024ClientQuoteRequestID\030\364\013 \001(\t\022" +
+      "\020\n\007QuoteID\030\365\013 \001(\t\022\026\n\rClientQuoteID\030\366\013 \001(" +
+      "\t\022\030\n\017QuoteResponseID\030\367\013 \001(\t\022\036\n\025ClientQuo" +
+      "teResponseID\030\370\013 \001(\t\0223\n\tInternals\030\317\017 \001(\0132" +
+      "\037.org.example.MarketInternalInfo\"\333\004\n\013Mar" +
+      "ketPrice\022\023\n\nSecurityID\030\320\017 \001(\t\022\021\n\010ISINCod" +
+      "e\030\321\017 \001(\t\022\016\n\005CUSIP\030\322\017 \001(\t\022\023\n\nTradeClass\030\323" +
+      "\017 \001(\t\022+\n\004Type\030\324\017 \001(\0162\034.org.example.Marke" +
+      "tPriceType\022\021\n\010BidPrice\030\325\017 \001(\001\022\021\n\010BidYiel" +
+      "d\030\326\017 \001(\001\022\022\n\tBidSpread\030\327\017 \001(\001\022\017\n\006BidAxe\030\330" +
+      "\017 \001(\001\022\017\n\006BidQty\030\331\017 \001(\001\022\021\n\010AskPrice\030\332\017 \001(" +
+      "\001\022\021\n\010AskYield\030\333\017 \001(\001\022\022\n\tAskSpread\030\334\017 \001(\001" +
+      "\022\017\n\006AskAxe\030\335\017 \001(\001\022\017\n\006AskQty\030\336\017 \001(\001\022\023\n\nDe" +
+      "ltaPrice\030\337\017 \001(\001\022\023\n\nDeltaYield\030\340\017 \001(\001\022\024\n\013" +
+      "DeltaSpread\030\341\017 \001(\001\022-\n\005State\030\342\017 \001(\0162\035.org" +
+      ".example.MarketPriceState\022\022\n\tPriceDate\030\343" +
+      "\017 \001(\004\022\022\n\tPriceTime\030\344\017 \001(\004\022\023\n\nUpdateDate\030" +
+      "\345\017 \001(\004\022\023\n\nUpdateTime\030\346\017 \001(\004\022\021\n\010MarketID\030" +
+      "\347\017 \001(\t\022\021\n\010MemberID\030\350\017 \001(\t\0223\n\tInternals\030\303" +
+      "\023 \001(\0132\037.org.example.MarketInternalInfo\"L" +
+      "\n\rMarketSection\022\021\n\010MarketID\030\366\023 \001(\t\022\022\n\tSe" +
+      "ctionID\030\367\023 \001(\t\022\024\n\013Description\030\370\023 \001(\t\"\327\003\n" +
+      "\020MarketInstrument\022\023\n\nSecurityID\030\250\024 \001(\t\022\024" +
+      "\n\013Description\030\251\024 \001(\t\022\021\n\010ISINCode\030\263\024 \001(\t\022" +
+      "\016\n\005CUSIP\030\264\024 \001(\t\022\021\n\010MarketID\030\265\024 \001(\t\022\022\n\tSe" +
+      "ctionID\030\266\024 \001(\t\022\023\n\nTradeClass\030\267\024 \001(\t\022\021\n\010C" +
+      "urrency\030\271\024 \001(\t\022\017\n\006Issuer\030\272\024 \001(\t\0222\n\005Class" +
+      "\030\273\024 \001(\0162\".org.example.MarketInstrumentCl" +
+      "ass\022\022\n\tPriceTick\030\274\024 \001(\001\022\020\n\007QtyTick\030\275\024 \001(" +
+      "\001\022\027\n\016MinTradableQty\030\276\024 \001(\001\022\020\n\007LotSize\030\277\024" +
+      " \001(\001\022\025\n\014ClosingPrice\030\300\024 \001(\001\022\022\n\tIssueDate" +
+      "\030\301\024 \001(\004\022\031\n\020TradingStartDate\030\302\024 \001(\004\022\030\n\017Tr" +
+      "adingStopDate\030\303\024 \001(\004\022\022\n\tYieldTick\030\304\024 \001(\001" +
+      "\022\034\n\023BenchmarkSecurityID\030\305\024 \001(\t*,\n\rMarket" +
+      "LegVerb\022\014\n\010VERB_BUY\020\000\022\r\n\tVERB_SELL\020\001*g\n\032" +
+      "MarketQuoteRequestMLegType\022\021\n\rMLEG_ZeroL" +
+      "egs\020\000\022\021\n\rMLEG_Outright\020\001\022\017\n\013MLEG_Switch\020" +
+      "\002\022\022\n\016MLEG_Butterfly\020\003*^\n\026MarketQuoteRequ" +
+      "estType\022\030\n\024TYPE_RequestBidOffer\020\000\022\025\n\021TYP" +
+      "E_MyBidMyOffer\020\001\022\023\n\017TYPE_LimitOrder\020\002*s\n" +
+      "\030MarketQuoteRequestStatus\022\021\n\rSTATUS_Acti" +
+      "ve\020\000\022\021\n\rSTATUS_Filled\020\001\022\024\n\020STATUS_Cancel" +
+      "led\020\002\022\033\n\027STATUS_RejectedByMarket\020\003*b\n\023Ma" +
+      "rketProcessStatus\022\032\n\026PROCESSED_NotProces" +
+      "sed\020\000\022\027\n\023PROCESSED_Processed\020\001\022\026\n\022PROCES" +
+      "SED_Rejected\020\002*X\n\021MarketTradeSource\022\027\n\023S" +
+      "OURCE_QuoteRequest\020\000\022\020\n\014SOURCE_Quote\020\001\022\030" +
+      "\n\024SOURCE_QuoteResponse\020\002*\205\001\n\017MarketPrice" +
+      "Type\022\022\n\016TYPE_Composite\020\000\022\023\n\017TYPE_Indicat" +
+      "ive\020\001\022\r\n\tTYPE_Tier\020\002\022\030\n\024TYPE_CorporateSp" +
+      "read\020\003\022\020\n\014TYPE_CORP4PM\020\004\022\016\n\nTYPE_CD4PM\020\005" +
+      "*X\n\020MarketPriceState\022\016\n\nSTATE_None\020\000\022\016\n\n" +
+      "STATE_Firm\020\001\022\021\n\rSTATE_Subject\020\002\022\021\n\rSTATE" +
+      "_Deleted\020\003*]\n\025MarketInstrumentClass\022\030\n\024C" +
+      "LASS_GovernmentBond\020\000\022\027\n\023CLASS_Corporate" +
+      "Bond\020\001\022\021\n\rCLASS_Futures\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23046,7 +23194,7 @@ public final class Market {
     internal_static_org_example_MarketInternalInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_MarketInternalInfo_descriptor,
-        new java.lang.String[] { "SessionID", "FlowID", "ProcessStatus", "ProcessStatusDescription", "TransactionCreationTime", "SentOnBusTime", "TakenFromBusTime", "ProcessedTime", "SentBackToBusTime", "TakenBackFromBusTime", "CloseTransactionTime", });
+        new java.lang.String[] { "SessionID", "FlowID", "ProcessStatus", "ProcessStatusDescription", "TransactionCreationTime", "SentOnBusTime", "TakenFromBusTime", "ProcessedTime", "SentBackToBusTime", "TakenBackFromBusTime", "CloseTransactionTime", "TransactionID", });
     internal_static_org_example_MarketQuoteRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_org_example_MarketQuoteRequest_fieldAccessorTable = new

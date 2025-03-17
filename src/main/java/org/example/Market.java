@@ -6845,6 +6845,18 @@ public final class Market {
     org.example.Market.MarketQuoteRequestStatus getStatus();
 
     /**
+     * <code>string ClientQuoteRequestID = 519;</code>
+     * @return The clientQuoteRequestID.
+     */
+    java.lang.String getClientQuoteRequestID();
+    /**
+     * <code>string ClientQuoteRequestID = 519;</code>
+     * @return The bytes for clientQuoteRequestID.
+     */
+    com.google.protobuf.ByteString
+        getClientQuoteRequestIDBytes();
+
+    /**
      * <code>.org.example.MarketInternalInfo Internals = 999;</code>
      * @return Whether the internals field is set.
      */
@@ -6895,6 +6907,7 @@ public final class Market {
       counterpartMemberID_ = "";
       counterpartOperatorID_ = "";
       status_ = 0;
+      clientQuoteRequestID_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -7382,6 +7395,45 @@ public final class Market {
       return result == null ? org.example.Market.MarketQuoteRequestStatus.UNRECOGNIZED : result;
     }
 
+    public static final int CLIENTQUOTEREQUESTID_FIELD_NUMBER = 519;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientQuoteRequestID_ = "";
+    /**
+     * <code>string ClientQuoteRequestID = 519;</code>
+     * @return The clientQuoteRequestID.
+     */
+    @java.lang.Override
+    public java.lang.String getClientQuoteRequestID() {
+      java.lang.Object ref = clientQuoteRequestID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientQuoteRequestID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ClientQuoteRequestID = 519;</code>
+     * @return The bytes for clientQuoteRequestID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientQuoteRequestIDBytes() {
+      java.lang.Object ref = clientQuoteRequestID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientQuoteRequestID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int INTERNALS_FIELD_NUMBER = 999;
     private org.example.Market.MarketInternalInfo internals_;
     /**
@@ -7479,6 +7531,9 @@ public final class Market {
       if (status_ != org.example.Market.MarketQuoteRequestStatus.STATUS_Active.getNumber()) {
         output.writeEnum(518, status_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteRequestID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 519, clientQuoteRequestID_);
+      }
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(999, getInternals());
       }
@@ -7560,6 +7615,9 @@ public final class Market {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(518, status_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteRequestID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(519, clientQuoteRequestID_);
+      }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(999, getInternals());
@@ -7623,6 +7681,8 @@ public final class Market {
       if (getValidityTime()
           != other.getValidityTime()) return false;
       if (status_ != other.status_) return false;
+      if (!getClientQuoteRequestID()
+          .equals(other.getClientQuoteRequestID())) return false;
       if (hasInternals() != other.hasInternals()) return false;
       if (hasInternals()) {
         if (!getInternals()
@@ -7689,6 +7749,8 @@ public final class Market {
           getValidityTime());
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + CLIENTQUOTEREQUESTID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientQuoteRequestID().hashCode();
       if (hasInternals()) {
         hash = (37 * hash) + INTERNALS_FIELD_NUMBER;
         hash = (53 * hash) + getInternals().hashCode();
@@ -7868,6 +7930,7 @@ public final class Market {
         validityDate_ = 0L;
         validityTime_ = 0L;
         status_ = 0;
+        clientQuoteRequestID_ = "";
         internals_ = null;
         if (internalsBuilder_ != null) {
           internalsBuilder_.dispose();
@@ -7974,6 +8037,9 @@ public final class Market {
           result.status_ = status_;
         }
         if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.clientQuoteRequestID_ = clientQuoteRequestID_;
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
           result.internals_ = internalsBuilder_ == null
               ? internals_
               : internalsBuilder_.build();
@@ -8064,6 +8130,11 @@ public final class Market {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (!other.getClientQuoteRequestID().isEmpty()) {
+          clientQuoteRequestID_ = other.clientQuoteRequestID_;
+          bitField0_ |= 0x00080000;
+          onChanged();
         }
         if (other.hasInternals()) {
           mergeInternals(other.getInternals());
@@ -8195,11 +8266,16 @@ public final class Market {
                 bitField0_ |= 0x00040000;
                 break;
               } // case 4144
+              case 4154: {
+                clientQuoteRequestID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00080000;
+                break;
+              } // case 4154
               case 7994: {
                 input.readMessage(
                     getInternalsFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00080000;
+                bitField0_ |= 0x00100000;
                 break;
               } // case 7994
               default: {
@@ -9437,6 +9513,78 @@ public final class Market {
         return this;
       }
 
+      private java.lang.Object clientQuoteRequestID_ = "";
+      /**
+       * <code>string ClientQuoteRequestID = 519;</code>
+       * @return The clientQuoteRequestID.
+       */
+      public java.lang.String getClientQuoteRequestID() {
+        java.lang.Object ref = clientQuoteRequestID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientQuoteRequestID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 519;</code>
+       * @return The bytes for clientQuoteRequestID.
+       */
+      public com.google.protobuf.ByteString
+          getClientQuoteRequestIDBytes() {
+        java.lang.Object ref = clientQuoteRequestID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientQuoteRequestID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 519;</code>
+       * @param value The clientQuoteRequestID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteRequestID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientQuoteRequestID_ = value;
+        bitField0_ |= 0x00080000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 519;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientQuoteRequestID() {
+        clientQuoteRequestID_ = getDefaultInstance().getClientQuoteRequestID();
+        bitField0_ = (bitField0_ & ~0x00080000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 519;</code>
+       * @param value The bytes for clientQuoteRequestID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteRequestIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientQuoteRequestID_ = value;
+        bitField0_ |= 0x00080000;
+        onChanged();
+        return this;
+      }
+
       private org.example.Market.MarketInternalInfo internals_;
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.MarketInternalInfo, org.example.Market.MarketInternalInfo.Builder, org.example.Market.MarketInternalInfoOrBuilder> internalsBuilder_;
@@ -9445,7 +9593,7 @@ public final class Market {
        * @return Whether the internals field is set.
        */
       public boolean hasInternals() {
-        return ((bitField0_ & 0x00080000) != 0);
+        return ((bitField0_ & 0x00100000) != 0);
       }
       /**
        * <code>.org.example.MarketInternalInfo Internals = 999;</code>
@@ -9470,7 +9618,7 @@ public final class Market {
         } else {
           internalsBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
@@ -9484,7 +9632,7 @@ public final class Market {
         } else {
           internalsBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
@@ -9493,7 +9641,7 @@ public final class Market {
        */
       public Builder mergeInternals(org.example.Market.MarketInternalInfo value) {
         if (internalsBuilder_ == null) {
-          if (((bitField0_ & 0x00080000) != 0) &&
+          if (((bitField0_ & 0x00100000) != 0) &&
             internals_ != null &&
             internals_ != org.example.Market.MarketInternalInfo.getDefaultInstance()) {
             getInternalsBuilder().mergeFrom(value);
@@ -9504,7 +9652,7 @@ public final class Market {
           internalsBuilder_.mergeFrom(value);
         }
         if (internals_ != null) {
-          bitField0_ |= 0x00080000;
+          bitField0_ |= 0x00100000;
           onChanged();
         }
         return this;
@@ -9513,7 +9661,7 @@ public final class Market {
        * <code>.org.example.MarketInternalInfo Internals = 999;</code>
        */
       public Builder clearInternals() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         internals_ = null;
         if (internalsBuilder_ != null) {
           internalsBuilder_.dispose();
@@ -9526,7 +9674,7 @@ public final class Market {
        * <code>.org.example.MarketInternalInfo Internals = 999;</code>
        */
       public org.example.Market.MarketInternalInfo.Builder getInternalsBuilder() {
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00100000;
         onChanged();
         return getInternalsFieldBuilder().getBuilder();
       }
@@ -9824,6 +9972,30 @@ public final class Market {
     org.example.Market.MarketQuoteRequestStatus getStatus();
 
     /**
+     * <code>string ClientQuoteRequestID = 1020;</code>
+     * @return The clientQuoteRequestID.
+     */
+    java.lang.String getClientQuoteRequestID();
+    /**
+     * <code>string ClientQuoteRequestID = 1020;</code>
+     * @return The bytes for clientQuoteRequestID.
+     */
+    com.google.protobuf.ByteString
+        getClientQuoteRequestIDBytes();
+
+    /**
+     * <code>string ClientQuoteID = 1021;</code>
+     * @return The clientQuoteID.
+     */
+    java.lang.String getClientQuoteID();
+    /**
+     * <code>string ClientQuoteID = 1021;</code>
+     * @return The bytes for clientQuoteID.
+     */
+    com.google.protobuf.ByteString
+        getClientQuoteIDBytes();
+
+    /**
      * <code>.org.example.MarketInternalInfo Internals = 1499;</code>
      * @return Whether the internals field is set.
      */
@@ -9875,6 +10047,8 @@ public final class Market {
       counterpartMemberID_ = "";
       counterpartOperatorID_ = "";
       status_ = 0;
+      clientQuoteRequestID_ = "";
+      clientQuoteID_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -10401,6 +10575,84 @@ public final class Market {
       return result == null ? org.example.Market.MarketQuoteRequestStatus.UNRECOGNIZED : result;
     }
 
+    public static final int CLIENTQUOTEREQUESTID_FIELD_NUMBER = 1020;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientQuoteRequestID_ = "";
+    /**
+     * <code>string ClientQuoteRequestID = 1020;</code>
+     * @return The clientQuoteRequestID.
+     */
+    @java.lang.Override
+    public java.lang.String getClientQuoteRequestID() {
+      java.lang.Object ref = clientQuoteRequestID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientQuoteRequestID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ClientQuoteRequestID = 1020;</code>
+     * @return The bytes for clientQuoteRequestID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientQuoteRequestIDBytes() {
+      java.lang.Object ref = clientQuoteRequestID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientQuoteRequestID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENTQUOTEID_FIELD_NUMBER = 1021;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientQuoteID_ = "";
+    /**
+     * <code>string ClientQuoteID = 1021;</code>
+     * @return The clientQuoteID.
+     */
+    @java.lang.Override
+    public java.lang.String getClientQuoteID() {
+      java.lang.Object ref = clientQuoteID_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clientQuoteID_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ClientQuoteID = 1021;</code>
+     * @return The bytes for clientQuoteID.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClientQuoteIDBytes() {
+      java.lang.Object ref = clientQuoteID_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clientQuoteID_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int INTERNALS_FIELD_NUMBER = 1499;
     private org.example.Market.MarketInternalInfo internals_;
     /**
@@ -10501,6 +10753,12 @@ public final class Market {
       if (status_ != org.example.Market.MarketQuoteRequestStatus.STATUS_Active.getNumber()) {
         output.writeEnum(1019, status_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteRequestID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1020, clientQuoteRequestID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteID_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1021, clientQuoteID_);
+      }
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(1499, getInternals());
       }
@@ -10585,6 +10843,12 @@ public final class Market {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1019, status_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteRequestID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1020, clientQuoteRequestID_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientQuoteID_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1021, clientQuoteID_);
+      }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1499, getInternals());
@@ -10650,6 +10914,10 @@ public final class Market {
       if (getValidityTime()
           != other.getValidityTime()) return false;
       if (status_ != other.status_) return false;
+      if (!getClientQuoteRequestID()
+          .equals(other.getClientQuoteRequestID())) return false;
+      if (!getClientQuoteID()
+          .equals(other.getClientQuoteID())) return false;
       if (hasInternals() != other.hasInternals()) return false;
       if (hasInternals()) {
         if (!getInternals()
@@ -10718,6 +10986,10 @@ public final class Market {
           getValidityTime());
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      hash = (37 * hash) + CLIENTQUOTEREQUESTID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientQuoteRequestID().hashCode();
+      hash = (37 * hash) + CLIENTQUOTEID_FIELD_NUMBER;
+      hash = (53 * hash) + getClientQuoteID().hashCode();
       if (hasInternals()) {
         hash = (37 * hash) + INTERNALS_FIELD_NUMBER;
         hash = (53 * hash) + getInternals().hashCode();
@@ -10898,6 +11170,8 @@ public final class Market {
         validityDate_ = 0L;
         validityTime_ = 0L;
         status_ = 0;
+        clientQuoteRequestID_ = "";
+        clientQuoteID_ = "";
         internals_ = null;
         if (internalsBuilder_ != null) {
           internalsBuilder_.dispose();
@@ -11007,6 +11281,12 @@ public final class Market {
           result.status_ = status_;
         }
         if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.clientQuoteRequestID_ = clientQuoteRequestID_;
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.clientQuoteID_ = clientQuoteID_;
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
           result.internals_ = internalsBuilder_ == null
               ? internals_
               : internalsBuilder_.build();
@@ -11102,6 +11382,16 @@ public final class Market {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (!other.getClientQuoteRequestID().isEmpty()) {
+          clientQuoteRequestID_ = other.clientQuoteRequestID_;
+          bitField0_ |= 0x00100000;
+          onChanged();
+        }
+        if (!other.getClientQuoteID().isEmpty()) {
+          clientQuoteID_ = other.clientQuoteID_;
+          bitField0_ |= 0x00200000;
+          onChanged();
         }
         if (other.hasInternals()) {
           mergeInternals(other.getInternals());
@@ -11238,11 +11528,21 @@ public final class Market {
                 bitField0_ |= 0x00080000;
                 break;
               } // case 8152
+              case 8162: {
+                clientQuoteRequestID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00100000;
+                break;
+              } // case 8162
+              case 8170: {
+                clientQuoteID_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00200000;
+                break;
+              } // case 8170
               case 11994: {
                 input.readMessage(
                     getInternalsFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00100000;
+                bitField0_ |= 0x00400000;
                 break;
               } // case 11994
               default: {
@@ -12552,6 +12852,150 @@ public final class Market {
         return this;
       }
 
+      private java.lang.Object clientQuoteRequestID_ = "";
+      /**
+       * <code>string ClientQuoteRequestID = 1020;</code>
+       * @return The clientQuoteRequestID.
+       */
+      public java.lang.String getClientQuoteRequestID() {
+        java.lang.Object ref = clientQuoteRequestID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientQuoteRequestID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 1020;</code>
+       * @return The bytes for clientQuoteRequestID.
+       */
+      public com.google.protobuf.ByteString
+          getClientQuoteRequestIDBytes() {
+        java.lang.Object ref = clientQuoteRequestID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientQuoteRequestID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 1020;</code>
+       * @param value The clientQuoteRequestID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteRequestID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientQuoteRequestID_ = value;
+        bitField0_ |= 0x00100000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 1020;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientQuoteRequestID() {
+        clientQuoteRequestID_ = getDefaultInstance().getClientQuoteRequestID();
+        bitField0_ = (bitField0_ & ~0x00100000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteRequestID = 1020;</code>
+       * @param value The bytes for clientQuoteRequestID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteRequestIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientQuoteRequestID_ = value;
+        bitField0_ |= 0x00100000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clientQuoteID_ = "";
+      /**
+       * <code>string ClientQuoteID = 1021;</code>
+       * @return The clientQuoteID.
+       */
+      public java.lang.String getClientQuoteID() {
+        java.lang.Object ref = clientQuoteID_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clientQuoteID_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteID = 1021;</code>
+       * @return The bytes for clientQuoteID.
+       */
+      public com.google.protobuf.ByteString
+          getClientQuoteIDBytes() {
+        java.lang.Object ref = clientQuoteID_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clientQuoteID_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ClientQuoteID = 1021;</code>
+       * @param value The clientQuoteID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteID(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        clientQuoteID_ = value;
+        bitField0_ |= 0x00200000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteID = 1021;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClientQuoteID() {
+        clientQuoteID_ = getDefaultInstance().getClientQuoteID();
+        bitField0_ = (bitField0_ & ~0x00200000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ClientQuoteID = 1021;</code>
+       * @param value The bytes for clientQuoteID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClientQuoteIDBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        clientQuoteID_ = value;
+        bitField0_ |= 0x00200000;
+        onChanged();
+        return this;
+      }
+
       private org.example.Market.MarketInternalInfo internals_;
       private com.google.protobuf.SingleFieldBuilder<
           org.example.Market.MarketInternalInfo, org.example.Market.MarketInternalInfo.Builder, org.example.Market.MarketInternalInfoOrBuilder> internalsBuilder_;
@@ -12560,7 +13004,7 @@ public final class Market {
        * @return Whether the internals field is set.
        */
       public boolean hasInternals() {
-        return ((bitField0_ & 0x00100000) != 0);
+        return ((bitField0_ & 0x00400000) != 0);
       }
       /**
        * <code>.org.example.MarketInternalInfo Internals = 1499;</code>
@@ -12585,7 +13029,7 @@ public final class Market {
         } else {
           internalsBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00400000;
         onChanged();
         return this;
       }
@@ -12599,7 +13043,7 @@ public final class Market {
         } else {
           internalsBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00400000;
         onChanged();
         return this;
       }
@@ -12608,7 +13052,7 @@ public final class Market {
        */
       public Builder mergeInternals(org.example.Market.MarketInternalInfo value) {
         if (internalsBuilder_ == null) {
-          if (((bitField0_ & 0x00100000) != 0) &&
+          if (((bitField0_ & 0x00400000) != 0) &&
             internals_ != null &&
             internals_ != org.example.Market.MarketInternalInfo.getDefaultInstance()) {
             getInternalsBuilder().mergeFrom(value);
@@ -12619,7 +13063,7 @@ public final class Market {
           internalsBuilder_.mergeFrom(value);
         }
         if (internals_ != null) {
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x00400000;
           onChanged();
         }
         return this;
@@ -12628,7 +13072,7 @@ public final class Market {
        * <code>.org.example.MarketInternalInfo Internals = 1499;</code>
        */
       public Builder clearInternals() {
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         internals_ = null;
         if (internalsBuilder_ != null) {
           internalsBuilder_.dispose();
@@ -12641,7 +13085,7 @@ public final class Market {
        * <code>.org.example.MarketInternalInfo Internals = 1499;</code>
        */
       public org.example.Market.MarketInternalInfo.Builder getInternalsBuilder() {
-        bitField0_ |= 0x00100000;
+        bitField0_ |= 0x00400000;
         onChanged();
         return getInternalsFieldBuilder().getBuilder();
       }
@@ -23070,7 +23514,7 @@ public final class Market {
       "(\004\022\025\n\014ValidityTime\030\246\001 \001(\004\0226\n\006Status\030\247\001 \001" +
       "(\0162%.org.example.MarketQuoteRequestStatu" +
       "s\0223\n\tInternals\030\363\003 \001(\0132\037.org.example.Mark" +
-      "etInternalInfo\"\266\005\n\013MarketQuote\022\020\n\007QuoteI" +
+      "etInternalInfo\"\325\005\n\013MarketQuote\022\020\n\007QuoteI" +
       "D\030\364\003 \001(\t\022\026\n\rClientQuoteID\030\365\003 \001(\t\022\027\n\016Quot" +
       "eRequestID\030\366\003 \001(\t\022:\n\010MlegType\030\367\003 \001(\0162\'.o" +
       "rg.example.MarketQuoteRequestMLegType\0222\n" +
@@ -23086,98 +23530,100 @@ public final class Market {
       "dateDate\030\202\004 \001(\004\022\023\n\nUpdateTime\030\203\004 \001(\004\022\025\n\014" +
       "ValidityDate\030\204\004 \001(\004\022\025\n\014ValidityTime\030\205\004 \001" +
       "(\004\0226\n\006Status\030\206\004 \001(\0162%.org.example.Market" +
-      "QuoteRequestStatus\0223\n\tInternals\030\347\007 \001(\0132\037" +
-      ".org.example.MarketInternalInfo\"\340\005\n\023Mark" +
-      "etQuoteResponse\022\030\n\017QuoteResponseID\030\350\007 \001(" +
-      "\t\022\036\n\025ClientQuoteResponseID\030\351\007 \001(\t\022\027\n\016Quo" +
-      "teRequestID\030\352\007 \001(\t\022\020\n\007QuoteID\030\353\007 \001(\t\022:\n\010" +
-      "MlegType\030\354\007 \001(\0162\'.org.example.MarketQuot" +
-      "eRequestMLegType\0222\n\004Type\030\355\007 \001(\0162#.org.ex" +
-      "ample.MarketQuoteRequestType\022.\n\010FirstLeg" +
-      "\030\356\007 \001(\0132\033.org.example.MarketQuoteLeg\022/\n\t" +
-      "SecondLeg\030\357\007 \001(\0132\033.org.example.MarketQuo" +
-      "teLeg\022.\n\010ThirdLeg\030\360\007 \001(\0132\033.org.example.M" +
-      "arketQuoteLeg\022\027\n\016IssuerMemberID\030\361\007 \001(\t\022\031" +
-      "\n\020IssuerOperatorID\030\362\007 \001(\t\022\034\n\023Counterpart" +
-      "MemberID\030\363\007 \001(\t\022\036\n\025CounterpartOperatorID" +
-      "\030\364\007 \001(\t\022\025\n\014CreationDate\030\365\007 \001(\004\022\025\n\014Creati" +
-      "onTime\030\366\007 \001(\004\022\023\n\nUpdateDate\030\367\007 \001(\004\022\023\n\nUp" +
-      "dateTime\030\370\007 \001(\004\022\025\n\014ValidityDate\030\371\007 \001(\004\022\025" +
-      "\n\014ValidityTime\030\372\007 \001(\004\0226\n\006Status\030\373\007 \001(\0162%" +
-      ".org.example.MarketQuoteRequestStatus\0223\n" +
-      "\tInternals\030\333\013 \001(\0132\037.org.example.MarketIn" +
-      "ternalInfo\"\263\006\n\013MarketTrade\022\020\n\007TradeID\030\334\013" +
-      " \001(\t\022\023\n\nSecurityID\030\336\013 \001(\t\022\021\n\010ISINCode\030\337\013" +
-      " \001(\t\022\016\n\005CUSIP\030\340\013 \001(\t\022\016\n\005Price\030\341\013 \001(\001\022\016\n\005" +
-      "Yield\030\342\013 \001(\001\022\021\n\010Quantity\030\343\013 \001(\001\022\023\n\nMinim" +
-      "umQty\030\344\013 \001(\001\0222\n\rAggressorVerb\030\345\013 \001(\0162\032.o" +
-      "rg.example.MarketLegVerb\022\032\n\021AggressorMem" +
-      "berID\030\346\013 \001(\t\022\034\n\023AggressorOperatorID\030\347\013 \001" +
-      "(\t\0228\n\017AggressorSource\030\350\013 \001(\0162\036.org.examp" +
-      "le.MarketTradeSource\022\032\n\021AggressorSourceI" +
-      "D\030\351\013 \001(\t\022\031\n\020ProviderMemberID\030\352\013 \001(\t\022\033\n\022P" +
-      "roviderOperatorID\030\353\013 \001(\t\0227\n\016ProviderSour" +
-      "ce\030\354\013 \001(\0162\036.org.example.MarketTradeSourc" +
-      "e\022\031\n\020ProviderSourceID\030\355\013 \001(\t\022\025\n\014Creation" +
-      "Date\030\356\013 \001(\004\022\025\n\014CreationTime\030\357\013 \001(\004\022\023\n\nUp" +
-      "dateDate\030\360\013 \001(\004\022\023\n\nUpdateTime\030\361\013 \001(\004\022\031\n\020" +
-      "SettlementAmount\030\362\013 \001(\001\022\027\n\016QuoteRequestI" +
-      "D\030\363\013 \001(\t\022\035\n\024ClientQuoteRequestID\030\364\013 \001(\t\022" +
-      "\020\n\007QuoteID\030\365\013 \001(\t\022\026\n\rClientQuoteID\030\366\013 \001(" +
-      "\t\022\030\n\017QuoteResponseID\030\367\013 \001(\t\022\036\n\025ClientQuo" +
-      "teResponseID\030\370\013 \001(\t\0223\n\tInternals\030\317\017 \001(\0132" +
-      "\037.org.example.MarketInternalInfo\"\333\004\n\013Mar" +
-      "ketPrice\022\023\n\nSecurityID\030\320\017 \001(\t\022\021\n\010ISINCod" +
-      "e\030\321\017 \001(\t\022\016\n\005CUSIP\030\322\017 \001(\t\022\023\n\nTradeClass\030\323" +
-      "\017 \001(\t\022+\n\004Type\030\324\017 \001(\0162\034.org.example.Marke" +
-      "tPriceType\022\021\n\010BidPrice\030\325\017 \001(\001\022\021\n\010BidYiel" +
-      "d\030\326\017 \001(\001\022\022\n\tBidSpread\030\327\017 \001(\001\022\017\n\006BidAxe\030\330" +
-      "\017 \001(\001\022\017\n\006BidQty\030\331\017 \001(\001\022\021\n\010AskPrice\030\332\017 \001(" +
-      "\001\022\021\n\010AskYield\030\333\017 \001(\001\022\022\n\tAskSpread\030\334\017 \001(\001" +
-      "\022\017\n\006AskAxe\030\335\017 \001(\001\022\017\n\006AskQty\030\336\017 \001(\001\022\023\n\nDe" +
-      "ltaPrice\030\337\017 \001(\001\022\023\n\nDeltaYield\030\340\017 \001(\001\022\024\n\013" +
-      "DeltaSpread\030\341\017 \001(\001\022-\n\005State\030\342\017 \001(\0162\035.org" +
-      ".example.MarketPriceState\022\022\n\tPriceDate\030\343" +
-      "\017 \001(\004\022\022\n\tPriceTime\030\344\017 \001(\004\022\023\n\nUpdateDate\030" +
-      "\345\017 \001(\004\022\023\n\nUpdateTime\030\346\017 \001(\004\022\021\n\010MarketID\030" +
-      "\347\017 \001(\t\022\021\n\010MemberID\030\350\017 \001(\t\0223\n\tInternals\030\303" +
-      "\023 \001(\0132\037.org.example.MarketInternalInfo\"L" +
-      "\n\rMarketSection\022\021\n\010MarketID\030\366\023 \001(\t\022\022\n\tSe" +
-      "ctionID\030\367\023 \001(\t\022\024\n\013Description\030\370\023 \001(\t\"\327\003\n" +
-      "\020MarketInstrument\022\023\n\nSecurityID\030\250\024 \001(\t\022\024" +
-      "\n\013Description\030\251\024 \001(\t\022\021\n\010ISINCode\030\263\024 \001(\t\022" +
-      "\016\n\005CUSIP\030\264\024 \001(\t\022\021\n\010MarketID\030\265\024 \001(\t\022\022\n\tSe" +
-      "ctionID\030\266\024 \001(\t\022\023\n\nTradeClass\030\267\024 \001(\t\022\021\n\010C" +
-      "urrency\030\271\024 \001(\t\022\017\n\006Issuer\030\272\024 \001(\t\0222\n\005Class" +
-      "\030\273\024 \001(\0162\".org.example.MarketInstrumentCl" +
-      "ass\022\022\n\tPriceTick\030\274\024 \001(\001\022\020\n\007QtyTick\030\275\024 \001(" +
-      "\001\022\027\n\016MinTradableQty\030\276\024 \001(\001\022\020\n\007LotSize\030\277\024" +
-      " \001(\001\022\025\n\014ClosingPrice\030\300\024 \001(\001\022\022\n\tIssueDate" +
-      "\030\301\024 \001(\004\022\031\n\020TradingStartDate\030\302\024 \001(\004\022\030\n\017Tr" +
-      "adingStopDate\030\303\024 \001(\004\022\022\n\tYieldTick\030\304\024 \001(\001" +
-      "\022\034\n\023BenchmarkSecurityID\030\305\024 \001(\t*,\n\rMarket" +
-      "LegVerb\022\014\n\010VERB_BUY\020\000\022\r\n\tVERB_SELL\020\001*g\n\032" +
-      "MarketQuoteRequestMLegType\022\021\n\rMLEG_ZeroL" +
-      "egs\020\000\022\021\n\rMLEG_Outright\020\001\022\017\n\013MLEG_Switch\020" +
-      "\002\022\022\n\016MLEG_Butterfly\020\003*^\n\026MarketQuoteRequ" +
-      "estType\022\030\n\024TYPE_RequestBidOffer\020\000\022\025\n\021TYP" +
-      "E_MyBidMyOffer\020\001\022\023\n\017TYPE_LimitOrder\020\002*s\n" +
-      "\030MarketQuoteRequestStatus\022\021\n\rSTATUS_Acti" +
-      "ve\020\000\022\021\n\rSTATUS_Filled\020\001\022\024\n\020STATUS_Cancel" +
-      "led\020\002\022\033\n\027STATUS_RejectedByMarket\020\003*b\n\023Ma" +
-      "rketProcessStatus\022\032\n\026PROCESSED_NotProces" +
-      "sed\020\000\022\027\n\023PROCESSED_Processed\020\001\022\026\n\022PROCES" +
-      "SED_Rejected\020\002*X\n\021MarketTradeSource\022\027\n\023S" +
-      "OURCE_QuoteRequest\020\000\022\020\n\014SOURCE_Quote\020\001\022\030" +
-      "\n\024SOURCE_QuoteResponse\020\002*\205\001\n\017MarketPrice" +
-      "Type\022\022\n\016TYPE_Composite\020\000\022\023\n\017TYPE_Indicat" +
-      "ive\020\001\022\r\n\tTYPE_Tier\020\002\022\030\n\024TYPE_CorporateSp" +
-      "read\020\003\022\020\n\014TYPE_CORP4PM\020\004\022\016\n\nTYPE_CD4PM\020\005" +
-      "*X\n\020MarketPriceState\022\016\n\nSTATE_None\020\000\022\016\n\n" +
-      "STATE_Firm\020\001\022\021\n\rSTATE_Subject\020\002\022\021\n\rSTATE" +
-      "_Deleted\020\003*]\n\025MarketInstrumentClass\022\030\n\024C" +
-      "LASS_GovernmentBond\020\000\022\027\n\023CLASS_Corporate" +
-      "Bond\020\001\022\021\n\rCLASS_Futures\020\002b\006proto3"
+      "QuoteRequestStatus\022\035\n\024ClientQuoteRequest" +
+      "ID\030\207\004 \001(\t\0223\n\tInternals\030\347\007 \001(\0132\037.org.exam" +
+      "ple.MarketInternalInfo\"\227\006\n\023MarketQuoteRe" +
+      "sponse\022\030\n\017QuoteResponseID\030\350\007 \001(\t\022\036\n\025Clie" +
+      "ntQuoteResponseID\030\351\007 \001(\t\022\027\n\016QuoteRequest" +
+      "ID\030\352\007 \001(\t\022\020\n\007QuoteID\030\353\007 \001(\t\022:\n\010MlegType\030" +
+      "\354\007 \001(\0162\'.org.example.MarketQuoteRequestM" +
+      "LegType\0222\n\004Type\030\355\007 \001(\0162#.org.example.Mar" +
+      "ketQuoteRequestType\022.\n\010FirstLeg\030\356\007 \001(\0132\033" +
+      ".org.example.MarketQuoteLeg\022/\n\tSecondLeg" +
+      "\030\357\007 \001(\0132\033.org.example.MarketQuoteLeg\022.\n\010" +
+      "ThirdLeg\030\360\007 \001(\0132\033.org.example.MarketQuot" +
+      "eLeg\022\027\n\016IssuerMemberID\030\361\007 \001(\t\022\031\n\020IssuerO" +
+      "peratorID\030\362\007 \001(\t\022\034\n\023CounterpartMemberID\030" +
+      "\363\007 \001(\t\022\036\n\025CounterpartOperatorID\030\364\007 \001(\t\022\025" +
+      "\n\014CreationDate\030\365\007 \001(\004\022\025\n\014CreationTime\030\366\007" +
+      " \001(\004\022\023\n\nUpdateDate\030\367\007 \001(\004\022\023\n\nUpdateTime\030" +
+      "\370\007 \001(\004\022\025\n\014ValidityDate\030\371\007 \001(\004\022\025\n\014Validit" +
+      "yTime\030\372\007 \001(\004\0226\n\006Status\030\373\007 \001(\0162%.org.exam" +
+      "ple.MarketQuoteRequestStatus\022\035\n\024ClientQu" +
+      "oteRequestID\030\374\007 \001(\t\022\026\n\rClientQuoteID\030\375\007 " +
+      "\001(\t\0223\n\tInternals\030\333\013 \001(\0132\037.org.example.Ma" +
+      "rketInternalInfo\"\263\006\n\013MarketTrade\022\020\n\007Trad" +
+      "eID\030\334\013 \001(\t\022\023\n\nSecurityID\030\336\013 \001(\t\022\021\n\010ISINC" +
+      "ode\030\337\013 \001(\t\022\016\n\005CUSIP\030\340\013 \001(\t\022\016\n\005Price\030\341\013 \001" +
+      "(\001\022\016\n\005Yield\030\342\013 \001(\001\022\021\n\010Quantity\030\343\013 \001(\001\022\023\n" +
+      "\nMinimumQty\030\344\013 \001(\001\0222\n\rAggressorVerb\030\345\013 \001" +
+      "(\0162\032.org.example.MarketLegVerb\022\032\n\021Aggres" +
+      "sorMemberID\030\346\013 \001(\t\022\034\n\023AggressorOperatorI" +
+      "D\030\347\013 \001(\t\0228\n\017AggressorSource\030\350\013 \001(\0162\036.org" +
+      ".example.MarketTradeSource\022\032\n\021AggressorS" +
+      "ourceID\030\351\013 \001(\t\022\031\n\020ProviderMemberID\030\352\013 \001(" +
+      "\t\022\033\n\022ProviderOperatorID\030\353\013 \001(\t\0227\n\016Provid" +
+      "erSource\030\354\013 \001(\0162\036.org.example.MarketTrad" +
+      "eSource\022\031\n\020ProviderSourceID\030\355\013 \001(\t\022\025\n\014Cr" +
+      "eationDate\030\356\013 \001(\004\022\025\n\014CreationTime\030\357\013 \001(\004" +
+      "\022\023\n\nUpdateDate\030\360\013 \001(\004\022\023\n\nUpdateTime\030\361\013 \001" +
+      "(\004\022\031\n\020SettlementAmount\030\362\013 \001(\001\022\027\n\016QuoteRe" +
+      "questID\030\363\013 \001(\t\022\035\n\024ClientQuoteRequestID\030\364" +
+      "\013 \001(\t\022\020\n\007QuoteID\030\365\013 \001(\t\022\026\n\rClientQuoteID" +
+      "\030\366\013 \001(\t\022\030\n\017QuoteResponseID\030\367\013 \001(\t\022\036\n\025Cli" +
+      "entQuoteResponseID\030\370\013 \001(\t\0223\n\tInternals\030\317" +
+      "\017 \001(\0132\037.org.example.MarketInternalInfo\"\333" +
+      "\004\n\013MarketPrice\022\023\n\nSecurityID\030\320\017 \001(\t\022\021\n\010I" +
+      "SINCode\030\321\017 \001(\t\022\016\n\005CUSIP\030\322\017 \001(\t\022\023\n\nTradeC" +
+      "lass\030\323\017 \001(\t\022+\n\004Type\030\324\017 \001(\0162\034.org.example" +
+      ".MarketPriceType\022\021\n\010BidPrice\030\325\017 \001(\001\022\021\n\010B" +
+      "idYield\030\326\017 \001(\001\022\022\n\tBidSpread\030\327\017 \001(\001\022\017\n\006Bi" +
+      "dAxe\030\330\017 \001(\001\022\017\n\006BidQty\030\331\017 \001(\001\022\021\n\010AskPrice" +
+      "\030\332\017 \001(\001\022\021\n\010AskYield\030\333\017 \001(\001\022\022\n\tAskSpread\030" +
+      "\334\017 \001(\001\022\017\n\006AskAxe\030\335\017 \001(\001\022\017\n\006AskQty\030\336\017 \001(\001" +
+      "\022\023\n\nDeltaPrice\030\337\017 \001(\001\022\023\n\nDeltaYield\030\340\017 \001" +
+      "(\001\022\024\n\013DeltaSpread\030\341\017 \001(\001\022-\n\005State\030\342\017 \001(\016" +
+      "2\035.org.example.MarketPriceState\022\022\n\tPrice" +
+      "Date\030\343\017 \001(\004\022\022\n\tPriceTime\030\344\017 \001(\004\022\023\n\nUpdat" +
+      "eDate\030\345\017 \001(\004\022\023\n\nUpdateTime\030\346\017 \001(\004\022\021\n\010Mar" +
+      "ketID\030\347\017 \001(\t\022\021\n\010MemberID\030\350\017 \001(\t\0223\n\tInter" +
+      "nals\030\303\023 \001(\0132\037.org.example.MarketInternal" +
+      "Info\"L\n\rMarketSection\022\021\n\010MarketID\030\366\023 \001(\t" +
+      "\022\022\n\tSectionID\030\367\023 \001(\t\022\024\n\013Description\030\370\023 \001" +
+      "(\t\"\327\003\n\020MarketInstrument\022\023\n\nSecurityID\030\250\024" +
+      " \001(\t\022\024\n\013Description\030\251\024 \001(\t\022\021\n\010ISINCode\030\263" +
+      "\024 \001(\t\022\016\n\005CUSIP\030\264\024 \001(\t\022\021\n\010MarketID\030\265\024 \001(\t" +
+      "\022\022\n\tSectionID\030\266\024 \001(\t\022\023\n\nTradeClass\030\267\024 \001(" +
+      "\t\022\021\n\010Currency\030\271\024 \001(\t\022\017\n\006Issuer\030\272\024 \001(\t\0222\n" +
+      "\005Class\030\273\024 \001(\0162\".org.example.MarketInstru" +
+      "mentClass\022\022\n\tPriceTick\030\274\024 \001(\001\022\020\n\007QtyTick" +
+      "\030\275\024 \001(\001\022\027\n\016MinTradableQty\030\276\024 \001(\001\022\020\n\007LotS" +
+      "ize\030\277\024 \001(\001\022\025\n\014ClosingPrice\030\300\024 \001(\001\022\022\n\tIss" +
+      "ueDate\030\301\024 \001(\004\022\031\n\020TradingStartDate\030\302\024 \001(\004" +
+      "\022\030\n\017TradingStopDate\030\303\024 \001(\004\022\022\n\tYieldTick\030" +
+      "\304\024 \001(\001\022\034\n\023BenchmarkSecurityID\030\305\024 \001(\t*,\n\r" +
+      "MarketLegVerb\022\014\n\010VERB_BUY\020\000\022\r\n\tVERB_SELL" +
+      "\020\001*g\n\032MarketQuoteRequestMLegType\022\021\n\rMLEG" +
+      "_ZeroLegs\020\000\022\021\n\rMLEG_Outright\020\001\022\017\n\013MLEG_S" +
+      "witch\020\002\022\022\n\016MLEG_Butterfly\020\003*^\n\026MarketQuo" +
+      "teRequestType\022\030\n\024TYPE_RequestBidOffer\020\000\022" +
+      "\025\n\021TYPE_MyBidMyOffer\020\001\022\023\n\017TYPE_LimitOrde" +
+      "r\020\002*s\n\030MarketQuoteRequestStatus\022\021\n\rSTATU" +
+      "S_Active\020\000\022\021\n\rSTATUS_Filled\020\001\022\024\n\020STATUS_" +
+      "Cancelled\020\002\022\033\n\027STATUS_RejectedByMarket\020\003" +
+      "*b\n\023MarketProcessStatus\022\032\n\026PROCESSED_Not" +
+      "Processed\020\000\022\027\n\023PROCESSED_Processed\020\001\022\026\n\022" +
+      "PROCESSED_Rejected\020\002*X\n\021MarketTradeSourc" +
+      "e\022\027\n\023SOURCE_QuoteRequest\020\000\022\020\n\014SOURCE_Quo" +
+      "te\020\001\022\030\n\024SOURCE_QuoteResponse\020\002*\205\001\n\017Marke" +
+      "tPriceType\022\022\n\016TYPE_Composite\020\000\022\023\n\017TYPE_I" +
+      "ndicative\020\001\022\r\n\tTYPE_Tier\020\002\022\030\n\024TYPE_Corpo" +
+      "rateSpread\020\003\022\020\n\014TYPE_CORP4PM\020\004\022\016\n\nTYPE_C" +
+      "D4PM\020\005*X\n\020MarketPriceState\022\016\n\nSTATE_None" +
+      "\020\000\022\016\n\nSTATE_Firm\020\001\022\021\n\rSTATE_Subject\020\002\022\021\n" +
+      "\rSTATE_Deleted\020\003*]\n\025MarketInstrumentClas" +
+      "s\022\030\n\024CLASS_GovernmentBond\020\000\022\027\n\023CLASS_Cor" +
+      "porateBond\020\001\022\021\n\rCLASS_Futures\020\002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23206,13 +23652,13 @@ public final class Market {
     internal_static_org_example_MarketQuote_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_MarketQuote_descriptor,
-        new java.lang.String[] { "QuoteID", "ClientQuoteID", "QuoteRequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "Internals", });
+        new java.lang.String[] { "QuoteID", "ClientQuoteID", "QuoteRequestID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ClientQuoteRequestID", "Internals", });
     internal_static_org_example_MarketQuoteResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_org_example_MarketQuoteResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_org_example_MarketQuoteResponse_descriptor,
-        new java.lang.String[] { "QuoteResponseID", "ClientQuoteResponseID", "QuoteRequestID", "QuoteID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "Internals", });
+        new java.lang.String[] { "QuoteResponseID", "ClientQuoteResponseID", "QuoteRequestID", "QuoteID", "MlegType", "Type", "FirstLeg", "SecondLeg", "ThirdLeg", "IssuerMemberID", "IssuerOperatorID", "CounterpartMemberID", "CounterpartOperatorID", "CreationDate", "CreationTime", "UpdateDate", "UpdateTime", "ValidityDate", "ValidityTime", "Status", "ClientQuoteRequestID", "ClientQuoteID", "Internals", });
     internal_static_org_example_MarketTrade_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_org_example_MarketTrade_fieldAccessorTable = new

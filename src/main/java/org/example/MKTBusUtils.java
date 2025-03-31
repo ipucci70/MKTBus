@@ -72,7 +72,7 @@ public class MKTBusUtils {
     public static String createNewTransactionID(String prefix, int counter)
     {
         long timeNowNanoSeconds = Utils.getTimeNowNanoseconds();
-        String transactionID = prefix + "-" + String.format("%16d", timeNowNanoSeconds) + "-" + String.format("%06d", counter);
+        String transactionID = prefix + "-" + String.format("%15d", timeNowNanoSeconds) + "-" + String.format("%06d", counter);
 
         return transactionID;
     }

@@ -318,12 +318,15 @@ public class MKTBusManager {
     public String sendOnBus(MarketPrice marketPrice) throws IOException
     {
         if (busConnection==null){
+            LOG.error("Trying to send price on bus, missing connection");
             return MISSING_CONNECTION;
         }
         if (busChannel==null){
+            LOG.error("Trying to send price on bus, missing channel");
             return MISSING_CHANNEL;
         }
         byte[] serializedPrice = marketPrice.toByteArray();
+        LOG.info("Sending price {}", marketPrice.getSecurityID());
         try{
             busChannel.basicPublish("", PRICE_QUEUE_NAME_OUT, null, serializedPrice);
         }

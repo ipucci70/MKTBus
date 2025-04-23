@@ -57,6 +57,10 @@ public class MKTBusManager {
     private final static String EXCHANGE_NAME = "MKT";
     private static final long MAX_CONNECTION_ATTEMPTS = 50;
 
+    private static final boolean AUTO_ACK = true;
+    private static final boolean DURABLE = true;
+    private static final String EMPTY_EXCHANGE = "";
+
     private ConnectionFactory busFactory;
     private Connection busConnection;
     private Channel busChannel;
@@ -114,15 +118,15 @@ public class MKTBusManager {
 
             busChannel = busConnection.createChannel();
             busChannel.exchangeDeclare(EXCHANGE_NAME, "topic");
-            busChannel.queueDeclare(QUOTEREQ_QUEUE_NAME_OUT, false, false, false, null);
-            busChannel.queueDeclare(QUOTERES_QUEUE_NAME_OUT, false, false, false, null);
-            busChannel.queueDeclare(QUOTE_QUEUE_NAME_OUT, false, false, false, null);
-            busChannel.queueDeclare(TRADE_QUEUE_NAME_OUT, false, false, false, null);
-            busChannel.queueDeclare(PRICE_QUEUE_NAME_OUT, false, false, false, null);
-            busChannel.queueDeclare(QUOTEREQ_QUEUE_NAME_IN, false, false, false, null);
-            busChannel.queueDeclare(QUOTERES_QUEUE_NAME_IN, false, false, false, null);
-            busChannel.queueDeclare(QUOTE_QUEUE_NAME_IN, false, false, false, null);
-            busChannel.queueDeclare(TRADE_QUEUE_NAME_IN, false, false, false, null);
+            busChannel.queueDeclare(QUOTEREQ_QUEUE_NAME_OUT, !DURABLE, false, false, null);
+            busChannel.queueDeclare(QUOTERES_QUEUE_NAME_OUT, !DURABLE, false, false, null);
+            busChannel.queueDeclare(QUOTE_QUEUE_NAME_OUT, !DURABLE, false, false, null);
+            busChannel.queueDeclare(TRADE_QUEUE_NAME_OUT, !DURABLE, false, false, null);
+            busChannel.queueDeclare(PRICE_QUEUE_NAME_OUT, !DURABLE, false, false, null);
+            busChannel.queueDeclare(QUOTEREQ_QUEUE_NAME_IN, !DURABLE, false, false, null);
+            busChannel.queueDeclare(QUOTERES_QUEUE_NAME_IN, !DURABLE, false, false, null);
+            busChannel.queueDeclare(QUOTE_QUEUE_NAME_IN, !DURABLE, false, false, null);
+            busChannel.queueDeclare(TRADE_QUEUE_NAME_IN, !DURABLE, false, false, null);
         
             LOG.info("successfully created bus channel {}@{}:{}, binding queues", userName, hostName, port);
             
@@ -199,7 +203,7 @@ public class MKTBusManager {
         }
         byte[] serializedQuoteRequest = marketQuoteRequest.toByteArray();
         try {
-            busChannel.basicPublish("", QUOTEREQ_QUEUE_NAME_OUT, null, serializedQuoteRequest);
+            busChannel.basicPublish(EMPTY_EXCHANGE, QUOTEREQ_QUEUE_NAME_OUT, null, serializedQuoteRequest);
         }
         catch (IOException  e){
             LOG.error("Error sending Quote Request " + marketQuoteRequest + e.getLocalizedMessage(), Utils.stackTraceToString(e));
@@ -220,7 +224,7 @@ public class MKTBusManager {
         }
         byte[] serializedQuoteRequest = marketQuoteRequest.toByteArray();
         try {
-            busChannel.basicPublish("", QUOTEREQ_QUEUE_NAME_IN, null, serializedQuoteRequest);
+            busChannel.basicPublish(EMPTY_EXCHANGE, QUOTEREQ_QUEUE_NAME_IN, null, serializedQuoteRequest);
         }
         catch (IOException  e){
             LOG.error("Error sending Quote Request " + marketQuoteRequest + e.getLocalizedMessage(), Utils.stackTraceToString(e));
@@ -241,7 +245,7 @@ public class MKTBusManager {
         }
         byte[] serializedQuoteResponse = marketQuoteResponse.toByteArray();
         try {
-            busChannel.basicPublish("", QUOTERES_QUEUE_NAME_OUT, null, serializedQuoteResponse);
+            busChannel.basicPublish(EMPTY_EXCHANGE, QUOTERES_QUEUE_NAME_OUT, null, serializedQuoteResponse);
         }
         catch (IOException  e){
             LOG.error("Error sending Quote Response " + marketQuoteResponse + e.getLocalizedMessage(), Utils.stackTraceToString(e));
@@ -262,7 +266,7 @@ public class MKTBusManager {
         }
         byte[] serializedQuoteResponse = marketQuoteResponse.toByteArray();
         try {
-            busChannel.basicPublish("", QUOTERES_QUEUE_NAME_IN, null, serializedQuoteResponse);
+            busChannel.basicPublish(EMPTY_EXCHANGE, QUOTERES_QUEUE_NAME_IN, null, serializedQuoteResponse);
         }
         catch (IOException  e){
             LOG.error("Error sending Quote Response " + marketQuoteResponse + e.getLocalizedMessage(), Utils.stackTraceToString(e));
@@ -283,7 +287,7 @@ public class MKTBusManager {
         }
         byte[] serializedQuote = marketQuote.toByteArray();
         try{
-            busChannel.basicPublish("", QUOTE_QUEUE_NAME_OUT, null, serializedQuote);
+            busChannel.basicPublish(EMPTY_EXCHANGE, QUOTE_QUEUE_NAME_OUT, null, serializedQuote);
         }
         catch (IOException  e){
             LOG.error("Error sending Quote" + marketQuote + e.getLocalizedMessage(), Utils.stackTraceToString(e));
@@ -304,7 +308,7 @@ public class MKTBusManager {
         }
         byte[] serializedQuote = marketQuote.toByteArray();
         try{
-            busChannel.basicPublish("", QUOTE_QUEUE_NAME_IN, null, serializedQuote);
+            busChannel.basicPublish(EMPTY_EXCHANGE, QUOTE_QUEUE_NAME_IN, null, serializedQuote);
         }
         catch (IOException  e){
             LOG.error("Error sending Quote" + marketQuote + e.getLocalizedMessage(), Utils.stackTraceToString(e));
@@ -328,7 +332,7 @@ public class MKTBusManager {
         byte[] serializedPrice = marketPrice.toByteArray();
         LOG.info("Sending price {}", marketPrice.getSecurityID());
         try{
-            busChannel.basicPublish("", PRICE_QUEUE_NAME_OUT, null, serializedPrice);
+            busChannel.basicPublish(EMPTY_EXCHANGE, PRICE_QUEUE_NAME_OUT, null, serializedPrice);
         }
         catch (IOException  e){
             LOG.error("Error sending Price " + marketPrice + e.getLocalizedMessage(), Utils.stackTraceToString(e));
@@ -461,7 +465,8 @@ public class MKTBusManager {
                     MarketQuoteRequest marketQuoteRequest = MarketQuoteRequest.parseFrom(body);
                     LOG.info("received a quote request from bus" + marketQuoteRequest.toString());
                     quoteRequestCallback.handle(marketQuoteRequest);
-                } catch (InvalidProtocolBufferException e) {
+                    busChannel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+                } catch (IOException e) {
                     LOG.error("Failed to parse Protocol Buffer message: " + 
                     e.getLocalizedMessage(),
                     Utils.stackTraceToString(e));
@@ -470,7 +475,7 @@ public class MKTBusManager {
         };
 
         try {
-            busChannel.basicConsume(QUOTEREQ_QUEUE_NAME_OUT, true, deliverCallback, consumerTag -> {});
+            busChannel.basicConsume(QUOTEREQ_QUEUE_NAME_OUT, !AUTO_ACK, deliverCallback, consumerTag -> {});
         }catch (IOException e){
             LOG.error("Exception in basicConsume: " + 
             e.getLocalizedMessage(),
@@ -492,7 +497,8 @@ public class MKTBusManager {
                     MarketQuoteRequest marketQuoteRequest = MarketQuoteRequest.parseFrom(body);
                     LOG.info("received a quote request from bus" + marketQuoteRequest.toString());
                     quoteRequestCallback.handle(marketQuoteRequest);
-                } catch (InvalidProtocolBufferException e) {
+                    busChannel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+                } catch (IOException e) {
                     LOG.error("Failed to parse Protocol Buffer message: " + 
                     e.getLocalizedMessage(),
                     Utils.stackTraceToString(e));
@@ -501,7 +507,7 @@ public class MKTBusManager {
         };
 
         try {
-            busChannel.basicConsume(QUOTEREQ_QUEUE_NAME_IN, true, deliverCallback, consumerTag -> {});
+            busChannel.basicConsume(QUOTEREQ_QUEUE_NAME_IN, !AUTO_ACK, deliverCallback, consumerTag -> {});
         }catch (IOException e){
             LOG.error("Exception in basicConsume: " + 
             e.getLocalizedMessage(),
@@ -523,7 +529,8 @@ public class MKTBusManager {
                     MarketQuote marketQuote = MarketQuote.parseFrom(body);
                     LOG.info("received a quote from bus" + marketQuote.toString());
                     quoteCallback.handle(marketQuote);
-                } catch (InvalidProtocolBufferException e) {
+                    busChannel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+                } catch (IOException e) {
                     LOG.error("Failed to parse Protocol Buffer message: " + 
                     e.getLocalizedMessage(),
                     Utils.stackTraceToString(e));
@@ -532,7 +539,7 @@ public class MKTBusManager {
         };
 
         try {
-            busChannel.basicConsume(QUOTE_QUEUE_NAME_OUT, true, deliverCallback, consumerTag -> {});
+            busChannel.basicConsume(QUOTE_QUEUE_NAME_OUT, !AUTO_ACK, deliverCallback, consumerTag -> {});
         }catch (IOException e){
             LOG.error("Exception in basicConsume: " + 
             e.getLocalizedMessage(),
@@ -554,7 +561,8 @@ public class MKTBusManager {
                     MarketQuote marketQuote = MarketQuote.parseFrom(body);
                     LOG.info("received a quote from bus" + marketQuote.toString());
                     quoteCallback.handle(marketQuote);
-                } catch (InvalidProtocolBufferException e) {
+                    busChannel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+                } catch (IOException e) {
                     LOG.error("Failed to parse Protocol Buffer message: " + 
                     e.getLocalizedMessage(),
                     Utils.stackTraceToString(e));
@@ -563,7 +571,7 @@ public class MKTBusManager {
         };
 
         try {
-            busChannel.basicConsume(QUOTE_QUEUE_NAME_IN, true, deliverCallback, consumerTag -> {});
+            busChannel.basicConsume(QUOTE_QUEUE_NAME_IN, !AUTO_ACK, deliverCallback, consumerTag -> {});
         }catch (IOException e){
             LOG.error("Exception in basicConsume: " + 
             e.getLocalizedMessage(),
@@ -585,7 +593,8 @@ public class MKTBusManager {
                     MarketQuoteResponse marketQuoteResponse = MarketQuoteResponse.parseFrom(body);
                     LOG.info("received a quote response from bus" + marketQuoteResponse.toString());
                     quoteResponseCallback.handle(marketQuoteResponse);
-                } catch (InvalidProtocolBufferException e) {
+                    busChannel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+                } catch (IOException e) {
                     LOG.error("Failed to parse Protocol Buffer message: " + 
                     e.getLocalizedMessage(),
                     Utils.stackTraceToString(e));
@@ -594,7 +603,7 @@ public class MKTBusManager {
         };
 
         try {
-            busChannel.basicConsume(QUOTERES_QUEUE_NAME_OUT, true, deliverCallback, consumerTag -> {});
+            busChannel.basicConsume(QUOTERES_QUEUE_NAME_OUT, !AUTO_ACK, deliverCallback, consumerTag -> {});
         }catch (IOException e){
             LOG.error("Exception in basicConsume: " + 
             e.getLocalizedMessage(),
@@ -616,7 +625,8 @@ public class MKTBusManager {
                     MarketQuoteResponse marketQuoteResponse = MarketQuoteResponse.parseFrom(body);
                     LOG.info("received a quote response from bus" + marketQuoteResponse.toString());
                     quoteResponseCallback.handle(marketQuoteResponse);
-                } catch (InvalidProtocolBufferException e) {
+                    busChannel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+                } catch (IOException e) {
                     LOG.error("Failed to parse Protocol Buffer message: " + 
                     e.getLocalizedMessage(),
                     Utils.stackTraceToString(e));
@@ -625,7 +635,7 @@ public class MKTBusManager {
         };
 
         try {
-            busChannel.basicConsume(QUOTERES_QUEUE_NAME_IN, true, deliverCallback, consumerTag -> {});
+            busChannel.basicConsume(QUOTERES_QUEUE_NAME_IN, !AUTO_ACK, deliverCallback, consumerTag -> {});
         }catch (IOException e){
             LOG.error("Exception in basicConsume: " + 
             e.getLocalizedMessage(),
@@ -646,7 +656,8 @@ public class MKTBusManager {
                     MarketPrice marketPrice = MarketPrice.parseFrom(body);
                     LOG.info("received a price from bus" + marketPrice.toString());
                     priceCallback.handle(marketPrice);
-                } catch (InvalidProtocolBufferException e) {
+                    busChannel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+                } catch (IOException e) {
                     LOG.error("Failed to parse Protocol Buffer message: " + 
                     e.getLocalizedMessage(),
                     Utils.stackTraceToString(e));
@@ -655,7 +666,7 @@ public class MKTBusManager {
         };
 
         try {
-            busChannel.basicConsume(PRICE_QUEUE_NAME_OUT, true, deliverCallback, consumerTag -> {});
+            busChannel.basicConsume(PRICE_QUEUE_NAME_OUT, !AUTO_ACK, deliverCallback, consumerTag -> {});
         }catch (IOException e){
             LOG.error("Exception in basicConsume: " + 
             e.getLocalizedMessage(),

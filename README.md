@@ -1,0 +1,2 @@
+A simple library, used by my set of applications that reproduce a complex matching engine that handles request for quotes via FIX protocol.
+This library exports an interface between Google protobuf objects and rabbitMQ queue system.
